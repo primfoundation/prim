@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, mkdirSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -267,23 +267,43 @@ registerValidator(
 );
 assert.deepEqual(validate(p), []);
 
+function assertBookPack(path: string): void {
+  const m = openPrim(path);
+  try {
+    assert.equal(m.viewKey, "obf/picture-book");
+    assert.equal(m.view().projects, "scene+lines");
+    assert.ok(m.authorityPaths().includes("book.json"));
+    assert.ok(m.constraintPaths().some((x) => x.includes("bible")));
+    assert.ok(m.logFile());
+    assert.deepEqual(m.validateBase(), []);
+    assert.equal(m.trust(), "agent");
+  } finally {
+    m.close();
+  }
+}
+
+// Exercise these SDK contracts on every checkout, not only machines with a
+// separate (potentially private) prim.obf repository beside this repository.
+const bookFixture = join(tmp, "book-fixture");
+mkdirSync(bookFixture);
+writeFileSync(join(bookFixture, "index.md"), FACE
+  .replace("profile: ocsf", "profile: obf")
+  .replace("type: entity_structure", "type: Book\nsubtype: picture-book")
+  .replace("tags: []", "book: book.json")
+  .replace("authority: human", "authority: agent"), "utf8");
+writeFileSync(join(bookFixture, "book.json"), "{}\n", "utf8");
+writeFileSync(join(bookFixture, "log.md"), "# Log\n\n- synthetic SDK fixture\n", "utf8");
+mkdirSync(join(bookFixture, "bible"));
+writeFileSync(join(bookFixture, "bible", "canon.json"), "{}\n", "utf8");
+assertBookPack(bookFixture);
+
 const here = dirname(fileURLToPath(import.meta.url));
 const morgan = join(here, "..", "..", "..", "..", "prim.obf", "examples", "metrics-gold-fairy-tale");
-try {
-  const m = openPrim(morgan);
-  assert.equal(m.viewKey, "obf/picture-book");
-  assert.equal(m.view().projects, "scene+lines");
-  assert.ok(m.authorityPaths().includes("book.json"));
-  assert.ok(m.constraintPaths().some((x) => x.includes("bible")));
-  assert.ok(m.logFile());
-  assert.deepEqual(m.validateBase(), []);
-  assert.equal(m.trust(), "agent");
-} catch (err) {
-  if (err instanceof PrimError && err.message.includes("no index.md")) {
-    /* sibling example not checked out */
-  } else {
-    throw err;
-  }
+if (existsSync(morgan)) {
+  // An available but malformed fixture must fail; only absence is optional.
+  assertBookPack(morgan);
+} else {
+  process.stdout.write("skip — optional sibling prim.obf example not checked out; local book contracts exercised\n");
 }
 
 const empty = join(tmp, "empty");
