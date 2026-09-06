@@ -191,10 +191,20 @@ assert.equal(hp.surface({ as: "editor" }), undefined);
 assert.equal(hp.surface({ as: "viewer" })?.name, "prim-viewer");
 assert.equal(hp.connector()?.name, "prim-viewer-webmcp");
 assert.equal(hp.connector({ as: "webmcp" })?.name, "prim-viewer-webmcp");
-assert.deepEqual(hp.tools().map((t) => t.name), ["opff-editor", "prim-viewer", "prim-viewer-webmcp"]);
+// The registry also publishes two category-wide hosts. They cite every profile;
+// they must remain discoverable without displacing the profile-specific editor.
+assert.deepEqual(hp.tools().map((t) => t.name), [
+  "opff-editor", "prim-viewer", "prim-viewer-webmcp", "prim-mac", "prim-web",
+]);
+assert.deepEqual(hp.tools({ kind: "surface", as: "host" }).map((t) => t.name), [
+  "prim-mac", "prim-web",
+]);
+assert.deepEqual(hp.tools({ kind: "connector", as: "host" }), []);
 assert.equal(hp.pair().surface?.name, "opff-editor");
 assert.equal(hp.pair().connector?.name, "prim-viewer-webmcp");
-assert.deepEqual(p.tools().map((t) => t.name), ["ocsf-editor", "prim-viewer", "prim-viewer-webmcp"]);
+assert.deepEqual(p.tools().map((t) => t.name), [
+  "ocsf-editor", "prim-viewer", "prim-viewer-webmcp", "prim-mac", "prim-web",
+]);
 assert.ok(hp.files().includes("index.md"));
 assert.ok(hp.files("**/*.md").includes("log.md"));
 assert.throws(() => hp.read("../secret.md"), PrimError);
