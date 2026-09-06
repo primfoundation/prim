@@ -1,0 +1,117 @@
+{
+  "recorded_at": "2026-09-06T19:09:34.376520+00:00",
+  "scope": "New-file bootstrap only, in a standalone change-set workspace; not a complete repository checkout.",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "dependencies": {
+    "PyYAML": "6.0.3"
+  },
+  "success": true,
+  "unit_tests_run": 44,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_catalog_cli_and_drift_detection (test_profile_catalog.ProfileCatalogTests.test_catalog_cli_and_drift_detection) ... ok\ntest_cli_diagnostics_are_nonzero_without_traceback (test_profile_catalog.ProfileCatalogTests.test_cli_diagnostics_are_nonzero_without_traceback) ... ok\ntest_declared_validator_is_never_executed (test_profile_catalog.ProfileCatalogTests.test_declared_validator_is_never_executed) ... ok\ntest_dependency_folders_are_not_scanned (test_profile_catalog.ProfileCatalogTests.test_dependency_folders_are_not_scanned) ... ok\ntest_discovery_limits_do_not_return_partial_success (test_profile_catalog.ProfileCatalogTests.test_discovery_limits_do_not_return_partial_success) ... ok\ntest_discovery_multiple_profiles_and_versions (test_profile_catalog.ProfileCatalogTests.test_discovery_multiple_profiles_and_versions) ... ok\ntest_duplicate_identity_version_is_rejected (test_profile_catalog.ProfileCatalogTests.test_duplicate_identity_version_is_rejected) ... ok\ntest_extensions_and_aliases_are_metadata_not_authority (test_profile_catalog.ProfileCatalogTests.test_extensions_and_aliases_are_metadata_not_authority) ... ok\ntest_invalid_fields_are_rejected_not_coerced (test_profile_catalog.ProfileCatalogTests.test_invalid_fields_are_rejected_not_coerced) ... ok\ntest_invalid_sources_and_outputs_are_rejected (test_profile_catalog.ProfileCatalogTests.test_invalid_sources_and_outputs_are_rejected) ... ok\ntest_malformed_unsupported_duplicate_and_unsafe_yaml_fail (test_profile_catalog.ProfileCatalogTests.test_malformed_unsupported_duplicate_and_unsafe_yaml_fail) ... ok\ntest_manifest_digest_does_not_claim_resource_integrity (test_profile_catalog.ProfileCatalogTests.test_manifest_digest_does_not_claim_resource_integrity) ... ok\ntest_missing_resource_fails (test_profile_catalog.ProfileCatalogTests.test_missing_resource_fails) ... ok\ntest_moving_a_package_preserves_identity_and_manifest_hash (test_profile_catalog.ProfileCatalogTests.test_moving_a_package_preserves_identity_and_manifest_hash) ... ok\ntest_no_packages_is_not_a_successful_empty_catalog (test_profile_catalog.ProfileCatalogTests.test_no_packages_is_not_a_successful_empty_catalog) ... ok\ntest_noncontained_resource_paths_fail (test_profile_catalog.ProfileCatalogTests.test_noncontained_resource_paths_fail) ... ok\ntest_package_is_a_discovery_boundary (test_profile_catalog.ProfileCatalogTests.test_package_is_a_discovery_boundary) ... ok\ntest_repository_is_not_required (test_profile_catalog.ProfileCatalogTests.test_repository_is_not_required) ... ok\ntest_repository_research_example_is_only_manifest_checked (test_profile_catalog.ProfileCatalogTests.test_repository_research_example_is_only_manifest_checked) ... ok\ntest_resource_paths_can_be_files_or_directories (test_profile_catalog.ProfileCatalogTests.test_resource_paths_can_be_files_or_directories) ... ok\ntest_size_encoding_and_nesting_limits (test_profile_catalog.ProfileCatalogTests.test_size_encoding_and_nesting_limits) ... ok\ntest_strict_semantic_versions (test_profile_catalog.ProfileCatalogTests.test_strict_semantic_versions) ... ok\ntest_symlink_directory_in_source_is_not_silently_followed (test_profile_catalog.ProfileCatalogTests.test_symlink_directory_in_source_is_not_silently_followed) ... ok\ntest_symlink_manifest_and_roots_fail (test_profile_catalog.ProfileCatalogTests.test_symlink_manifest_and_roots_fail) ... ok\ntest_symlink_resource_fails (test_profile_catalog.ProfileCatalogTests.test_symlink_resource_fails) ... ok\ntest_unframed_empty_or_unclosed_document_fails (test_profile_catalog.ProfileCatalogTests.test_unframed_empty_or_unclosed_document_fails) ... ok\ntest_blocked_requires_reason (test_program.ProgramTests.test_blocked_requires_reason) ... ok\ntest_complete_requires_declared_evidence (test_program.ProgramTests.test_complete_requires_declared_evidence) ... ok\ntest_completed_work_cannot_have_incomplete_dependencies (test_program.ProgramTests.test_completed_work_cannot_have_incomplete_dependencies) ... ok\ntest_current_repository_plan (test_program.ProgramTests.test_current_repository_plan) ... ok\ntest_cycle_fails (test_program.ProgramTests.test_cycle_fails) ... ok\ntest_duplicate_json_keys_fail (test_program.ProgramTests.test_duplicate_json_keys_fail) ... ok\ntest_duplicates_fail (test_program.ProgramTests.test_duplicates_fail) ... ok\ntest_indirect_cycle_fails (test_program.ProgramTests.test_indirect_cycle_fails) ... ok\ntest_invalid_calendar_date_fails (test_program.ProgramTests.test_invalid_calendar_date_fails) ... ok\ntest_loss_of_domain_coverage_fails (test_program.ProgramTests.test_loss_of_domain_coverage_fails) ... ok\ntest_missing_acceptance_owner_status_or_evidence_requirements_fails (test_program.ProgramTests.test_missing_acceptance_owner_status_or_evidence_requirements_fails) ... ok\ntest_missing_or_escaping_evidence_fails (test_program.ProgramTests.test_missing_or_escaping_evidence_fails) ... ok\ntest_render_is_deterministic_and_drift_fails (test_program.ProgramTests.test_render_is_deterministic_and_drift_fails) ... ok\ntest_tests_do_not_satisfy_release_or_real_use (test_program.ProgramTests.test_tests_do_not_satisfy_release_or_real_use) ... ok\ntest_uncovered_workstream_or_milestone_fails (test_program.ProgramTests.test_uncovered_workstream_or_milestone_fails) ... ok\ntest_unknown_references_fail (test_program.ProgramTests.test_unknown_references_fail) ... ok\ntest_valid_ledger (test_program.ProgramTests.test_valid_ledger) ... ok\ntest_version_must_be_actual_integer (test_program.ProgramTests.test_version_must_be_actual_integer) ... ok\n\n----------------------------------------------------------------------\nRan 44 tests in 0.098s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout": "Program valid: 17 workstreams, 70 requirements; evidence references resolve.\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "render",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "discover",
+        "profiles",
+        "--check",
+        "registry/profiles.generated.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "inspect",
+        "profiles/research"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"checks\": {\n    \"declared_resource_paths\": \"passed\",\n    \"manifest\": \"passed\",\n    \"profile_conformance\": \"not_checked\",\n    \"publisher_identity\": \"not_verified\",\n    \"security_review\": \"not_performed\"\n  },\n  \"manifest_sha256\": \"21ede98ae4a7dc9066d8139697621f0227df4c226898567a2337dac9eb016666\",\n  \"metadata\": {\n    \"description\": \"Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.\",\n    \"extensions\": {\n      \"primfoundation\": {\n        \"status-note\": \"Discovery prototype only; Research vNext instance validation and ORF migration are not implemented.\"\n      }\n    },\n    \"format\": \"prim-profile\",\n    \"id\": \"primfoundation/research\",\n    \"kinds\": [\n      \"investigation\"\n    ],\n    \"legacy_aliases\": [\n      \"orf\"\n    ],\n    \"license\": \"MIT\",\n    \"manifest_version\": \"0.1\",\n    \"maturity\": \"development\",\n    \"name\": \"Research Prim\",\n    \"resources\": {\n      \"examples\": \"examples\",\n      \"specification\": \"SPEC.md\"\n    },\n    \"version\": \"0.3.0-dev.1\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "tools"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "input_sha256": {
+    "profiles/research/PROFILE.md": "21ede98ae4a7dc9066d8139697621f0227df4c226898567a2337dac9eb016666",
+    "profiles/research/SPEC.md": "8ff0ecee1ff20b9c923df4c27141ebba11176a7a6bf7c81c815aa17014f4f6cb",
+    "profiles/research/examples/README.md": "44bdc206a6c475972c6ff999d67e30f53a9dba2a0e2baba84090d0ae820753c4",
+    "program/plan.json": "2d09fbedd3407dcf47579f2ccbf0e671e4b0fea9107c0d2c105ff7819ab4592f",
+    "registry/profiles.generated.json": "b7c39a330cb9798fd2b74649341f4eb340af7083e30aac27c0ee99157a55f505",
+    "tools/profile_catalog.py": "00ae868aeac86150e33bb3c5dd369993b6ecd7d5b9b8ad797777cf8368ad1d31",
+    "tools/program.py": "2502f5546da06d92a7933a685e899a4d36c41b2bf7e1d42bdc0b21b43b306249",
+    "tools/requirements.txt": "46670d2aa806e05f78aa8263fa4e847ff69cfe29196bd39f8eb9713fbbf02013",
+    "tools/tests/test_profile_catalog.py": "de796a1fb8723b350f5230181b2ac937d4f287223a22fe609b95565c7e1f5ef8",
+    "tools/tests/test_program.py": "426f79072b9a94e5a472b1a763dd050cfc042a74bf793ead66562440d6429524",
+    "tools/verify.py": "a4f469064b172db17a962e551c4ad4be586e1a0965f233effaaa171dfc9bd372"
+  },
+  "not_run": [
+    "Existing TypeScript SDK regression",
+    "ORF legacy validator/fixtures",
+    "Desktop or browser UI",
+    "Repository CI",
+    "Published-package installation",
+    "Independent security review",
+    "Real-account or production acceptance"
+  ],
+  "publication": {
+    "github": "blocked: create_tree and create_branch returned HTTP 403",
+    "commit": null,
+    "pull_request": null,
+    "released": false,
+    "deployed": false
+  },
+  "limits": [
+    "Input hashes identify the tested new code/data, not external resources or an authenticated attestation.",
+    "A manifest pass is not Research instance conformance, publisher verification, or a security certification."
+  ]
+}

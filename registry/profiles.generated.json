@@ -1,0 +1,42 @@
+{
+  "catalog_version": 1,
+  "format": "prim-profile-catalog",
+  "profiles": [
+    {
+      "checks": {
+        "declared_resource_paths": "passed",
+        "manifest": "passed",
+        "profile_conformance": "not_checked",
+        "publisher_identity": "not_verified",
+        "security_review": "not_performed"
+      },
+      "location": "research/PROFILE.md",
+      "manifest_sha256": "21ede98ae4a7dc9066d8139697621f0227df4c226898567a2337dac9eb016666",
+      "metadata": {
+        "description": "Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.",
+        "extensions": {
+          "primfoundation": {
+            "status-note": "Discovery prototype only; Research vNext instance validation and ORF migration are not implemented."
+          }
+        },
+        "format": "prim-profile",
+        "id": "primfoundation/research",
+        "kinds": [
+          "investigation"
+        ],
+        "legacy_aliases": [
+          "orf"
+        ],
+        "license": "MIT",
+        "manifest_version": "0.1",
+        "maturity": "development",
+        "name": "Research Prim",
+        "resources": {
+          "examples": "examples",
+          "specification": "SPEC.md"
+        },
+        "version": "0.3.0-dev.1"
+      }
+    }
+  ]
+}
