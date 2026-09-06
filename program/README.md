@@ -2,7 +2,7 @@
 
 This is the durable record of the Foundation-wide build authorized on September 6, 2026. Research is the first implementation path, not the boundary of the mission.
 
-**Current publication state:** GitHub write access is restored; work is on `codex/foundation-program-bootstrap`. See `HANDOFF.md` for observed commit, PR and CI evidence. No package release, production deployment, or unattended agent execution is implied.
+**Current publication state:** GitHub write access is restored; bootstrap is in PR #5 and Research compatibility continues on `codex/research-compatibility` (PR #6). See `HANDOFF.md` for observed commit, PR and CI evidence. No package release, production deployment, or unattended agent execution is implied.
 
 ## One record, several views
 
@@ -34,6 +34,7 @@ python -m unittest discover -s tools/tests -v
 python tools/program.py check
 python tools/program.py render --check
 python tools/profile_catalog.py inspect profiles/research
+python tools/orf_conformance.py
 python tools/profile_catalog.py discover profiles --check registry/profiles.generated.json
 ```
 

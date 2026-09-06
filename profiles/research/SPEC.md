@@ -1,7 +1,7 @@
 # Research Prim — development design brief
 
 Status: discovery prototype; not a replacement for the ORF 0.2.0 specification.
-Publication package version: 0.3.0-dev.1. No stable instance encoding is selected.
+Publication package version: 0.3.0-dev.2. No stable instance encoding is selected.
 
 ## Durable outcomes
 
@@ -45,7 +45,16 @@ Adding `legacy_aliases: [orf]` is not such an adapter.
 
 Claim/source/evidence identifiers and relationships; minimal interoperable
 encoding; evidence-policy selection; revision semantics; authenticated review
-receipts; category/grammar version compatibility; genuine legacy fixtures;
+receipts; category/grammar version compatibility; semantic migration from the pinned legacy fixtures;
 two independent readers/writers; and mappings to relevant provenance and
 research-object standards remain open. Those obligations live in the program
 ledger rather than being presented as implemented features.
+
+## Compatibility implementation checkpoint
+
+The pinned ORF baseline, inspection tool, offline review view and byte-preserving
+transport are implemented in this development branch. See
+[compatibility/README.md](compatibility/README.md). They preserve historical
+semantics and expose gaps; they do not ratify a Research vNext instance schema.
+The target semantic model, versioned migration, authenticated review, actual
+source verification and two independent readers/writers remain open.

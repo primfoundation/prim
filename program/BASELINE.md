@@ -38,3 +38,18 @@ created codex/foundation-program-bootstrap from the same main SHA. The original
 403 evidence is historical. The initial archive checksum manifest and 44 tests
 were verified again locally. Direct Git checkout still failed with a DNS error;
 this does not prevent connector writes, but full-checkout CI must be observed.
+
+## Research continuation baseline
+
+Read-only CI run 34059269453 exported the full public Prim bootstrap at
+633ae194ff96de6d1e9bf43dad91aa7f066a474f and ORF at
+4ae78ddaec19ebbc2c1e93f8289e9c6993af057d. The downloaded artifact digest and both
+archive digests matched. Local reconstruction of the full Prim source reproduced
+Git tree 93d9db26f48ce461c6e74f3fb6c7499eb8e505ce exactly. Full SDK tests can now
+run locally on the exported source; direct network checkout is still unavailable.
+
+The ORF commit's actual tree is bcaa23d1bd32bce7e627538abb107d98799cebaa. All 15
+tracked upstream files are retained unchanged under Research compatibility. The
+original self-test and strict good fixture pass; the original negative fixture
+returns the expected nonzero result. This does not retrospectively alter the
+earlier baseline's more limited observations. Research vNext migration is open.

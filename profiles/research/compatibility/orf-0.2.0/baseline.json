@@ -1,0 +1,107 @@
+{
+  "format": "prim-legacy-baseline",
+  "version": 1,
+  "repository": "eidos-agi/prim.orf",
+  "commit": "4ae78ddaec19ebbc2c1e93f8289e9c6993af057d",
+  "tree": "bcaa23d1bd32bce7e627538abb107d98799cebaa",
+  "profile_version": "0.2.0",
+  "grammar_version": "0.2",
+  "license": "MIT",
+  "acquisition": {
+    "run_id": 34059269453,
+    "artifact_id": 9996944933,
+    "artifact_sha256": "7ed4ce0c208deda3ad5493146e0bb1347867ae6766ccdf998d959d297dbdfcf5"
+  },
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 8,
+      "sha256": "b0d516d67cf06d24e190f7487ce6c242603648ee3739e980c7870558aaf72b4b",
+      "git_blob": "f8e2daa0d4a21ee3a08cf0d39ef6feb28ca1f560"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 410,
+      "sha256": "92bab5d9e5d451da7476f4dcfeac472114e82ae05fff85e4dd19951fb257bb01",
+      "git_blob": "212c39573c151499fbf4cb064fbf313f1fec1430"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+      "git_blob": "810ae661b705e3da980cc5a798fa867f9d5ad619"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2492,
+      "sha256": "8af7ad7303812d8ede11b35c4b1fefcb233af09cfce6d224b66f946ddb0de726",
+      "git_blob": "53d143b093e183eb2650d7c31442d2da383d40ca"
+    },
+    {
+      "path": "SPEC.md",
+      "bytes": 8947,
+      "sha256": "d676ac85258879a5430f50e626fdb96ca438f786b6c77aa0d9d1414453874068",
+      "git_blob": "a2ad359b27a904fc4a2bf34d5a6788c0d3d18ea2"
+    },
+    {
+      "path": "examples/orf-bad-done-without-go/index.md",
+      "bytes": 328,
+      "sha256": "c01195a11ba610db786e83a20201d1b5058e932673c88c9238c1ff9a6adef39f",
+      "git_blob": "a960655f9685790a55d1bbf1d504d20cd6275dd9"
+    },
+    {
+      "path": "examples/orf-bad-done-without-go/log.md",
+      "bytes": 43,
+      "sha256": "de9a1375c22958a6887b878835fc29d8c9e25074329e1e334596bfd112fbb155",
+      "git_blob": "2f6441752fc25489fbfac4400caac8119c9dcb68"
+    },
+    {
+      "path": "examples/orf-minimal/findings/01-origin-myth.md",
+      "bytes": 802,
+      "sha256": "9aae2b46f8246c706d961845de1bbe2cf8fcdce5a4b2464e67ad66d4e0afa0e8",
+      "git_blob": "a9914462ca02c991aa4909e2d89a5bf26a920dd3"
+    },
+    {
+      "path": "examples/orf-minimal/findings/02-retention-studies.md",
+      "bytes": 793,
+      "sha256": "8a365ed39ccf2007fe8d842b09fe5eafd69c8747f2994a08b8aed964f4b6f1c2",
+      "git_blob": "60c08a43d1b41076fe6d5548591098d8722f8ebc"
+    },
+    {
+      "path": "examples/orf-minimal/index.md",
+      "bytes": 1216,
+      "sha256": "e9b56ff3434859a1cbac8275ff1a083c8d0807d27cb85e08c306c997d9a4fc1f",
+      "git_blob": "56755170cd9857e9d0f8b89fe20010afa1e9907e"
+    },
+    {
+      "path": "examples/orf-minimal/log.md",
+      "bytes": 72,
+      "sha256": "dd474bf936894c08c5b0307f8f8c42ec2fb1772efe33fa8704d3237d03890880",
+      "git_blob": "929626b70006777b3e4468b9aa7752dd1443c33a"
+    },
+    {
+      "path": "orf/__init__.py",
+      "bytes": 132,
+      "sha256": "2adec2613695dbe595ce05773f2d5178a142e7807fe0d3cb746e55c00d7c3224",
+      "git_blob": "2f0d7a8531fd397526927dec108fd0d0392e72bf"
+    },
+    {
+      "path": "orf/__main__.py",
+      "bytes": 88,
+      "sha256": "f6794dd8852e533f04f68d14ba425f3f3be3b9b8e1b85600b05d74562a1a799f",
+      "git_blob": "a39eea18acce4665c382ac51e408e9212dc41c71"
+    },
+    {
+      "path": "orf/validate.py",
+      "bytes": 19392,
+      "sha256": "acc4c9febf52800e3c8e4034f9db2fb860f31c32edb42f61d74b871aa0c0a24d",
+      "git_blob": "2699d9ef1fe94074bf75359de5550409d842f686"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 582,
+      "sha256": "137f2f2a09b4eaa771963b904867ba7231e37fc74ec45d4a5811fdbfc909e22a",
+      "git_blob": "e9d830c480024cbe034e7f1ef54e116dfb686c03"
+    }
+  ]
+}

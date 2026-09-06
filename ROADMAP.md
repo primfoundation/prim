@@ -2,13 +2,13 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-06. Execution: **branch_work_under_review**.
+As of 2026-09-06. Execution: **research_compatibility_under_review**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 70 tracked requirements. blocked: 0; complete: 0; in_progress: 2; in_review: 5; planned: 63.
+17 workstreams; 70 tracked requirements. blocked: 0; complete: 0; in_progress: 5; in_review: 6; planned: 59.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -70,13 +70,13 @@ Local checker and negative tests; external review pending.
 
 **PRG-003 — Publish the reviewed change set**
 
-State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
+State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Create an identifiable branch, verify every changed file, run repository CI, and open a PR without modifying production.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-BOOT-CI. Dependencies: none.
 
-Authorization restored and branch created. Consult HANDOFF.md for publication and CI evidence; independent review remains an acceptance gate.
+PR #5 published and full-checkout CI passed. PR #6 continues Research as a stacked review; no merge or independent approval is inferred.
 
 **PRG-004 — Reconcile existing plans and in-flight work**
 
@@ -260,19 +260,23 @@ Delivery responsibility: foundation.
 
 **RES-001 — Preserve and test ORF compatibility**
 
-State: `planned` · Milestone: M2 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Pin actual ORF source/fixtures, run the original validator, retain negative cases, and require explicit loss-reporting differential migration tests.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-ORF-CONFORMANCE. Dependencies: none.
+
+Pinned all 15 upstream files; original CLI and both modes exercised; transport and inspection round trips tested. Target Research vNext semantic migration and independent review remain open.
 
 **RES-002 — Implement lasting research records**
 
-State: `planned` · Milestone: M2 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Question/scope, sources, claims, evidence relationships, counterevidence, methods and uncertainty interoperate without a particular agent harness.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: CORE-001, RES-001.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST. Dependencies: CORE-001, RES-001.
+
+A derived legacy Research preview exposes question, recorded context/status and claim citations. It is explicitly non-authoritative; a native vNext model and cross-implementation interchange are not implemented.
 
 **RES-003 — Implement research lifecycle and review**
 
@@ -476,11 +480,13 @@ Delivery responsibility: foundation.
 
 **SEC-001 — Maintain the threat model**
 
-State: `planned` · Milestone: M1 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Untrusted definitions, instance data, scripts, renderers, sources, agents, logs and indexes have abuse cases and trust boundaries before network execution.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST. Dependencies: none.
+
+THREAT-MODEL.md covers the local compatibility slice with bounded-input tests. Whole-platform threat modeling, process sandboxing and independent review remain open.
 
 **SEC-002 — Protect sensitive records and keys**
 
@@ -514,7 +520,7 @@ Delivery responsibility: reference.
 
 State: `planned` · Milestone: M3 · Owner: implementation-lead.
 
-Acceptance: Coverage spans personal/family/household/work/business/community contexts with unknown and deliberately unfiled states; domains are not automatic new schemas.
+Acceptance: Coverage spans overlapping personal/family/household/work/business/community Worlds or contexts with unknown and deliberately unfiled states; domains are not automatic new schemas or one folder taxonomy.
 
 Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
 
@@ -530,7 +536,7 @@ Required evidence: implementation, tests, review. Evidence retained: none. Depen
 
 State: `planned` · Milestone: M4 · Owner: implementation-lead.
 
-Acceptance: Coverage distinguishes unknown, absent, unfiled, stale, contradictory and inaccessible; imported item counts are not completeness.
+Acceptance: Life diagnostics distinguish Coverage, Fidelity and Operability, including unknown, absent, unfiled, stale, contradictory and inaccessible; silence and imported item counts are not completeness.
 
 Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: LIFE-001, LIFE-002.
 
@@ -548,11 +554,13 @@ Delivery responsibility: foundation.
 
 **INTEROP-001 — Publish version-specific conformance fixtures**
 
-State: `planned` · Milestone: M2 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Positive/negative and adversarial cases separately cover packaging, manifest, profile semantics, migrations and unsupported-validator states.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-ORF-CONFORMANCE. Dependencies: none.
+
+Pinned legacy fixtures and adversarial preservation/interpretation cases exist. Full category/vNext conformance and independent review remain open.
 
 **INTEROP-002 — Map relevant existing standards**
 

@@ -1,0 +1,12 @@
+{
+  "scope": "DOM-render smoke test of generated HTML via set_content; not file-opening or user acceptance",
+  "viewport_width": 390,
+  "browser_version": "144.0.7559.96",
+  "title": "Goldfish memory \u2014 weeks, not three seconds \u2014 Research review",
+  "horizontal_overflow": false,
+  "network_requests": [],
+  "limitations": [
+    "Default Playwright browser executable unavailable; used system Chromium.",
+    "Direct file navigation is blocked by environment policy and was not bypassed. Actual file-opening acceptance remains unverified."
+  ]
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "okf-research-format"
+version = "0.2.0"
+description = "ORF — OKF Research Format: additive OKF v0.2 profile for investigations"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+
+[project.scripts]
+orf-validate = "orf.validate:main"
+
+[project.urls]
+Homepage = "https://github.com/eidos-agi/orf"
+Repository = "https://github.com/eidos-agi/orf"
+Spec = "https://github.com/eidos-agi/orf/blob/main/SPEC.md"
+
+[tool.setuptools.packages.find]
+include = ["orf*"]

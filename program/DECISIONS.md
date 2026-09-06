@@ -46,6 +46,49 @@ Status: implemented; full-checkout CI passed, independent review remains open.
 
 Always run book contract assertions on a local synthetic fixture; keep the optional sibling integration when available, report absence explicitly, and fail malformed available examples. Do not make a private sibling checkout a prerequisite for testing the public SDK. Rationale: [fixture evidence](evidence/2026-09-06-sdk-fixture.md). Passing result for both corrections: [CI summary](evidence/ci-34057807656.json).
 
+## D008 — Preserve and characterize the exact ORF baseline
+
+Status: implemented on the Research compatibility branch; review remains open.
+
+Keep all 15 upstream source files, license and examples unchanged at the pinned
+ORF commit. Verify sizes, SHA-256 and Git blob IDs before loading the reviewed
+local oracle. Run its actual CLI and self-tests, then retain counterexamples
+showing where a legacy pass differs from completeness or factual correctness.
+Do not fix old semantics inside the preserved baseline. Source acquisition used
+read-only CI with public, pinned commits; no tokens entered the source artifacts.
+
+## D009 — Byte preservation is not semantic migration
+
+Status: selected, implemented reference transport; not a ratified Prim encoding.
+
+Provide an explicitly named versioned preservation envelope for file bytes,
+relative paths and empty directories. Document lost OS/archive metadata. Restore
+to new destinations only; never overwrite originals. Derived Research previews
+and browser views cite hashes and retain original metadata; they are not a second
+authority and do not turn citations into evidentiary support. RES-001 stays in
+progress until the target Research migration and independent review are proven.
+
+## D010 — Local compatibility before remote execution
+
+Status: selected, scoped implementation boundary.
+
+Directory packs and the preservation envelope are supported. No remote fetch,
+arbitrary validator import, ZIP/TAR ingestion, live agent runtime, cloud service
+or package release is added. Unrecognized versions and oracle exceptions cannot
+produce a passed profile result. Broader trust boundaries and limitations are
+recorded in THREAT-MODEL.md. Production SDK integration is still separate work.
+
+## D011 — Preserve whole-life direction while implementing Research
+
+Status: scope clarification, not new schema proliferation.
+
+The larger mission remains overlapping Worlds/contexts, not one folder taxonomy.
+Life diagnostics must distinguish Coverage, Fidelity and Operability and must not
+confuse silence or artifact count with completeness. The current domain list is
+provisional; reconcile it against the original discovery scaffold under PRG-004
+and LIFE-001 rather than pretending the scaffold is already exhausted. This slice
+removes no workstreams, requirements, milestone gates or reference cases.
+
 ## Open decisions
 
 | ID | Decision | Evidence needed |

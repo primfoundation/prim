@@ -1,0 +1,119 @@
+{
+  "recorded_at": "2026-09-06T21:03:06.479616+00:00",
+  "scope": "Pinned ORF CLI and preservation transport; not Research vNext migration or source verification",
+  "source_commit": "4ae78ddaec19ebbc2c1e93f8289e9c6993af057d",
+  "source_tree": "bcaa23d1bd32bce7e627538abb107d98799cebaa",
+  "files_checked": 15,
+  "success": true,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "orf.validate",
+        "--selftest"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "selftest OK — done/go gate, question gates, CONFIRMED hosts, version alignment, intent authorship, host independence, frontmatter parse\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "orf.validate",
+        "examples/orf-minimal"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok    $UPSTREAM/examples/orf-minimal/index.md\nok    $UPSTREAM/examples/orf-minimal/findings/01-origin-myth.md\nok    $UPSTREAM/examples/orf-minimal/findings/02-retention-studies.md\n\n3 path(s), 0 with errors\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "orf.validate",
+        "--strict",
+        "examples/orf-minimal"
+      ],
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok    $UPSTREAM/examples/orf-minimal/index.md\nok    $UPSTREAM/examples/orf-minimal/findings/01-origin-myth.md\nok    $UPSTREAM/examples/orf-minimal/findings/02-retention-studies.md\n\n3 path(s), 0 with errors\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "orf.validate",
+        "examples/orf-bad-done-without-go"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL  $UPSTREAM/examples/orf-bad-done-without-go/index.md\n        error done_needs_go: status: done requires approval: go — no durable finish without human go\nwarn  $UPSTREAM/examples/orf-bad-done-without-go/findings\n        warn  findings_missing: status: done but no findings/ directory\n\n2 path(s), 1 with errors\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "orf.validate",
+        "--strict",
+        "examples/orf-bad-done-without-go"
+      ],
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL  $UPSTREAM/examples/orf-bad-done-without-go/index.md\n        error done_needs_go: status: done requires approval: go — no durable finish without human go\nFAIL  $UPSTREAM/examples/orf-bad-done-without-go/findings\n        error findings_missing: status: done but no findings/ directory\n\n2 path(s), 2 with errors\n",
+      "stderr": ""
+    }
+  ],
+  "roundtrips": [
+    {
+      "fixture": "orf-minimal",
+      "strict": false,
+      "bytes_equal": true,
+      "inspection_equal": true,
+      "legacy_status": "passed"
+    },
+    {
+      "fixture": "orf-minimal",
+      "strict": true,
+      "bytes_equal": true,
+      "inspection_equal": true,
+      "legacy_status": "passed"
+    },
+    {
+      "fixture": "orf-bad-done-without-go",
+      "strict": false,
+      "bytes_equal": true,
+      "inspection_equal": true,
+      "legacy_status": "failed"
+    },
+    {
+      "fixture": "orf-bad-done-without-go",
+      "strict": true,
+      "bytes_equal": true,
+      "inspection_equal": true,
+      "legacy_status": "failed"
+    }
+  ],
+  "not_established": [
+    "factual correctness",
+    "source independence",
+    "authenticated authority",
+    "Research vNext semantic migration",
+    "independent implementation review"
+  ]
+}
