@@ -1,0 +1,48 @@
+name: Pinned ORF source baseline
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/orf-baseline.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Read the public bootstrap baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: primfoundation/prim
+          ref: 633ae194ff96de6d1e9bf43dad91aa7f066a474f
+          path: prim
+          persist-credentials: false
+      - name: Read the public legacy ORF baseline
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: eidos-agi/prim.orf
+          ref: 4ae78ddaec19ebbc2c1e93f8289e9c6993af057d
+          path: orf
+          persist-credentials: false
+      - name: Export tracked public source only; do not run source code
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/prim-baselines"
+          test "$(git -C prim rev-parse HEAD)" = 633ae194ff96de6d1e9bf43dad91aa7f066a474f
+          test "$(git -C orf rev-parse HEAD)" = 4ae78ddaec19ebbc2c1e93f8289e9c6993af057d
+          test "$(git -C orf rev-parse HEAD^{tree})" = bcaa23d1bd32bce7e627538abb107d98799cebaa
+          git -C prim archive --format=tar HEAD > "$RUNNER_TEMP/prim-baselines/prim.tar"
+          git -C orf archive --format=tar HEAD > "$RUNNER_TEMP/prim-baselines/orf.tar"
+          cd "$RUNNER_TEMP/prim-baselines"
+          sha256sum prim.tar orf.tar > SHA256SUMS
+      - name: Retain immutable baseline sources for local compatibility development
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: prim-orf-public-baselines
+          path: ${{ runner.temp }}/prim-baselines/
+          retention-days: 7
+          if-no-files-found: error
