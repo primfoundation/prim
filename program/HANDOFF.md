@@ -1,71 +1,58 @@
-# Research compatibility handoff — September 6, 2026
+# Foundation Library MCP handoff — September 6, 2026
 
-## Scope and branches
+## Larger map and preserved branches
 
-The full Foundation program remains authoritative: 17 workstreams, 70 requirements,
-seven milestone gates. Research is the first path, not the mission boundary.
-Whole-life Worlds, Coverage/Fidelity/Operability diagnostics, six reference cases,
-security, human products, governance, ecosystem and sustainability remain open.
+All 17 workstreams and seven milestones remain. The prior 70 requirement IDs are
+retained; nine explicit library/MCP/ranking/publication/hosting requirements bring
+the ledger to 79. Person and Decision now exercise the generic kit alongside
+Research; receipt, contract, project and system are still open reference cases.
+Whole-life contexts/Worlds, diagnostics, ingestion, agency, privacy, governance,
+community and sustainability are not dropped.
 
-Bootstrap: PR #5, `codex/foundation-program-bootstrap`, observed head
-`633ae194ff96de6d1e9bf43dad91aa7f066a474f`; its CI passed. It is not merged.
-Continuation: PR #6, `codex/research-compatibility`, stacked on the bootstrap.
-https://github.com/primfoundation/prim/pull/6
+PR #5: `codex/foundation-program-bootstrap`, observed head 633ae194ff96de6d1e9bf43dad91aa7f066a474f.
+PR #6: `codex/research-compatibility`, observed head 65b956b03c5eee4b309bbc61df2a57e413b34fb0.
+Current PR #7: `codex/foundation-library-mcp`, stacked on #6. Consult PR metadata
+for the exact submitted head/CI; local workspace commits are not upstream commits.
+No merge, old format rewrite, existing service modification, or unattended agent.
 
-The initial continuation commit b8c3e9f579486934a20169cda2ef2c9ec3af323f created
-only a bounded read-only baseline-source acquisition workflow. Run 34059269453
-passed and its public tracked-source artifact was verified. The temporary
-acquisition workflow is removed from the final code slice; its commit and run
-remain evidence. Ordinary Foundation CI now covers stacked pull requests too.
+## What is available
 
-## Implemented here
+`services/library` is the alpha installable package. It supports public definition
+search, exact-version/hash pins, schemas/templates, resources, creation guidance,
+Popular/Trending ranking, stdio and remotely hostable Streamable HTTP. Human and
+JSON surfaces share the same compiled definitions. Three development profiles
+are available, not the entire historical registry. `prim-library` creates and
+checks local files with a definition lock; private content is not a public MCP
+parameter. Generic tooling, not a hand-written endpoint per Prim type.
 
-All 15 original ORF source files plus license/spec/examples are frozen at commit
-4ae78ddaec19ebbc2c1e93f8289e9c6993af057d. The reference tools provide baseline
-integrity verification, historical CLI conformance, bounded inspection, exact
-byte/layout transport and restoration, interpretation-difference warnings,
-a derived research preview and script-free offline review HTML.
+Signed, consented popularity signals can be processed by the operator CLI; the
+public service cannot accept votes. The initial snapshot has no made-up adoption.
+Use the README/SECURITY.md for environment, ownership and trust limits. Schemas
+validate structure, not truth or permission. Native Research is still experimental;
+ORF preservation and compatibility remain separate, and semantic migration is open.
 
-See profiles/research/compatibility/README.md, program/THREAT-MODEL.md and D008–D011.
-`legacy_aliases: [orf]` still does not trigger automatic resolution or migration.
-The preservation envelope is explicitly NOT a native Research instance encoding.
-Nothing in the input package can supply executable validation code or authority.
+## Evidence and release state
 
-## Evidence and honesty
+See evidence/2026-09-06-library-mcp.md and evidence/library-tests.json. The service
+suite, inherited 95 Python tests and existing TypeScript suites are run. Clean
+wheel installation is separately exercised outside the repository. PR CI runs
+same-source checks and retains packages/reports. An installable alpha is not a
+PyPI release, public endpoint, independent review or complete user acceptance.
+Read any CI checkpoint for the exact head tested; do not assume later changes pass.
 
-The complete public source export hashes to the observed bootstrap tree, so local
-verification now includes the actual existing SDK. Retained reports:
-- evidence/research-local-tests.json: exact current local checks/input digests.
-- evidence/orf-conformance.json: original CLI and strict/default round trips.
-- evidence/2026-09-06-research-compatibility.md: source and implementation scope.
-- PR #6 checks/comments: observed CI for each submitted head; do not infer success
-  for a later commit from an earlier passing run.
+## Next gate
 
-Historical validator gaps are preserved and exposed, not silently repaired.
-A legacy pass is not factual correctness, independent evidence, authenticated
-review, authorization, security certification or Research vNext conformance.
-No independent review, native vNext migration, UI acceptance, published package,
-production deployment, real-account trial or unattended agent is claimed.
+OPS-005 is blocked on Foundation hosting ownership and budget: the read inventory
+did not establish a named approved target. Do not use unrelated personal/employer
+workloads to avoid asking. After authorization, use explicit allowed hosts, TLS,
+edge quotas, monitoring, rollback and external-client acceptance. No live public
+URL is claimed. Container configuration is provided but Docker was not proven here.
 
-## Next concrete bounded step
+While that gate is pending, PUB-006/DIR-007 cover approved external publishers,
+immutable snapshot refresh and authenticated opt-in popularity collection. RES-003
+and RES-001 still require lifecycle and genuine semantic migration. Independent
+security and user feedback remain review evidence, never fabricated by tests.
 
-CORE-001/RES-002: propose and implement the smallest native Research record model
-covering questions, assertions, source/evidence relationships, contradiction,
-uncertainty, provenance and separate review/authorization state. Exercise it
-against the known legacy failures and the six non-research reference cases before
-promoting any new universal envelope. Then add explicit semantic migration and
-loss reports; byte-preserving transport alone does not finish RES-001.
-
-Completion requires retaining unknown bytes/fields, never creating approval or
-support that was not asserted, recording parser ambiguity, and demonstrating a
-round trip across independently developed readers. Keep broader program and
-all review/deployment/real-use gates visible; do not shrink scope to this tool.
-
-## Safety and coordination
-
-Main, original ORF repository, the old runtime/registry, person formats, production
-services and unrelated branches are untouched. The inherited bootstrap test fixes
-remain unchanged. No automatic merge, paid worker, schedule or background agent
-is enabled. Verification workflows are bounded CI, not autonomous implementation.
-Do not overwrite PR #5 or existing sdk-python / prims/zeroshot-connector work.
-Cross-repository plan/owner and deployment reconciliation remain PRG-004 work.
+No background worker, publication schedule, auto-merge, paid service or private
+record upload is started. CI is bounded testing. Preserve other branches and
+reconcile prior docs/opf work under PRG-004 before any cutover.

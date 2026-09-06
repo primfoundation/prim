@@ -1,0 +1,141 @@
+{
+  "format": "prim-library-index",
+  "version": 1,
+  "definitions": [
+    {
+      "metadata": {
+        "format": "prim-profile",
+        "manifest_version": "0.1",
+        "id": "primfoundation/decision",
+        "name": "Decision Prim",
+        "version": "0.1.0-dev.1",
+        "maturity": "development",
+        "description": "A decision with alternatives, rationale, recorded authority and supersession.",
+        "license": "MIT",
+        "kinds": [
+          "decision"
+        ],
+        "resources": {
+          "specification": "SPEC.md",
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "template": "template.json"
+        }
+      },
+      "resources": {
+        "manifest": {
+          "sha256": "98cd58abfcc549139124b0dc27d0e95e51a04d0b8f871b7ed7065a458d91cc76"
+        },
+        "specification": {
+          "sha256": "d12ed9aeed46366e740d13717d2dd61e8766238ad18837995e72b72b3b9cba3d"
+        },
+        "creation": {
+          "sha256": "864749a1da738af24d54dab53963025b05b03d5a01b113dd96aa09cbbb611584"
+        },
+        "schema": {
+          "sha256": "1995dc98e94c876213caf89db46a18b99ede6f5af089c2b78403d8051289edb9"
+        },
+        "template": {
+          "sha256": "276cb9bfa2545dbd075d646ea8537d75533cab6ead92c80e49eab8bcf82e4649"
+        }
+      },
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759"
+    },
+    {
+      "metadata": {
+        "format": "prim-profile",
+        "manifest_version": "0.1",
+        "id": "primfoundation/person",
+        "name": "Person Prim",
+        "version": "0.1.0-dev.1",
+        "maturity": "development",
+        "description": "A person record: name, contact details and explicitly recorded relationships.",
+        "license": "MIT",
+        "kinds": [
+          "person"
+        ],
+        "resources": {
+          "specification": "SPEC.md",
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "template": "template.json"
+        }
+      },
+      "resources": {
+        "manifest": {
+          "sha256": "a43ecc29176f73a4b6f035f627af917dfba52f82d9ba66fd5b9fdf372985bfce"
+        },
+        "specification": {
+          "sha256": "3adecb228fe021ccbc8b36e412583d8146cd6a86a991f0da786abd7d14863511"
+        },
+        "creation": {
+          "sha256": "d96f235958903c464fe814ab085dd887c48daab48736c5bbf6719bbd69cf78d4"
+        },
+        "schema": {
+          "sha256": "ec1dea54871365a994e59415c931ab6082e4c00faa335ffbdeeef1bc374dbd9f"
+        },
+        "template": {
+          "sha256": "c3237d388e4147b6f75c28d3f9f6199c1990730fe2c9802719727f4b85a30dc7"
+        }
+      },
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c"
+    },
+    {
+      "metadata": {
+        "format": "prim-profile",
+        "manifest_version": "0.1",
+        "id": "primfoundation/research",
+        "name": "Research Prim",
+        "version": "0.3.0-dev.3",
+        "maturity": "development",
+        "description": "Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.",
+        "license": "MIT",
+        "kinds": [
+          "investigation"
+        ],
+        "legacy_aliases": [
+          "orf"
+        ],
+        "resources": {
+          "specification": "SPEC.md",
+          "examples": "examples",
+          "compatibility": "compatibility/README.md",
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "template": "template.json",
+          "native-specification": "NATIVE.md"
+        },
+        "extensions": {
+          "primfoundation": {
+            "status-note": "Native draft creation schema and local validator now available. ORF semantic migration and independent interoperability remain open."
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "sha256": "5ea258d72c23e57f477f74e397bb5f6f939c2a7722d3f6286b9e9d50c28f03c8"
+        },
+        "specification": {
+          "sha256": "92c5af54e8d8562bbb72991dc42fdbb7fd86c622feeec10d8ab291db6fc65c96"
+        },
+        "compatibility": {
+          "sha256": "804474d12566f3e5da04a56fbe90130fdb71795f1e60b41bf00c9a9e0ca47043"
+        },
+        "creation": {
+          "sha256": "00aedbe02799334df72e154f8bf5a0a97fd36857ebec1f71b68350ce2ce46381"
+        },
+        "schema": {
+          "sha256": "e53eb7c88ef5fd5b9f8a6bc17dd30650505512702ecbd419500b788b3b379060"
+        },
+        "template": {
+          "sha256": "effa22bc11d793e657dd3503dd3d6912bfccb4345b828abcd32ec831ab7ea480"
+        },
+        "native-specification": {
+          "sha256": "03c6c970eb88079fc8bbee31817b617b0707ebc9be00cfbe6468c2c9dee1834c"
+        }
+      },
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3"
+    }
+  ],
+  "snapshot_sha256": "eb03116b547111437cb11e02f65fb35da495861333d5b9d73ff3dce2d598d50a"
+}

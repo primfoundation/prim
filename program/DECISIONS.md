@@ -102,3 +102,48 @@ removes no workstreams, requirements, milestone gates or reference cases.
 | D107 | Public/private diagnostics and adoption metrics | Threat model, privacy review, explicit collection policy. |
 
 A selected choice is reversible engineering within this implementation, not a claim the founder ratified every field. Superseding decisions retain history and state migration consequences. Publishing permission is an operational concern, not a reason to weaken architectural gates.
+
+## D012 — Foundation MCP distribution is a first-class delivery path
+
+Status: founder requested September 6; implemented alpha, independent review open.
+
+Add an installable stdio/Streamable HTTP service backed by the same versioned
+library as human/JSON discovery. Public tools retrieve definitions, not private
+records. Agents obtain schemas and blank templates and create/validate locally.
+One generic kit contract works for multiple profiles. The server is neither an
+agent nor a hosted store for personal work. Existing TypeScript interfaces and
+legacy ORF interpretation are not silently replaced.
+
+## D013 — Popularity is consented adoption, not truth
+
+Status: selected alpha scoring policy; public signal collection not activated.
+
+Separate Popular (longer-term stars/adoption) and Trending (recent capped momentum).
+Search relevance still filters results. Approved collector services sign events;
+end-user client assertions alone cannot inflate counts. Deduplicate adoption,
+retain star/unstar and deletion semantics, suppress small cohorts, neutralize
+stale snapshots, and start with genuine no-data rather than seeded popularity.
+Trusted issuers still need identity/consent verification and anti-Sybil review.
+Read requests do not automatically become votes. Scoring and public collection
+can evolve through explicit versioned policies; neither implies security quality.
+
+## D014 — Small native drafts, not an unratified universal model
+
+Status: experimental Research, Person and Decision creation demonstrated.
+
+Research's development model separates claims, sources, evidence relationships,
+activities, workflow/outcome and recorded review. The same declaration-driven
+schema/template mechanism handles Person and Decision. Unknown JSON fields are
+preserved. This proves an authoring path, not a stable universal substrate,
+authenticated review, full lifecycle, or semantic ORF migration. Four remaining
+non-research reference cases and independent implementations remain obligations.
+
+## D015 — Hosting is a named ownership decision
+
+Status: public deployment gate open; portable software proceeds independently.
+
+Build and test a remotely hostable package and container recipe. Do not invent a
+live endpoint or deploy Foundation infrastructure into an unrelated account just
+because credentials exist. A read inventory did not establish a Foundation-owned
+hosting target. Record the ownership/budget/TLS/operations gate as OPS-005; no
+private account identifiers or credentials belong in this public record.

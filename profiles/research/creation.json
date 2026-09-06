@@ -1,0 +1,45 @@
+{
+  "format": "prim-creation-kit",
+  "version": 1,
+  "authority_file": "research.json",
+  "schema_resource": "schema",
+  "template_resource": "template",
+  "identity_field": "id",
+  "title_field": "title",
+  "rules": {
+    "unique_ids": [
+      "sources",
+      "claims",
+      "evidence",
+      "activities",
+      "reviews"
+    ],
+    "references": [
+      {
+        "collection": "evidence",
+        "field": "claim_id",
+        "target": "claims"
+      },
+      {
+        "collection": "evidence",
+        "field": "source_id",
+        "target": "sources"
+      },
+      {
+        "collection": "reviews",
+        "field": "claim_id",
+        "target": "claims"
+      }
+    ],
+    "required_links": [
+      {
+        "collection": "claims",
+        "when_field": "support_state",
+        "when_value": "supported",
+        "links": "evidence",
+        "reference_field": "claim_id",
+        "relation": "supports"
+      }
+    ]
+  }
+}

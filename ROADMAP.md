@@ -2,13 +2,13 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-06. Execution: **research_compatibility_under_review**.
+As of 2026-09-06. Execution: **foundation_library_mcp_under_review**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 70 tracked requirements. blocked: 0; complete: 0; in_progress: 5; in_review: 6; planned: 59.
+17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 9; in_review: 11; planned: 58.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -148,11 +148,13 @@ Delivery responsibility: foundation.
 
 **CORE-001 — Reconcile small substrate and current primitives**
 
-State: `planned` · Milestone: M1 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: A small-substrate design is exercised against Research and six minimal scenarios; semantic concepts and packaging/tool primitives are reconciled without requiring a universal table/schema rewrite.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+
+Research, Person and Decision exercise one generic creation-kit contract; receipt, contract, project and system cases plus reconciliation of the whole substrate remain open.
 
 **CORE-002 — Define interoperable identity and references**
 
@@ -216,6 +218,24 @@ Acceptance: A third party authors, tests and publishes from another repository/p
 
 Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-002, PUB-003, DEV-002.
 
+**PUB-005 — Provide generic version-pinned creation kits**
+
+State: `in_review` · Milestone: M1 · Owner: implementation-lead.
+
+Acceptance: A new profile supplies schema, blank template, authority filename and declarative rules; an agent can create locally without a type-specific endpoint or model dependency.
+
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+
+Implementation and tests available; independent review and activation/release gates remain open.
+
+**PUB-006 — Automate approved definition publication and refresh**
+
+State: `planned` · Milestone: M5 · Owner: implementation-lead.
+
+Acceptance: Multiple external/local sources are indexed into immutable snapshots with maintainer provenance, withdrawal and review; installations can update with digest pins and rollback without one repository per type.
+
+Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-002, PUB-003, DIR-005.
+
 ### DIR — Registry and discovery
 
 Delivery responsibility: foundation.
@@ -240,11 +260,13 @@ Required evidence: implementation, tests, review. Evidence retained: none. Depen
 
 **DIR-003 — Ship human and agent discovery surfaces**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Search, filters, version pages, documentation and API serve one source model; official/publisher/conformance/security states are distinct.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: DIR-001, DIR-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DIR-001, DIR-002.
+
+Installable MCP, HTTP JSON routes and human catalog share a compiled snapshot. Public hosting, general source resolution and third-party ecosystem publication are not complete.
 
 **DIR-004 — Operate a trustworthy directory**
 
@@ -253,6 +275,34 @@ State: `planned` · Milestone: M6 · Owner: implementation-lead.
 Acceptance: Moderation, abuse, reports, retention, takedown/retraction, package ownership and privacy-preserving opt-in metrics have runbooks and tests.
 
 Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: DIR-003, SEC-004.
+
+**DIR-005 — Expose one public library across human, JSON and MCP views**
+
+State: `in_review` · Milestone: M5 · Owner: implementation-lead.
+
+Acceptance: All surfaces share hashes and exact versions; unknown definitions do not silently substitute; catalog resources never expose private instances.
+
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DEV-005.
+
+Implementation and tests available; independent review and activation/release gates remain open.
+
+**DIR-006 — Rank genuine adoption and recent momentum**
+
+State: `in_review` · Milestone: M5 · Owner: implementation-lead.
+
+Acceptance: Popular and trending are explicit reproducible policies; replay, duplicate adoption, reversible stars, stale snapshots and insufficient cohorts are tested; no invented launch votes or quality claims.
+
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+
+Implementation and tests available; independent review and activation/release gates remain open.
+
+**DIR-007 — Activate authenticated consented popularity collection**
+
+State: `planned` · Milestone: M6 · Owner: implementation-lead.
+
+Acceptance: Verified collector identity, consent, revocation, anti-Sybil controls, anomaly review and user star/unstar experience operate before public collection is enabled; telemetry remains optional.
+
+Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: DIR-006, SEC-004.
 
 ### RES — Research Prim
 
@@ -274,9 +324,9 @@ State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Question/scope, sources, claims, evidence relationships, counterevidence, methods and uncertainty interoperate without a particular agent harness.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST. Dependencies: CORE-001, RES-001.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-LIB-IMPL, E-LIB-TEST. Dependencies: CORE-001, RES-001.
 
-A derived legacy Research preview exposes question, recorded context/status and claim citations. It is explicitly non-authoritative; a native vNext model and cross-implementation interchange are not implemented.
+Native experimental research.json now has schema, creation template, references, contradiction and recorded review fields through generic tooling. Authenticated review, full lifecycle and ORF semantic migration remain open.
 
 **RES-003 — Implement research lifecycle and review**
 
@@ -365,6 +415,26 @@ State: `planned` · Milestone: M5 · Owner: implementation-lead.
 Acceptance: At least two implementations share fixtures; packaged install, serialization, large inputs and compatibility tests run from clean environments.
 
 Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: DEV-001, INTEROP-001.
+
+**DEV-005 — Serve the Foundation library through MCP**
+
+State: `in_review` · Milestone: M1 · Owner: implementation-lead.
+
+Acceptance: Official SDK stdio and Streamable HTTP serve bounded search, exact definitions, versions, resources, creation kits and rankings; tools never require private instance contents.
+
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+
+Implementation and tests available; independent review and activation/release gates remain open.
+
+**DEV-006 — Ship a reproducibly installable MCP package**
+
+State: `in_review` · Milestone: M5 · Owner: implementation-lead.
+
+Acceptance: A built wheel includes its definition snapshot, installs in a clean environment, and completes creation plus protocol tests outside the checkout; reviewed publication and supported-client matrix remain explicit.
+
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DEV-005.
+
+Implementation and tests available; independent review and activation/release gates remain open.
 
 ### HUM — Human-facing reference products
 
@@ -526,11 +596,13 @@ Required evidence: implementation, tests, review. Evidence retained: none. Depen
 
 **LIFE-002 — Implement six diverse reference cases**
 
-State: `planned` · Milestone: M3 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M3 · Owner: implementation-lead.
 
 Acceptance: Person, receipt, contract, project, decision and system expose identity, evidence, commitments, history, capability/authority and context problems with retained fixtures.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: CORE-001, CORE-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: CORE-001, CORE-002.
+
+Person and Decision have development schemas and generic creation tests. The other four reference cases and the complete contextual model remain open.
 
 **LIFE-003 — Build diagnostic coverage, not vanity scores**
 
@@ -658,6 +730,16 @@ Acceptance: The open/free core and optional funded services have an approved mod
 
 Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: OPS-001, GOV-002.
 
+**OPS-005 — Launch the Foundation-owned public MCP endpoint**
+
+State: `blocked` · Milestone: M6 · Owner: implementation-lead.
+
+Acceptance: Confirm hosting owner and budget; deploy a pinned reviewed release with TLS, origin/host policies, edge quotas, health monitoring and rollback; connect a real external MCP host.
+
+Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: none. Dependencies: DEV-006, OPS-001.
+
+Read inventory found no confirmed Foundation hosting target. Do not deploy into unrelated personal/employer services. Hosting ownership and budget require a founder decision; no public endpoint is claimed.
+
 ### COMM — Adoption and community
 
 Delivery responsibility: ecosystem.
@@ -693,6 +775,16 @@ State: `planned` · Milestone: M6 · Owner: implementation-lead.
 Acceptance: External users, maintainers and integrations provide retained feedback; feedback changes traceable requirements rather than creating parallel ad-hoc plans.
 
 Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: COMM-001.
+
+**COMM-005 — Make library adoption self-service**
+
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
+
+Acceptance: Publish actual install artifacts and client instructions; test unfamiliar users finding definitions and producing valid local Prims; any public example-instance sharing must be opt-in and separate from definition discovery.
+
+Required evidence: implementation, tests, review, real_use. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DEV-006, DIR-005.
+
+Installable artifact and generic host instructions are supplied; independent user onboarding and client-directory publication remain unverified.
 
 ## Whole-life coverage is not a type catalog
 
