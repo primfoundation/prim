@@ -24,15 +24,27 @@ Do not relabel ORF bytes as Research and claim interoperability. Record the base
 
 ## D004 — Additive, reversible bootstrap
 
-Status: selected implementation safeguard.
+Status: selected implementation safeguard; narrow test-only exception in D006/D007.
 
-No changes to existing category, registry, SDK, ORF, or person files. No production deployment, package publication, tag movement, repository archive, secret transfer, or paid unattended work. Preserve the existing `sdk-python` and `prims/zeroshot-connector` branches. Their existence is not proof of active work.
+No changes to existing category, registry, SDK runtime, ORF, or person files. D006/D007 permit the documented changes to one existing SDK test file after full-checkout CI exposed two baseline test problems. No production deployment, package publication, tag movement, repository archive, secret transfer, or paid unattended work. Preserve the existing `sdk-python` and `prims/zeroshot-connector` branches. Their existence is not proof of active work.
 
 ## D005 — Reference tooling, not premature platform commitment
 
 Status: selected, reversible implementation choice.
 
 The first local discovery/compiler uses Python and PyYAML; the program checker uses the Python standard library. No custom partial YAML parser is added. This does not select the production runtime, supersede the TypeScript SDK, or overwrite the existing Python branch. Integration into production SDK/CLI surfaces is a separately tested obligation. Discovery reports manifest checks separately from unperformed instance validation, security review, and publisher authentication.
+
+## D006 — Correct stale host expectations without changing runtime
+
+Status: implemented; full-checkout CI passed, independent review remains open.
+
+The existing registry and SDK correctly include wildcard Mac/web hosts. Two old test expectations omitted them. Preserve strict equality and editor precedence, include the existing hosts, and add positive/negative host-filter checks. Rationale and failed-run evidence: [publication evidence](evidence/2026-09-06-publication.md).
+
+## D007 — Make SDK contract fixtures self-contained
+
+Status: implemented; full-checkout CI passed, independent review remains open.
+
+Always run book contract assertions on a local synthetic fixture; keep the optional sibling integration when available, report absence explicitly, and fail malformed available examples. Do not make a private sibling checkout a prerequisite for testing the public SDK. Rationale: [fixture evidence](evidence/2026-09-06-sdk-fixture.md). Passing result for both corrections: [CI summary](evidence/ci-34057807656.json).
 
 ## Open decisions
 
