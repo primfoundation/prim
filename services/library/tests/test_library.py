@@ -27,9 +27,9 @@ class LibraryTests(unittest.TestCase):
     def setUp(self):
         self.library = Library()
 
-    def test_three_profiles_no_repository_requirement(self):
+    def test_profiles_no_repository_requirement(self):
         ids = {row['id'] for row in self.library.search()['items']}
-        self.assertEqual(ids, {RESEARCH, 'primfoundation/person', 'primfoundation/decision'})
+        self.assertEqual(ids, {RESEARCH, 'primfoundation/person', 'primfoundation/decision', 'primfoundation/workbook'})
         for row in self.library.search()['items']:
             self.assertTrue(row['creation_available'])
             self.assertNotIn('repo', self.library.get(row['id'])['metadata'])
@@ -177,6 +177,29 @@ class LibraryTests(unittest.TestCase):
         p.update(question='Which?',rationale='test',authority_as_recorded='agent:test',chosen_option='a',options=[{'id':'a','description':'A'}])
         self.assertEqual(self.library.validate('primfoundation/decision','0.1.0-dev.1',p)['status'],'passed')
         p['chosen_option']='absent';self.assertEqual(self.library.validate('primfoundation/decision','0.1.0-dev.1',p)['status'],'failed')
+
+    def test_workbook_profile_is_generic_and_structural(self):
+        profile = 'primfoundation/workbook'
+        version = '0.1.0-dev.1'
+        row = self.library.search('workbook')['items'][0]
+        self.assertEqual(row['id'], profile)
+        self.assertEqual(row['version'], version)
+        self.assertEqual(set(self.library.get(profile, version)['metadata']['kinds']), {'workbook', 'worksheet', 'measure', 'metric'})
+        record = self.library.kit(profile, version)['template']
+        record['workbook_id'] = 'workbook:test:metrics'
+        record['title'] = 'Metrics'
+        record['worksheets'] = [
+            {'n': 1, 'id': 'plan', 'role': 'expected', 'pack': 'worksheets/plan', 'title': 'Plan'},
+            {'n': 2, 'id': 'actuals', 'role': 'actuals', 'pack': 'worksheets/actuals', 'title': 'Actuals'},
+        ]
+        self.assertEqual(self.library.validate(profile, version, record)['status'], 'passed')
+        record['worksheets'][1]['id'] = 'plan'
+        self.assertEqual(self.library.validate(profile, version, record)['status'], 'failed')
+
+    def test_workbook_schema_does_not_weaken_no_regex_boundary(self):
+        kit = self.library.kit('primfoundation/workbook', '0.1.0-dev.1')
+        self.assertNotIn('pattern', json.dumps(kit['schema']))
+        self.assertEqual(kit['authority_file'], 'workbook.json')
 
 
 class PopularityTests(unittest.TestCase):

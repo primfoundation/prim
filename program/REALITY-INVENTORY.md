@@ -1,6 +1,9 @@
 # Foundation reality inventory — 2026-09-07
 
-Status: point-in-time checkpoint for Wave 0. This records observed GitHub state before repository rename/archive or production cutover. It is not a claim that every deployment, secret binding, release artifact or external consumer has already been discovered.
+Status: pre-execution point-in-time checkpoint for Wave 0. This records observed GitHub state before repository rename/archive or production cutover. It is not a claim that every deployment, secret binding, release artifact or external consumer has already been discovered.
+
+
+**Later September 7 execution:** Foundation #5/#6/#7/#10, Hub #5, Browsers #1, Primboard #1, Desktop #7 and governance #1 have since merged. This inventory retains the observed earlier heads/PRs for provenance. Use [GOAL-STATUS.md](GOAL-STATUS.md) and [execution evidence](evidence/2026-09-07-execution.json) for current results and merge commits. Production routes, repository slugs and archive gates remain open.
 
 ## Prim Foundation repositories
 

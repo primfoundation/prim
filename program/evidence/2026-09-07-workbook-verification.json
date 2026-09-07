@@ -1,0 +1,218 @@
+{
+  "recorded_at": "2026-09-07T04:56:39.976450+00:00",
+  "scope": "Library unit/protocol tests and full inherited Foundation regression; not package installation or deployment",
+  "success": true,
+  "library_tests": 53,
+  "inherited_tests": 96,
+  "dependencies": {
+    "mcp": "2.1.1",
+    "jsonschema": "4.26.0",
+    "uvicorn": "0.52.4",
+    "PyYAML": "6.0.3"
+  },
+  "input_sha256": {
+    "ROADMAP.md": "5070cba6d8c7eb5f00ed77052f733df59f0a0dd9e696c885422d9f9a61ad7252",
+    "profiles/decision/PROFILE.md": "98cd58abfcc549139124b0dc27d0e95e51a04d0b8f871b7ed7065a458d91cc76",
+    "profiles/decision/SPEC.md": "d12ed9aeed46366e740d13717d2dd61e8766238ad18837995e72b72b3b9cba3d",
+    "profiles/decision/creation.json": "864749a1da738af24d54dab53963025b05b03d5a01b113dd96aa09cbbb611584",
+    "profiles/decision/schema/record.schema.json": "1995dc98e94c876213caf89db46a18b99ede6f5af089c2b78403d8051289edb9",
+    "profiles/decision/template.json": "276cb9bfa2545dbd075d646ea8537d75533cab6ead92c80e49eab8bcf82e4649",
+    "profiles/person/INTENTION.md": "a5f54241cfecc868da0957070e2bcd7f7f91945463d216b079e824cce3b5a96a",
+    "profiles/person/NEEDS.md": "a810268fdfe1637277fd068e1e324b64129a291f232b797eb1ad167fa7c9f5ba",
+    "profiles/person/PROFILE.md": "a43ecc29176f73a4b6f035f627af917dfba52f82d9ba66fd5b9fdf372985bfce",
+    "profiles/person/SPEC.md": "3adecb228fe021ccbc8b36e412583d8146cd6a86a991f0da786abd7d14863511",
+    "profiles/person/creation.json": "d96f235958903c464fe814ab085dd887c48daab48736c5bbf6719bbd69cf78d4",
+    "profiles/person/examples/ada/index.md": "ab23b8534d63e25806b86a25b075bf3808af227a08a10e8f987eddf044a8ae04",
+    "profiles/person/examples/ada/log.md": "2d1c2b5477157626930aa212c2a715248ba67260051a479f08ce235ddea3be33",
+    "profiles/person/examples/ada/person.json": "b9f2482211c6026f3e1e2125acddfc906a2ecb8d58f3d2126a16b6b193afa15a",
+    "profiles/person/schema/record.schema.json": "ec1dea54871365a994e59415c931ab6082e4c00faa335ffbdeeef1bc374dbd9f",
+    "profiles/person/template.json": "c3237d388e4147b6f75c28d3f9f6199c1990730fe2c9802719727f4b85a30dc7",
+    "profiles/person/validate.py": "df5ffa953847d2b22ac00bf5cf3715be1261031b41e03c0319d0d1f597944f77",
+    "profiles/person/viewer/README.md": "2890a1159a167b2fdb99f158da21b34c8a90ae69cd7d600844213eb4cc834f36",
+    "profiles/research/NATIVE.md": "03c6c970eb88079fc8bbee31817b617b0707ebc9be00cfbe6468c2c9dee1834c",
+    "profiles/research/PROFILE.md": "5ea258d72c23e57f477f74e397bb5f6f939c2a7722d3f6286b9e9d50c28f03c8",
+    "profiles/research/SPEC.md": "92c5af54e8d8562bbb72991dc42fdbb7fd86c622feeec10d8ab291db6fc65c96",
+    "profiles/research/compatibility/.gitignore": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b",
+    "profiles/research/compatibility/README.md": "804474d12566f3e5da04a56fbe90130fdb71795f1e60b41bf00c9a9e0ca47043",
+    "profiles/research/compatibility/orf-0.2.0/baseline.json": "0f022821a28fb006be90ea92ce21556ccf03cbdd59038bab5247d32eeffa1611",
+    "profiles/research/compatibility/orf-0.2.0/upstream/.gitignore": "b0d516d67cf06d24e190f7487ce6c242603648ee3739e980c7870558aaf72b4b",
+    "profiles/research/compatibility/orf-0.2.0/upstream/AGENTS.md": "92bab5d9e5d451da7476f4dcfeac472114e82ae05fff85e4dd19951fb257bb01",
+    "profiles/research/compatibility/orf-0.2.0/upstream/LICENSE": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/README.md": "8af7ad7303812d8ede11b35c4b1fefcb233af09cfce6d224b66f946ddb0de726",
+    "profiles/research/compatibility/orf-0.2.0/upstream/SPEC.md": "d676ac85258879a5430f50e626fdb96ca438f786b6c77aa0d9d1414453874068",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-bad-done-without-go/index.md": "c01195a11ba610db786e83a20201d1b5058e932673c88c9238c1ff9a6adef39f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-bad-done-without-go/log.md": "de9a1375c22958a6887b878835fc29d8c9e25074329e1e334596bfd112fbb155",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/findings/01-origin-myth.md": "9aae2b46f8246c706d961845de1bbe2cf8fcdce5a4b2464e67ad66d4e0afa0e8",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/findings/02-retention-studies.md": "8a365ed39ccf2007fe8d842b09fe5eafd69c8747f2994a08b8aed964f4b6f1c2",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/index.md": "e9b56ff3434859a1cbac8275ff1a083c8d0807d27cb85e08c306c997d9a4fc1f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/log.md": "dd474bf936894c08c5b0307f8f8c42ec2fb1772efe33fa8704d3237d03890880",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/__init__.py": "2adec2613695dbe595ce05773f2d5178a142e7807fe0d3cb746e55c00d7c3224",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/__main__.py": "f6794dd8852e533f04f68d14ba425f3f3be3b9b8e1b85600b05d74562a1a799f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/validate.py": "acc4c9febf52800e3c8e4034f9db2fb860f31c32edb42f61d74b871aa0c0a24d",
+    "profiles/research/compatibility/orf-0.2.0/upstream/pyproject.toml": "137f2f2a09b4eaa771963b904867ba7231e37fc74ec45d4a5811fdbfc909e22a",
+    "profiles/research/creation.json": "00aedbe02799334df72e154f8bf5a0a97fd36857ebec1f71b68350ce2ce46381",
+    "profiles/research/examples/README.md": "44bdc206a6c475972c6ff999d67e30f53a9dba2a0e2baba84090d0ae820753c4",
+    "profiles/research/schema/record.schema.json": "e53eb7c88ef5fd5b9f8a6bc17dd30650505512702ecbd419500b788b3b379060",
+    "profiles/research/template.json": "effa22bc11d793e657dd3503dd3d6912bfccb4345b828abcd32ec831ab7ea480",
+    "profiles/workbook/MIGRATION.md": "eee07b48c3f19d1dd5f1fd2078a5abf9d0f697e17ba58768ca5f93de3e46b25b",
+    "profiles/workbook/PROFILE.md": "38940732135e7223aee717fc60921a7528321de56f6226076c812e9f02662f97",
+    "profiles/workbook/SPEC.md": "906dcd766153738e8b4cef3aeb05cf3f57aec6b15fd0e6f5c53520be5ae6b1c1",
+    "profiles/workbook/creation.json": "3366bd8f19d3f7ed4baa4b48c61394fe4f51cca5aa4adcee497fce033c84553f",
+    "profiles/workbook/examples/acme-minimal/workbook.json": "9993d2ae58986c8d009466fa6aaa01af384686f9c4e134ee98632369157b4153",
+    "profiles/workbook/legacy/INTENTION.md": "b60a22ac0b094ce7e2b3a4e4586e2ec47e67a4d3fc05bfdb1b44c5726b54f9ab",
+    "profiles/workbook/legacy/SPEC-0.1.0-draft.md": "df240eee122f68dc8b8f2adb3fd91d92315a151972f47aaaf417bc20436d397a",
+    "profiles/workbook/schema/record.schema.json": "56edadf4c39009a4b04fe3b965191a6a0f140c92f9ed385c016d5a0775ebab01",
+    "profiles/workbook/template.json": "4242ca6e0470ff95b0a48cc80c1b324dc925e7fceb5a520762307d9133cf7cc3",
+    "program/plan.json": "1d815ab6c0a0cc36ca42e798e2f1c6d533a39284fd2859126a919200ee0d0672",
+    "registry/profiles.generated.json": "8a90193bb593aee2a1bb3f0ae0094cc6b9eba375878c0a974193396e385c9cb5",
+    "services/library/.dockerignore": "9fbc0d6ed5d50a539a5732aa1afa127620384fcba5391611914b25f858b40771",
+    "services/library/.gitignore": "2b933c6b0dc79a9aaf0a8e68a0112129fc4cf2db178935c667925f60f11454c1",
+    "services/library/Dockerfile": "b5ec0d36a8268d0b486c0b5377489135dc147c8ae82089dc058513726bf4e952",
+    "services/library/LICENSE": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+    "services/library/README.md": "e685706ab34144bf8f0159ba9b0627c15ee1c7e44fe6119339c890f9179a66a4",
+    "services/library/SECURITY.md": "032d24459afe795b39108e778e66f3bc8fc6c57ae19ac92685fba749e4dbfb9a",
+    "services/library/constraints.txt": "2aeaf9aa00ac996e54677cbac855b18c6367937ea6c371f263561d422f3246c0",
+    "services/library/pyproject.toml": "1a06c754dc03666ee494d9eda266e6412bc49138e61f0c1a2d0cbeaed3d2964a",
+    "services/library/src/prim_library/__init__.py": "fb4d3c5988ff9f8b4595a242241be49406beb625d926654535a747321fc980c5",
+    "services/library/src/prim_library/cli.py": "f9d4ba9a1e06ca873d7ea1f9f1d6708f0a384ec1d6a4477a7c70405f5a9c55d0",
+    "services/library/src/prim_library/data/library.json": "fcde49b06e4c48005126247bc94a67f032a96eedaa6e82ba6b6c0f10ea9b214d",
+    "services/library/src/prim_library/data/rankings.json": "4d17906544600566e58ac3ffd31b1e710d0511bce681a6c4eb91f960c4058e41",
+    "services/library/src/prim_library/data/resources/00aedbe02799334df72e154f8bf5a0a97fd36857ebec1f71b68350ce2ce46381.txt": "00aedbe02799334df72e154f8bf5a0a97fd36857ebec1f71b68350ce2ce46381",
+    "services/library/src/prim_library/data/resources/03c6c970eb88079fc8bbee31817b617b0707ebc9be00cfbe6468c2c9dee1834c.txt": "03c6c970eb88079fc8bbee31817b617b0707ebc9be00cfbe6468c2c9dee1834c",
+    "services/library/src/prim_library/data/resources/1995dc98e94c876213caf89db46a18b99ede6f5af089c2b78403d8051289edb9.txt": "1995dc98e94c876213caf89db46a18b99ede6f5af089c2b78403d8051289edb9",
+    "services/library/src/prim_library/data/resources/276cb9bfa2545dbd075d646ea8537d75533cab6ead92c80e49eab8bcf82e4649.txt": "276cb9bfa2545dbd075d646ea8537d75533cab6ead92c80e49eab8bcf82e4649",
+    "services/library/src/prim_library/data/resources/3366bd8f19d3f7ed4baa4b48c61394fe4f51cca5aa4adcee497fce033c84553f.txt": "3366bd8f19d3f7ed4baa4b48c61394fe4f51cca5aa4adcee497fce033c84553f",
+    "services/library/src/prim_library/data/resources/38940732135e7223aee717fc60921a7528321de56f6226076c812e9f02662f97.txt": "38940732135e7223aee717fc60921a7528321de56f6226076c812e9f02662f97",
+    "services/library/src/prim_library/data/resources/3adecb228fe021ccbc8b36e412583d8146cd6a86a991f0da786abd7d14863511.txt": "3adecb228fe021ccbc8b36e412583d8146cd6a86a991f0da786abd7d14863511",
+    "services/library/src/prim_library/data/resources/4242ca6e0470ff95b0a48cc80c1b324dc925e7fceb5a520762307d9133cf7cc3.txt": "4242ca6e0470ff95b0a48cc80c1b324dc925e7fceb5a520762307d9133cf7cc3",
+    "services/library/src/prim_library/data/resources/56edadf4c39009a4b04fe3b965191a6a0f140c92f9ed385c016d5a0775ebab01.txt": "56edadf4c39009a4b04fe3b965191a6a0f140c92f9ed385c016d5a0775ebab01",
+    "services/library/src/prim_library/data/resources/5ea258d72c23e57f477f74e397bb5f6f939c2a7722d3f6286b9e9d50c28f03c8.txt": "5ea258d72c23e57f477f74e397bb5f6f939c2a7722d3f6286b9e9d50c28f03c8",
+    "services/library/src/prim_library/data/resources/804474d12566f3e5da04a56fbe90130fdb71795f1e60b41bf00c9a9e0ca47043.txt": "804474d12566f3e5da04a56fbe90130fdb71795f1e60b41bf00c9a9e0ca47043",
+    "services/library/src/prim_library/data/resources/864749a1da738af24d54dab53963025b05b03d5a01b113dd96aa09cbbb611584.txt": "864749a1da738af24d54dab53963025b05b03d5a01b113dd96aa09cbbb611584",
+    "services/library/src/prim_library/data/resources/906dcd766153738e8b4cef3aeb05cf3f57aec6b15fd0e6f5c53520be5ae6b1c1.txt": "906dcd766153738e8b4cef3aeb05cf3f57aec6b15fd0e6f5c53520be5ae6b1c1",
+    "services/library/src/prim_library/data/resources/92c5af54e8d8562bbb72991dc42fdbb7fd86c622feeec10d8ab291db6fc65c96.txt": "92c5af54e8d8562bbb72991dc42fdbb7fd86c622feeec10d8ab291db6fc65c96",
+    "services/library/src/prim_library/data/resources/98cd58abfcc549139124b0dc27d0e95e51a04d0b8f871b7ed7065a458d91cc76.txt": "98cd58abfcc549139124b0dc27d0e95e51a04d0b8f871b7ed7065a458d91cc76",
+    "services/library/src/prim_library/data/resources/a43ecc29176f73a4b6f035f627af917dfba52f82d9ba66fd5b9fdf372985bfce.txt": "a43ecc29176f73a4b6f035f627af917dfba52f82d9ba66fd5b9fdf372985bfce",
+    "services/library/src/prim_library/data/resources/b60a22ac0b094ce7e2b3a4e4586e2ec47e67a4d3fc05bfdb1b44c5726b54f9ab.txt": "b60a22ac0b094ce7e2b3a4e4586e2ec47e67a4d3fc05bfdb1b44c5726b54f9ab",
+    "services/library/src/prim_library/data/resources/c3237d388e4147b6f75c28d3f9f6199c1990730fe2c9802719727f4b85a30dc7.txt": "c3237d388e4147b6f75c28d3f9f6199c1990730fe2c9802719727f4b85a30dc7",
+    "services/library/src/prim_library/data/resources/d12ed9aeed46366e740d13717d2dd61e8766238ad18837995e72b72b3b9cba3d.txt": "d12ed9aeed46366e740d13717d2dd61e8766238ad18837995e72b72b3b9cba3d",
+    "services/library/src/prim_library/data/resources/d96f235958903c464fe814ab085dd887c48daab48736c5bbf6719bbd69cf78d4.txt": "d96f235958903c464fe814ab085dd887c48daab48736c5bbf6719bbd69cf78d4",
+    "services/library/src/prim_library/data/resources/df240eee122f68dc8b8f2adb3fd91d92315a151972f47aaaf417bc20436d397a.txt": "df240eee122f68dc8b8f2adb3fd91d92315a151972f47aaaf417bc20436d397a",
+    "services/library/src/prim_library/data/resources/e53eb7c88ef5fd5b9f8a6bc17dd30650505512702ecbd419500b788b3b379060.txt": "e53eb7c88ef5fd5b9f8a6bc17dd30650505512702ecbd419500b788b3b379060",
+    "services/library/src/prim_library/data/resources/ec1dea54871365a994e59415c931ab6082e4c00faa335ffbdeeef1bc374dbd9f.txt": "ec1dea54871365a994e59415c931ab6082e4c00faa335ffbdeeef1bc374dbd9f",
+    "services/library/src/prim_library/data/resources/eee07b48c3f19d1dd5f1fd2078a5abf9d0f697e17ba58768ca5f93de3e46b25b.txt": "eee07b48c3f19d1dd5f1fd2078a5abf9d0f697e17ba58768ca5f93de3e46b25b",
+    "services/library/src/prim_library/data/resources/effa22bc11d793e657dd3503dd3d6912bfccb4345b828abcd32ec831ab7ea480.txt": "effa22bc11d793e657dd3503dd3d6912bfccb4345b828abcd32ec831ab7ea480",
+    "services/library/src/prim_library/guard.py": "9899d456950ab6b4eb460745d529e8b12f32694f0d18431d779bc3c26f362c67",
+    "services/library/src/prim_library/library.py": "0bbf781f7134666d17059301872456710554c16e507768e01a462fcd2e3967cf",
+    "services/library/src/prim_library/popularity.py": "53cd6ca6ac54207c76ca15338619f8e2d5445fd3fc814aacee1fe3d439201886",
+    "services/library/src/prim_library/server.py": "a683b570bb62052d184f9b527f8d9e8c7a37816476e535f08419d22652eca06f",
+    "services/library/src/prim_library/signals_cli.py": "5185b50fb9100b176fecd7347f7338db3f383f131edafd22e2f8a2a6a31465bb",
+    "services/library/src/prim_library/web.py": "c2ed36dce43dab66a2f5234d4b005500cc00b143a5f4ffdbe03839f2ffd6fe17",
+    "services/library/tests/installed_smoke.py": "95d3d1ba7c3b3ec1d1ff797cd032517536ec23ee8ce72d18874d38ee7912003b",
+    "services/library/tests/test_library.py": "658bb532a9a199ab69ff81a67e3c2f88292ff89d5644164543b37f313e6d495a",
+    "tools/build_library.py": "afaf52ebd64683ce480b822392bd7b7f3bf7f77b85da846ba001e669fcf03f85",
+    "tools/verify_library.py": "eb865cb00634fd2cbeddf32a7913fecf326652e0a96d150387d9cd6d8a3f2f4e"
+  },
+  "not_established": [
+    "public hosted endpoint",
+    "package index publication",
+    "authenticated public signal collection",
+    "independent review",
+    "full Research lifecycle or ORF semantic migration",
+    "all Foundation requirements"
+  ],
+  "base_commit": "d7136a18adeea72f88ddd4a83f780b41838706dd",
+  "changes": [
+    "Restore retained Workbook SPEC bytes to upstream Git blob 2f5a66da6865b497379432c7f58c228d940787c9.",
+    "Check legacy SPEC and INTENTION against fixed source Git blob IDs independently of generated artifacts.",
+    "Keep execution evidence outside distributed definition inputs; regenerate the content-addressed Library."
+  ],
+  "runtime": {
+    "python": "3.12.13",
+    "node": "v24.19.0"
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "services/library/tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/build_library.py",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/verify.py",
+        "--with-sdk",
+        "--output",
+        "/tmp/tmpwhxmqgzn/foundation.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "sdk_suites": "pack.test.ts and registry.test.ts passed",
+  "clean_wheel_install": {
+    "success": true,
+    "version": "0.1.0a1",
+    "installed_from_site_packages": true,
+    "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+    "profiles": [
+      {
+        "profile": "primfoundation/decision",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/person",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/research",
+        "version": "0.3.0-dev.3",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/workbook",
+        "version": "0.1.0-dev.1",
+        "created": true
+      }
+    ],
+    "stdio_client_modes": [
+      "auto",
+      "legacy"
+    ],
+    "not_established": [
+      "public deployment",
+      "all client UIs",
+      "independent security review"
+    ]
+  },
+  "build_artifacts": {
+    "prim_foundation_mcp-0.1.0a1.tar.gz": "0aa3d1d47425a157cc20becc54574a69d623d72fbae151f675587a7d37417ecc",
+    "prim_foundation_mcp-0.1.0a1-py3-none-any.whl": "252b4eb24b8ccbee918a3857d156bea3c79ea75bc4a556a12ece8c05dedcfbeb"
+  },
+  "ci_at_baseline": {
+    "runs": [
+      34075740080,
+      34075740163
+    ],
+    "conclusion": "action_required",
+    "jobs_started": 0,
+    "actor": "github-actions[bot]"
+  },
+  "verification_limit": "This is local implementation and installation evidence, not approval of blocked CI or independent review."
+}

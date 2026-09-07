@@ -2,6 +2,9 @@
 
 Status: observed/proposed quality program, September 6, 2026. This is not permission to rewrite working compatibility surfaces without tests. Items are classified so old code is neither preserved merely because it exists nor discarded merely because it is old.
 
+
+**September 7 resolution checkpoint:** Primboard normal-startup seeding, stale concurrent writes and remove-then-move replacement now have tested fixes merged in PR #1. Browser Worker duplication and legacy unsigned-token/missing-secret authentication defects have fixes merged in PR #1. Hub catalog drift/runtime source fetching are addressed by a verified canonical bundle in PR #5. Desktop's false successful proof after skipped source tests is fixed in PR #7; its authoritative dependency remains unavailable. These are bounded fixes, not closure of the encrypted metadata, multi-file recovery, real-account/device, production and independent-review obligations below. See [execution evidence](evidence/2026-09-07-execution.json).
+
 ## Classification
 
 - **DEFECT** — current behavior can violate a stated contract, lose data, leak information, or fail a known workflow.

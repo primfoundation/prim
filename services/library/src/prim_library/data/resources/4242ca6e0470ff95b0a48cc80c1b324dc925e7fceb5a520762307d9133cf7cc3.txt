@@ -1,0 +1,8 @@
+{
+  "format": "prim.workbook",
+  "version": "0.1.0",
+  "workbook_id": "workbook:local:untitled",
+  "title": "Untitled workbook",
+  "periods": [],
+  "worksheets": []
+}
