@@ -270,9 +270,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Search, filters, version pages, documentation and API serve one source model; official/publisher/conformance/security states are distinct.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: DIR-001, DIR-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: DIR-001, DIR-002.
 
-Merged Hub supplies generated human pages, API and MCP from one canonical bundle. All four kits match an external local MCP client; no public endpoint or full old-site migration yet.
+Merged Hub supplies generated human pages, API and MCP from one canonical bundle. All four kits match an external local MCP client. Clawdflare is connected; reserved preview remains disabled because scoped asset uploads fail token verification. Public acceptance and full old-site migration remain open.
 
 **DIR-004 — Operate a trustworthy directory**
 
@@ -724,9 +724,9 @@ State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Actual providers, domains, services, access boundaries, owners and operating budgets are verified; no guessed deployments or unapproved spend.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: none.
 
-Cloudflare architecture and isolated preview configs are concrete. Foundation account connection, operator/cost ownership and actual preview domains are not established.
+Clawdflare confirms the Eidos AGI account, active prims.sh zone and existing Prim Workers. Isolated Hub preview was created but remains disabled and undeployed after asset-upload HTTP 401. Account access does not establish Foundation legal ownership, operator/cost ownership or production budgets.
 
 **OPS-002 — Operate reliable public services**
 
@@ -760,9 +760,9 @@ State: `blocked` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Confirm hosting owner and budget; deploy a pinned reviewed release with TLS, origin/host policies, edge quotas, health monitoring and rollback; connect a real external MCP host.
 
-Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: DEV-006, OPS-001.
+Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: DEV-006, OPS-001.
 
-Foundation Cloudflare Worker target and local/CI external MCP acceptance are prepared. Install/connect the available Cloudflare integration to the approved Foundation account; account ownership/cost and preview domain gates remain. No public URL is claimed.
+Clawdflare is connected and the isolated Hub preview Worker exists with workers.dev disabled. Manifest registration passes; fresh scoped asset uploads fail HTTP 401 invalid_token/token verification failure. Resolve that upload failure, deploy the pinned module/assets, and run public HTTP/MCP acceptance. Ownership, cost and production operational gates remain.
 
 ### COMM — Adoption and community
 

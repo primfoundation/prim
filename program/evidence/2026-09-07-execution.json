@@ -135,5 +135,9 @@
     "No repository rename/archive/history rewrite.",
     "No private user Prim or customer source data imported.",
     "No signed package release or paid unattended work started."
-  ]
+  ],
+  "cloudflare_access_followup": {
+    "path": "program/evidence/2026-09-07-cloudflare-preview.json",
+    "summary": "Supersedes the historical installation/connection blocker: Clawdflare access confirmed, isolated preview created disabled; asset-upload token verification now blocks deployment. Other historical evidence and gates remain unchanged."
+  }
 }
