@@ -1,0 +1,16 @@
+{
+  "observed_on": "2026-09-06",
+  "repository": "primfoundation/prim",
+  "read_access": "succeeded",
+  "write_attempts": [
+    {"action": "create_tree", "status": 403, "message": "Resource not accessible by integration"},
+    {"action": "create_branch", "status": 403, "message": "Resource not accessible by integration"}
+  ],
+  "remote_tree_created": false,
+  "remote_branch_created": false,
+  "remote_commit_created": false,
+  "pull_request_created": false,
+  "plugin_directory_result": "GitHub installed and enabled",
+  "permission_settings_changed": false,
+  "limitation": "The precise provider-side authorization or installation setting causing the rejection is not exposed by the available tools."
+}

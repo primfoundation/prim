@@ -1,0 +1,52 @@
+# Prim Foundation delivery program
+
+This is the durable record of the Foundation-wide build authorized on September 6, 2026. Research is the first implementation path, not the boundary of the mission.
+
+**Current publication state:** GitHub write access is restored; work is on `codex/foundation-program-bootstrap`. See `HANDOFF.md` for observed commit, PR and CI evidence. No package release, production deployment, or unattended agent execution is implied.
+
+## One record, several views
+
+| Record | Authority and purpose |
+| --- | --- |
+| `CHARTER.md` | Mission, outcomes, boundaries, and decisions reserved for human authority. |
+| `plan.json` | Canonical workstreams, requirements, milestones, dependencies, status, and evidence references. |
+| `../ROADMAP.md` | Generated human view of the plan; never an independently maintained checklist. |
+| `DECISIONS.md` | Accepted direction, reversible implementation choices, and unresolved decisions. |
+| `BASELINE.md` | Observed repository state, read scope, and migration constraints. |
+| `evidence/` | Dated commands/results, tested file hashes, limitations, and release evidence. |
+| `HANDOFF.md` | Current bounded work, publication evidence, next step, and overlap warnings. |
+
+GitHub issues and PRs are coordination surfaces referencing requirement IDs, not another canonical roadmap. Conversations propose changes; reviewed repository changes preserve them. Private source material, credentials, personal records, and sensitive operating details do not belong in this public program record.
+
+## Definition of progress
+
+A requirement is `planned`, `in_progress`, `blocked`, `in_review`, or `complete`. Implementation, testing, review, release, deployment, and real-use verification are separate evidence stages. Each requirement specifies the stages needed before completion. The checker rejects broken references, dependency cycles, unsupported status, and missing required evidence for completed work. It does not independently authenticate an evidence report or establish that its claims are true.
+
+A milestone is complete only when all its requirements and acceptance gates are met. Deferral remains visible with a reason. Scope removal needs a recorded decision; deleted requirements are detectable in Git review, not magically prevented by a single-file validator. There is no equal-weight task percentage presented as mission completion.
+
+## Commands
+
+From the repository or this standalone change-set root:
+
+```bash
+python -m pip install -r tools/requirements.txt
+python -m unittest discover -s tools/tests -v
+python tools/program.py check
+python tools/program.py render --check
+python tools/profile_catalog.py inspect profiles/research
+python tools/profile_catalog.py discover profiles --check registry/profiles.generated.json
+```
+
+After changing the source ledger, regenerate with `python tools/program.py render`.
+After changing a profile manifest, regenerate with
+`python tools/profile_catalog.py discover profiles --output registry/profiles.generated.json`.
+
+The reference publication tooling is local-first and intentionally separate from the existing TypeScript SDK and the pre-existing `sdk-python` branch. It is not a second production SDK or a commitment to Python as the ecosystem's runtime. Cross-language integration and packaged release tests remain ledger obligations.
+
+The program initially uses JSON and Markdown: durable, portable records now, not a fabricated claim of Project Prim conformance. A later reference Project Prim may adopt this record through an explicit migration. A future website can render the same data without owning it.
+
+## Execution policy
+
+Read the charter, baseline, decisions, and handoff before changing the program. Use identifiable branches and bounded changes. Preserve existing formats and consumers. Do not force-push, archive repositories, change production, publish packages, or start paid unattended work as incidental cleanup. Implementation leadership does not confer unlimited governance, spending, or data-access authority.
+
+The first Research acceptance path is: publish a definition; discover and pin it; create an investigation; validate what can actually be checked; open it in another implementation; challenge and revise it; export a view; and preserve legacy ORF data. A manifest parser alone does not complete that path.

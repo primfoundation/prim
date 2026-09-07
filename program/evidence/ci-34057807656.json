@@ -1,0 +1,41 @@
+{
+  "record_type": "observed_ci_summary",
+  "repository": "primfoundation/prim",
+  "pull_request": 5,
+  "code_head": "4eb5b456d0c2591a754f1e5c03d97680072e17a2",
+  "checkout_merge_ref": "ab546d8935d36891c18d896490fc02b030b967d4",
+  "run_id": 34057807656,
+  "job_id": 101552793870,
+  "url": "https://github.com/primfoundation/prim/actions/runs/34057807656",
+  "conclusion": "success",
+  "completed_at": "2026-09-06T20:23:12Z",
+  "report_recorded_at": "2026-09-06T20:23:07.714557+00:00",
+  "environment": {"platform": "Linux", "python": "3.13.15", "PyYAML": "6.0.3", "node": "22.16.0"},
+  "unit_tests_run": 44,
+  "commands": [
+    {"command": "python -m unittest discover -s tools/tests -v", "exit_code": 0},
+    {"command": "python tools/program.py check", "exit_code": 0},
+    {"command": "python tools/program.py render --check", "exit_code": 0},
+    {"command": "python tools/profile_catalog.py discover profiles --check registry/profiles.generated.json", "exit_code": 0},
+    {"command": "python tools/profile_catalog.py inspect profiles/research", "exit_code": 0},
+    {"command": "python -m compileall -q tools", "exit_code": 0},
+    {"command": "npm --prefix sdk/typescript test", "exit_code": 0}
+  ],
+  "sdk_results": {"pack.test.ts": "passed", "registry.test.ts": "passed", "synthetic_book_contracts": "passed", "optional_sibling_prim.obf_example": "skipped: not checked out"},
+  "artifact": {
+    "id": 9996503870,
+    "name": "prim-foundation-verification",
+    "expires_at": "2026-10-06T20:23:07Z",
+    "zip_sha256": "73e2ea1fd0cc7588e391220a91b5da13d4b81dd3c40382c07d3cd22653a21a72",
+    "downloaded_zip_digest_matched": true,
+    "report_sha256": "f0bf4a4cad322faa6db170ffd332d8a7b3cb454156f5c30cf62d04f671c9a2e4"
+  },
+  "earlier_failed_runs": [34057476987, 34057666087],
+  "not_established": ["ORF legacy validation/migration", "Desktop or browser UI", "Published-package installation", "Independent security review", "Real-account or production acceptance", "Independent PR approval", "Release or deployment"],
+  "limits": [
+    "This is a summary of an observed downloaded CI report, not a signed independent attestation.",
+    "The PR merge ref is GitHub's test checkout and does not mean the branch was merged into main.",
+    "Passing metadata validation is not Research instance validity, factual truth, or publisher authentication.",
+    "The original full report artifact has finite retention; retain additional copies for long-term release evidence."
+  ]
+}
