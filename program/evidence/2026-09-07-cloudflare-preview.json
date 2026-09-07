@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-07T06:06:21.933Z",
+  "scope": "Clawdflare connection and bounded Hub preview deployment attempt; no public deployment or external hosted-client acceptance.",
+  "connection": {
+    "plugin": "Clawdflare",
+    "account_label": "Eidos AGI",
+    "active_zone": "prims.sh",
+    "account_and_zone_reads": "HTTP 200",
+    "foundation_legal_ownership_and_operating_budget": "not established by account access"
+  },
+  "preview": {
+    "name": "prims-hub-preview",
+    "created_at": "2026-09-07T06:00:19.779587Z",
+    "reserved_url": "https://prims-hub-preview.eidos-agi.workers.dev",
+    "workers_dev_enabled": false,
+    "version_previews_enabled": false,
+    "deployed_on": null,
+    "script_uploaded": false,
+    "assets_uploaded": 0
+  },
+  "build": {
+    "repository": "primfoundation/prim-web",
+    "source_commit": "dfe683cc4bbf75054fea1b42473279df699eb42c",
+    "merged_commit": "dd73feab044be9540ce5179332248d1680b5558b",
+    "ci_run": "https://github.com/primfoundation/prim-web/actions/runs/34086822519",
+    "command": "wrangler deploy --dry-run --outdir /tmp/prim-hub-deployment",
+    "result": "passed",
+    "script_sha256": "7fec028b442d0ad39fdefd90b38f06bea22b914ad22f886dafea4e1a29915a06",
+    "script_bytes": 1265929,
+    "asset_manifest": {
+      "/index.html": {
+        "hash": "2286a255b08e2cc5d38ceab848c05fbf",
+        "size": 3629
+      },
+      "/prims/primfoundation/decision/0.1.0-dev.1/index.html": {
+        "hash": "a848dc2ee1fab3935d22b5f355ea8a68",
+        "size": 3137
+      },
+      "/prims/primfoundation/person/0.1.0-dev.1/index.html": {
+        "hash": "95586236b5e3c52c566989a9f0370987",
+        "size": 4584
+      },
+      "/prims/primfoundation/research/0.3.0-dev.3/index.html": {
+        "hash": "6d28333bc6751d9150a90d9849f9a08b",
+        "size": 6035
+      },
+      "/prims/primfoundation/workbook/0.1.0-dev.1/index.html": {
+        "hash": "f32cd7aca35ec9600b5abd224f007b07",
+        "size": 5238
+      }
+    }
+  },
+  "upload": {
+    "manifest_registration_status": 200,
+    "asset_upload_status": 401,
+    "response": "Unauthorized",
+    "authentication_error": "invalid_token",
+    "authentication_error_description": "token verification failure",
+    "cf_ray": "a37383a4db603177-DFW",
+    "fresh_token_unexpired": true,
+    "mode": "bulk",
+    "attempts": "Fresh upload sessions, documented Bearer authentication, base64 multipart with both FormData and explicit boundary encoding returned the same error.",
+    "root_cause": "Unresolved; response does not establish whether token issuance, transport or backend verification is responsible.",
+    "credentials_retained": false
+  },
+  "unchanged_existing_scripts": [
+    {
+      "name": "browsers-prims-sh",
+      "modified_on": "2026-09-03T00:35:38.991924Z"
+    },
+    {
+      "name": "logins-prims-sh",
+      "modified_on": "2026-09-03T00:39:47.642583Z"
+    },
+    {
+      "name": "prim-registry",
+      "modified_on": "2026-08-23T20:32:55.746842Z"
+    }
+  ],
+  "production_dns_or_routes_written": false,
+  "next_steps": [
+    "Inspect the existing disabled preview before retrying; do not blindly recreate or overwrite it.",
+    "Resolve the scoped asset-upload token verification failure through an authorized Cloudflare client. New session tokens are temporary; none are preserved.",
+    "Upload the exact compiled module with its five real Static Assets and ASSETS binding, preserve run_worker_first, then enable only the isolated preview.",
+    "Record the resulting Worker version and run public HTTP plus external auto/legacy MCP canonical parity before claiming deployment acceptance.",
+    "Retain operator, budget, accessibility, edge limits, monitoring and recovery gates before production cutover."
+  ]
+}

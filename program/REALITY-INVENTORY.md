@@ -73,7 +73,7 @@ Existing work is migration input, not disposable legacy.
 - `browsers.prims.sh` — authenticated Prims Browsers gateway.
 - Public Foundation Library/MCP alpha is built/installable in `prim` but is not yet a Foundation-hosted endpoint.
 
-Exact live origin bindings, Cloudflare project/version inventory, current traffic levels, production Worker version IDs, secret binding presence, rollback history and all external consumers remain an operations-account inventory gate because this session has no Cloudflare administration connector. Do not fabricate those facts from repository config.
+At this initial checkpoint no Cloudflare administration connector was available, so exact live origin bindings, project/version inventory, current traffic, secret binding presence, rollback history and external consumers were unresolved. On September 7 Clawdflare connected successfully: account/zone and the three existing Prim Worker names/timestamps were verified. The isolated Hub preview was created disabled; asset upload then failed scoped-token verification. See [the follow-up evidence](evidence/2026-09-07-cloudflare-preview.json). This bounded read does not complete the wider operational inventory.
 
 ## Legacy Eidos Prim incubators
 
