@@ -26,6 +26,10 @@ The publishable unit is now `primfoundation/workbook`; its declared kinds includ
 
 A development schema/template were added so the generic Foundation Library can create a blank root workbook locally. Those files are new reference tooling, not evidence that every legacy semantic rule is mechanically checked.
 
+## Generated integration checkpoint
+
+One-shot generation at branch commit `72223c7bac8d78d8dcbcf5458df54f55104296a4` committed the deterministic profile catalog, content-addressed Library resources, compiled Library snapshot, and the four-profile regression update, then removed the temporary generator. The generator's own complete Library unit run passed before that commit. Normal Foundation CI on this subsequent human-authored checkpoint is the durable acceptance gate; bot-authored workflow commits are not treated as a substitute when GitHub marks their follow-up runs `action_required`.
+
 ## Retirement gate for the old repository
 
 Do not archive `prim.workbook` until sanitized fixtures and old consumers open through the new package; registry/Hub resolution points to the new profile without changing old pack interpretation; any viewer worth preserving has a successor; earlier repository history receives privacy review; real-use and rollback evidence are retained; and the old README points to this successor and last supported state.
