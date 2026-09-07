@@ -5,15 +5,17 @@ on:
       - 'profiles/workbook/**'
       - '.github/workflows/workbook-profile-generate.yml'
 permissions:
-  contents: read
+  contents: write
 jobs:
   generate:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'codex/workbook-profile-migration'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          persist-credentials: false
+          ref: codex/workbook-profile-migration
+          persist-credentials: true
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.13'
@@ -31,7 +33,7 @@ jobs:
           prim-library search workbook
           prim-library create primfoundation/workbook --version 0.1.0-dev.1 --output "$tmp/book"
           prim-library validate primfoundation/workbook --version 0.1.0-dev.1 "$tmp/book/workbook.json"
-      - name: Prepare the existing library regression for the fourth generic profile
+      - name: Prepare existing library regression for the fourth generic profile
         shell: python
         run: |
           from pathlib import Path
@@ -53,13 +55,37 @@ jobs:
         env:
           PYTHONPATH: services/library/src
         run: python -m unittest discover -s services/library/tests -v
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: workbook-profile-generated
-          path: |
-            registry/profiles.generated.json
-            services/library/src/prim_library/data/library.json
-            services/library/src/prim_library/data/resources/
-            services/library/tests/test_library.py
-          if-no-files-found: error
-          retention-days: 7
+      - name: Remove this one-shot generator and bound the commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm .github/workflows/workbook-profile-generate.yml
+          python - <<'PY'
+          from pathlib import Path
+          allowed_exact = {
+              'registry/profiles.generated.json',
+              'services/library/src/prim_library/data/library.json',
+              'services/library/tests/test_library.py',
+              '.github/workflows/workbook-profile-generate.yml',
+          }
+          import subprocess
+          changed = subprocess.check_output(['git','status','--porcelain=v1'], text=True).splitlines()
+          paths = []
+          for line in changed:
+              p = line[3:]
+              if ' -> ' in p: p = p.split(' -> ', 1)[1]
+              paths.append(p)
+          bad = [p for p in paths if p not in allowed_exact and not p.startswith('services/library/src/prim_library/data/resources/')]
+          if bad:
+              raise SystemExit('unexpected generated paths: ' + repr(bad))
+          print('\n'.join(paths))
+          PY
+      - name: Commit deterministic generated artifacts to this PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'prim-foundation-generation-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A registry/profiles.generated.json services/library/src/prim_library/data services/library/tests/test_library.py .github/workflows/workbook-profile-generate.yml
+          git commit -m 'G1: integrate Workbook into generated catalog and Library'
+          git push origin HEAD:codex/workbook-profile-migration
