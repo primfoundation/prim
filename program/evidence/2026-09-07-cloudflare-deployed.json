@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-07T17:05:47.282Z",
+  "state": "deployed_public_preview",
+  "source_commit": "dfe683cc4bbf75054fea1b42473279df699eb42c",
+  "compiled_module_sha256": "7fec028b442d0ad39fdefd90b38f06bea22b914ad22f886dafea4e1a29915a06",
+  "worker": "prims-hub-preview",
+  "url": "https://prims-hub-preview.eidos-agi.workers.dev",
+  "version_id": "03266017-e4df-42f4-beda-fe656a095767",
+  "deployment_id": "fabf4b0e-a170-41d8-9014-652869273d5c",
+  "version_percentage": 100,
+  "workers_dev_enabled": true,
+  "version_previews_enabled": false,
+  "assets": {
+    "count": 5,
+    "upload_statuses": [
+      202,
+      202,
+      201
+    ],
+    "missing_after_upload": 0,
+    "binding": "ASSETS",
+    "run_worker_first": true,
+    "manifest": {
+      "/index.html": {
+        "hash": "2286a255b08e2cc5d38ceab848c05fbf",
+        "size": 3629
+      },
+      "/prims/primfoundation/decision/0.1.0-dev.1/index.html": {
+        "hash": "a848dc2ee1fab3935d22b5f355ea8a68",
+        "size": 3137
+      },
+      "/prims/primfoundation/person/0.1.0-dev.1/index.html": {
+        "hash": "95586236b5e3c52c566989a9f0370987",
+        "size": 4584
+      },
+      "/prims/primfoundation/research/0.3.0-dev.3/index.html": {
+        "hash": "6d28333bc6751d9150a90d9849f9a08b",
+        "size": 6035
+      },
+      "/prims/primfoundation/workbook/0.1.0-dev.1/index.html": {
+        "hash": "f32cd7aca35ec9600b5abd224f007b07",
+        "size": 5238
+      }
+    }
+  },
+  "resolved_blocker": {
+    "historical_evidence": "2026-09-07-cloudflare-preview.json",
+    "cause": "Cloudflare MCP GlobalOutbound adds account Authorization even when the request already carries an asset-upload JWT, producing a combined Authorization value.",
+    "source": "https://github.com/cloudflare/mcp/blob/46641b2f8514b208a7ce808e986554219f286542/src/tools/execute.ts",
+    "resolution": "The issued short-lived asset-upload JWT was used in a separate HTTPS uploader with exactly one Authorization value; all files uploaded. A new manifest session supplied the completion token to the ordinary MCP module upload.",
+    "credential_handling": "Temporary JWT entered uploader through non-echoing stdin, never printed or committed. No account token was extracted, created or broadened."
+  },
+  "verification": {
+    "browser": "Homepage observed with Decision, Person, Research and Workbook links.",
+    "local_https_client": "Historical Python urllib requests returned edge HTTP 403/error 1010. The standard MCP SDK initialized and listed tools successfully. The revised mixed HTTP/MCP verifier uses the same httpx2 transport as the SDK; one local attempt timed out at the environment HTTP proxy. Hosted CI passed all checks.",
+    "hosted_sdk": {
+      "result": "passed",
+      "tested_commit": "2e7d3d8eab1fc6b8700cf2c4e2cdd406d1b3c7e0",
+      "workflow_run": "https://github.com/primfoundation/prim-web/actions/runs/34146877288",
+      "profiles": 4,
+      "mcp_modes": [
+        "auto",
+        "legacy"
+      ],
+      "scope": "Real public HTTP, profile pages/CSP, resource digests, invalid methods/origins/pins and oversized requests; creation kit schema/template/rules/authority/digest parity against the installed canonical Library."
+    },
+    "initial_hosted_run": {
+      "result": "failed",
+      "run": "https://github.com/primfoundation/prim-web/actions/runs/34146596543",
+      "reason": "The preliminary urllib catalog request returned non-200 before any MCP checks; replaced its HTTP transport with the SDK dependency and retained all assertions."
+    }
+  },
+  "production_dns_or_routes_written": false,
+  "remaining_gates": [
+    "Accessibility, real product use and independent review.",
+    "Named ownership/budget, edge quotas, monitoring and recovery.",
+    "Production route/content migration and controlled cutover."
+  ]
+}

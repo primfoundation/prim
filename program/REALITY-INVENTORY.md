@@ -98,3 +98,7 @@ This checkpoint materially advances repository/open-work reconciliation, but W0 
 5. organization administration baseline (branch rules/private vulnerability reporting/release controls) from an admin-capable inspection.
 
 Those are real evidence gates, not reasons to stop implementation in independent lanes.
+
+## Deployed preview follow-up — September 7, 17:05 UTC
+
+The initial upload failure is resolved and the isolated Hub preview is deployed. The exact module, five-file asset manifest, Worker version/deployment, browser observation and client checks are recorded in [deployment evidence](evidence/2026-09-07-cloudflare-deployed.json). Existing login, gateway and registry Worker timestamps remain unchanged; this does not claim a production route migration or complete operational inventory.
