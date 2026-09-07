@@ -102,6 +102,50 @@
         },
         "version": "0.3.0-dev.3"
       }
+    },
+    {
+      "checks": {
+        "declared_resource_paths": "passed",
+        "manifest": "passed",
+        "profile_conformance": "not_checked",
+        "publisher_identity": "not_verified",
+        "security_review": "not_performed"
+      },
+      "location": "workbook/PROFILE.md",
+      "manifest_sha256": "38940732135e7223aee717fc60921a7528321de56f6226076c812e9f02662f97",
+      "metadata": {
+        "description": "Ordered workbook composition whose worksheets cite measures and metrics; spreadsheet files are views, not authority.",
+        "extensions": {
+          "primfoundation": {
+            "source-commit": "8e997f0e349d788c56722ea8bd0c3d0afbdb99e5",
+            "source-repository": "primfoundation/prim.workbook",
+            "source-status": "sanitized-public-head"
+          }
+        },
+        "format": "prim-profile",
+        "id": "primfoundation/workbook",
+        "kinds": [
+          "workbook",
+          "worksheet",
+          "measure",
+          "metric"
+        ],
+        "license": "MIT",
+        "manifest_version": "0.1",
+        "maturity": "development",
+        "name": "Workbook Prim",
+        "resources": {
+          "creation": "creation.json",
+          "examples": "examples",
+          "legacy-intention": "legacy/INTENTION.md",
+          "legacy-specification": "legacy/SPEC-0.1.0-draft.md",
+          "migration": "MIGRATION.md",
+          "schema": "schema/record.schema.json",
+          "specification": "SPEC.md",
+          "template": "template.json"
+        },
+        "version": "0.1.0-dev.1"
+      }
     }
   ]
 }

@@ -135,7 +135,69 @@
         }
       },
       "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3"
+    },
+    {
+      "metadata": {
+        "format": "prim-profile",
+        "manifest_version": "0.1",
+        "id": "primfoundation/workbook",
+        "name": "Workbook Prim",
+        "version": "0.1.0-dev.1",
+        "maturity": "development",
+        "description": "Ordered workbook composition whose worksheets cite measures and metrics; spreadsheet files are views, not authority.",
+        "license": "MIT",
+        "kinds": [
+          "workbook",
+          "worksheet",
+          "measure",
+          "metric"
+        ],
+        "resources": {
+          "specification": "SPEC.md",
+          "migration": "MIGRATION.md",
+          "legacy-specification": "legacy/SPEC-0.1.0-draft.md",
+          "legacy-intention": "legacy/INTENTION.md",
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "template": "template.json",
+          "examples": "examples"
+        },
+        "extensions": {
+          "primfoundation": {
+            "source-repository": "primfoundation/prim.workbook",
+            "source-commit": "8e997f0e349d788c56722ea8bd0c3d0afbdb99e5",
+            "source-status": "sanitized-public-head"
+          }
+        }
+      },
+      "resources": {
+        "manifest": {
+          "sha256": "38940732135e7223aee717fc60921a7528321de56f6226076c812e9f02662f97"
+        },
+        "specification": {
+          "sha256": "906dcd766153738e8b4cef3aeb05cf3f57aec6b15fd0e6f5c53520be5ae6b1c1"
+        },
+        "migration": {
+          "sha256": "eee07b48c3f19d1dd5f1fd2078a5abf9d0f697e17ba58768ca5f93de3e46b25b"
+        },
+        "legacy-specification": {
+          "sha256": "df240eee122f68dc8b8f2adb3fd91d92315a151972f47aaaf417bc20436d397a"
+        },
+        "legacy-intention": {
+          "sha256": "b60a22ac0b094ce7e2b3a4e4586e2ec47e67a4d3fc05bfdb1b44c5726b54f9ab"
+        },
+        "creation": {
+          "sha256": "3366bd8f19d3f7ed4baa4b48c61394fe4f51cca5aa4adcee497fce033c84553f"
+        },
+        "schema": {
+          "sha256": "56edadf4c39009a4b04fe3b965191a6a0f140c92f9ed385c016d5a0775ebab01"
+        },
+        "template": {
+          "sha256": "4242ca6e0470ff95b0a48cc80c1b324dc925e7fceb5a520762307d9133cf7cc3"
+        }
+      },
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5"
     }
   ],
-  "snapshot_sha256": "eb03116b547111437cb11e02f65fb35da495861333d5b9d73ff3dce2d598d50a"
+  "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771"
 }
