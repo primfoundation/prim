@@ -31,6 +31,28 @@ jobs:
           prim-library search workbook
           prim-library create primfoundation/workbook --version 0.1.0-dev.1 --output "$tmp/book"
           prim-library validate primfoundation/workbook --version 0.1.0-dev.1 "$tmp/book/workbook.json"
+      - name: Prepare the existing library regression for the fourth generic profile
+        shell: python
+        run: |
+          from pathlib import Path
+          path = Path('services/library/tests/test_library.py')
+          text = path.read_text()
+          old_name = 'def test_three_profiles_no_repository_requirement(self):'
+          old_ids = "{RESEARCH, 'primfoundation/person', 'primfoundation/decision'}"
+          if old_name not in text or old_ids not in text:
+              raise SystemExit('expected Library profile-count fixture changed; review manually')
+          text = text.replace(old_name, 'def test_profiles_no_repository_requirement(self):', 1)
+          text = text.replace(old_ids, "{RESEARCH, 'primfoundation/person', 'primfoundation/decision', 'primfoundation/workbook'}", 1)
+          anchor = '\n\nclass PopularityTests(unittest.TestCase):\n'
+          if anchor not in text:
+              raise SystemExit('Library test insertion anchor changed; review manually')
+          workbook_tests = '''\n    def test_workbook_profile_is_generic_and_structural(self):\n        profile = 'primfoundation/workbook'\n        version = '0.1.0-dev.1'\n        row = self.library.search('workbook')['items'][0]\n        self.assertEqual(row['id'], profile)\n        self.assertEqual(row['version'], version)\n        self.assertEqual(set(self.library.get(profile, version)['metadata']['kinds']), {'workbook', 'worksheet', 'measure', 'metric'})\n        record = self.library.kit(profile, version)['template']\n        record['workbook_id'] = 'workbook:test:metrics'\n        record['title'] = 'Metrics'\n        record['worksheets'] = [\n            {'n': 1, 'id': 'plan', 'role': 'expected', 'pack': 'worksheets/plan', 'title': 'Plan'},\n            {'n': 2, 'id': 'actuals', 'role': 'actuals', 'pack': 'worksheets/actuals', 'title': 'Actuals'},\n        ]\n        self.assertEqual(self.library.validate(profile, version, record)['status'], 'passed')\n        record['worksheets'][1]['id'] = 'plan'\n        self.assertEqual(self.library.validate(profile, version, record)['status'], 'failed')\n\n    def test_workbook_schema_does_not_weaken_no_regex_boundary(self):\n        kit = self.library.kit('primfoundation/workbook', '0.1.0-dev.1')\n        self.assertNotIn('pattern', json.dumps(kit['schema']))\n        self.assertEqual(kit['authority_file'], 'workbook.json')\n'''
+          text = text.replace(anchor, workbook_tests + anchor, 1)
+          path.write_text(text)
+      - name: Run complete library unit suite against generated snapshot
+        env:
+          PYTHONPATH: services/library/src
+        run: python -m unittest discover -s services/library/tests -v
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: workbook-profile-generated
@@ -38,5 +60,6 @@ jobs:
             registry/profiles.generated.json
             services/library/src/prim_library/data/library.json
             services/library/src/prim_library/data/resources/
+            services/library/tests/test_library.py
           if-no-files-found: error
           retention-days: 7
