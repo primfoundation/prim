@@ -1,0 +1,20 @@
+{
+  "format": "prim-creation-kit",
+  "version": 1,
+  "authority_file": "decision.json",
+  "schema_resource": "schema",
+  "template_resource": "template",
+  "identity_field": "id",
+  "title_field": "title",
+  "rules": {
+    "unique_ids": [
+      "options"
+    ],
+    "root_references": [
+      {
+        "field": "chosen_option",
+        "target": "options"
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@
 
 This is the durable record of the Foundation-wide build authorized on September 6, 2026. Research is the first implementation path, not the boundary of the mission.
 
-**Current publication state:** GitHub write access is restored; bootstrap is in PR #5 and Research compatibility continues on `codex/research-compatibility` (PR #6). See `HANDOFF.md` for observed commit, PR and CI evidence. No package release, production deployment, or unattended agent execution is implied.
+**Current publication state:** GitHub write access is restored; bootstrap is in PR #5 and Research compatibility continues on `codex/research-compatibility` (PR #6). The installable Foundation Library MCP and rankings continue in PR #7 (`codex/foundation-library-mcp`). See `HANDOFF.md` for observed commit, PR and CI evidence. No package release, production deployment, or unattended agent execution is implied.
 
 ## One record, several views
 

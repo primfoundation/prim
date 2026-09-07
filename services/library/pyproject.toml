@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools==80.9.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prim-foundation-mcp"
+version = "0.1.0a1"
+description = "Prim Foundation Library: versioned definitions, creation kits, and MCP discovery"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+dependencies = ["mcp==2.1.1", "jsonschema==4.26.0", "uvicorn==0.52.4"]
+
+[project.scripts]
+prim-library = "prim_library.cli:main"
+prim-library-signals = "prim_library.signals_cli:main"
+prim-foundation-mcp = "prim_library.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+prim_library = ["data/*.json", "data/resources/*.txt"]

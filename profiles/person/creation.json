@@ -1,0 +1,14 @@
+{
+  "format": "prim-creation-kit",
+  "version": 1,
+  "authority_file": "person.json",
+  "schema_resource": "schema",
+  "template_resource": "template",
+  "identity_field": "id",
+  "title_field": "name",
+  "rules": {
+    "token_fields": [
+      "id"
+    ]
+  }
+}

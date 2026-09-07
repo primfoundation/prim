@@ -1,0 +1,7 @@
+{
+  "id": "",
+  "name": "Unnamed person",
+  "phones": [],
+  "emails": [],
+  "note": ""
+}

@@ -10,13 +10,73 @@
         "publisher_identity": "not_verified",
         "security_review": "not_performed"
       },
+      "location": "decision/PROFILE.md",
+      "manifest_sha256": "98cd58abfcc549139124b0dc27d0e95e51a04d0b8f871b7ed7065a458d91cc76",
+      "metadata": {
+        "description": "A decision with alternatives, rationale, recorded authority and supersession.",
+        "format": "prim-profile",
+        "id": "primfoundation/decision",
+        "kinds": [
+          "decision"
+        ],
+        "license": "MIT",
+        "manifest_version": "0.1",
+        "maturity": "development",
+        "name": "Decision Prim",
+        "resources": {
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "specification": "SPEC.md",
+          "template": "template.json"
+        },
+        "version": "0.1.0-dev.1"
+      }
+    },
+    {
+      "checks": {
+        "declared_resource_paths": "passed",
+        "manifest": "passed",
+        "profile_conformance": "not_checked",
+        "publisher_identity": "not_verified",
+        "security_review": "not_performed"
+      },
+      "location": "person/PROFILE.md",
+      "manifest_sha256": "a43ecc29176f73a4b6f035f627af917dfba52f82d9ba66fd5b9fdf372985bfce",
+      "metadata": {
+        "description": "A person record: name, contact details and explicitly recorded relationships.",
+        "format": "prim-profile",
+        "id": "primfoundation/person",
+        "kinds": [
+          "person"
+        ],
+        "license": "MIT",
+        "manifest_version": "0.1",
+        "maturity": "development",
+        "name": "Person Prim",
+        "resources": {
+          "creation": "creation.json",
+          "schema": "schema/record.schema.json",
+          "specification": "SPEC.md",
+          "template": "template.json"
+        },
+        "version": "0.1.0-dev.1"
+      }
+    },
+    {
+      "checks": {
+        "declared_resource_paths": "passed",
+        "manifest": "passed",
+        "profile_conformance": "not_checked",
+        "publisher_identity": "not_verified",
+        "security_review": "not_performed"
+      },
       "location": "research/PROFILE.md",
-      "manifest_sha256": "83187e87b916a5f239f9272a9d3a468a4070f3c4a4d7593f94804cdf747288c1",
+      "manifest_sha256": "5ea258d72c23e57f477f74e397bb5f6f939c2a7722d3f6286b9e9d50c28f03c8",
       "metadata": {
         "description": "Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.",
         "extensions": {
           "primfoundation": {
-            "status-note": "Legacy ORF inspection and byte-preserving transport are implemented; Research vNext semantic migration remains open."
+            "status-note": "Native draft creation schema and local validator now available. ORF semantic migration and independent interoperability remain open."
           }
         },
         "format": "prim-profile",
@@ -33,10 +93,14 @@
         "name": "Research Prim",
         "resources": {
           "compatibility": "compatibility/README.md",
+          "creation": "creation.json",
           "examples": "examples",
-          "specification": "SPEC.md"
+          "native-specification": "NATIVE.md",
+          "schema": "schema/record.schema.json",
+          "specification": "SPEC.md",
+          "template": "template.json"
         },
-        "version": "0.3.0-dev.2"
+        "version": "0.3.0-dev.3"
       }
     }
   ]

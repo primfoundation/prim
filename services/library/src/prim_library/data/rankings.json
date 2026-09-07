@@ -1,0 +1,14 @@
+{
+  "format": "prim-popularity",
+  "version": 1,
+  "as_of": null,
+  "policy": {
+    "id": "prim-popularity-v1",
+    "minimum_cohort": 5,
+    "popular": "2*ln(1+active_stars)+ln(1+distinct_adoptions_30d)",
+    "trending": "ln(1+distinct_adoptions_7d)*min(4,(week+5)/(previous_week+5))",
+    "note": "Popularity is adoption, not quality, factual truth, conformance, or security."
+  },
+  "profiles": {},
+  "limits": "No adoption collection activated. No votes, users, downloads or ranking counts have been fabricated."
+}

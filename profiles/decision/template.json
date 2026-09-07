@@ -1,0 +1,12 @@
+{
+  "profile": "primfoundation/decision",
+  "profile_version": "0.1.0-dev.1",
+  "id": "",
+  "title": "Untitled decision",
+  "question": null,
+  "status": "proposed",
+  "options": [],
+  "rationale": null,
+  "chosen_option": null,
+  "authority_as_recorded": null
+}

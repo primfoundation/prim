@@ -1,0 +1,61 @@
+{
+  "record_type": "Observed CI and clean installed-wheel evidence",
+  "repository": "primfoundation/prim",
+  "pull_request": 7,
+  "head_commit": "995d9516b7ba1a80fe7d899994faf963d3740f0b",
+  "head_tree": "0fd25487222bf814a994146be0b4c49d8a865186",
+  "run_id": 34065067787,
+  "conclusion": "success",
+  "recorded_at": "2026-09-06T22:48:36.051556+00:00",
+  "library_tests": 51,
+  "inherited_python_tests": 95,
+  "typescript_sdk_suites": [
+    "pack.test.ts",
+    "registry.test.ts"
+  ],
+  "tested_input_hashes_matching_local": 84,
+  "artifact_id": 9998677889,
+  "artifact_sha256": "51d35319c53a3579edbded6f8c32f60b1c5529fd7574b934657e3ea5aaad0324",
+  "full_report_sha256": "4cc0efd5ff1cc412db256a2ca2e5e3325aced07292f320ded6c6bf153e479d4f",
+  "ci_wheel_sha256": "b68c77de6b2ca5b4b49448649c09dddeb05497271cc045c750a68d24f68aa252",
+  "local_wheel_sha256": "ef3f254cf49769c6b234810732446e083d318d1e02d499d5e9ffb910d8bce22e",
+  "wheel_contents_identical": true,
+  "installed_smoke": {
+    "success": true,
+    "version": "0.1.0a1",
+    "installed_from_site_packages": true,
+    "snapshot_sha256": "eb03116b547111437cb11e02f65fb35da495861333d5b9d73ff3dce2d598d50a",
+    "profiles": [
+      {
+        "profile": "primfoundation/decision",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/person",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/research",
+        "version": "0.3.0-dev.3",
+        "created": true
+      }
+    ],
+    "stdio_client_modes": [
+      "auto",
+      "legacy"
+    ],
+    "not_established": [
+      "public deployment",
+      "all client UIs",
+      "independent security review"
+    ]
+  },
+  "limits": [
+    "Named implementation head only; later documentation commits need their own checks.",
+    "Only three development profiles; no claim of all legacy profile support.",
+    "No public deployment, package-index publication, active public votes, independent review or all-client UI acceptance.",
+    "Local and CI wheel ZIP bytes differ in build metadata/timestamps; content equality was checked separately."
+  ]
+}
