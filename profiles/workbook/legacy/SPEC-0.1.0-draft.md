@@ -57,7 +57,7 @@ Required: `profile: workbook`, `workbook_version`, `type: workbook`, `workbook_i
   log.md                # strongly recommended
   worksheets/           # composed worksheet packs
   measures/             # optional co-located measure packs
-  metrics/               # optional co-located metric packs
+  metrics/              # optional co-located metric packs
   views/                # generated grids / scorecards — never authority
 ```
 

@@ -26,9 +26,16 @@ The publishable unit is now `primfoundation/workbook`; its declared kinds includ
 
 A development schema/template were added so the generic Foundation Library can create a blank root workbook locally. Those files are new reference tooling, not evidence that every legacy semantic rule is mechanically checked.
 
-## Generated integration checkpoint
+## Source integrity and generated distribution
 
-One-shot generation at branch commit `72223c7bac8d78d8dcbcf5458df54f55104296a4` committed the deterministic profile catalog, content-addressed Library resources, compiled Library snapshot, and the four-profile regression update, then removed the temporary generator. The generator's own complete Library unit run passed before that commit. Normal Foundation CI on this subsequent human-authored checkpoint is the durable acceptance gate; bot-authored workflow commits are not treated as a substitute when GitHub marks their follow-up runs `action_required`.
+Both retained legacy documents must match the source Git blob IDs above exactly.
+`tools/tests/test_workbook_migration.py` verifies those bytes independently of the
+Library snapshot, so regenerating the snapshot cannot conceal source drift.
+
+After any declared definition resource changes, run `python tools/build_library.py`
+and its `--check` mode before publication. Execution checkpoints and CI results live
+under `program/evidence/`, outside the distributed definition, to avoid changing its
+digest merely to record a verification result.
 
 ## Retirement gate for the old repository
 

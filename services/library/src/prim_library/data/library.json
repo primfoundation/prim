@@ -178,10 +178,10 @@
           "sha256": "906dcd766153738e8b4cef3aeb05cf3f57aec6b15fd0e6f5c53520be5ae6b1c1"
         },
         "migration": {
-          "sha256": "891156157fb55abc62d02a674ab94f6442636f434fdc414a76717e7384a69335"
+          "sha256": "eee07b48c3f19d1dd5f1fd2078a5abf9d0f697e17ba58768ca5f93de3e46b25b"
         },
         "legacy-specification": {
-          "sha256": "b15095e1692dd2bae61a91f61b2db6f740c00cff625d2dc1415f74cef6b073c6"
+          "sha256": "df240eee122f68dc8b8f2adb3fd91d92315a151972f47aaaf417bc20436d397a"
         },
         "legacy-intention": {
           "sha256": "b60a22ac0b094ce7e2b3a4e4586e2ec47e67a4d3fc05bfdb1b44c5726b54f9ab"
@@ -196,8 +196,8 @@
           "sha256": "4242ca6e0470ff95b0a48cc80c1b324dc925e7fceb5a520762307d9133cf7cc3"
         }
       },
-      "definition_sha256": "8f1b5a7da423c6ae7e441f33d842bc9469da9227a76c6be979ef834272fa6d82"
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5"
     }
   ],
-  "snapshot_sha256": "d7a4e73ccaceec6558b32168842e1b3362dbbd8a0e1323b61702d597e37e40fa"
+  "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771"
 }
