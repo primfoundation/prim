@@ -1,0 +1,11 @@
+{
+  "format": "prim.workbook",
+  "version": "0.1.0",
+  "workbook_id": "workbook:acme:metrics",
+  "title": "Acme Metrics",
+  "periods": ["2026-01", "2026-02"],
+  "worksheets": [
+    {"n": 1, "id": "plan", "role": "expected", "pack": "worksheets/plan", "title": "Plan · expected"},
+    {"n": 2, "id": "actuals", "role": "actuals", "pack": "worksheets/actuals", "title": "Actuals"}
+  ]
+}

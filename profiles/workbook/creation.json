@@ -1,0 +1,12 @@
+{
+  "format": "prim-creation-kit",
+  "version": 1,
+  "authority_file": "workbook.json",
+  "schema_resource": "schema",
+  "template_resource": "template",
+  "identity_field": "workbook_id",
+  "title_field": "title",
+  "rules": {
+    "unique_ids": ["worksheets"]
+  }
+}
