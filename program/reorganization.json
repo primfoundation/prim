@@ -1,0 +1,197 @@
+{
+  "format": "prim-foundation-reorganization",
+  "version": 1,
+  "as_of": "2026-09-06",
+  "target_active_repositories": [
+    "primfoundation/.github",
+    "primfoundation/prim",
+    "primfoundation/prims-hub",
+    "primfoundation/prims-desktop",
+    "primfoundation/primboard",
+    "primfoundation/prims-browsers"
+  ],
+  "principles": [
+    "repositories map to independent standards/product/release responsibility, not routes or Prim types",
+    "profile identity is independent of repository location",
+    "user Prim instances remain user-owned and private by default",
+    "archive only after successor, compatibility, tests, rollback and real-use proof",
+    "brand, repository, public route and runtime security identities are distinct rename layers",
+    "no force-push or history deletion as cleanup"
+  ],
+  "repositories": [
+    {
+      "source": "primfoundation/.github",
+      "target": "primfoundation/.github",
+      "class": "organization-policy",
+      "lifecycle": "active",
+      "action": "keep-and-strengthen",
+      "notes": "Own only organization-wide defaults, templates, shared policy and genuinely reusable CI."
+    },
+    {
+      "source": "primfoundation/prim",
+      "target": "primfoundation/prim",
+      "class": "standards",
+      "lifecycle": "active",
+      "action": "keep-and-consolidate-definitions",
+      "notes": "Category spec, portable profiles, compatibility, conformance, publication contracts and program record."
+    },
+    {
+      "source": "primfoundation/prim-web",
+      "target": "primfoundation/prims-hub",
+      "class": "public-platform",
+      "lifecycle": "migrating",
+      "action": "audit-then-rename-or-import-history",
+      "open_prs": [1],
+      "archive_gate": [
+        "history and private-asset audit",
+        "Cloudflare Worker preview passes",
+        "website/API/MCP cutover passes",
+        "old Pages/Railway rollback preserved"
+      ]
+    },
+    {
+      "source": "primfoundation/prim-registry",
+      "target": "primfoundation/prims-hub",
+      "class": "route-service",
+      "lifecycle": "migrating",
+      "action": "absorb-runtime-and-tests",
+      "open_prs": [1],
+      "archive_gate": [
+        "registry.prims.sh compatibility route proven",
+        "current HTTP clients inventoried",
+        "tests and release evidence moved",
+        "rollback window complete"
+      ]
+    },
+    {
+      "source": "primfoundation/prim.workbook",
+      "target": "primfoundation/prim:profiles/workbook",
+      "class": "profile-incubator",
+      "lifecycle": "migrating",
+      "action": "migrate-definition-and-classify-viewer",
+      "open_prs": [1],
+      "risk": "repository history may contain private/customer material; public scrub must be reviewed before visibility or migration",
+      "archive_gate": [
+        "privacy/history audit",
+        "profile semantics fixtures and validators moved",
+        "viewer assigned to Hub/Desktop/other appropriate surface",
+        "old consumers pass"
+      ]
+    },
+    {
+      "source": "primfoundation/prims-desktop",
+      "target": "primfoundation/prims-desktop",
+      "class": "signed-desktop-product",
+      "lifecycle": "active",
+      "action": "keep-and-refactor-generic-host",
+      "open_prs": [2, 3, 4, 6],
+      "notes": "Preserve Mac proof gates; reconcile existing connector, XPC/Messages, logging and person-resolution work before broad refactor."
+    },
+    {
+      "source": "primfoundation/prims-browsers",
+      "target": "primfoundation/prims-browsers",
+      "class": "browser-sandbox-product",
+      "lifecycle": "active",
+      "action": "keep-and-absorb-cloud-apps"
+    },
+    {
+      "source": "primfoundation/browsers-prims-sh",
+      "target": "primfoundation/prims-browsers:cloud/gateway",
+      "class": "product-route-service",
+      "lifecycle": "migrating",
+      "action": "merge-into-product",
+      "archive_gate": [
+        "browsers.prims.sh live behavior unchanged",
+        "container registry and machine redirects tested",
+        "session/auth boundary tested",
+        "rollback complete"
+      ]
+    },
+    {
+      "source": "primfoundation/logins-prims-sh",
+      "target": "primfoundation/prims-browsers:cloud/login",
+      "class": "product-route-service",
+      "lifecycle": "migrating",
+      "action": "merge-into-product-unless-identity-scope-changes",
+      "archive_gate": [
+        "Apple login callback tested",
+        "shared cookie/domain behavior tested",
+        "secrets recreated in target environment without copying values through git",
+        "rollback complete"
+      ]
+    },
+    {
+      "source": "primfoundation/prims-paste-desktop",
+      "target": "primfoundation/primboard",
+      "class": "signed-desktop-product",
+      "lifecycle": "migrating",
+      "action": "stabilize-then-rename-repository",
+      "observed_commit": "25d2641443c1e9d4b55b2651c18188a378a3b166",
+      "locked_compatibility_identities": [
+        "CFBundleIdentifier=sh.prims.paste",
+        "executable=PrimsPaste",
+        "cli=prims-paste",
+        "store=~/.prims-paste/",
+        "keychain_service=sh.prims.paste",
+        "existing serialized notebook/sticky IDs"
+      ],
+      "refactor_priorities": [
+        "encrypt sensitive notebook index metadata",
+        "interprocess app/CLI locking and stale-write protection",
+        "crash-consistent atomic replacement",
+        "versioned store migrations and rollback",
+        "backup/export/restore and lost-key UX",
+        "explicit Touch ID versus CLI/Keychain threat model",
+        "remove product bugs/features seeding from normal user notebooks",
+        "generic Convert to Prim using pinned Foundation Library definition",
+        "real Mac TCC/signing/store regression matrix",
+        "accessibility and large-board performance"
+      ],
+      "archive_gate": "not-applicable; repository is renamed successor, old GitHub slug should redirect"
+    }
+  ],
+  "legacy_eidos_incubators": [
+    {"repo": "eidos-agi/prim.orf", "classification": "profile", "target": "primfoundation/prim:profiles/research compatibility", "action": "already-being-preserved-and-migrated"},
+    {"repo": "eidos-agi/prim.opf", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.odwf", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.opff", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.omf", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.ocsf", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.osf", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-and-import-definition"},
+    {"repo": "eidos-agi/prim.album", "classification": "profile-candidate", "target": "primfoundation/prim", "action": "audit-definition-versus-tool"},
+    {"repo": "eidos-agi/prim.brand", "classification": "profile-and-assets-candidate", "target": "primfoundation/prim", "action": "audit-brand-definition-assets-and-consumers"},
+    {"repo": "eidos-agi/prim.docket", "classification": "profile-tool-hybrid", "target": "split", "action": "move-normative-definition-to-prim-keep-tool-runtime-separate-if-justified"},
+    {"repo": "eidos-agi/prim.scene", "classification": "profile-tool-hybrid", "target": "split", "action": "audit-before-movement"},
+    {"repo": "eidos-agi/prim.video", "classification": "profile-tool-hybrid", "target": "split", "action": "audit-before-movement"},
+    {"repo": "eidos-agi/prim.obf", "classification": "private-profile-tool-hybrid", "target": "undecided", "action": "privacy-and-consumer-audit-before-any-public-migration"},
+    {"repo": "eidos-agi/prim.emf", "classification": "private-profile-candidate", "target": "undecided", "action": "privacy-and-semantics-audit"},
+    {"repo": "eidos-agi/prim.cre.opaf", "classification": "profile-candidate", "target": "primfoundation/prim-or-external", "action": "audit-semantics-and-ownership"},
+    {"repo": "eidos-agi/prim.obif", "classification": "archived-history", "target": "history", "action": "preserve-archived-state-and-map-successor-if-any"},
+    {"repo": "eidos-agi/prim.viewer.temp.odwf-viewer-v1", "classification": "temporary-viewer", "target": "appropriate-product-or-history", "action": "archive-after-viewer-migration-audit"},
+    {"repo": "eidos-agi/prims-launchpad-web", "classification": "eidos-product-incubator", "target": "not-automatically-foundation", "action": "require-product-boundary-governance-and-security-decision-before-transfer"}
+  ],
+  "waves": [
+    {"id": "W0", "name": "inventory-and-freeze-sprawl", "destructive": false},
+    {"id": "W1", "name": "standards-consolidation", "destructive": false},
+    {"id": "W2", "name": "build-prims-hub-preview", "destructive": false},
+    {"id": "W3", "name": "public-cloudflare-cutover", "destructive": true, "requires": ["production approval", "rollback evidence"]},
+    {"id": "W4", "name": "primboard-stabilize-and-rename", "destructive": true, "requires": ["compatibility audit", "Mac acceptance"]},
+    {"id": "W5", "name": "browsers-repo-consolidation", "destructive": true, "requires": ["domain/session acceptance"]},
+    {"id": "W6", "name": "desktop-generic-host-refactor", "destructive": false},
+    {"id": "W7", "name": "legacy-eidos-profile-migration", "destructive": true, "requires": ["per-repo privacy/consumer/compatibility audit"]},
+    {"id": "W8", "name": "governance-quality-and-archive", "destructive": true, "requires": ["successor proof", "rollback window", "real-use verification"]}
+  ],
+  "archive_definition": {
+    "meaning": "read-only history, never deletion",
+    "required": [
+      "successor live and documented",
+      "open PRs/issues reconciled",
+      "consumer/dependency inventory complete",
+      "release/config evidence preserved",
+      "compatibility promises tested",
+      "successor README and last supported commit recorded",
+      "rollback window passed",
+      "real-use verification retained"
+    ]
+  }
+}
