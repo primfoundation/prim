@@ -8,7 +8,7 @@ Free digital filing cabinets for billions; durable, understandable, evidence-bac
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 79 tracked requirements. blocked: 2; complete: 0; in_progress: 20; in_review: 11; planned: 46.
+17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 21; in_review: 11; planned: 46.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -270,9 +270,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Search, filters, version pages, documentation and API serve one source model; official/publisher/conformance/security states are distinct.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: DIR-001, DIR-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW, E-CF-DEPLOY, E-CF-HOSTED. Dependencies: DIR-001, DIR-002.
 
-Merged Hub supplies generated human pages, API and MCP from one canonical bundle. All four kits match an external local MCP client. Clawdflare is connected; reserved preview remains disabled because scoped asset uploads fail token verification. Public acceptance and full old-site migration remain open.
+Hub preview is deployed with human pages, JSON and MCP from the four-profile canonical bundle. Homepage observed live; hosted CI 34146877288 passes all four canonical kits, HTTP/assets/CSP and negative boundaries through the external SDK in auto/legacy modes. Accessibility, independent acceptance and old-site migration remain open.
 
 **DIR-004 — Operate a trustworthy directory**
 
@@ -428,9 +428,9 @@ State: `in_review` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Official SDK stdio and Streamable HTTP serve bounded search, exact definitions, versions, resources, creation kits and rankings; tools never require private instance contents.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-CF-HOSTED, E-CF-DEPLOY. Dependencies: none.
 
-Merged stdio/HTTP Library and Cloudflare MCP preview both tested with external SDK; public deployment and independent security acceptance remain.
+Merged stdio/HTTP Library and deployed Cloudflare preview are tested with the external SDK. Hosted CI 34146877288 passes both modes and all four canonical creation kits. Independent security review and production operational acceptance remain open.
 
 **DEV-006 — Ship a reproducibly installable MCP package**
 
@@ -724,9 +724,9 @@ State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Actual providers, domains, services, access boundaries, owners and operating budgets are verified; no guessed deployments or unapproved spend.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW, E-CF-DEPLOY. Dependencies: none.
 
-Clawdflare confirms the Eidos AGI account, active prims.sh zone and existing Prim Workers. Isolated Hub preview was created but remains disabled and undeployed after asset-upload HTTP 401. Account access does not establish Foundation legal ownership, operator/cost ownership or production budgets.
+Clawdflare confirms the Eidos AGI account, active prims.sh zone and existing Prim Workers. Isolated Hub preview now has five Static Assets and a deployed version at 100%. Foundation legal ownership, operator/cost ownership and production budgets remain open.
 
 **OPS-002 — Operate reliable public services**
 
@@ -756,13 +756,13 @@ Required evidence: implementation, tests, review, real_use. Evidence retained: n
 
 **OPS-005 — Launch the Foundation-owned public MCP endpoint**
 
-State: `blocked` · Milestone: M6 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Confirm hosting owner and budget; deploy a pinned reviewed release with TLS, origin/host policies, edge quotas, health monitoring and rollback; connect a real external MCP host.
 
-Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW. Dependencies: DEV-006, OPS-001.
+Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW, E-CF-DEPLOY, E-CF-HOSTED. Dependencies: DEV-006, OPS-001.
 
-Clawdflare is connected and the isolated Hub preview Worker exists with workers.dev disabled. Manifest registration passes; fresh scoped asset uploads fail HTTP 401 invalid_token/token verification failure. Resolve that upload failure, deploy the pinned module/assets, and run public HTTP/MCP acceptance. Ownership, cost and production operational gates remain.
+Isolated Hub preview is live with version 03266017-e4df-42f4-beda-fe656a095767; hosted HTTP/MCP parity passes in CI 34146877288. Upload token failure resolved without account credential extraction or reconnection. Named ownership, cost, edge quotas, monitoring, recovery and production cutover remain open.
 
 ### COMM — Adoption and community
 
