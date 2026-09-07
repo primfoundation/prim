@@ -1,58 +1,33 @@
-# Foundation Library MCP handoff — September 6, 2026
+# Foundation execution handoff — September 7, 2026
 
-## Larger map and preserved branches
+## Current state
 
-All 17 workstreams and seven milestones remain. The prior 70 requirement IDs are
-retained; nine explicit library/MCP/ranking/publication/hosting requirements bring
-the ledger to 79. Person and Decision now exercise the generic kit alongside
-Research; receipt, contract, project and system are still open reference cases.
-Whole-life contexts/Worlds, diagnostics, ingestion, agency, privacy, governance,
-community and sustainability are not dropped.
+The Foundation bootstrap (#5), ORF compatibility (#6), Library/MCP alpha (#7) and sanitized Workbook import (#10) are merged into `primfoundation/prim`. The reorganization branch (#8) is reconciled with their shared main baseline; its current PR metadata is the authority for its submitted head and final integration state.
 
-PR #5: `codex/foundation-program-bootstrap`, observed head 633ae194ff96de6d1e9bf43dad91aa7f066a474f.
-PR #6: `codex/research-compatibility`, observed head 65b956b03c5eee4b309bbc61df2a57e413b34fb0.
-Current PR #7: `codex/foundation-library-mcp`, stacked on #6. Consult PR metadata
-for the exact submitted head/CI; local workspace commits are not upstream commits.
-No merge, old format rewrite, existing service modification, or unattended agent.
+Four development profiles are available through generic local creation tooling: Research, Person, Decision and Workbook. Source/workbook provenance is preserved; no customer-history import or stable-standard release is implied. All 17 workstreams, seven milestones and 79 requirement IDs remain. Whole-life contexts, diagnostics, ingestion, authority/privacy, governance, community, sustainability and the remaining diverse reference cases are still obligations.
 
-## What is available
+## Integrated product increments
 
-`services/library` is the alpha installable package. It supports public definition
-search, exact-version/hash pins, schemas/templates, resources, creation guidance,
-Popular/Trending ranking, stdio and remotely hostable Streamable HTTP. Human and
-JSON surfaces share the same compiled definitions. Three development profiles
-are available, not the entire historical registry. `prim-library` creates and
-checks local files with a definition lock; private content is not a public MCP
-parameter. Generic tooling, not a hand-written endpoint per Prim type.
+| Repository / PR | Result | Evidence |
+| --- | --- | --- |
+| `prim` #10 | Workbook provenance fix, immutable source regression, rebuilt four-profile Library | tested `86e8a58c…`; CI `34085213081` / `34085213070`; 53 Library + 96 Foundation Python tests, both TS suites, clean wheel and installed MCP smoke |
+| `prim-web` #5 | canonical bundled Hub catalog, human pages, JSON/MCP and local-authoring kits | tested `dfe683cc…`; CI `34086822519`; six tests, dry build, real local Worker HTTP + external auto/legacy MCP parity for all four kits |
+| `prims-paste-desktop` #1 | safe startup, current-version store locking, revision conflict rejection and atomic replacement | tested `d0fae3b9…`; macOS CI `34086141864`; 121 XCTest cases, release build, isolated selftest and compatibility guards |
+| `prims-browsers` #1 | imported login/gateway Workers; shared session/assets; verified Apple identity and fail-closed configuration | tested `e542cd69…`; CI `34086860578`; 13 tests and two dry builds; complete synthetic Apple-to-gateway round trip |
+| `prims-desktop` #7 | required-source/toolchain preflight prevents false successful proof | tested `075128f3…`; Bash syntax + real missing-dependency failure; no native pass |
+| `.github` #1 | contribution, security, repository lifecycle and evidence defaults | document contents inspected; merged `350af7fe…`; no admin enforcement or independent review claimed |
 
-Signed, consented popularity signals can be processed by the operator CLI; the
-public service cannot accept votes. The initial snapshot has no made-up adoption.
-Use the README/SECURITY.md for environment, ownership and trust limits. Schemas
-validate structure, not truth or permission. Native Research is still experimental;
-ORF preservation and compatibility remain separate, and semantic migration is open.
+All rows above are merged. Full tested and merge SHAs, scope and limitations are in [execution evidence](evidence/2026-09-07-execution.json). A CI result belongs to its exact tested commit, not arbitrary later work.
 
-## Evidence and release state
+## Next actionable gates
 
-See evidence/2026-09-06-library-mcp.md and evidence/library-tests.json. The service
-suite, inherited 95 Python tests and existing TypeScript suites are run. Clean
-wheel installation is separately exercised outside the repository. PR CI runs
-same-source checks and retains packages/reports. An installable alpha is not a
-PyPI release, public endpoint, independent review or complete user acceptance.
-Read any CI checkpoint for the exact head tested; do not assume later changes pass.
+1. **Cloudflare:** the Hub and both browser Workers have isolated preview configurations and passing builds. The available Cloudflare integration was suggested for installation/connection, but no connection was confirmed in this run. Establish the approved Foundation account, operator/cost owner and preview domain. Follow `prim-web/hub/OPERATIONS.md` and `prims-browsers/cloud/README.md`; prove public clients and a real Apple/session/container path before changing production routes. Separate workers.dev hosts cannot share host-only login cookies.
+2. **Desktop:** recover the authoritative `../prim-sim` checkout and its remote/revision/license. Both candidate GitHub lookups returned 404 through the current account, which does not prove deletion. Do not replace `PrimSimCore` with a guessed URL or stub. Preserve existing PRs #2/#3/#4/#6 and their FDA/XPC/signing gates until reproducible source and Mac proof exist.
+3. **Primboard:** implement encrypted index migration and tested recovery/backup, then generic Library conversion and signed existing-store acceptance. The merged file replacement is atomic per file, not a multi-file journal. Locking requires updated binaries; mixed old/new writers remain unsupported.
+4. **Governance/migrations:** obtain actual admin/reporting controls and ownership evidence; complete remaining source/consumer/privacy audits. No archive, rename or visibility change follows automatically from consolidation docs. Independent review and real-use evidence remain separate from our automated checks.
 
-## Next gate
+## Stable boundaries
 
-OPS-005 is blocked on Foundation hosting ownership and budget: the read inventory
-did not establish a named approved target. Do not use unrelated personal/employer
-workloads to avoid asking. After authorization, use explicit allowed hosts, TLS,
-edge quotas, monitoring, rollback and external-client acceptance. No live public
-URL is claimed. Container configuration is provided but Docker was not proven here.
+Private Prim instances stay local/user-owned. The public Hub distributes definitions and public metadata. Popularity has no fabricated launch signals and does not mean truth, safety or official status. Primboard and Desktop bundle/CLI/Keychain/store/signing identities remain fixed. Valid legacy browser session cookies remain compatible; restart old in-flight Apple logins when a future nonce-enforcing cutover occurs.
 
-While that gate is pending, PUB-006/DIR-007 cover approved external publishers,
-immutable snapshot refresh and authenticated opt-in popularity collection. RES-003
-and RES-001 still require lifecycle and genuine semantic migration. Independent
-security and user feedback remain review evidence, never fabricated by tests.
-
-No background worker, publication schedule, auto-merge, paid service or private
-record upload is started. CI is bounded testing. Preserve other branches and
-reconcile prior docs/opf work under PRG-004 before any cutover.
+No production DNS or route change, repository archive/rename, history rewrite, signed release, private data upload or paid unattended worker was performed. No background agent is running. `plan.json` remains the canonical ledger; regenerate `ROADMAP.md` with `python tools/program.py render` after edits.

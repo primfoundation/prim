@@ -2,13 +2,13 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-06. Execution: **foundation_library_mcp_under_review**.
+As of 2026-09-07. Execution: **verified_foundation_and_product_increments_merged_deployment_and_real_use_gates_open**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 9; in_review: 11; planned: 58.
+17 workstreams; 79 tracked requirements. blocked: 2; complete: 0; in_progress: 20; in_review: 11; planned: 46.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -74,9 +74,9 @@ State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Create an identifiable branch, verify every changed file, run repository CI, and open a PR without modifying production.
 
-Required evidence: implementation, tests, review. Evidence retained: E-BOOT-CI. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-BOOT-CI, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
 
-PR #5 published and full-checkout CI passed. PR #6 continues Research as a stacked review; no merge or independent approval is inferred.
+Bootstrap #5, ORF #6, Library #7 and Workbook #10 merged. Exact commits/CI are retained; merging does not establish independent approval or a released standard.
 
 **PRG-004 — Reconcile existing plans and in-flight work**
 
@@ -84,9 +84,9 @@ State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Cross-repository inventory retains docs/opf and branch work, records owners/overlap and preserves incomplete acceptance gates.
 
-Required evidence: implementation, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
 
-Main/branches/ORF baseline inspected; full reconciliation remains open.
+Reorganization #8 reconciles the merged Foundation baseline. Hub, Browsers, Primboard, governance and Desktop preflight increments merged; historical SDK/docs/product branches and repository cutovers remain.
 
 **PRG-005 — Project coordination without duplicate authority**
 
@@ -102,9 +102,9 @@ State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: A replacement worker can identify inputs, changes, commands, evidence, blocked publication and the exact next step without private chat reconstruction.
 
-Required evidence: implementation, review. Evidence retained: E-IMPL. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-IMPL, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
 
-Current checkpoint is HANDOFF.md; no unattended agent started.
+HANDOFF.md and GOAL-STATUS.md now identify exact merged increments, tested scope and the next access/real-use gates. No unattended agent is running.
 
 ### GOV — Mission and governance
 
@@ -112,11 +112,13 @@ Delivery responsibility: foundation.
 
 **GOV-001 — Define stewardship and decision rights**
 
-State: `planned` · Milestone: M6 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Approved charter, maintainer/succession/dispute processes, public decisions and the Foundation/commercial boundary.
 
-Required evidence: implementation, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+
+Contribution/security/lifecycle defaults merged in .github. Admin enforcement, legal decisions and independent stewardship remain open.
 
 **GOV-002 — Set legal, IP and licensing policy**
 
@@ -196,11 +198,13 @@ Local implementation only; no package publication, production SDK integration, o
 
 **PUB-002 — Pin immutable package distributions**
 
-State: `planned` · Milestone: M1 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Complete package digests, authenticated provenance, lockfiles, source moves, rollback and offline caches are tested; hashes are not truth claims.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-001, SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: PUB-001, SEC-001.
+
+Canonical resources and definition/snapshot pins are verified in the installable Library and bundled Hub. Published immutable distribution, release trust and independent review remain open.
 
 **PUB-003 — Resolve versions, names and dependencies**
 
@@ -212,11 +216,13 @@ Required evidence: implementation, tests, review. Evidence retained: none. Depen
 
 **PUB-004 — Make authoring independent of Foundation hosting**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: A third party authors, tests and publishes from another repository/private source with useful errors and without creating a Foundation repo.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-002, PUB-003, DEV-002.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: PUB-002, PUB-003, DEV-002.
+
+Clean installed Library creates four profile instances locally and pins definitions; private instance contents are not public MCP inputs. Wider independent authoring acceptance remains.
 
 **PUB-005 — Provide generic version-pinned creation kits**
 
@@ -224,9 +230,9 @@ State: `in_review` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: A new profile supplies schema, blank template, authority filename and declarative rules; an agent can create locally without a type-specific endpoint or model dependency.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-WORKBOOK-TEST. Dependencies: none.
 
-Implementation and tests available; independent review and activation/release gates remain open.
+Research, Person, Decision and Workbook creation kits match canonical schemas/templates/rules/authority and digests through Library and Hub. No independent review or stable release claimed.
 
 **PUB-006 — Automate approved definition publication and refresh**
 
@@ -246,9 +252,9 @@ State: `in_review` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: PROFILE.md metadata generates a deterministic local catalog; drift fails; legacy registry remains unchanged until consumer migration.
 
-Required evidence: implementation, tests, review. Evidence retained: E-IMPL, E-TEST. Dependencies: PUB-001.
+Required evidence: implementation, tests, review. Evidence retained: E-IMPL, E-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: PUB-001.
 
-Development catalog generated; not consumed by the existing registry or live website.
+Four-profile development catalog now feeds the Library and side-by-side Cloudflare Hub preview. Production website/registry cutover remains open.
 
 **DIR-002 — Implement private and external resolution**
 
@@ -264,9 +270,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Search, filters, version pages, documentation and API serve one source model; official/publisher/conformance/security states are distinct.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DIR-001, DIR-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: DIR-001, DIR-002.
 
-Installable MCP, HTTP JSON routes and human catalog share a compiled snapshot. Public hosting, general source resolution and third-party ecosystem publication are not complete.
+Merged Hub supplies generated human pages, API and MCP from one canonical bundle. All four kits match an external local MCP client; no public endpoint or full old-site migration yet.
 
 **DIR-004 — Operate a trustworthy directory**
 
@@ -282,9 +288,9 @@ State: `in_review` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: All surfaces share hashes and exact versions; unknown definitions do not silently substitute; catalog resources never expose private instances.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DEV-005.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: DEV-005.
 
-Implementation and tests available; independent review and activation/release gates remain open.
+Canonical bundle, human pages, JSON and MCP pass same-source checks and real local Worker parity in CI. Deployment and independent review remain open.
 
 **DIR-006 — Rank genuine adoption and recent momentum**
 
@@ -422,9 +428,9 @@ State: `in_review` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Official SDK stdio and Streamable HTTP serve bounded search, exact definitions, versions, resources, creation kits and rankings; tools never require private instance contents.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
 
-Implementation and tests available; independent review and activation/release gates remain open.
+Merged stdio/HTTP Library and Cloudflare MCP preview both tested with external SDK; public deployment and independent security acceptance remain.
 
 **DEV-006 — Ship a reproducibly installable MCP package**
 
@@ -432,9 +438,9 @@ State: `in_review` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: A built wheel includes its definition snapshot, installs in a clean environment, and completes creation plus protocol tests outside the checkout; reviewed publication and supported-client matrix remain explicit.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: DEV-005.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-WORKBOOK-TEST. Dependencies: DEV-005.
 
-Implementation and tests available; independent review and activation/release gates remain open.
+Clean wheel installation, pip check and installed stdio smoke passed for all four development profiles. No package index release or independent review.
 
 ### HUM — Human-facing reference products
 
@@ -450,11 +456,13 @@ Required evidence: implementation, tests, review. Evidence retained: none. Depen
 
 **HUM-002 — Prove desktop open-edit-save**
 
-State: `planned` · Milestone: M4 · Owner: implementation-lead.
+State: `blocked` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Supported platforms have explicit matrices; a real app opens attachments, edits, saves and exports the actual file with no hidden competing store.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: HUM-001, REL-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: HUM-001, REL-003.
+
+Desktop still imports an unavailable sibling PrimSimCore source. Proof now fails before live probes instead of skipping source tests and claiming success. Recover authoritative source, then reconcile Mac integration PRs and verify signed-device behavior.
 
 **HUM-003 — Support mobile and accessible use**
 
@@ -554,33 +562,39 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Untrusted definitions, instance data, scripts, renderers, sources, agents, logs and indexes have abuse cases and trust boundaries before network execution.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
 
-THREAT-MODEL.md covers the local compatibility slice with bounded-input tests. Whole-platform threat modeling, process sandboxing and independent review remain open.
+Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains.
 
 **SEC-002 — Protect sensitive records and keys**
 
-State: `planned` · Milestone: M4 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Encryption/key recovery, private/public separation, grants, secret references, rotation, redacted sharing and revocation are tested without secret values in packs.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: SEC-001.
+
+Primboard normal startup stops backlog seeding; locked current-version mutations, stale-index rejection and atomic private file replacement pass macOS CI. Encrypted metadata, backup and real-store acceptance remain.
 
 **SEC-003 — Isolate untrusted processing**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Archive traversal/bombs, parser exhaustion, unsafe renderers, prompt injection, validator execution and dependency supply-chain risks have tests and sandbox boundaries.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: SEC-001, PUB-002.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: SEC-001, PUB-002.
+
+Browser login/gateway sources consolidated with verified Apple identity and fail-closed session/fleet handling. Synthetic tests and dry builds pass; real-account/container and isolation acceptance remain.
 
 **SEC-004 — Establish security response**
 
-State: `planned` · Milestone: M6 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Disclosure/contact process, scoped independent review, incident handling, revocation/retraction and security regression evidence exist before stable public claims.
 
-Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: SEC-001.
+Required evidence: implementation, tests, review, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: SEC-001.
+
+Organization SECURITY.md is merged; private reporting configuration, response ownership and actual incident/recovery practice remain administration/operations gates.
 
 ### LIFE — Whole-life and organizational coverage
 
@@ -600,9 +614,9 @@ State: `in_progress` · Milestone: M3 · Owner: implementation-lead.
 
 Acceptance: Person, receipt, contract, project, decision and system expose identity, evidence, commitments, history, capability/authority and context problems with retained fixtures.
 
-Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST. Dependencies: CORE-001, CORE-002.
+Required evidence: implementation, tests, review. Evidence retained: E-LIB-IMPL, E-LIB-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-WORKBOOK-TEST. Dependencies: CORE-001, CORE-002.
 
-Person and Decision have development schemas and generic creation tests. The other four reference cases and the complete contextual model remain open.
+Research/Person/Decision kits retained; first sanitized Workbook incubator profile imported with exact source provenance. This does not replace the remaining six-reference-case obligations.
 
 **LIFE-003 — Build diagnostic coverage, not vanity scores**
 
@@ -664,27 +678,33 @@ Delivery responsibility: foundation.
 
 **RELENG-001 — Inventory consumers before cutover**
 
-State: `planned` · Milestone: M0 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Existing registries, profiles, SDKs, products and in-flight branches have owners and dependency maps; compatibility decisions preserve open obligations.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+
+Source commits, runtime IDs, route/cookie boundaries and open Desktop PRs recorded. Complete production consumer inventory and route migration remain before renames/archives.
 
 **RELENG-002 — Create reproducible release gates**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Clean installs/builds, pinned dependencies, supported-platform tests, signing where applicable and artifact provenance are demonstrated.
 
-Required evidence: implementation, tests, review, release. Evidence retained: none. Dependencies: RELENG-001.
+Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: RELENG-001.
+
+Exact-commit CI passes Foundation, Hub, both browser Workers and 121 macOS Primboard tests/release build/selftest. Desktop source preflight blocks honestly; notarized releases and independent gates remain.
 
 **RELENG-003 — Migrate without a flag day**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Aliases, read-old/write-new policy, migration receipts, originals, restore/rollback and deprecated repositories have tested, authorized procedures.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: RELENG-001, RES-001, PUB-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
+
+Sanitized Workbook import and valid legacy browser session/read-old notebook behavior are tested. No route, user-store, repository rename or archive cutover performed.
 
 **RELENG-004 — Define stable acceptance and maintenance**
 
@@ -700,11 +720,13 @@ Delivery responsibility: foundation.
 
 **OPS-001 — Inventory infrastructure and approve costs**
 
-State: `planned` · Milestone: M0 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Actual providers, domains, services, access boundaries, owners and operating budgets are verified; no guessed deployments or unapproved spend.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+
+Cloudflare architecture and isolated preview configs are concrete. Foundation account connection, operator/cost ownership and actual preview domains are not established.
 
 **OPS-002 — Operate reliable public services**
 
@@ -716,11 +738,13 @@ Required evidence: implementation, tests, review, real_use, release, deployment.
 
 **OPS-003 — Prove recovery and exit**
 
-State: `planned` · Milestone: M6 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Backups and restore drills, key loss, publisher/service disappearance, offline export, mirrors and service/vendor migration pass explicit recovery goals.
 
-Required evidence: implementation, tests, review, real_use. Evidence retained: none. Dependencies: OPS-001.
+Required evidence: implementation, tests, review, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: OPS-001.
+
+Hub and browser preview/cutover rollback procedures committed; no actual deployment recovery or user-data restore drill yet.
 
 **OPS-004 — Sustain a useful free core**
 
@@ -736,9 +760,9 @@ State: `blocked` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Confirm hosting owner and budget; deploy a pinned reviewed release with TLS, origin/host policies, edge quotas, health monitoring and rollback; connect a real external MCP host.
 
-Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: none. Dependencies: DEV-006, OPS-001.
+Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: DEV-006, OPS-001.
 
-Read inventory found no confirmed Foundation hosting target. Do not deploy into unrelated personal/employer services. Hosting ownership and budget require a founder decision; no public endpoint is claimed.
+Foundation Cloudflare Worker target and local/CI external MCP acceptance are prepared. Install/connect the available Cloudflare integration to the approved Foundation account; account ownership/cost and preview domain gates remain. No public URL is claimed.
 
 ### COMM — Adoption and community
 

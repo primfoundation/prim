@@ -1,0 +1,139 @@
+{
+  "format": "prim-foundation-execution-evidence",
+  "version": 1,
+  "observed_at": "2026-09-07",
+  "scope": "Verified implementation increments; independent review, released products, public deployment and real-account/device acceptance are separate gates.",
+  "foundation": {
+    "repository": "primfoundation/prim",
+    "merged_prs": [
+      {
+        "number": 5,
+        "merge_commit": "980edca440e95de6ac314ec405f14ac7e9f35bbf"
+      },
+      {
+        "number": 6,
+        "merge_commit": "c249f6746d659a95a112849ec22c827e4a20ad27"
+      },
+      {
+        "number": 7,
+        "merge_commit": "100cacab035dcd787493f672514c4e2b5e424fc6"
+      },
+      {
+        "number": 10,
+        "merge_commit": "d63b573fd3afeb1e23effec6941c6727829f80b1"
+      }
+    ],
+    "tested_commit": "86e8a58c4491afedc1be07520e6360bdc1989ba1",
+    "ci_runs": [
+      34085213081,
+      34085213070
+    ],
+    "results": {
+      "library_tests": 53,
+      "foundation_python_tests": 96,
+      "typescript_sdk_suites": 2,
+      "clean_wheel_install": "passed",
+      "pip_check": "passed",
+      "installed_stdio_mcp_modes": [
+        "auto",
+        "legacy"
+      ],
+      "profile_count": 4
+    },
+    "workbook_evidence": "program/evidence/2026-09-07-workbook-verification.json"
+  },
+  "hub": {
+    "repository": "primfoundation/prim-web",
+    "pr": 5,
+    "tested_commit": "dfe683cc4bbf75054fea1b42473279df699eb42c",
+    "merge_commit": "dd73feab044be9540ce5179332248d1680b5558b",
+    "ci_run": 34086822519,
+    "results": {
+      "typecheck": "passed",
+      "unit_tests": 6,
+      "canonical_git_object_bundle_check": "passed",
+      "worker_and_assets_dry_build": "passed",
+      "real_local_worker_http": "passed",
+      "external_mcp_client_modes": [
+        "auto",
+        "legacy"
+      ],
+      "canonical_creation_kit_parity_profiles": 4
+    },
+    "public_deployment": false,
+    "operations": "hub/OPERATIONS.md"
+  },
+  "primboard": {
+    "repository": "primfoundation/prims-paste-desktop",
+    "pr": 1,
+    "tested_commit": "d0fae3b98fbaca37f3c7611c2965bf48bbb0a0ce",
+    "merge_commit": "5be76f05e8845c9bb0f3c1778d00e0971d82bb45",
+    "ci_run": 34086141864,
+    "results": {
+      "macos_xctest_cases": 121,
+      "release_build": "passed",
+      "isolated_product_selftest": "passed",
+      "runtime_identity_guards": "passed"
+    },
+    "limits": [
+      "No encrypted index migration or backup/recovery proof.",
+      "Atomic replacement and serialized current-version operations do not provide a journal across multiple files.",
+      "Mixed old/new binary concurrency is unsupported.",
+      "No signed-Mac/TCC or existing real-user store acceptance."
+    ]
+  },
+  "browsers": {
+    "repository": "primfoundation/prims-browsers",
+    "pr": 1,
+    "tested_commit": "e542cd69a0902894d959a6b7470a2a22467685f1",
+    "merge_commit": "8b687f1a821ee4dee661158a701a35f25c973758",
+    "ci_run": 34086860578,
+    "results": {
+      "typecheck": "passed",
+      "tests": 13,
+      "worker_dry_builds": [
+        "login",
+        "gateway"
+      ],
+      "apple_roundtrip": "Mocked Apple token/JWKS endpoints, cryptographic fixtures, actual callback/session/gateway code"
+    },
+    "production_routes_changed": false,
+    "real_apple_container_acceptance": false,
+    "provenance": "cloud/migration.json"
+  },
+  "desktop": {
+    "repository": "primfoundation/prims-desktop",
+    "pr": 7,
+    "tested_commit": "075128f3ae3f1e4aa10047cc6d4f77f0936438bc",
+    "merge_commit": "ab5b11401eaadefc0c2ea68eada1f021fbd6dd8d",
+    "results": {
+      "bash_syntax": "passed",
+      "missing_dependency_preflight": "Actual script returned 1 before runtime probes; no PROVE OK"
+    },
+    "native_tests": "blocked: authoritative ../prim-sim / PrimSimCore source unavailable; two candidate repository lookups returned 404, not proof of deletion",
+    "open_integration_prs": [
+      2,
+      3,
+      4,
+      6
+    ]
+  },
+  "governance": {
+    "repository": "primfoundation/.github",
+    "pr": 1,
+    "merge_commit": "350af7feef01480a6b8d03d7caeb494e0de18cfc",
+    "scope": "Reviewed document contents and merged contribution/security/lifecycle defaults; no independent review or admin setting changes claimed."
+  },
+  "remaining_access_gates": [
+    "Foundation Cloudflare installation/connection and approved account/preview domain; suggestion supplied but connection unconfirmed.",
+    "Authoritative Desktop PrimSimCore source with revision/license/consumer provenance.",
+    "Signed Mac environment and real Apple/browser/container acceptance.",
+    "GitHub administration for repository rules and private vulnerability reporting."
+  ],
+  "unchanged_operating_boundaries": [
+    "No production DNS/route cutover.",
+    "No repository rename/archive/history rewrite.",
+    "No private user Prim or customer source data imported.",
+    "No signed package release or paid unattended work started."
+  ]
+}
