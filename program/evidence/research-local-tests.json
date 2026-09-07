@@ -1,0 +1,172 @@
+{
+  "recorded_at": "2026-09-06T21:22:06.422443+00:00",
+  "scope": "Foundation reference tools, ORF compatibility and existing TypeScript SDK",
+  "checkout_head": "1a5c3903544f0a479ac7f3731191c00f2fa90a4e",
+  "python": "3.13.5",
+  "platform": "Linux",
+  "dependencies": {
+    "PyYAML": "6.0.3"
+  },
+  "success": true,
+  "unit_tests_run": 95,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "f9197eb9040747b18183f68a8112690fe6449bf8da41b5e72e87cd175b94f1b4",
+      "stderr_sha256": "82d9511ae2d495180f9e9e032b2aa85bd476d6fd18a383fcfba6c432c1044e24"
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "f1b8fd097c218621de7a08e183ad4509aa749349aa08754f8f2348441c74a53e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "render",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "discover",
+        "profiles",
+        "--check",
+        "registry/profiles.generated.json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "inspect",
+        "profiles/research"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "f1c386cff662a4c254b4c900499459a57c7c798ac28a3e5965442bed1cb09071",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "tools"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "python",
+        "tools/orf_conformance.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "97f89aab0b98625965d0e4e45c9cbb76ec2185113379e363bce6c10550943081",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "npm",
+        "--prefix",
+        "sdk/typescript",
+        "test"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "d5aa1b76b8214bcdcb4f474df2c7e6d5d4c74b2db4fc9fb89c8d6f56bf0a5657",
+      "stderr_sha256": "e0f881187e6f38c42be689938f9fdadb6d8cb55d4e3b4b0a37edf882712807d1"
+    }
+  ],
+  "input_sha256": {
+    "ROADMAP.md": "41ea0ddb4828cd5dc993e75152090c92c4645ffcf93637fc904880750d89e2b6",
+    "profiles/research/PROFILE.md": "83187e87b916a5f239f9272a9d3a468a4070f3c4a4d7593f94804cdf747288c1",
+    "profiles/research/SPEC.md": "965ccfef00ffe69ec18825ec14503bce991cfaf23ab4bd3bd0275c8a6488dc6a",
+    "profiles/research/compatibility/.gitignore": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b",
+    "profiles/research/compatibility/README.md": "804474d12566f3e5da04a56fbe90130fdb71795f1e60b41bf00c9a9e0ca47043",
+    "profiles/research/compatibility/orf-0.2.0/baseline.json": "0f022821a28fb006be90ea92ce21556ccf03cbdd59038bab5247d32eeffa1611",
+    "profiles/research/compatibility/orf-0.2.0/upstream/.gitignore": "b0d516d67cf06d24e190f7487ce6c242603648ee3739e980c7870558aaf72b4b",
+    "profiles/research/compatibility/orf-0.2.0/upstream/AGENTS.md": "92bab5d9e5d451da7476f4dcfeac472114e82ae05fff85e4dd19951fb257bb01",
+    "profiles/research/compatibility/orf-0.2.0/upstream/LICENSE": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/README.md": "8af7ad7303812d8ede11b35c4b1fefcb233af09cfce6d224b66f946ddb0de726",
+    "profiles/research/compatibility/orf-0.2.0/upstream/SPEC.md": "d676ac85258879a5430f50e626fdb96ca438f786b6c77aa0d9d1414453874068",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-bad-done-without-go/index.md": "c01195a11ba610db786e83a20201d1b5058e932673c88c9238c1ff9a6adef39f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-bad-done-without-go/log.md": "de9a1375c22958a6887b878835fc29d8c9e25074329e1e334596bfd112fbb155",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/findings/01-origin-myth.md": "9aae2b46f8246c706d961845de1bbe2cf8fcdce5a4b2464e67ad66d4e0afa0e8",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/findings/02-retention-studies.md": "8a365ed39ccf2007fe8d842b09fe5eafd69c8747f2994a08b8aed964f4b6f1c2",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/index.md": "e9b56ff3434859a1cbac8275ff1a083c8d0807d27cb85e08c306c997d9a4fc1f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/examples/orf-minimal/log.md": "dd474bf936894c08c5b0307f8f8c42ec2fb1772efe33fa8704d3237d03890880",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/__init__.py": "2adec2613695dbe595ce05773f2d5178a142e7807fe0d3cb746e55c00d7c3224",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/__main__.py": "f6794dd8852e533f04f68d14ba425f3f3be3b9b8e1b85600b05d74562a1a799f",
+    "profiles/research/compatibility/orf-0.2.0/upstream/orf/validate.py": "acc4c9febf52800e3c8e4034f9db2fb860f31c32edb42f61d74b871aa0c0a24d",
+    "profiles/research/compatibility/orf-0.2.0/upstream/pyproject.toml": "137f2f2a09b4eaa771963b904867ba7231e37fc74ec45d4a5811fdbfc909e22a",
+    "profiles/research/examples/README.md": "44bdc206a6c475972c6ff999d67e30f53a9dba2a0e2baba84090d0ae820753c4",
+    "program/plan.json": "a0c1299f59e59c2e6d8c79b373f9ec39d52205070a81e956cc3ee8516afe4830",
+    "registry/profiles.generated.json": "24e63d4980e4a36bdd3ab443606a7958c37d6a854f775d65d71b45782abffa40",
+    "sdk/typescript/README.md": "a1c32be605d5ee5b9a4d2ec15b846dd2d88ba8af035b14e4079a98840e63c20b",
+    "sdk/typescript/package.json": "36829912ac22da7c962ef0b2eb616f6379cfa58d689735ed3f212ac45ed36fa4",
+    "sdk/typescript/src/cli.ts": "c498eb5e85da054f7806674b356637e81fb1bdf4a6b03ca89bfb8d4562757414",
+    "sdk/typescript/src/face.ts": "88622430662a10cfab878a1498f62e3179b5143ece74a637b4b5d1a3adb8bfc7",
+    "sdk/typescript/src/index.ts": "35a68bab8d0a75f59bf3c243c2b2c75f9961bf0c1b312fb1a5a8d7d8a002f030",
+    "sdk/typescript/src/pack.ts": "822e951f33ebd29220023250820c0c57416b6894610c2f7d3c954b9cf15d1c64",
+    "sdk/typescript/src/primitives.ts": "e7f401372933a9b06b71a24b41cc8f860c75faec18cec9e5d5537445685acd54",
+    "sdk/typescript/src/registry.ts": "70bcfb967ba1c532d3387dd2fb7e8f08727af3fdbf7ea1ed1c7d098e1ef19057",
+    "sdk/typescript/src/tools.ts": "70bd49f7af049490e712cf190583d964f39b2f96c8d66aa70cb9d15f97646750",
+    "sdk/typescript/src/trust.ts": "442fce3de7280590ddf04dafab8b6f1dbaed23107e083395a26e4d5710e80038",
+    "sdk/typescript/src/ui.ts": "50e68dba0add1101100d304312f5c62bcd3e6207ecd6fbc63c5398062e12c4a4",
+    "sdk/typescript/src/validator.ts": "4a6fddcabb20898d140bdb27ea21ab1ced12754e8879d78991f43349f3977c2d",
+    "sdk/typescript/tests/pack.test.ts": "b3fd2cf63e9e62134d9cde85f5f8fd569b959fa84ed3a368813075a41faa6026",
+    "sdk/typescript/tests/registry.test.ts": "f05b2e421e8d8f945056afe203cda9412f7fea25fa68a09edb6552b40ba67d8d",
+    "sdk/typescript/tsconfig.json": "fd2f9900e5e20e6b2c65348e2d9daac91e2eff9a5843a971fc53884e73c014fe",
+    "tools/orf_conformance.py": "1fc5c9e790ac9f87f63c87d2e225eecee86405b7e4b9c8ee0b13a85fe9ec609c",
+    "tools/profile_catalog.py": "00ae868aeac86150e33bb3c5dd369993b6ecd7d5b9b8ad797777cf8368ad1d31",
+    "tools/program.py": "2502f5546da06d92a7933a685e899a4d36c41b2bf7e1d42bdc0b21b43b306249",
+    "tools/requirements.txt": "46670d2aa806e05f78aa8263fa4e847ff69cfe29196bd39f8eb9713fbbf02013",
+    "tools/research.py": "7f34e215f09529dc3dc1e2b7456c1528256a09fd08f605f457c0cc30dc65a304",
+    "tools/research_store.py": "62db2283181b7ff1fd0eedce7c5ecb1466479d2627a40590ffe217db88af9bc5",
+    "tools/tests/test_profile_catalog.py": "de796a1fb8723b350f5230181b2ac937d4f287223a22fe609b95565c7e1f5ef8",
+    "tools/tests/test_program.py": "426f79072b9a94e5a472b1a763dd050cfc042a74bf793ead66562440d6429524",
+    "tools/tests/test_research.py": "49cc684efe0731382921db67bd12d80858ed49f095941d4a8b5f09270b180c2e",
+    "tools/verify.py": "64aed82840678d072db40f88368ab42c07c661631a19aa892e53c065467953b6"
+  },
+  "not_run": [
+    "Research vNext semantic migration",
+    "Factual/source verification",
+    "Desktop or browser UI",
+    "Published-package installation",
+    "Independent security review",
+    "Real-account or production acceptance"
+  ],
+  "limits": [
+    "Commands and input hashes identify the tested scope, not an authenticated attestation.",
+    "Publication, review, release and deployment are not inferred from tests or checkout HEAD.",
+    "A manifest or historical ORF pass is not Research vNext conformance, publisher verification, truth, or security certification.",
+    "A local working tree may differ from checkout_head; exact tested input hashes are recorded."
+  ],
+  "record_type": "summary of actual local verification; output digests replace verbose command logs",
+  "full_report_sha256": "bb5748d2327e7ef55565816943ac6edb1c017863003ebb6b630cd95148463372"
+}

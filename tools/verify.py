@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run local checks and optionally the existing SDK; retain scoped evidence."""
+"""Run Foundation reference checks, ORF compatibility and optional SDK checks."""
 from __future__ import annotations
 
 import argparse
@@ -28,6 +28,7 @@ def main() -> int:
         [sys.executable, "tools/profile_catalog.py", "discover", "profiles", "--check", "registry/profiles.generated.json"],
         [sys.executable, "tools/profile_catalog.py", "inspect", "profiles/research"],
         [sys.executable, "-m", "compileall", "-q", "tools"],
+        [sys.executable, "tools/orf_conformance.py"],
     ]
     if args.with_sdk:
         commands.append(["npm", "--prefix", "sdk/typescript", "test"])
@@ -47,7 +48,7 @@ def main() -> int:
             print(record["stderr"], end="", file=sys.stderr)
     paths = list((ROOT / "tools").rglob("*.py"))
     paths += [ROOT / "tools/requirements.txt", ROOT / "program/plan.json", ROOT / "ROADMAP.md", ROOT / "registry/profiles.generated.json"]
-    paths += [p for p in (ROOT / "profiles/research").rglob("*") if p.is_file()]
+    paths += [p for p in (ROOT / "profiles/research").rglob("*") if p.is_file() and "__pycache__" not in p.parts]
     if args.with_sdk:
         paths += [p for p in (ROOT / "sdk/typescript").rglob("*") if p.is_file() and "node_modules" not in p.parts]
     inputs = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(set(paths))}
@@ -59,7 +60,7 @@ def main() -> int:
         commit = None
     report = {
         "recorded_at": datetime.now(timezone.utc).isoformat(),
-        "scope": "Bootstrap checks plus existing TypeScript SDK command" if args.with_sdk else "Additive bootstrap checks only",
+        "scope": "Foundation reference tools, ORF compatibility and existing TypeScript SDK" if args.with_sdk else "Foundation reference tools and ORF compatibility",
         "checkout_head": commit,
         "python": platform.python_version(), "platform": platform.system(),
         "dependencies": {"PyYAML": version("PyYAML")},
@@ -67,12 +68,13 @@ def main() -> int:
         "unit_tests_run": int(tests.group(1)) if tests else None,
         "checks": checks, "input_sha256": inputs,
         "not_run": ([] if args.with_sdk else ["Existing TypeScript SDK regression"]) + [
-            "ORF legacy validator/fixtures", "Desktop or browser UI", "Published-package installation",
+            "Research vNext semantic migration", "Factual/source verification", "Desktop or browser UI", "Published-package installation",
             "Independent security review", "Real-account or production acceptance"],
         "limits": [
             "Commands and input hashes identify the tested scope, not an authenticated attestation.",
             "Publication, review, release and deployment are not inferred from tests or checkout HEAD.",
-            "A manifest pass is not Research instance conformance, publisher verification, or security certification."],
+            "A manifest or historical ORF pass is not Research vNext conformance, publisher verification, truth, or security certification.",
+            "A local working tree may differ from checkout_head; exact tested input hashes are recorded."],
     }
     if args.output.is_symlink():
         parser.error("report output must not be a symlink")

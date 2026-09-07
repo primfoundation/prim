@@ -3,7 +3,7 @@ format: prim-profile
 manifest_version: "0.1"
 id: primfoundation/research
 name: Research Prim
-version: "0.3.0-dev.1"
+version: "0.3.0-dev.2"
 maturity: development
 description: Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.
 license: MIT
@@ -14,9 +14,10 @@ legacy_aliases:
 resources:
   specification: SPEC.md
   examples: examples
+  compatibility: compatibility/README.md
 extensions:
   primfoundation:
-    status-note: Discovery prototype only; Research vNext instance validation and ORF migration are not implemented.
+    status-note: Legacy ORF inspection and byte-preserving transport are implemented; Research vNext semantic migration remains open.
 ---
 # Research Prim
 

@@ -2,7 +2,6 @@ name: Foundation program verification
 
 on:
   pull_request:
-    branches: [main]
   push:
     branches: [main]
 
@@ -32,7 +31,7 @@ jobs:
           node-version: '22.16.0'
       - name: Install reference tooling dependencies
         run: python -m pip install -r tools/requirements.txt
-      - name: Verify bootstrap, generated views and existing SDK
+      - name: Verify Foundation tools, ORF compatibility and existing SDK
         run: python tools/verify.py --with-sdk --output "$RUNNER_TEMP/prim-verification.json"
       - name: Retain scoped verification evidence
         if: always()

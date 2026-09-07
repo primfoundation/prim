@@ -11,12 +11,12 @@
         "security_review": "not_performed"
       },
       "location": "research/PROFILE.md",
-      "manifest_sha256": "21ede98ae4a7dc9066d8139697621f0227df4c226898567a2337dac9eb016666",
+      "manifest_sha256": "83187e87b916a5f239f9272a9d3a468a4070f3c4a4d7593f94804cdf747288c1",
       "metadata": {
         "description": "Durable investigations with questions, evidence, claims, uncertainty, review, and continuation independent of a particular agent.",
         "extensions": {
           "primfoundation": {
-            "status-note": "Discovery prototype only; Research vNext instance validation and ORF migration are not implemented."
+            "status-note": "Legacy ORF inspection and byte-preserving transport are implemented; Research vNext semantic migration remains open."
           }
         },
         "format": "prim-profile",
@@ -32,10 +32,11 @@
         "maturity": "development",
         "name": "Research Prim",
         "resources": {
+          "compatibility": "compatibility/README.md",
           "examples": "examples",
           "specification": "SPEC.md"
         },
-        "version": "0.3.0-dev.1"
+        "version": "0.3.0-dev.2"
       }
     }
   ]

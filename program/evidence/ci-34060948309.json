@@ -1,0 +1,101 @@
+{
+  "record_type": "observed GitHub Actions verification summary",
+  "repository": "primfoundation/prim",
+  "pull_request": 6,
+  "head_commit": "934ff6261d7c90b3daa4ba0f03a70e4a1f864ccc",
+  "head_tree": "1251f2f5b45e44ab300da9d088144082ea75a6dc",
+  "checkout_merge_commit": "472779ad3db876796bf3089780ebd451261e7c1a",
+  "run_id": 34060948309,
+  "conclusion": "success",
+  "recorded_at": "2026-09-06T21:24:14.919074+00:00",
+  "unit_tests_run": 95,
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/tests",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/program.py",
+        "render",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "discover",
+        "profiles",
+        "--check",
+        "registry/profiles.generated.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/profile_catalog.py",
+        "inspect",
+        "profiles/research"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "compileall",
+        "-q",
+        "tools"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "tools/orf_conformance.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "npm",
+        "--prefix",
+        "sdk/typescript",
+        "test"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "artifact_id": 9997440063,
+  "artifact_sha256": "dd02f15eb6767c4e250138a64e984d030078b42d548642c4f9941292f4a10bd5",
+  "report_sha256": "bdd5aa5fa284e20d5ecaf7e2b87f8c1b1cd31e9552b68afa7f1c084c9874a699",
+  "download_verified": true,
+  "tested_input_hashes_matching_local": 49,
+  "limits": [
+    "This records the named head and PR merge checkout, not an unobserved subsequent commit.",
+    "Original negative ORF fixture exits are expected and asserted, not ignored failures.",
+    "Optional external prim.obf integration is absent; local SDK book contracts ran.",
+    "Byte/layout transport is not native Research semantic migration or independent interoperability.",
+    "No independent review, security/accessibility certification, real-account acceptance, release or deployment."
+  ]
+}
