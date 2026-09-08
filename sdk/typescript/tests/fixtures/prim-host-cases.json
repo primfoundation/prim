@@ -1,0 +1,1675 @@
+{
+  "format": "prim-host-conformance",
+  "version": 1,
+  "scope": "Synthetic record structure and declared references. Not independent human review.",
+  "cases": [
+    {
+      "name": "primfoundation/decision draft",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": true
+    },
+    {
+      "name": "unknown fields preserved",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null,
+        "extension": {
+          "preserved": [
+            "\u6f22\u5b57",
+            true,
+            false,
+            null,
+            42
+          ]
+        }
+      },
+      "valid": true
+    },
+    {
+      "name": "missing profile",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing profile_version",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing id",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing title",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing question",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing status",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing options",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing rationale",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing chosen_option",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "missing authority_as_recorded",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong profile",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": {
+          "wrong_type": true
+        },
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong profile_version",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": {
+          "wrong_type": true
+        },
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong id",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": {
+          "wrong_type": true
+        },
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong title",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": {
+          "wrong_type": true
+        },
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong question",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": {
+          "wrong_type": true
+        },
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong status",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": {
+          "wrong_type": true
+        },
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong options",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": {
+          "wrong_type": true
+        },
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong rationale",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": {
+          "wrong_type": true
+        },
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong chosen_option",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": {
+          "wrong_type": true
+        },
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong authority_as_recorded",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "proposed",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": {
+          "wrong_type": true
+        }
+      },
+      "valid": false
+    },
+    {
+      "name": "accepted without authority record",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": null,
+        "status": "accepted",
+        "options": [],
+        "rationale": null,
+        "chosen_option": null,
+        "authority_as_recorded": null
+      },
+      "valid": false
+    },
+    {
+      "name": "accepted decision structural",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": "Choose?",
+        "status": "accepted",
+        "options": [
+          {
+            "id": "a",
+            "description": "Option A"
+          }
+        ],
+        "rationale": "Recorded reason",
+        "chosen_option": "a",
+        "authority_as_recorded": "Recorded owner"
+      },
+      "valid": true
+    },
+    {
+      "name": "dangling decision choice",
+      "profile_id": "primfoundation/decision",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "976e24778fb91740dd6315ad70067fc4f839aa1d15d97564a168250451fc6759",
+      "record": {
+        "profile": "primfoundation/decision",
+        "profile_version": "0.1.0-dev.1",
+        "id": "prim-fixture",
+        "title": "Untitled decision",
+        "question": "Choose?",
+        "status": "accepted",
+        "options": [
+          {
+            "id": "a",
+            "description": "Option A"
+          }
+        ],
+        "rationale": "Recorded reason",
+        "chosen_option": "missing",
+        "authority_as_recorded": "Recorded owner"
+      },
+      "valid": false
+    },
+    {
+      "name": "primfoundation/person draft",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": true
+    },
+    {
+      "name": "unknown fields preserved",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": "",
+        "extension": {
+          "preserved": [
+            "\u6f22\u5b57",
+            true,
+            false,
+            null,
+            42
+          ]
+        }
+      },
+      "valid": true
+    },
+    {
+      "name": "missing id",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "missing name",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong id",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": {
+          "wrong_type": true
+        },
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong name",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": {
+          "wrong_type": true
+        },
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong relate",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": "",
+        "relate": {
+          "wrong_type": true
+        }
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong phones",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": {
+          "wrong_type": true
+        },
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong emails",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": {
+          "wrong_type": true
+        },
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong note",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "prim-fixture",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": {
+          "wrong_type": true
+        }
+      },
+      "valid": false
+    },
+    {
+      "name": "invalid person token",
+      "profile_id": "primfoundation/person",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "5cc30238848840277424ec8951418bf7293564ec642147baa4e14bd56968d62c",
+      "record": {
+        "id": "BAD_TOKEN",
+        "name": "Unnamed person",
+        "phones": [],
+        "emails": [],
+        "note": ""
+      },
+      "valid": false
+    },
+    {
+      "name": "primfoundation/research draft",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": true
+    },
+    {
+      "name": "unknown fields preserved",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": [],
+        "extension": {
+          "preserved": [
+            "\u6f22\u5b57",
+            true,
+            false,
+            null,
+            42
+          ]
+        }
+      },
+      "valid": true
+    },
+    {
+      "name": "missing profile",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing profile_version",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing id",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing title",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing question",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing workflow_state",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing outcome",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing sources",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing claims",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing evidence",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing activities",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing reviews",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong profile",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": {
+          "wrong_type": true
+        },
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong profile_version",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": {
+          "wrong_type": true
+        },
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong id",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": {
+          "wrong_type": true
+        },
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong title",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": {
+          "wrong_type": true
+        },
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong question",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": {
+          "wrong_type": true
+        },
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong workflow_state",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": {
+          "wrong_type": true
+        },
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong outcome",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": {
+          "wrong_type": true
+        },
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong sources",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": {
+          "wrong_type": true
+        },
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong claims",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": {
+          "wrong_type": true
+        },
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong evidence",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": {
+          "wrong_type": true
+        },
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong activities",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": {
+          "wrong_type": true
+        },
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong reviews",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": {
+          "wrong_type": true
+        }
+      },
+      "valid": false
+    },
+    {
+      "name": "unjustified active",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "active",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "unjustified complete",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "complete",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "unsupported claim",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [],
+        "claims": [
+          {
+            "id": "c",
+            "text": "statement",
+            "basis": "inference",
+            "support_state": "supported"
+          }
+        ],
+        "evidence": [],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "linked support",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [
+          {
+            "id": "s",
+            "locator": "local-fixture",
+            "kind": "artifact"
+          }
+        ],
+        "claims": [
+          {
+            "id": "c",
+            "text": "statement",
+            "basis": "inference",
+            "support_state": "supported"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "e",
+            "claim_id": "c",
+            "source_id": "s",
+            "relation": "supports"
+          }
+        ],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": true
+    },
+    {
+      "name": "dangling evidence",
+      "profile_id": "primfoundation/research",
+      "version": "0.3.0-dev.3",
+      "definition_sha256": "182f3e268893f1261888cbd8ed6a9c34cd707586905a7615f084e95ab271ffe3",
+      "record": {
+        "profile": "primfoundation/research",
+        "profile_version": "0.3.0-dev.3",
+        "id": "prim-fixture",
+        "title": "Untitled investigation",
+        "question": null,
+        "workflow_state": "draft",
+        "outcome": "unresolved",
+        "sources": [
+          {
+            "id": "s",
+            "locator": "local-fixture",
+            "kind": "artifact"
+          }
+        ],
+        "claims": [
+          {
+            "id": "c",
+            "text": "statement",
+            "basis": "inference",
+            "support_state": "supported"
+          }
+        ],
+        "evidence": [
+          {
+            "id": "e",
+            "claim_id": "c",
+            "source_id": "absent",
+            "relation": "supports"
+          }
+        ],
+        "activities": [],
+        "reviews": []
+      },
+      "valid": false
+    },
+    {
+      "name": "primfoundation/workbook draft",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": true
+    },
+    {
+      "name": "unknown fields preserved",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": [],
+        "extension": {
+          "preserved": [
+            "\u6f22\u5b57",
+            true,
+            false,
+            null,
+            42
+          ]
+        }
+      },
+      "valid": true
+    },
+    {
+      "name": "missing format",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing version",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing workbook_id",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing title",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing periods",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "missing worksheets",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong format",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": {
+          "wrong_type": true
+        },
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong version",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": {
+          "wrong_type": true
+        },
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong workbook_id",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": {
+          "wrong_type": true
+        },
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong title",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": {
+          "wrong_type": true
+        },
+        "periods": [],
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong periods",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": {
+          "wrong_type": true
+        },
+        "worksheets": []
+      },
+      "valid": false
+    },
+    {
+      "name": "wrong worksheets",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": {
+          "wrong_type": true
+        }
+      },
+      "valid": false
+    },
+    {
+      "name": "bool is not integer",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": [
+          {
+            "n": true,
+            "id": "w",
+            "role": "other",
+            "pack": "w",
+            "title": "W"
+          }
+        ]
+      },
+      "valid": false
+    },
+    {
+      "name": "fraction is not integer",
+      "profile_id": "primfoundation/workbook",
+      "version": "0.1.0-dev.1",
+      "definition_sha256": "af116d012911ce70a82338e2a2a1fde2a354434de484643d091838ab378b58b5",
+      "record": {
+        "format": "prim.workbook",
+        "version": "0.1.0",
+        "workbook_id": "prim-fixture",
+        "title": "Untitled workbook",
+        "periods": [],
+        "worksheets": [
+          {
+            "n": 1.5,
+            "id": "w",
+            "role": "other",
+            "pack": "w",
+            "title": "W"
+          }
+        ]
+      },
+      "valid": false
+    }
+  ]
+}

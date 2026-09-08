@@ -172,3 +172,12 @@ Compiled data is a distribution view; `profiles/` remains the definition source.
 See `SECURITY.md` for explicit boundaries and `program/HANDOFF.md` for verified
 release/deployment state. Independent security review, broad client testing,
 package-index publication, public endpoint ownership and operations remain gates.
+# Offline host export and pack checking
+
+`prim-library export-host` emits public creation kits with exact definition pins
+for native and SDK hosts. Transfer its independently obtained SHA-256 alongside
+the catalog through a trusted installation; a self-declared checksum does not
+authenticate a publisher. `prim-library check-pack <folder>` validates a local
+record against its lock without printing its private values. Both commands are
+local and execute no profile code. See
+[the offline host contract](../../program/OFFLINE-HOST-CONTRACT.md).

@@ -26,6 +26,7 @@ def main():
         commands = [
             [sys.executable, '-m', 'unittest', 'discover', '-s', 'services/library/tests', '-v'],
             [sys.executable, 'tools/build_library.py', '--check'],
+            [sys.executable, 'tools/build_host_catalog.py', '--check'],
             [sys.executable, 'tools/verify.py', '--with-sdk', '--output', str(inherited)],
         ]
         checks = []

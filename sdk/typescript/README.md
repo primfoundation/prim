@@ -46,3 +46,33 @@ node --experimental-strip-types sdk/typescript/tests/pack.test.ts
 | `listTypes` / `listTools` / `listApplets` / `registerType` / `registerTool` / `registerApplet` | Category registry. Types are prim kinds. Tools cite a type (`surface` or `connector`). Applets compose types; they are not a tool kind. |
 
 `validateBase()` checks `okf_version` / `profile` / `type`, recommends `log.md`, resolves face path pointers, checks `compose:` targets, and rejects secret-shaped strings.
+# Pinned offline profiles
+
+The development package now builds compiled JavaScript and declarations, with its
+registry included. Node 22.16 or later is the tested release baseline. Build and
+exercise an actual tarball installation with:
+
+```bash
+npm ci --ignore-scripts
+npm run typecheck
+node scripts/installed-smoke.mjs
+```
+
+The additive profile API creates and validates local records without fetching or
+executing profile code:
+
+```ts
+import { ProfileLibrary } from '@eidos-agi/prim';
+const library = new ProfileLibrary();
+const kit = library.list().find(k => k.profile_id === 'primfoundation/person')!;
+const pin = library.pin(kit);
+const record = library.create(pin, {name: 'Example person'});
+library.writePack(pin, record, './new-person.prim');
+const reopened = library.readPack('./new-person.prim');
+```
+
+`prim profile list`, `prim profile create … --version … --output …` and
+`prim profile check <folder>` expose the same behavior. Exported files are local
+and unencrypted. Validation checks structure and declared references, not facts or
+authority. Exact definition pins are required; a missing version never upgrades
+silently. [Host contract](../../program/OFFLINE-HOST-CONTRACT.md).
