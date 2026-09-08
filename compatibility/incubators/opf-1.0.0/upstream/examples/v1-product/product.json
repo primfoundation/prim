@@ -1,0 +1,38 @@
+{
+  "format": "opf",
+  "version": "1.0",
+  "product": "opf:sample:product",
+  "entities": [
+    {
+      "id": "opf:sample:product",
+      "type": "product",
+      "title": "Sample Product",
+      "status": "active",
+      "provenance": {"by": "human:test", "method": "reference fixture"}
+    },
+    {
+      "id": "opf:sample:area:intent",
+      "type": "area",
+      "title": "Intent",
+      "status": "active",
+      "provenance": {"by": "human:test", "method": "reference fixture"}
+    },
+    {
+      "id": "opf:sample:intent",
+      "type": "intent",
+      "title": "Make the product legible",
+      "status": "active",
+      "provenance": {"by": "human:test", "method": "reference fixture"}
+    }
+  ],
+  "relationships": [
+    {"id": "opf:sample:rel:root-intent", "type": "contains", "from": "opf:sample:product", "to": "opf:sample:area:intent", "order": 0},
+    {"id": "opf:sample:rel:intent", "type": "contains", "from": "opf:sample:area:intent", "to": "opf:sample:intent", "order": 0},
+    {"id": "opf:sample:rel:expresses", "type": "expresses", "from": "opf:sample:product", "to": "opf:sample:intent"}
+  ],
+  "events": [
+    {"id": "opf:sample:event:product-created", "type": "created", "at": "2026-08-08T00:00:00Z", "subjects": ["opf:sample:product"], "detail": "Created product"},
+    {"id": "opf:sample:event:area-created", "type": "created", "at": "2026-08-08T00:00:01Z", "subjects": ["opf:sample:area:intent"], "detail": "Created intent area"},
+    {"id": "opf:sample:event:intent-created", "type": "created", "at": "2026-08-08T00:00:02Z", "subjects": ["opf:sample:intent"], "detail": "Created intent"}
+  ]
+}

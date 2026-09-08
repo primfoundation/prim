@@ -1,0 +1,46 @@
+{
+  "format": "prim-incubator-baseline",
+  "version": 1,
+  "repository": "eidos-agi/prim.scene",
+  "commit": "eb9271fa4074d9a382a9422dbc5f4c2d11641807",
+  "license": "MIT; preserved upstream/LICENSE applies",
+  "status": "compatibility-baseline-only",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 123,
+      "sha256": "5000b479c81165a11e9d76a6031d792ed9ec51a8ec510fff9128d08f0589966d",
+      "git_blob": "cbf443f43af70fc1561569e82981dfa5da3f2e5b"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1061,
+      "sha256": "145dcef013347cf76a2c40dba8352c1647097b85e262447d2ddea32fbc379141",
+      "git_blob": "5e423c2bd481d2a00d74484e392afb89cc61d26c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 345,
+      "sha256": "0fa53e4a4c2ade982afb1fe1e7196e9ca65a847358c6ccb8aae6268537ef1bd3",
+      "git_blob": "7505bf0be65e7839389725f5b8df3c865f54f674"
+    },
+    {
+      "path": "SPEC.md",
+      "bytes": 5003,
+      "sha256": "37917454819fb0e1a0b0b6510af2667e99cf15bfebe88efdd0fe23d6a2d4ea74",
+      "git_blob": "17e09167615186a268cafbd13c3370a512006f56"
+    },
+    {
+      "path": "validate.py",
+      "bytes": 4894,
+      "sha256": "0e5c200cbfa9724168158cbf453b1e8676817b94b4c2d41804244c0c87e44928",
+      "git_blob": "a97f2aea6a57d0f09d8b902c7cc58080a7975650"
+    }
+  ],
+  "limitations": [
+    "Only normative docs and validator are selected; renderer, media and original instance packs remain upstream.",
+    "Legacy parsers have no bounded JSON sandbox and do not fully validate all shapes or versions.",
+    "Video silently omits Scene validation without its sibling validator. Tests exercise both layouts using only the exact pinned Scene code.",
+    "No Foundation profile registration, real consumer acceptance or semantic migration is claimed."
+  ]
+}

@@ -4,6 +4,8 @@ This is the durable record of the Foundation-wide build authorized on September 
 
 **Current publication state:** Foundation bootstrap, ORF compatibility, Library/MCP alpha and sanitized Workbook migration are merged in PRs #5/#6/#7/#10. Verified Hub, Browsers, Primboard, Desktop proof-preflight and organization policy increments are also merged in their owning repositories. `HANDOFF.md` and `evidence/2026-09-07-execution.json` record exact tested commits, CI and unresolved gates. The isolated Cloudflare Hub workbench is deployed; Primboard encrypted-index and recovery changes are merged. See `evidence/2026-09-08-release.json` for exact release evidence. Production cutover, stable/signed releases and independent real-use acceptance remain open.
 
+The later September 8 increments are in `evidence/2026-09-08-portable-delivery.json`: Foundation PR #15 portable hosts, Primboard PR #5 native editing/recovery and Hub PRs #11/#12 actual browser downloads and legacy registry compatibility. `GOAL-STATUS.md` and `REMAINING-GATES.md` describe the remaining scope.
+
 ## One record, several views
 
 Primboard's subsequent safe Mac candidate tooling and encrypted process-crash
@@ -40,6 +42,7 @@ python tools/program.py check
 python tools/program.py render --check
 python tools/profile_catalog.py inspect profiles/research
 python tools/orf_conformance.py
+python tools/incubator_conformance.py
 python tools/profile_catalog.py discover profiles --check registry/profiles.generated.json
 ```
 

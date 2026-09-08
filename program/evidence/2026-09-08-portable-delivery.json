@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-08T13:49:24.992Z",
+  "state": "portable_hosts_native_library_and_hub_registry_shipped",
+  "scope": "G1/G2/G3/G6/G7 increments; full 79-requirement Foundation roadmap remains open.",
+  "foundation": {
+    "pr": 15,
+    "head": "e18d1141ab8aea75b32ee7062617a24a91a30ad5",
+    "merged_main": "f70f06f646115dd74c863992fd5d9af7087c7483",
+    "ci": {
+      "program": 34227351882,
+      "sdk_distribution": 34227351907,
+      "library_mcp": 34227351886
+    },
+    "result": "All three required workflows passed.",
+    "sdk_version": "0.5.0-dev.1",
+    "shared_case_count": 83,
+    "implementations": [
+      "Python",
+      "TypeScript",
+      "Swift"
+    ],
+    "roundtrips": [
+      "Python to SDK real directory",
+      "SDK to Python real directory"
+    ],
+    "artifact_scope": "Actual SDK tarball installed offline outside the checkout; API/CLI/declaration consumer exercised.",
+    "host_catalog_source": "50d829d5019ed2f2754dfb4fc11843bcd9d25cc9",
+    "host_catalog_sha256": "9787ffa5bc6948f6d069990ed2b2d2096b9b23c4ed338b4c2fe444ceb3db02e3",
+    "limitations": [
+      "Development artifact, not npm index or stable publication.",
+      "Implementations were independently written under one development effort; no independent organization review.",
+      "Catalog checksums pin bytes, not publisher authentication or truth."
+    ]
+  },
+  "primboard": {
+    "repository": "primfoundation/prims-paste-desktop",
+    "pr": 5,
+    "head": "a49540e68004ebf76334751bc66a40b28d75f216",
+    "merged_main": "9f7a0086ad0f9ecf72e4a9c495915485a257e8a0",
+    "macos_ci": 34228317358,
+    "result": "macOS tests, release binaries, 14 release-tool tests, assembled-app selftests and identity guards passed.",
+    "implemented": [
+      "Data-only native Library for four exact profile versions",
+      "Generic GUI and CLI creation, validation, editing, plaintext directory export/import",
+      "Source-preserving conversion, explicit operation IDs, compare-before-save and recoverable draft copies",
+      "Guided locked recovery and same-key restore to a separate folder",
+      "Single-sheet editor presentation and persisted cleared notes"
+    ],
+    "limitations": [
+      "No signed, notarized, installed real-device or private-store acceptance.",
+      "No Touch ID/TCC or physical power-loss proof.",
+      "Same-key backup does not recover a lost key.",
+      "Pending memory-only drafts do not survive process exit.",
+      "Filesystem operations assume trusted non-mutating parents; no adversarial TOCTOU sandbox."
+    ]
+  },
+  "hub": {
+    "repository": "primfoundation/prim-web",
+    "prs": [
+      11,
+      12
+    ],
+    "url": "https://prims-hub-preview.eidos-agi.workers.dev/",
+    "portable_release": {
+      "head": "5a3a612feb89a43b099f17a6c90cd830febf4378",
+      "merged_main": "f66be54db32dd3f13daa8bdb69299c4347246a5e",
+      "tested_checkout": "5c1bcc34388098bc04060e46e0a7bf02565be08c",
+      "build_ci": 34230610023,
+      "browser_ci": 34230610017,
+      "hosted_ci": 34231064465,
+      "health_ci": 34231064657,
+      "unit_dom_zip_tests": 27,
+      "artifact_id": 10057627742,
+      "zip_sha256": "3941103533fd325425d84af88f8663b5b747f8f6654c1608621b29436d70415f",
+      "module_sha256": "3bc30e3ab70c7ac1fe90902aec95212fb54f66d4f3e7560fc99c7a1ac54975f0",
+      "version_id": "96c19f70-fa34-443e-b8ac-d9a904bcb025",
+      "deployment_id": "9e2c697d-cdd5-4a5c-8351-677d86109f51"
+    },
+    "registry_release": {
+      "head": "026421849d9e18b337c5aa4dfc1f3c8d0de93998",
+      "merged_main": "15abbc59f3cba44c88e9d319abd2630d4c22aa7d",
+      "tested_checkout": "f323277c383ca6642aad4eab1689ed73220c552e",
+      "tested_tree": "65538355801a548e4eae2fd46359f2187322a97f",
+      "tested_and_reviewed_trees_equal": true,
+      "build_ci": 34231710703,
+      "browser_ci": 34231710689,
+      "browser_attempt": 2,
+      "browser_initial_failure": "Dependency installation: Microsoft package server returned 403. Retry passed before merge.",
+      "hosted_ci": 34233207755,
+      "unit_dom_zip_tests": 31,
+      "artifact_id": 10058080055,
+      "zip_sha256": "d73b63cdc45363936bb8fec5c7f272f18a52554d37bde0d566ae815a4010b3fb",
+      "module_sha256": "b7577431a28e1236580f2e1091559ddcbd46d9c2f3283028c6b15d0e612377b9",
+      "asset_count": 36,
+      "all_asset_sizes_and_sha256_verified": true,
+      "source_category_sha": "f70f06f646115dd74c863992fd5d9af7087c7483",
+      "category_counts": {
+        "types": 24,
+        "tools": 23,
+        "applets": 1
+      },
+      "version_id": "1bf1e03e-6899-4c0e-b9b9-e992a3ccc891",
+      "deployment_id": "e256288b-6701-4129-a79a-1841d3f72fe2",
+      "created_on": "2026-09-08T13:38:19.391407Z"
+    },
+    "browser_scope": [
+      "Desktop Chromium and phone-size WebKit",
+      "Actual browser downloads, exact four-file pack reopen, edited values and unknown fields preserved",
+      "Downloaded offline HTML opened through file:// and exercised",
+      "No network requests during private record editing/saving",
+      "Automated WCAG A/AA axe checks and horizontal overflow checks on representative pages",
+      "Desktop keyboard flow; phone hardware-keyboard case deliberately skipped"
+    ],
+    "operations": {
+      "worker_plan": "Existing Workers Free defaults; no paid plan activated",
+      "logging": "Request observability disabled/default",
+      "health": "Six-hour exact asset/hash and protocol check retained",
+      "routing_inventory": "prims.sh and www remain on prim-web.pages.dev; registry/login/browsers retain old Workers; no Worker zone routes observed",
+      "legacy_railway": "Service not found remains unresolved. Hub-only paths now excluded from that unrelated deployment workflow.",
+      "rollback": "PR11 version retained as immediate rollback target. Earlier actual preview rollback/return drill remains in 2026-09-08-release.json; no new drill inferred."
+    },
+    "limitations": [
+      "Isolated preview only; production routes and current client acceptance remain open.",
+      "Automated browser engine checks are not independent usability, assistive-technology or real-user acceptance.",
+      "ZIP CRC checks integrity, not authenticity.",
+      "Specific ChatGPT/Claude connector installation not established by MCP protocol tests."
+    ]
+  },
+  "not_performed": [
+    "Production DNS/route cutover",
+    "Repository rename/archive",
+    "History rewrite",
+    "Private record upload",
+    "Paid unattended service activation",
+    "Stable standards/npm publication",
+    "Signed installed Mac release",
+    "Independent governance/security review or actual-user acceptance"
+  ]
+}

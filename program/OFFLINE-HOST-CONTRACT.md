@@ -63,7 +63,7 @@ review, real-person usability acceptance or factual validation.
 
 ## SDK distribution
 
-The development SDK is `@eidos-agi/prim` **0.5.0-dev.1**. Its package contains
+The development SDK is `@eidos-agi/prim` **0.5.0-dev.2**. Its package contains
 compiled JavaScript, declarations and the legacy category registry. The existing
 category interfaces remain available; full profile pins are an additive interface
 and do not reinterpret old category `repo` values or legacy Prim files.
@@ -72,3 +72,5 @@ The SDK workflow builds a tarball, installs it offline outside the checkout,
 executes its public API/CLI and type-checks an actual consumer. CI retains the
 tarball and its checksum report. A CI artifact is not an npm-index publication,
 stable release or permanent distribution service.
+
+Version 0.5.0-dev.2 checks the actual formatted authority-file bytes before export, so a successful write stays within its own reader budget. The earlier 0.5.0-dev.1 artifact remains historical.

@@ -17,7 +17,7 @@ try {
   execFileSync('npm', ['install', '--ignore-scripts', '--offline', '--no-audit', '--no-fund', archive], {cwd:temp, stdio:'pipe'});
   const test = `import assert from 'node:assert/strict';
 import {ProfileLibrary, listTypes, VERSION} from '@eidos-agi/prim';
-assert.equal(VERSION,'0.5.0-dev.1'); assert.ok(listTypes().length > 0);
+assert.equal(VERSION,'0.5.0-dev.2'); assert.ok(listTypes().length > 0);
 const library=new ProfileLibrary(); assert.equal(library.list().length,4);
 for (const kit of library.list()) {
  const pin=library.pin(kit), record=library.create(pin,{extension:{retained:'outside checkout'}});

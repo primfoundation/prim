@@ -1,7 +1,7 @@
 {
   "format": "prim-foundation-reorganization",
   "version": 1,
-  "as_of": "2026-09-07",
+  "as_of": "2026-09-08",
   "target_active_repositories": [
     "primfoundation/.github",
     "primfoundation/prim",
@@ -66,7 +66,13 @@
         "current HTTP clients inventoried",
         "tests and release evidence moved",
         "rollback window complete"
-      ]
+      ],
+      "compatibility_preview": {
+        "hub_pr": 12,
+        "merged_main": "15abbc59f3cba44c88e9d319abd2630d4c22aa7d",
+        "hosted_ci": 34233207755,
+        "production_route_changed": false
+      }
     },
     {
       "source": "primfoundation/prim.workbook",
@@ -168,7 +174,13 @@
         "accessibility and large-board performance"
       ],
       "archive_gate": "not-applicable; repository is renamed successor, old GitHub slug should redirect",
-      "merged_stabilization_pr": 1
+      "merged_stabilization_pr": 1,
+      "native_library_increment": {
+        "pr": 5,
+        "merged_main": "9f7a0086ad0f9ecf72e4a9c495915485a257e8a0",
+        "macos_ci": 34228317358,
+        "signed_device_acceptance": false
+      }
     }
   ],
   "legacy_eidos_incubators": [
@@ -182,103 +194,222 @@
       "repo": "eidos-agi/prim.opf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "c55e7a493b29e860f34ce4e89a847b125c666294",
+        "disposition": "selected-public-baseline-preserved",
+        "baseline_path": "compatibility/incubators/opf-1.0.0",
+        "reason": "Exact selected normative source and license retained; full profile migration, excluded tools and consumer acceptance remain open.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.odwf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "f5094555afa36fd3f5a7ed32c60ff4fbe0b24eaa",
+        "disposition": "semantic-and-consumer-audit-open",
+        "baseline_path": null,
+        "reason": "Source inventory only. Read normative semantics, fixtures, attachments and consumers before selecting any import.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.opff",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "27c3247b577ac63ddb014c1ed6126e18bea62327",
+        "disposition": "semantic-and-consumer-audit-open",
+        "baseline_path": null,
+        "reason": "Source inventory only. Read normative semantics, fixtures, attachments and consumers before selecting any import.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.omf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "91e801ac76d8ce7248ef524624bcb41afc55b60e",
+        "disposition": "semantic-and-consumer-audit-open",
+        "baseline_path": null,
+        "reason": "Contributor rules, intention, validator/test portions inspected. Tests include service locators and secret-shaped regression strings; audit or derive explicitly sanitized fixtures before import. Full specification and consumer review remain.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.ocsf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "6ea288fc5c45c543ab937ffd4f482c387536309e",
+        "disposition": "selected-public-baseline-preserved",
+        "baseline_path": "compatibility/incubators/ocsf-0.1.0-draft",
+        "reason": "Exact selected normative source and license retained; full profile migration, excluded tools and consumer acceptance remain open.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.osf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-and-import-definition"
+      "action": "audit-and-import-definition",
+      "source_audit": {
+        "observed_commit": "f2a1d74c4350b93ec97a3edc458be09753bd80f8",
+        "disposition": "license-review-hold",
+        "baseline_path": null,
+        "reason": "No LICENSE/COPYING file was found in the observed source tree. Record explicit reuse authority before copying implementation.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.album",
       "classification": "profile-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-definition-versus-tool"
+      "action": "audit-definition-versus-tool",
+      "source_audit": {
+        "observed_commit": "e8ee480a5bdefe9698cdea3e4f48855755228424",
+        "disposition": "selected-public-baseline-preserved",
+        "baseline_path": "compatibility/incubators/album-0.1.0-draft",
+        "reason": "Exact selected normative source and license retained; full profile migration, excluded tools and consumer acceptance remain open.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.brand",
       "classification": "profile-and-assets-candidate",
       "target": "primfoundation/prim",
-      "action": "audit-brand-definition-assets-and-consumers"
+      "action": "audit-brand-definition-assets-and-consumers",
+      "source_audit": {
+        "observed_commit": "2fae028444d061f1131b11306e539a810ad954ea",
+        "disposition": "semantic-and-consumer-audit-open",
+        "baseline_path": null,
+        "reason": "Source inventory only. Read normative semantics, fixtures, attachments and consumers before selecting any import.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.docket",
       "classification": "profile-tool-hybrid",
       "target": "split",
-      "action": "move-normative-definition-to-prim-keep-tool-runtime-separate-if-justified"
+      "action": "move-normative-definition-to-prim-keep-tool-runtime-separate-if-justified",
+      "source_audit": {
+        "observed_commit": "c71cd30a5982e648bc5708fd64d621c41c4990b5",
+        "disposition": "license-review-hold",
+        "baseline_path": null,
+        "reason": "No LICENSE/COPYING file was found in the observed source tree. Record explicit reuse authority before copying implementation.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.scene",
       "classification": "profile-tool-hybrid",
       "target": "split",
-      "action": "audit-before-movement"
+      "action": "audit-before-movement",
+      "source_audit": {
+        "observed_commit": "eb9271fa4074d9a382a9422dbc5f4c2d11641807",
+        "disposition": "selected-public-baseline-preserved",
+        "baseline_path": "compatibility/incubators/scene-0.1.0-draft",
+        "reason": "Exact selected normative source and license retained; full profile migration, excluded tools and consumer acceptance remain open.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.video",
       "classification": "profile-tool-hybrid",
       "target": "split",
-      "action": "audit-before-movement"
+      "action": "audit-before-movement",
+      "source_audit": {
+        "observed_commit": "c3d80b4d4b0525c4c0e12de8ed27f41fe8cb9e0f",
+        "disposition": "selected-public-baseline-preserved",
+        "baseline_path": "compatibility/incubators/video-0.1.0-draft",
+        "reason": "Exact selected normative source and license retained; full profile migration, excluded tools and consumer acceptance remain open.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.obf",
       "classification": "private-profile-tool-hybrid",
       "target": "undecided",
-      "action": "privacy-and-consumer-audit-before-any-public-migration"
+      "action": "privacy-and-consumer-audit-before-any-public-migration",
+      "source_audit": {
+        "observed_commit": null,
+        "disposition": "private-hold",
+        "baseline_path": null,
+        "reason": "No private content imported. Public transfer needs scoped privacy, ownership and consumer review.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.emf",
       "classification": "private-profile-candidate",
       "target": "undecided",
-      "action": "privacy-and-semantics-audit"
+      "action": "privacy-and-semantics-audit",
+      "source_audit": {
+        "observed_commit": null,
+        "disposition": "private-hold",
+        "baseline_path": null,
+        "reason": "No private content imported. Public transfer needs scoped privacy, ownership and consumer review.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.cre.opaf",
       "classification": "profile-candidate",
       "target": "primfoundation/prim-or-external",
-      "action": "audit-semantics-and-ownership"
+      "action": "audit-semantics-and-ownership",
+      "source_audit": {
+        "observed_commit": "b31760e7bb88a94d1b7363e5b7bd6d377426cdfb",
+        "disposition": "semantic-and-consumer-audit-open",
+        "baseline_path": null,
+        "reason": "Source inventory only. Read normative semantics, fixtures, attachments and consumers before selecting any import.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.obif",
       "classification": "archived-history",
       "target": "history",
-      "action": "preserve-archived-state-and-map-successor-if-any"
+      "action": "preserve-archived-state-and-map-successor-if-any",
+      "source_audit": {
+        "observed_commit": null,
+        "disposition": "preserve-archived-history",
+        "baseline_path": null,
+        "reason": "Keep archived state; map successor prim.brand without rewriting history.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prim.viewer.temp.odwf-viewer-v1",
       "classification": "temporary-viewer",
       "target": "appropriate-product-or-history",
-      "action": "archive-after-viewer-migration-audit"
+      "action": "archive-after-viewer-migration-audit",
+      "source_audit": {
+        "observed_commit": null,
+        "disposition": "private-hold",
+        "baseline_path": null,
+        "reason": "No private content imported. Public transfer needs scoped privacy, ownership and consumer review.",
+        "history_audited": false
+      }
     },
     {
       "repo": "eidos-agi/prims-launchpad-web",
       "classification": "eidos-product-incubator",
       "target": "not-automatically-foundation",
-      "action": "require-product-boundary-governance-and-security-decision-before-transfer"
+      "action": "require-product-boundary-governance-and-security-decision-before-transfer",
+      "source_audit": {
+        "observed_commit": null,
+        "disposition": "private-hold",
+        "baseline_path": null,
+        "reason": "Private company product boundary is not automatically Foundation ownership; governance and security decision remains.",
+        "history_audited": false
+      }
     }
   ],
   "waves": [
