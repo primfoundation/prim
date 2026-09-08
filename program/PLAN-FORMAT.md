@@ -20,7 +20,7 @@ summary. Stages are implementation, tests, review, release, deployment and
 real_use. They are deliberately separate. Tests alone cannot satisfy a release,
 deployment, or real-use gate.
 
-The checker rejects unknown references, duplicate IDs and JSON keys, orphaned
+The checker rejects missing or empty evidence files, unknown references, duplicate IDs and JSON keys, orphaned
 workstreams/milestones, dependency cycles, missing acceptance/owners, unsupported
 status, blocked requirements without reasons, invalid evidence paths, and
 completed requirements without all declared evidence stages or with unfinished

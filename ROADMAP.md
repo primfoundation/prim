@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-08. Execution: **portable_hosts_native_library_hub_registry_shipped_incubator_baselines_under_verification**.
+As of 2026-09-08. Execution: **portable_hosts_native_library_hub_registry_and_selected_incubator_baselines_implemented**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 

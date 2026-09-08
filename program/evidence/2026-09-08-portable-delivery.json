@@ -59,7 +59,9 @@
     "repository": "primfoundation/prim-web",
     "prs": [
       11,
-      12
+      12,
+      13,
+      14
     ],
     "url": "https://prims-hub-preview.eidos-agi.workers.dev/",
     "portable_release": {
@@ -125,7 +127,37 @@
       "Automated browser engine checks are not independent usability, assistive-technology or real-user acceptance.",
       "ZIP CRC checks integrity, not authenticity.",
       "Specific ChatGPT/Claude connector installation not established by MCP protocol tests."
-    ]
+    ],
+    "portable_budget_release": {
+      "pr": 13,
+      "head": "866cd786cc8c5c1eec827fdb1cd949c14f0a0393",
+      "merged_main": "c98ab1a111ceec4156730a9a9c30fd30c2c01c16",
+      "tested_checkout": "d92a68052e857b948e576c9228a5a70d5c3c2fb9",
+      "tested_tree": "0587381a069920d2fb34954ff3f69078af32bec9",
+      "tested_and_reviewed_trees_equal": true,
+      "build_ci": 34234177479,
+      "browser_ci": 34234177685,
+      "unit_dom_zip_tests": 32,
+      "interop": "All four Hub-generated ZIPs are decoded by Python and opened by the independent pinned SDK in a separate process; record and exact pin match. One authority file is exactly 524288 bytes.",
+      "artifact_id": 10059127438,
+      "zip_sha256": "431f8c0acbe4625eafc9072c18b7fcd3afd47371eb0a966b05f59a8dec34b30b",
+      "module_sha256": "b7577431a28e1236580f2e1091559ddcbd46d9c2f3283028c6b15d0e612377b9",
+      "asset_count": 36,
+      "all_asset_sizes_and_sha256_verified": true,
+      "version_id": "2dd0054f-5f19-4a93-9d2b-907b14a99752",
+      "deployment_id": "fade69f6-359f-4903-a82f-b697ebf8ec68",
+      "created_on": "2026-09-08T13:59:27.439114Z",
+      "immediate_rollback_version": "1bf1e03e-6899-4c0e-b9b9-e992a3ccc891",
+      "limits": "New pack exports enforce actual 512 KiB record bytes, 24 nested containers, 2048 entries/container and distinct normalized field names. Larger JSON and previously saved packs remain readable under the existing editor limits; Save record preserves larger records.",
+      "hosted_ci": 34235451854,
+      "exact_file_health_ci": 34235623721,
+      "postmerge_result": "Hosted HTTP/MCP and exact-file public health passed."
+    },
+    "release_health_trigger": {
+      "pr": 14,
+      "merged_main": "356c20dc7e4b1dca04a311fd3b6a155268391e94",
+      "change": "Run existing exact-file health checks on main changes to generated public assets or Worker sources, in addition to the six-hour schedule."
+    }
   },
   "not_performed": [
     "Production DNS/route cutover",
@@ -136,5 +168,23 @@
     "Stable standards/npm publication",
     "Signed installed Mac release",
     "Independent governance/security review or actual-user acceptance"
-  ]
+  ],
+  "foundation_followup": {
+    "pr": 16,
+    "verified_head": "5aa654cca11354bc49cc50f44a35c7ff360b095b",
+    "sdk_version": "0.5.0-dev.2",
+    "ci": {
+      "program": 34235165992,
+      "sdk_distribution": 34235165899,
+      "library_mcp": 34235165915
+    },
+    "result": "All three workflows passed at this exact head, including the pinned incubator runner and installed SDK artifact. Subsequent evidence-checker guard is verified by PR #16 final checks.",
+    "sdk_artifact_id": 10059514935,
+    "sdk_artifact_zip_sha256": "17c8bbb7a43b7d7e98ff7476f66dac44ccc3c6bbef2b226e3e7e3f670b5e0c4a",
+    "source_files": 28,
+    "incubator_cli_cases": 27,
+    "known_unsafe_acceptance_regressions": 5,
+    "sdk_fix": "Check actual pretty-printed record representation before creating an export folder.",
+    "ledger_guard": "Reject empty evidence files; an interrupted report write must not count as retained proof."
+  }
 }

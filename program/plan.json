@@ -4,7 +4,7 @@
   "as_of": "2026-09-08",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "portable_hosts_native_library_hub_registry_shipped_incubator_baselines_under_verification",
+    "state": "portable_hosts_native_library_hub_registry_and_selected_incubator_baselines_implemented",
     "target_repository": "primfoundation/prim",
     "base_commit": "f70f06f646115dd74c863992fd5d9af7087c7483",
     "target_branch": "codex/lineage-and-interop",
@@ -301,13 +301,13 @@
       "id": "E-SEP8-PACK-IMPL",
       "stage": "implementation",
       "path": "program/evidence/2026-09-08-portable-delivery.json",
-      "summary": "Hub PRs #11/#12 portable ZIP saves, real browser acceptance, precise save confirmation and full pinned legacy category registry adapter merged."
+      "summary": "Hub PRs #11/#12/#13 portable ZIP saves, actual browser acceptance, exact legacy registry and native-compatible export budgets merged."
     },
     {
       "id": "E-SEP8-PACK-TEST",
       "stage": "tests",
       "path": "program/evidence/2026-09-08-portable-delivery.json",
-      "summary": "Exact Hub build and browser workflows plus hosted HTTP/MCP checks passed. All 24 types, 23 tools and one applet preserve list/named/filter contracts."
+      "summary": "Exact Hub build/browser and hosted HTTP/MCP workflows pass; pinned legacy contracts plus actual Hub ZIP-to-SDK record/pin parity, including an exact 512 KiB authority file."
     },
     {
       "id": "E-SEP8-PACK-DEPLOY",
