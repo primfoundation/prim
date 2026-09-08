@@ -166,3 +166,24 @@ merged after Mac CI; no existing private store was migrated by this work session
 Signed device acceptance, a multi-file crash journal and lost-key recovery remain
 open. The legacy Railway service mapping failure is retained as an operational
 finding, not represented as a successful production deployment.
+
+## D017 — Recover complete notebook operations before admitting access
+
+Status: implementation and macOS software-fault tests complete; broader G3 gates open.
+
+Primboard publishes an authenticated encrypted redo record before changing any
+referenced payload/index files. That publication is the commit point. All updated
+store readers/writers finish valid pending replay under the existing process lock
+before proceeding; malformed records and unexpected file state are preserved and
+block access. A save error after publication can mean a committed operation, so
+callers reload/reconcile rather than blindly repeat an add. Changes retain the
+existing bundle, CLI, store and Keychain identities and current index encoding.
+
+This supersedes D016's journal-not-implemented observation only. Both app and CLI
+must be journal-aware. The journal requires the same existing key and does not
+provide key-loss recovery, arbitrary-corruption repair or authorization to use
+private records. Physical power loss, device/filesystem failure matrices,
+large-store latency, independent review and signed installed acceptance remain
+separate obligations. The shared cloud Apple release system is not activated.
+
+Evidence and exact scope: `evidence/2026-09-08-primboard-journal.json`.

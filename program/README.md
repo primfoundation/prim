@@ -6,6 +6,11 @@ This is the durable record of the Foundation-wide build authorized on September 
 
 ## One record, several views
 
+Primboard's subsequent safe Mac candidate tooling and encrypted process-crash
+journal are recorded in `evidence/2026-09-08-primboard-journal.json`. They add
+software recovery proof; signed installed acceptance and physical power-loss
+validation remain open.
+
 | Record | Authority and purpose |
 | --- | --- |
 | `CHARTER.md` | Mission, outcomes, boundaries, and decisions reserved for human authority. |

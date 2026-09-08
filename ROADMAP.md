@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-08. Execution: **hub_workbench_alpha_deployed_primboard_recovery_merged_stable_acceptance_open**.
+As of 2026-09-08. Execution: **hub_alpha_live_primboard_journal_merged_stable_acceptance_open**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
@@ -572,9 +572,9 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Untrusted definitions, instance data, scripts, renderers, sources, agents, logs and indexes have abuse cases and trust boundaries before network execution.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: none.
 
-Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains.
+Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained.
 
 **SEC-002 — Protect sensitive records and keys**
 
@@ -582,9 +582,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Encryption/key recovery, private/public separation, grants, secret references, rotation, redacted sharing and revocation are tested without secret values in packs.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST. Dependencies: SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: SEC-001.
 
-Primboard encrypted index migration and authenticated backup/restore are merged after macOS tests, release build and isolated selftest. Exact legacy bytes are preserved in an encrypted backup; restore requires the existing key and publishes to a new directory. Same-key backup does not recover a lost key. Independent security, rotation/sharing and signed existing-store acceptance remain open.
+Primboard encrypted index migration and authenticated backup/restore are merged after macOS tests, release build and isolated selftest. Exact legacy bytes are preserved in an encrypted backup; restore requires the existing key and publishes to a new directory. Same-key backup does not recover a lost key. Independent security, rotation/sharing and signed existing-store acceptance remain open. An encrypted multi-file journal now recovers interrupted operations before admitting store access, with private records and the original key retained. Wrong-key/tamper/path/revision failures preserve recovery evidence. Physical power-loss, guided recovery and independent review remain open.
 
 **SEC-003 — Isolate untrusted processing**
 
@@ -702,9 +702,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Clean installs/builds, pinned dependencies, supported-platform tests, signing where applicable and artifact provenance are demonstrated.
 
-Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY. Dependencies: RELENG-001.
+Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: RELENG-001.
 
-Hub CI retains the exact tested Worker/assets, source SHA and content hashes; those artifacts were verified and deployed. Primboard 131-case Mac suite, release build, selftest and identity guards pass. Independent release review, signed/notarized distribution and Desktop source recovery remain open.
+Hub CI retains the exact tested Worker/assets, source SHA and content hashes; those artifacts were verified and deployed. Primboard 131-case Mac suite, release build, selftest and identity guards pass. Independent release review, signed/notarized distribution and Desktop source recovery remain open. PR #3 adds safe immutable-source Mac candidate and resumable notarization tooling; PR #4 passes a 151-case scheduled Mac suite, five abrupt subprocess scenarios and 14 release-tool tests. Actual company signing/notarization and installed acceptance remain unverified.
 
 **RELENG-003 — Migrate without a flag day**
 
@@ -712,9 +712,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Aliases, read-old/write-new policy, migration receipts, originals, restore/rollback and deprecated repositories have tested, authorized procedures.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
 
-Primboard now reads validated legacy indexes, authenticates referenced payloads, preserves exact old bytes encrypted and writes the new binary envelope. Old JSON-only readers fail; updated app/CLI must be used together. Restore targets a new directory. Signed real-store acceptance and broader consumer cutovers remain open.
+Primboard now reads validated legacy indexes, authenticates referenced payloads, preserves exact old bytes encrypted and writes the new binary envelope. Old JSON-only readers fail; updated app/CLI must be used together. Restore targets a new directory. Signed real-store acceptance and broader consumer cutovers remain open. Journal-aware app and CLI must be updated together. Pending transactions replay before reads/writes; old binaries do not understand them. Legacy derived tab creation timestamps are now deterministic and new commits persist derived tabs.
 
 **RELENG-004 — Define stable acceptance and maintenance**
 
@@ -754,9 +754,9 @@ State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Backups and restore drills, key loss, publisher/service disappearance, offline export, mirrors and service/vendor migration pass explicit recovery goals.
 
-Required evidence: implementation, tests, review, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY. Dependencies: OPS-001.
+Required evidence: implementation, tests, review, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: OPS-001.
 
-Actual Cloudflare preview rollback to the prior catalog and return to the workbench were observed through the API and live homepage. Primboard synthetic encrypted restore passes macOS tests; offline workbench distributed. Real-user restore, key recovery, mirrors and provider-disappearance acceptance remain open.
+Actual Cloudflare preview rollback to the prior catalog and return to the workbench were observed through the API and live homepage. Primboard synthetic encrypted restore passes macOS tests; offline workbench distributed. Real-user restore, key recovery, mirrors and provider-disappearance acceptance remain open. Encrypted multi-file process-crash recovery now passes five real abrupt subprocess scenarios and repeated fault replay; backup export finishes pending recovery first. Physical power loss, disk exhaustion/device matrices, large-store latency and lost-key recovery remain open.
 
 **OPS-004 — Sustain a useful free core**
 

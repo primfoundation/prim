@@ -1,0 +1,132 @@
+{
+  "format_version": 1,
+  "as_of": "2026-09-08",
+  "scope": "Primboard safe Mac candidate preparation and encrypted process-crash recovery; no signed/private-store release claim",
+  "requirements": [
+    "SEC-001",
+    "SEC-002",
+    "RELENG-002",
+    "RELENG-003",
+    "OPS-003"
+  ],
+  "repository": "primfoundation/prims-paste-desktop",
+  "journal": {
+    "pull_request": "https://github.com/primfoundation/prims-paste-desktop/pull/4",
+    "base_commit": "17574957818d2873f21c83773d0ce761ef34af53",
+    "tested_head": "51d8db6862d91536d8d6d987f67495a2467607c7",
+    "ci_checkout": "3252c803bfc0b46c114cbc1688240694ac51dd8f",
+    "merged_commit": "0b30b472cf0cbd960bac99c4f02648dba0cd092f",
+    "ci_checkout_and_merged_tree": "bacfcb93e9371cf9afa3c81bbe7cd6df14ffc117",
+    "ci": {
+      "url": "https://github.com/primfoundation/prims-paste-desktop/actions/runs/34180465442",
+      "run_id": 34180465442,
+      "job_id": 101918338409,
+      "conclusion": "success",
+      "os": "macOS 15.7.9 (24G830)",
+      "runner_image": "macos-15-arm64 20260829.0321.1",
+      "scheduled_xctest_cases": 151,
+      "journal_test_methods": 20,
+      "real_abrupt_process_exit_scenarios": [
+        "before journal publication",
+        "after journal publication",
+        "after payload replacement",
+        "after index replacement",
+        "during obsolete-file deletion"
+      ],
+      "release_tool_tests_passed": 14,
+      "other_gates": [
+        "Swift release build",
+        "selftest inside assembled app",
+        "isolated product selftest",
+        "bundle/product/CLI/store/Keychain compatibility guards"
+      ],
+      "skip_policy": "The subprocess-only crash helper skips in the parent run and executes in five child processes. Optional installed Docket integrations skip when the tool is absent. Scheduled cases are not presented as a count of ordinary passed tests.",
+      "limitations": "This is arm64 macOS CI with synthetic data and test keys; it does not demonstrate x86_64, real hardware power loss, company signing/notarization, TCC, or an existing private notebook."
+    },
+    "prior_runs": [
+      {
+        "run_id": 34179805477,
+        "head": "0012f6d245a68f32ec03d92dcf8989725f517357",
+        "conclusion": "failure",
+        "finding": "Two recovery equality checks exposed newly generated tab creation timestamps when reopening an index without explicit tabs. The implementation was corrected; the assertions were retained."
+      },
+      {
+        "run_id": 34180347260,
+        "head": "9aee9872d960b3049a3dc6840b55f6977132836b",
+        "conclusion": "success",
+        "finding": "Journal, deterministic metadata and bounded capture passed; the later final head adds the Mac handoff clarification."
+      }
+    ],
+    "source_sha256": {
+      "Sources/PrimsPasteCore/NotebookJournal.swift": "29bb5d1d356143f64930f9cc0730786f77106bb79dd9d1b3feb7c8a92138c780",
+      "Sources/PrimsPasteCore/NotebookStore.swift": "8bd12179184e5e4fedc1ca95f2b2f82445dbf36ec6f091ad7143c727f5fc8ab9",
+      "Sources/PrimsPasteCore/Models.swift": "2271beb9744e97b9da73c82af673b2afd628cfe273592242defaee720d4e437e",
+      "Tests/PrimsPasteCoreTests/NotebookJournalTests.swift": "6ac1b6d5299d5e00426a4770f8ec8febdb8c5090896adeb4e874a2505692e8f5",
+      "Tests/PrimsPasteCoreTests/NotebookRecoveryTests.swift": "bcd4169f9a49e17927640ce689effbde6f3688c82f7739aa3020c7f3424a532f",
+      "STABILIZATION.md": "f86a598b773c1ca76b1f168b28931d0570bd0c2782f50a8996385b05cedefbf4",
+      "MAC-RELEASE.md": "846ff32665fb8c71e77ce7f9d150e6db2545e3cf9b9a0aa754792cf5a2c21031"
+    },
+    "behavior": [
+      "Publish one authenticated encrypted PPJ1 redo record before changing referenced blobs or index; publication is the commit point.",
+      "Recover under the existing interprocess lock before index or direct payload/image reads and before mutations.",
+      "Authenticate and validate complete old/new index state, revisions, payloads, lengths/fingerprints, paths and filename aliases before replay changes a file.",
+      "Replay changed blobs, the matching index and precise obsolete-file deletion idempotently; retain invalid or unfinished records.",
+      "Require synced directory entries and macOS F_FULLFSYNC barriers; unsupported filesystems fail rather than silently weaken the requested durability.",
+      "Persist derived tabs and derive legacy tab timestamps from source items instead of the current clock.",
+      "A post-publication error may represent a committed change; reload/reconcile before repeating an operation."
+    ],
+    "limits": {
+      "changed_sealed_blob_bytes_per_transaction": 67108864,
+      "encoded_journal_bytes": 134217728
+    },
+    "compatibility": "PPI3 index and notebook model versions 1/2 remain. Bundle sh.prims.paste, executable PrimsPaste, CLI prims-paste, original Keychain identity and notebook path remain. Both app and CLI must be journal-aware; older binaries must not access a pending journal.",
+    "merged_main_ci": {
+      "run_id": 34180613114,
+      "url": "https://github.com/primfoundation/prims-paste-desktop/actions/runs/34180613114",
+      "head": "0b30b472cf0cbd960bac99c4f02648dba0cd092f",
+      "conclusion": "success"
+    }
+  },
+  "safe_mac_candidate_tooling": {
+    "pull_request": "https://github.com/primfoundation/prims-paste-desktop/pull/3",
+    "tested_head": "dfee097a96a6dd906e5c4e8ef1e7d8b93d61dc6f",
+    "merged_commit": "17574957818d2873f21c83773d0ce761ef34af53",
+    "pr_ci_run": 34178662280,
+    "merged_main_ci_run": 34178783609,
+    "conclusion": "success",
+    "behavior": "Check usable company signing access before side-building an immutable source candidate; never replace the installed app from the build script. Preserve notarization submission IDs, verify accepted archive hashes, staple a copy and verify final unpacked artifacts.",
+    "limitations": "Tests mock company signing and Apple service responses; no live signed/notarized release or installed notebook acceptance was performed."
+  },
+  "delivery_state": {
+    "implemented": true,
+    "macos_ci_verified": true,
+    "merged": true,
+    "company_signed_release": false,
+    "live_notarization_verified": false,
+    "installed_on_user_mac": false,
+    "private_notebook_migrated": false,
+    "physical_power_loss_verified": false
+  },
+  "remaining": [
+    "Guided GUI backup/recovery and generic Convert to Prim",
+    "Lost-key and portable recovery design; the current journal/backups require the original key",
+    "Disk exhaustion, device/filesystem failure matrices and physical power-loss acceptance",
+    "Large-store memory, throughput and UI latency validation; streaming journals beyond the current bounds",
+    "Independent security review and supported mixed-version/release policy",
+    "Company signing, notarization, fresh download and installed existing-store/Keychain/TCC acceptance through MAC-RELEASE.md",
+    "Activate the shared Apple cloud build/signing system; no connected Mac executor exists in this session"
+  ],
+  "foundation_local_checks": {
+    "python_tests": 96,
+    "conclusion": "passed",
+    "commands": [
+      "python3 -m unittest discover -s tools/tests -v",
+      "python3 tools/program.py check",
+      "python3 tools/program.py render --check",
+      "python3 tools/profile_catalog.py inspect profiles/research",
+      "python3 tools/orf_conformance.py",
+      "python3 tools/profile_catalog.py discover profiles --check registry/profiles.generated.json"
+    ],
+    "scope": "Local Foundation checkout; full repository GitHub CI is a separate gate on the evidence PR."
+  }
+}
