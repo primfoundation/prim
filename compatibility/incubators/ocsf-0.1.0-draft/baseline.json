@@ -1,0 +1,39 @@
+{
+  "format": "prim-incubator-baseline",
+  "version": 1,
+  "repository": "eidos-agi/prim.ocsf",
+  "commit": "6ea288fc5c45c543ab937ffd4f482c387536309e",
+  "license": "MIT; preserved upstream/LICENSE applies",
+  "status": "draft-documentation-only",
+  "files": [
+    {
+      "path": "INTENTION.md",
+      "bytes": 3069,
+      "sha256": "511cf1f3d7fd8e3e7cd541af72ea11ac3dfc44d970de7b7988f222569b9bbf19",
+      "git_blob": "eba3270755cf7f0b5fa0fe7fbce00d2762c2a8f9"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+      "git_blob": "810ae661b705e3da980cc5a798fa867f9d5ad619"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1898,
+      "sha256": "c095c534321563b05a4657c95c8ce0128cf58fa4c39badfeeffffb0959f27760",
+      "git_blob": "e35927b93192fe96b4dc5da17fb9a3b18fa9885d"
+    },
+    {
+      "path": "SPEC.md",
+      "bytes": 5400,
+      "sha256": "e2ff8984d0295786368fc9f4f7153130bd65d719914bd90754628939b620aaf3",
+      "git_blob": "8df4e0dd7c9287bc6136e2b182106f28fee22350"
+    }
+  ],
+  "limitations": [
+    "Upstream states validator, schema and fictional example are not implemented.",
+    "No corporate records are imported. Draft legal, financial and trust assertions are preserved as historical proposals, not verified guarantees.",
+    "No Foundation profile registration or semantic migration is claimed."
+  ]
+}

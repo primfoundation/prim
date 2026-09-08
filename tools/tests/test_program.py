@@ -117,6 +117,11 @@ class ProgramTests(unittest.TestCase):
                 with self.assertRaises(PlanError):
                     validate_plan(plan, self.root)
 
+    def test_empty_report_does_not_count_as_retained_evidence(self):
+        (self.root / "evidence.md").write_bytes(b"")
+        with self.assertRaisesRegex(PlanError, "evidence file empty"):
+            validate_plan(self.plan, self.root)
+
     def test_loss_of_domain_coverage_fails(self):
         for key in ("life_domains", "coverage_lenses"):
             plan = copy.deepcopy(self.plan)

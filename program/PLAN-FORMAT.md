@@ -20,7 +20,7 @@ summary. Stages are implementation, tests, review, release, deployment and
 real_use. They are deliberately separate. Tests alone cannot satisfy a release,
 deployment, or real-use gate.
 
-The checker rejects unknown references, duplicate IDs and JSON keys, orphaned
+The checker rejects missing or empty evidence files, unknown references, duplicate IDs and JSON keys, orphaned
 workstreams/milestones, dependency cycles, missing acceptance/owners, unsupported
 status, blocked requirements without reasons, invalid evidence paths, and
 completed requirements without all declared evidence stages or with unfinished
@@ -33,6 +33,6 @@ results. Nor does a single-snapshot checker stop someone deleting a requirement;
 Git review and the decision register govern scope changes. Requirements can be
 added and legitimate completion recorded without changing test fixtures.
 
-The initial map has 17 workstreams and 70 requirements, including delivery
-control. This is a baseline decomposition, not a proof that no future obligation
+The initial map had 17 workstreams and 70 requirements. The current preserved
+map has 79 requirements, including delivery control. This is a baseline decomposition, not a proof that no future obligation
 can be discovered. New findings get stable IDs and explicit acceptance criteria.

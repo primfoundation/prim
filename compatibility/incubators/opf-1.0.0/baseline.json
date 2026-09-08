@@ -1,0 +1,76 @@
+{
+  "format": "prim-incubator-baseline",
+  "version": 1,
+  "repository": "eidos-agi/prim.opf",
+  "commit": "c55e7a493b29e860f34ce4e89a847b125c666294",
+  "source_tree": "fb587b9e78d32483216d52e01622a10c9e893c73",
+  "license": "MIT; preserved upstream/LICENSE applies to copied files",
+  "status": "compatibility-baseline-only",
+  "files": [
+    {
+      "path": "SPEC.md",
+      "bytes": 8440,
+      "sha256": "b780db3941597401340a64cddb0674df0e54b724ccb2f811d27a39e9516bb323",
+      "git_blob": "483f2e13ac70665966fba24eb9f26b50fb098912"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1769,
+      "sha256": "566a69c78456a0101af11d9b2305691767f1ab4d0a5f65be43a492638c28ef2f",
+      "git_blob": "a7ebbaa6f18d07f92acc379c6af3890c5f3890d8"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 732,
+      "sha256": "5dd9e3d515a46f0d99249f7bd08552902e0d5b6430815fc5141629ee188aa6d1",
+      "git_blob": "b05076d3b04173c6e3b62795c44f638b81c161a7"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "7420c14c8aec788e263370e65768dca6664d89f27df2f172b22f1e49fe9b340f",
+      "git_blob": "810ae661b705e3da980cc5a798fa867f9d5ad619"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 987,
+      "sha256": "a1f6bd42a49d8c175ecfc4dac5a375cd18676fdab56d4a84e58e768c59ca6d6c",
+      "git_blob": "4a1410cfe7366dc9e5c786fc50b2ed3fc8e99b75"
+    },
+    {
+      "path": "opf/__init__.py",
+      "bytes": 99,
+      "sha256": "4b207ef86b6cd8648f1c78bfcc989ca1a1dea3c0e5e8ae641ed678879fb04ae8",
+      "git_blob": "5c445d2e5eb4ef16667611d5da87348eace828c9"
+    },
+    {
+      "path": "opf/__main__.py",
+      "bytes": 96,
+      "sha256": "f4405c97acdad50afd77ef4fa783148e0cc19e72b8c6a17cfe13b136746f6976",
+      "git_blob": "4cf7db07f36217d94cbcd2e63d494cd4109eb95a"
+    },
+    {
+      "path": "opf/validate.py",
+      "bytes": 14644,
+      "sha256": "c1d8e09de42dbd32bf6b939c533b58c21e27cca62318d53157d891d65dc218ad",
+      "git_blob": "86051dc6e9b7aa8c8e7f7827d44c54f83651cb93"
+    },
+    {
+      "path": "tests/test_validate.py",
+      "bytes": 3084,
+      "sha256": "c910e28a76809a1b15fe76cf85ab9f65ba8de8f8273d0348b6cb78a3f81ece5e",
+      "git_blob": "8d2e0eb60558801bbf2e8d7fc1cf6aadcad7a0e4"
+    },
+    {
+      "path": "examples/v1-product/product.json",
+      "bytes": 1622,
+      "sha256": "4c512c4226626120b5c125ee2a23a82b2228e7469332446c69efe79d959bcef9",
+      "git_blob": "95f73634cb319fd98401381394b59e407acc9110"
+    }
+  ],
+  "limitations": [
+    "v1 deliberately rejects v0 packs; no semantic migration is claimed.",
+    "Editor, self-packet and product records are excluded pending separate audit.",
+    "Legacy validator is not a sandbox: duplicate JSON keys, resource limits and malformed event handling need hardening before untrusted use."
+  ]
+}

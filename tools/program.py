@@ -84,6 +84,8 @@ def _evidence_path(root: Path, name: str) -> Path:
             raise PlanError("symlink evidence paths are not allowed")
     if not current.is_file():
         raise PlanError(f"evidence file missing: {name}")
+    if current.stat().st_size == 0:
+        raise PlanError(f"evidence file empty: {name}")
     return current
 
 

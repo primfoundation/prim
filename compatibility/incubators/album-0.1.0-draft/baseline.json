@@ -1,0 +1,40 @@
+{
+  "format": "prim-incubator-baseline",
+  "version": 1,
+  "repository": "eidos-agi/prim.album",
+  "commit": "e8ee480a5bdefe9698cdea3e4f48855755228424",
+  "source_tree": "d6257c5d7f6cde4eeca475cbf981c9d14ed392e1",
+  "license": "MIT; preserved upstream/LICENSE applies to copied files",
+  "status": "compatibility-baseline-only",
+  "files": [
+    {
+      "path": "SPEC.md",
+      "bytes": 3584,
+      "sha256": "56b833babf1ee8ac85f261aa5d6a937246467b75300cd3ddb440dc31204986fe",
+      "git_blob": "7c3be227ff32a47a547bb9171618a2a9da84c9f0"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 148,
+      "sha256": "63eda354e1bd3ed10a10c15ff30c07be13cbcc9fb362be3e2025b72e71dde16f",
+      "git_blob": "2f9d8a52387ef6435e99edb221669ab51ba85c5a"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1061,
+      "sha256": "145dcef013347cf76a2c40dba8352c1647097b85e262447d2ddea32fbc379141",
+      "git_blob": "5e423c2bd481d2a00d74484e392afb89cc61d26c"
+    },
+    {
+      "path": "validate.py",
+      "bytes": 4304,
+      "sha256": "6c0f6cad37107de7927208780f7b7dbf404725122379f0acc6ad71b22346f76c",
+      "git_blob": "9ee3b4052dd04738a38e89c2a47aa2b4707ffa91"
+    }
+  ],
+  "limitations": [
+    "No player, audio, artwork or example album is imported.",
+    "Legacy validator accepts some unsupported versions, nonfinite numbers and paths outside a pack; it is only run on fixed synthetic fixtures here.",
+    "No native Foundation profile, generic-host support or semantic migration is claimed."
+  ]
+}

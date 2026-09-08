@@ -1,0 +1,292 @@
+{
+  "observed_at": "2026-09-08T13:55:47.915066+00:00",
+  "scope": "Exact selected public blobs, fixed pinned legacy validators and synthetic fixtures only.",
+  "baselines": [
+    {
+      "baseline": "opf-1.0.0",
+      "source_commit": "c55e7a493b29e860f34ce4e89a847b125c666294",
+      "files_verified": 10,
+      "selected_file_zip_roundtrip": true,
+      "status": "compatibility-baseline-only"
+    },
+    {
+      "baseline": "album-0.1.0-draft",
+      "source_commit": "e8ee480a5bdefe9698cdea3e4f48855755228424",
+      "files_verified": 4,
+      "selected_file_zip_roundtrip": true,
+      "status": "compatibility-baseline-only"
+    },
+    {
+      "baseline": "ocsf-0.1.0-draft",
+      "source_commit": "6ea288fc5c45c543ab937ffd4f482c387536309e",
+      "files_verified": 4,
+      "selected_file_zip_roundtrip": true,
+      "status": "draft-documentation-only"
+    },
+    {
+      "baseline": "scene-0.1.0-draft",
+      "source_commit": "eb9271fa4074d9a382a9422dbc5f4c2d11641807",
+      "files_verified": 5,
+      "selected_file_zip_roundtrip": true,
+      "status": "compatibility-baseline-only"
+    },
+    {
+      "baseline": "video-0.1.0-draft",
+      "source_commit": "c3d80b4d4b0525c4c0e12de8ed27f41fe8cb9e0f",
+      "files_verified": 5,
+      "selected_file_zip_roundtrip": true,
+      "status": "compatibility-baseline-only"
+    }
+  ],
+  "checks": [
+    {
+      "case": "opf original six validator tests",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "",
+      "stderr": "test_acceptance_targets_decisions (test_validate.ValidatorTests.test_acceptance_targets_decisions) ... ok\ntest_every_entity_requires_one_created_event (test_validate.ValidatorTests.test_every_entity_requires_one_created_event) ... ok\ntest_hierarchy_requires_one_ordered_parent (test_validate.ValidatorTests.test_hierarchy_requires_one_ordered_parent) ... ok\ntest_reference_pack_is_valid (test_validate.ValidatorTests.test_reference_pack_is_valid) ... ok\ntest_relationship_direction_is_typed (test_validate.ValidatorTests.test_relationship_direction_is_typed) ... ok\ntest_v0_markdown_pack_is_not_accepted (test_validate.ValidatorTests.test_v0_markdown_pack_is_not_accepted) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "case": "opf selftest",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok    selftest\n",
+      "stderr": ""
+    },
+    {
+      "case": "opf exact synthetic source fixture",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok    $REPOSITORY/compatibility/incubators/opf-1.0.0/upstream/examples/v1-product/product.json\n",
+      "stderr": ""
+    },
+    {
+      "case": "album patch file and cite source fixture",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject track numbering gap",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  track n must be contiguous 1..N (got n=4 at 2)\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject duplicate track identity",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  duplicate track id: patch\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject player state in authority",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  album.json must not contain player state: playing\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject inconsistent patch timing",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  track 1 duration=7 must equal bars*4*60/bpm=8.000000\n  album duration=10 must equal sum of tracks=9.000000\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject absent file source",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  track 2 file missing: audio/absent.bin\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject unknown source kind",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  track 3 unknown source.kind: unknown\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject incomplete cite",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  track 3 cite source needs album_id and track\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "reject inconsistent total",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  album duration=11 must equal sum of tracks=10.000000\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "known gap: unsupported version accepted",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": true
+    },
+    {
+      "case": "known gap: nonfinite duration accepted",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": true
+    },
+    {
+      "case": "known gap: boolean duration accepted",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": true
+    },
+    {
+      "case": "known gap: outside pack file accepted",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": true
+    },
+    {
+      "case": "scene valid timed fixture",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack/scenes/one\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video valid composed scene with pinned sibling validator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "scene rejects incomplete camera duration",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  last camera key t=1 must equal duration=2\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video propagates pinned scene rejection",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  scenes/one: last camera key t=1 must equal duration=2\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "known gap: video accepts invalid scene without sibling validator",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "passed": true,
+      "stdout": "ok $CASE/pack\n",
+      "stderr": "",
+      "known_unsafe_input_gap": true
+    },
+    {
+      "case": "scene rejects malformed object animation vector",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  object one: key t=2 position must be a 3-vector\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "scene renderer duration drift is a hard failure",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  warning-as-fail v0.1: renderer.html __duration=3 \u2260 scene.json duration=2\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video rejects citation mismatch",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  cites 'scene:fixture:other' \u2260 scene_id 'scene:fixture:one'\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video rejects escaping scene path",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  pack escapes root: ../../outside\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video rejects numbering gap",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  scenes n must be 1..N contiguous, got [2]\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    },
+    {
+      "case": "video rejects copied scene authority",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "passed": true,
+      "stdout": "FAIL\n  scene entry n=1 must not hold ['camera']\n",
+      "stderr": "",
+      "known_unsafe_input_gap": false
+    }
+  ],
+  "success": true,
+  "not_established": [
+    "semantic migration",
+    "arbitrary untrusted pack safety",
+    "independent implementation or review",
+    "consumer acceptance",
+    "new Foundation profile publication",
+    "full-history preservation"
+  ]
+}

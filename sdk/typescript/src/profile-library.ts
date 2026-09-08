@@ -110,13 +110,17 @@ export class ProfileLibrary {
 
   writePack(pin: DefinitionPin, record: JSONObject, path: string): void {
     const kit = this.get(pin); this.requireValid(pin, record);
+    // Validate the actual exported representation before creating any directory.
+    // Pretty printing can exceed the reader's byte budget even when compact JSON fits.
+    const recordText = JSON.stringify(record, null, 2) + "\n";
+    parseProfileJSON(recordText);
     const target = resolve(path), parent = dirname(target);
     if (!lstatSync(parent).isDirectory() || realpathSync(parent) !== parent) throw new ProfileError("Choose a trusted local parent without symlinks");
     try { lstatSync(target); throw new ProfileError("Export requires a new directory"); } catch (e) { if ((e as NodeJS.ErrnoException).code !== "ENOENT") throw e; }
     const temp = mkdtempSync(join(parent, ".prim-create-"));
     try {
       const write = (name: string, text: string) => writeFileSync(join(temp, name), text, { flag: "wx", mode: 0o600, flush: true });
-      write(kit.authority_file, JSON.stringify(record, null, 2) + "\n");
+      write(kit.authority_file, recordText);
       write("prim-definition.lock.json", JSON.stringify(this.pin(pin), null, 2) + "\n");
       write("index.md", `---\nprofile: ${JSON.stringify(pin.profile_id)}\nprofile_version: ${JSON.stringify(pin.version)}\ntype: ${JSON.stringify(pin.profile_id.split("/").at(-1))}\ntitle: ${JSON.stringify(record[kit.title_field] ?? kit.name)}\nauthority: ${kit.authority_file}\n---\n\nThe authoritative record is in \`${kit.authority_file}\`.\n`);
       write("log.md", "# Log\n\n- Created locally using a pinned definition. Structural validation does not verify facts or authority.\n");

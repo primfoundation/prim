@@ -70,6 +70,6 @@ export {
   type TypeStatus,
 } from "./registry.ts";
 
-export const VERSION = "0.5.0-dev.1";
+export const VERSION = "0.5.0-dev.2";
 
 export { ProfileLibrary, ProfileError, parseProfileJSON, type DefinitionPin, type CreationKit, type JSONValue, type ProfileProblem } from "./profile-library.ts";

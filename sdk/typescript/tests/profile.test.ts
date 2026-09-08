@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
@@ -75,4 +75,17 @@ test("prototype-named extension fields remain ordinary data", () => {
   assert.equal(Object.hasOwn(record, "__proto__"), true);
   assert.equal(({} as any).polluted, undefined);
   assert.equal(library.validate(library.pin(kit), record).length, 0);
+});
+
+test("exports reject representations the same reader cannot reopen before creating a folder", () => {
+  const root = mkdtempSync(join(tmpdir(), "prim-sdk-export-budget-")), library = new ProfileLibrary();
+  try {
+    const kit = library.list()[0], pin = library.pin(kit);
+    const record = library.create(pin, { extension: Array.from({length: 1800}, () => "x".repeat(284)) });
+    assert.ok(Buffer.byteLength(JSON.stringify(record)) < 512 * 1024);
+    assert.ok(Buffer.byteLength(JSON.stringify(record, null, 2) + "\n") > 512 * 1024);
+    const target = join(root, "too-large-after-formatting");
+    assert.throws(() => library.writePack(pin, record, target), /size limit/);
+    assert.equal(existsSync(target), false);
+  } finally { rmSync(root, {recursive: true, force: true}); }
 });
