@@ -27,9 +27,20 @@ All rows above are merged. Full tested and merge SHAs, scope and limitations are
 
 ## Next actionable gates
 
+The subsequent Primboard increment is recorded in
+[`evidence/2026-09-08-primboard-journal.json`](evidence/2026-09-08-primboard-journal.json).
+PR #3 protects the working installation during candidate preparation and adds
+resumable notarization tooling. PR #4 adds an authenticated encrypted multi-file
+redo journal, recovery before store reads/writes, precise cleanup, path/size
+checks, and deterministic derived-tab metadata. macOS CI exercises 151 scheduled
+XCTest cases (including 20 journal cases and a subprocess-only helper), five real
+abrupt process-exit scenarios, and 14 release-tool tests. The fixture helper and
+absent optional integrations are not counted as ordinary passed tests. Exact
+source, merge, CI identifiers and limitations are retained in that evidence file.
+
 1. **Hub acceptance:** automated compiled-UI saves and round trips pass. Hosted browser creation, focused edits and synthetic file reopen were observed, but download events timed out; do not claim confirmed browser-to-disk completion. Phone/screen-reader/accessibility and independent user acceptance remain open. Record fields stay local; the public service distributes only definitions.
 2. **Public operations:** establish named operator/cost ownership, escalation destination, SLOs and edge quotas. Reconcile the legacy Railway `Service not found` failure and old website/route ownership before production cutover. The new Cloudflare endpoint's HTTP/MCP checks pass separately. A working MCP protocol is not proof of installation in a particular ChatGPT/Claude host.
-3. **Primboard:** ship the signed real-Mac acceptance gate for existing-store reopen, Keychain reuse and TCC. Use the updated app and CLI together: old JSON-only readers fail on the encrypted index. Same-key backups cannot recover a lost key. A multi-file crash journal, guided GUI recovery and generic Library conversion remain open.
+3. **Primboard:** the multi-file process-crash journal is implemented and tested. Next implement guided GUI recovery and generic Library conversion, then finish signed existing-store/Keychain/TCC acceptance through the local-agent `MAC-RELEASE.md` work order. App and CLI must both be journal-aware; older binaries do not recover a pending transaction. A failed save may have committed, so reload and reconcile before repeating it. Physical power-loss/device/disk-exhaustion matrices, large-store performance and independent review remain open. Same-key backups still cannot recover a lost key. Shared cloud signing is planned but not activated; no Mac executor is connected to this chat.
 4. **Desktop:** recover the authoritative `../prim-sim` checkout and its remote/revision/license. Prior candidate lookups returned 404, which does not prove deletion. Do not stub `PrimSimCore` or guess its source. Preserve existing PRs #2/#3/#4/#6 and their FDA/XPC/signing gates.
 5. **Browsers/governance/migrations:** prove real Apple/session/container behavior and shared cookie-domain routing before cutover. Complete remaining source/consumer/privacy audits, actual administration/reporting controls and independent review. No rename/archive follows automatically from consolidation documents.
 
