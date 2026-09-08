@@ -102,3 +102,14 @@ Those are real evidence gates, not reasons to stop implementation in independent
 ## Deployed preview follow-up — September 7, 17:05 UTC
 
 The initial upload failure is resolved and the isolated Hub preview is deployed. The exact module, five-file asset manifest, Worker version/deployment, browser observation and client checks are recorded in [deployment evidence](evidence/2026-09-07-cloudflare-deployed.json). Existing login, gateway and registry Worker timestamps remain unchanged; this does not claim a production route migration or complete operational inventory.
+
+
+## Shipped workbench and recovery follow-up — September 8
+
+The Hub now serves 36 assets, searchable/readable discovery, local authoring for
+four profiles and an offline workbench. Primboard encrypted-index and backup
+recovery changes are merged with Mac verification. The actual preview
+rollback/return drill, current artifacts and all remaining acceptance limitations
+are recorded in [release evidence](evidence/2026-09-08-release.json). The legacy
+Railway workflow separately returned `Service not found`; production service
+mapping remains unresolved. Historical observations above remain dated evidence.
