@@ -2,7 +2,7 @@
 
 This is the durable record of the Foundation-wide build authorized on September 6, 2026. Research is the first implementation path, not the boundary of the mission.
 
-**Current publication state:** Foundation bootstrap, ORF compatibility, Library/MCP alpha and sanitized Workbook migration are merged in PRs #5/#6/#7/#10. Verified Hub, Browsers, Primboard, Desktop proof-preflight and organization policy increments are also merged in their owning repositories. `HANDOFF.md` and `evidence/2026-09-07-execution.json` record exact tested commits, CI and unresolved gates. Public Cloudflare deployment, stable/signed releases and independent real-use acceptance remain open.
+**Current publication state:** Foundation bootstrap, ORF compatibility, Library/MCP alpha and sanitized Workbook migration are merged in PRs #5/#6/#7/#10. Verified Hub, Browsers, Primboard, Desktop proof-preflight and organization policy increments are also merged in their owning repositories. `HANDOFF.md` and `evidence/2026-09-07-execution.json` record exact tested commits, CI and unresolved gates. The isolated Cloudflare Hub workbench is deployed; Primboard encrypted-index and recovery changes are merged. See `evidence/2026-09-08-release.json` for exact release evidence. Production cutover, stable/signed releases and independent real-use acceptance remain open.
 
 ## One record, several views
 

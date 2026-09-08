@@ -147,3 +147,22 @@ live endpoint or deploy Foundation infrastructure into an unrelated account just
 because credentials exist. A read inventory did not establish a Foundation-owned
 hosting target. Record the ownership/budget/TLS/operations gate as OPS-005; no
 private account identifiers or credentials belong in this public record.
+
+
+## D016 — Authorized preview delivery and source stabilization
+
+Status: executed September 8, 2026; production ownership gate retained.
+
+Subsequent explicit founder instructions authorized continued shipping through the
+selected Clawdflare connection. D015's unknown-target condition was resolved for
+the existing isolated Hub preview, whose deployment and recovery evidence is
+retained in `evidence/2026-09-08-release.json`. This is not a production domain
+cutover or proof of Foundation legal ownership, operating budget or independent
+acceptance. Those parts of OPS-001/OPS-005 remain open.
+
+The Hub workbench ships as a development alpha using the same immutable profile
+versions. Primboard's versioned encrypted index and same-key backup/recovery are
+merged after Mac CI; no existing private store was migrated by this work session.
+Signed device acceptance, a multi-file crash journal and lost-key recovery remain
+open. The legacy Railway service mapping failure is retained as an operational
+finding, not represented as a successful production deployment.

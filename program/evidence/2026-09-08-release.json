@@ -1,0 +1,386 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-09-08T01:37:25.266781+00:00",
+  "state": "hub_alpha_deployed_and_primboard_source_stabilization_merged",
+  "scope": "Authorized continuation of G2 Hub, G3 Primboard and G7 delivery evidence. No broad goal is declared complete.",
+  "hub": {
+    "repository": "primfoundation/prim-web",
+    "release": "0.2.0-alpha.1",
+    "pull_requests": [
+      8,
+      9,
+      10
+    ],
+    "final_head": "4a4f9b7bcb5921ccacf0abcf93b15a1552ec52af",
+    "tested_checkout": "bc86ccc0d1063cb231c5a707d102e095ae0869d0",
+    "merged_main": "2c5b9e74c66c8691a0125699225b53ec34152c95",
+    "verified_tree": "8aa711d054cbce34caef7445dff2bf51b26ed434",
+    "tested_and_merged_trees_equal": true,
+    "build_ci": "https://github.com/primfoundation/prim-web/actions/runs/34176195654",
+    "hosted_ci": "https://github.com/primfoundation/prim-web/actions/runs/34176458094",
+    "health_ci": "https://github.com/primfoundation/prim-web/actions/runs/34176458093",
+    "result": "All three workflows passed.",
+    "checks": {
+      "unit_and_compiled_ui_tests": 22,
+      "canonical_profiles": 4,
+      "worker_dry_build": true,
+      "real_local_worker_http": true,
+      "hosted_http_mcp_modes": [
+        "auto",
+        "legacy"
+      ],
+      "workbench_csp": "connect-src 'none'",
+      "public_health_routes": [
+        "/healthz",
+        "/",
+        "/workbench/",
+        "/connect/",
+        "/assets/workbench.js"
+      ]
+    },
+    "artifact": {
+      "id": 10037327216,
+      "zip_sha256": "217c21f6a02c1ac18db934bf3a14d2374b3512327256af029ae0bb436ae9d6ab",
+      "retention_days": 30,
+      "all_asset_sizes_and_sha256_verified": true,
+      "module_sha256": "4cecf3211a1d6f2ead4910170411b52e79f2359452c4f1627fc532231647c9e8",
+      "source_commit": "bc86ccc0d1063cb231c5a707d102e095ae0869d0"
+    },
+    "url": "https://prims-hub-preview.eidos-agi.workers.dev/",
+    "mcp_url": "https://prims-hub-preview.eidos-agi.workers.dev/mcp",
+    "deployment": {
+      "id": "d0b8f333-4736-403d-b136-0b59897fcde5",
+      "version_id": "71ce8830-b048-42ad-a742-9eb9067b5de7",
+      "percentage": 100,
+      "created_on": "2026-09-08T01:22:58.436898Z",
+      "asset_count": 36
+    },
+    "canonical_snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+    "assets": [
+      {
+        "path": "/assets/catalog.js",
+        "sha256": "b17b24d2cd9b83722a58c4bee262d5cfe72dedd3ceb74d0e491a5740f3de1ad4",
+        "size": 1437
+      },
+      {
+        "path": "/assets/styles.css",
+        "sha256": "f1fc834b1c2b2daec4922e9f57b8512ff63fcc0358c45ac712a681d2a52f1b4e",
+        "size": 7713
+      },
+      {
+        "path": "/assets/workbench.js",
+        "sha256": "0a7387f6663722363119fd18c8613a3343b3eba66387140f26f607f3561f8801",
+        "size": 93598
+      },
+      {
+        "path": "/connect/index.html",
+        "sha256": "bd588a02a5940f78922b0875a040ff20462bf760fc1739fce455a55c276452db",
+        "size": 3445
+      },
+      {
+        "path": "/downloads/prim-workbench.html",
+        "sha256": "d39842024a52166af5ee7cc244f47326813cd21f9cc85a944a0da7ae35bc7a74",
+        "size": 105558
+      },
+      {
+        "path": "/index.html",
+        "sha256": "73caa5e3eed76aae1714a7a6d66061f9b6b4b6225e23a79cde17742b8b41b480",
+        "size": 7436
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/index.html",
+        "sha256": "69e1c2af9c06fc22ba80629e74c0ac53197f8c366631ca8e21f32691ac276030",
+        "size": 4701
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/resources/creation/index.html",
+        "sha256": "fc1e14e30ab8d061b3b3ea27e90c04db707e912c94a190f4de28270397107fdd",
+        "size": 2040
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/resources/manifest/index.html",
+        "sha256": "632867ea3448e6ee0a1c27cebf176cc0c9d3b0d5117ee2ba1655278494fc0826",
+        "size": 2054
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/resources/schema/index.html",
+        "sha256": "7f9442b7c08517c650c411394e5abc38c5a218b7febcc14da5973abb1351cd24",
+        "size": 5017
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/resources/specification/index.html",
+        "sha256": "5989dce75a3b7e1858583f58b5f2621f0a9812ab8f463b508f282f0a5dde6a0b",
+        "size": 2235
+      },
+      {
+        "path": "/prims/primfoundation/decision/0.1.0-dev.1/resources/template/index.html",
+        "sha256": "911400d386b1ec0a1fe51ed65c645798ae4fce725ebaddc5789edac7e97449dc",
+        "size": 1866
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/index.html",
+        "sha256": "1fbbe2bdae9c130ed65edec4056d25858fce8007695255866e19d08141f6c75b",
+        "size": 7122
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/resources/creation/index.html",
+        "sha256": "4ce7029e3195bd1907e27f2a9e1d3c7968f7de3589e62885261c5e0be37e27a7",
+        "size": 1862
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/resources/manifest/index.html",
+        "sha256": "defbf02b498cebe16dcd8aa8a7f1e0a819be5622bd0a609c5aeb7f77344a13d4",
+        "size": 2036
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/resources/schema/index.html",
+        "sha256": "dad71b054f021491ac43a2400683172d6c80c30d290378370a4ada21e03d9615",
+        "size": 2722
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/resources/specification/index.html",
+        "sha256": "3f591e4facb47ff531a7ea60aa61a858d9fdcda48b391818b37526fdbcd8584f",
+        "size": 4678
+      },
+      {
+        "path": "/prims/primfoundation/person/0.1.0-dev.1/resources/template/index.html",
+        "sha256": "93fc3da1af8ddefa192d3d39f4b56d619e17caa325748323fae88fe6d6552c42",
+        "size": 1610
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/index.html",
+        "sha256": "c898acbc2ee50840a06051cc36d28b5a2b737107a77f21ac752936b65d027411",
+        "size": 8205
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/compatibility/index.html",
+        "sha256": "c49185dd32b2df3f2dc0fbcbe1aef30a2b97a95b54b3d6dd8bbd904b08ff0502",
+        "size": 8734
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/creation/index.html",
+        "sha256": "af89f469f72c8d00b8f10b5e247ad2d5ba13fee32bb652dfea3ba60feb49b0d4",
+        "size": 2911
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/manifest/index.html",
+        "sha256": "78cae7227e8f038939d0ac01774bf79e39c78ab13bbd3bc61e6aee27fa7f7528",
+        "size": 3580
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/native-specification/index.html",
+        "sha256": "f79a9f74781396034902f8c3869860f4534255597b752a86ad88f4ff34e21eec",
+        "size": 3066
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/schema/index.html",
+        "sha256": "02481fa29a1cfac295639874dc793b8aca4a4b2292bd339729f86754c8b64896",
+        "size": 10704
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/specification/index.html",
+        "sha256": "ce3827845b823c241cf45152c3706a9b6cf8e20ec0358c1397534868ff60de28",
+        "size": 5111
+      },
+      {
+        "path": "/prims/primfoundation/research/0.3.0-dev.3/resources/template/index.html",
+        "sha256": "34fc264ff697c021bdaa665268583ec9c8af8cabc4ea4f11025f3130fc5b21b9",
+        "size": 1925
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/index.html",
+        "sha256": "151ff62bc5dc2fc403c2f5690a68144f2b40113d4eb63b2ee1ee0b0322350ead",
+        "size": 7653
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/creation/index.html",
+        "sha256": "115a100d003c9a73ead0dc24408a31bc3f2a7bdfca5454adce98361b03d1ba85",
+        "size": 1892
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/legacy-intention/index.html",
+        "sha256": "4a4fea753205f0fe1d7a1393b863fa063cbc1c7d90432121a30383017bd9d9cb",
+        "size": 2885
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/legacy-specification/index.html",
+        "sha256": "c2071717945d4a1a3640b95c87354141ece8fd36b316dcfb94a359404216083e",
+        "size": 9689
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/manifest/index.html",
+        "sha256": "b3f4203a3b3761771cd223289bf2faf96091a7d29f0002a3f87b811be31385f6",
+        "size": 3049
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/migration/index.html",
+        "sha256": "829ebbe45421f994179c1c34f7fd32da30fcba0e1626314c117b3e4cd2cb5d11",
+        "size": 4657
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/schema/index.html",
+        "sha256": "6dd0067f70395cedc1ee2e281988b318fe66fc061f2eb84e5e1590055f4518b1",
+        "size": 3867
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/specification/index.html",
+        "sha256": "efc3b5ad7e3246757df9179912b57deb1af75c8bd38729501a77674b06eaf904",
+        "size": 4341
+      },
+      {
+        "path": "/prims/primfoundation/workbook/0.1.0-dev.1/resources/template/index.html",
+        "sha256": "7547e2877dcde500c21ae9d7d33148ed06e90f6054e0c5642b171351e735584a",
+        "size": 1720
+      },
+      {
+        "path": "/workbench/index.html",
+        "sha256": "8af8da63a0134beba04924ebab10dfc120ce79387f01470df1350908dfc1af2d",
+        "size": 3794
+      }
+    ],
+    "shipped": [
+      "Search and kind filters",
+      "Readable specifications and raw resource downloads",
+      "Connection URL and starter-prompt onboarding",
+      "Generic local form editor and readable view for four pinned definitions",
+      "Structural and declared-reference validation",
+      "Record and canonical definition-pin downloads",
+      "Unknown-field preservation and strict parse limits",
+      "Self-contained offline workbench",
+      "Exact tested release artifacts",
+      "Scheduled health workflow with an observed successful run"
+    ],
+    "browser": {
+      "observed": [
+        "Catalog search reduced results to the relevant Research definition",
+        "Definition and readable specification navigation",
+        "Connection onboarding and exact endpoint text",
+        "Research creation and immediate focused-field preservation",
+        "Synthetic JSON file reopened through the browser file chooser",
+        "Prior download link revoked and hidden after opening another record",
+        "Desktop homepage layout inspected"
+      ],
+      "download_completion": "unconfirmed",
+      "limitation": "Automatic and explicit blob-download events timed out. No browser-to-disk completion is claimed. Compiled UI tests verify the emitted download contents and record round trip. Browser reopen used a synthetic fixture copied from visible editor data, not an observed browser download.",
+      "independent_user_acceptance": false,
+      "phone_or_screen_reader_acceptance": false
+    },
+    "rollback_drill": {
+      "scope": "Existing isolated preview only; no production DNS/route cutover.",
+      "prior_version": "03266017-e4df-42f4-beda-fe656a095767",
+      "rollback_deployment": "51463cc0-e274-4e23-9f81-527fa3e9ecd4",
+      "rollback_observation": "API showed 100%; live homepage displayed the prior Find the definition. Keep the work. catalog.",
+      "return_version": "95cd352d-bddd-4c94-a666-fd8378448fcd",
+      "return_deployment": "1fac9f4e-313d-4c79-b934-023ed840eeb2",
+      "return_observation": "API showed 100%; live homepage displayed the new Good work deserves a longer life. workbench release.",
+      "later_accepted_asset_fix": "The final deployment above adds stale-download-link invalidation; its source tree, hosted checks and browser reopen were separately verified."
+    },
+    "retained_findings": [
+      {
+        "run": "https://github.com/primfoundation/prim-web/actions/runs/34173944984",
+        "finding": "Offline download attachment header did not survive Cloudflare HTML canonicalization; both canonical paths now covered and full CI passed."
+      },
+      {
+        "finding": "Live focused field edits waited for blur and could be lost by validation; input-event commit and a regression test shipped in PR 9."
+      },
+      {
+        "finding": "A fallback download could point to the prior opened record; revoke/reset and four-profile regression assertions shipped in PR 10."
+      }
+    ],
+    "operations_limits": [
+      "Six-hour GitHub health checks are configured and passed once; named escalation ownership and an external alert destination remain open.",
+      "Agent-operated exact-artifact deployment is working. Unattended deploy credentials and signing/independent review are not established.",
+      "Production route/content migration, owner/budget approval and edge quotas remain open."
+    ]
+  },
+  "primboard": {
+    "repository": "primfoundation/prims-paste-desktop",
+    "pull_request": "https://github.com/primfoundation/prims-paste-desktop/pull/2",
+    "tested_head": "3c6285fbfb108952069f2fa6226f47b364e0e0f7",
+    "merged_main": "26fa1162c4569f2e2f87c4c4ffabc792f9aa4231",
+    "pr_ci": "https://github.com/primfoundation/prims-paste-desktop/actions/runs/34175616470",
+    "main_ci": "https://github.com/primfoundation/prims-paste-desktop/actions/runs/34175780056",
+    "result": "Both macOS workflows passed.",
+    "test_cases_scheduled": 131,
+    "new_recovery_tests": 10,
+    "release_build": true,
+    "isolated_selftest": "SELFTEST OK",
+    "compatibility_guards": true,
+    "shipped": [
+      "PPI3 authenticated binary index envelope at the existing path",
+      "Validate and authenticate referenced legacy data before migration",
+      "Exact original index bytes retained in an encrypted migration backup",
+      "Wrong-key/tampered/unsafe index fails without rewriting the primary",
+      "Same-key encrypted backup authenticates all referenced text/image blobs",
+      "Exclusive backup publication and validated restore to a new directory",
+      "Explicit missing-key failure without creating a replacement key"
+    ],
+    "preserved_identities": {
+      "bundle": "sh.prims.paste",
+      "product": "PrimsPaste",
+      "cli": "prims-paste",
+      "store": "~/.prims-paste",
+      "keychain_service": "sh.prims.paste",
+      "keychain_account": "notebook-aes-256"
+    },
+    "backup_limits": {
+      "sealed_source_bytes": 134217728,
+      "restore_archive_bytes": 268435456,
+      "key_included": false,
+      "restores_to_active_store": false
+    },
+    "limitations": [
+      "Source stabilization is merged; no signed/notarized binary or real private-store migration was performed.",
+      "The existing key is required; lost-key or portable cross-Mac recovery is not provided.",
+      "Old JSON-only readers fail on encrypted indexes; use updated app and CLI together.",
+      "Filesystem names, sizes and timestamps remain observable; historical plaintext disk copies are not securely erased.",
+      "Multi-file crash journaling, guided GUI recovery, generic Library conversion, independent review and signed-Mac/TCC/existing-store acceptance remain open.",
+      "Optional installed Docket integration tests skip when its executable is absent; no installed external-tool acceptance is claimed."
+    ],
+    "retained_test_corrections": [
+      "Swift dictionary keys property syntax corrected after compilation failure.",
+      "An older conversion test expected visible plaintext captions; updated to require encrypted metadata and authorized readback.",
+      "Readback date comparison honors the existing whole-second ISO-8601 precision."
+    ]
+  },
+  "foundation": {
+    "base_commit": "cc640009089cd8663021fbd6a8211c7a605c68ea",
+    "requirements_preserved": 79,
+    "workstreams_preserved": 17,
+    "milestones_preserved": 7,
+    "status_counts": {
+      "planned": 40,
+      "in_progress": 27,
+      "in_review": 11,
+      "blocked": 1,
+      "complete": 0
+    },
+    "local_checks": {
+      "python_tests": 96,
+      "program_ledger": "passed",
+      "generated_roadmap": "passed",
+      "research_manifest": "passed",
+      "orf_conformance": "passed with original positive and negative semantics",
+      "generated_catalog": "passed"
+    },
+    "limitations": "The full Foundation mission and all seven major goals retain their unfinished acceptance obligations."
+  },
+  "remaining_operational_finding": {
+    "repository": "primfoundation/prim-web",
+    "workflow": "Deploy to Railway",
+    "observed_failure": "Service not found",
+    "runs": [
+      "https://github.com/primfoundation/prim-web/actions/runs/34174840276",
+      "https://github.com/primfoundation/prim-web/actions/runs/34176458060"
+    ],
+    "disposition": "Separate legacy deployment failure retained. Reconcile its service/environment mapping and old-site ownership before production cutover; Cloudflare hosted checks pass independently."
+  },
+  "not_performed": [
+    "Production domain or route cutover",
+    "Repository rename or archive",
+    "Private record upload",
+    "Key export or new account credential",
+    "Signed Mac release",
+    "Independent review or actual-user acceptance"
+  ]
+}
