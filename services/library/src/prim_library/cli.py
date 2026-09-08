@@ -52,6 +52,10 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--library", type=Path, help="Explicit local compiled library; no URL fetch")
     sub = ap.add_subparsers(dest="command", required=True)
+    host = sub.add_parser("export-host", help="Emit public, data-only kits for an offline native or SDK host")
+    host.add_argument("--source-commit", default="unrecorded", help="Optional source provenance; not publisher authentication")
+    pack = sub.add_parser("check-pack", help="Check a local Prim folder using its exact definition lock")
+    pack.add_argument("path", type=Path)
     search = sub.add_parser("search")
     search.add_argument("query", nargs="?", default="")
     search.add_argument("--sort", default="relevance", choices=["relevance", "popular", "trending"])
@@ -67,7 +71,14 @@ def main(argv: list[str] | None = None) -> int:
     args = ap.parse_args(argv)
     try:
         library = Library(load_json(args.library.read_bytes(), MAX_SNAPSHOT)) if args.library else Library()
-        if args.command == "search":
+        if args.command == "export-host":
+            from .host_catalog import export_host_catalog
+            result = export_host_catalog(library, args.source_commit)
+        elif args.command == "check-pack":
+            from .pack import read_pack
+            # Validation output never prints private record values.
+            result = read_pack(library, args.path)["validation"]
+        elif args.command == "search":
             result = library.search(args.query, args.sort)
         elif args.command == "definition":
             result = library.get(args.profile_id, args.version)

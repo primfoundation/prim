@@ -191,6 +191,10 @@ class Library:
                 raise LibraryError("invalid ranking profile")
             scores(stats)
 
+    def snapshot(self) -> dict:
+        """Return the verified portable definition snapshot, never private instances."""
+        return deepcopy(self._snapshot)
+
     def get(self, profile_id: str, version: str | None = None, expected_sha256: str | None = None) -> dict:
         if not ID.fullmatch(profile_id):
             raise LibraryError("use the full namespace/name identity returned by search")

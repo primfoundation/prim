@@ -1,6 +1,6 @@
 /** Category registry: Prim types, Prim Tools, and applets. Not a tenth primitive. */
 
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -40,9 +40,9 @@ export type PrimApplet = {
 
 export type Registry = {
   version: number;
-  types: PrimType[];
-  tools: RegisteredTool[];
-  applets: PrimApplet[];
+  types: readonly PrimType[];
+  tools: readonly RegisteredTool[];
+  applets: readonly PrimApplet[];
 };
 
 type RawRegistry = {
@@ -53,6 +53,8 @@ type RawRegistry = {
 };
 
 function committedPath(): string {
+  const packaged = join(dirname(fileURLToPath(import.meta.url)), "data/registry.json");
+  if (existsSync(packaged)) return packaged;
   return join(dirname(fileURLToPath(import.meta.url)), "../../../registry/registry.json");
 }
 
