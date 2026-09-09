@@ -22,7 +22,7 @@ These items are not all blocked on the user. Continue in bounded branches with t
 
 - Publishing/resolution: authenticated publishers, aliases, namespace transfers and automatic approved remote refresh; real external/private-source publisher acceptance. Installed local source publication, dependency/cycle policy, deprecation/withdrawal and offline restore are implemented with evidence in the September 9 distribution record.
 - Reference cases and composition: Receipt, Contract, Project and System alongside Person/Decision; identity, correction, context and cross-pack authority semantics that preserve real legacy meanings.
-- Research/ingestion: challenge/review lifecycle, extraction provenance, recursive artifact budgets and changed/revoked/deleted source handling; useful life-domain diagnostics.
+- Research/ingestion: challenge/review lifecycle, authenticated remote extraction and permission enforcement, recursive/encrypted/media parsing and changed/revoked/deleted source handling; useful life-domain diagnostics. Installed bounded local capture, byte-preserved originals, recorded provenance and retry/folder verification now have September 9 evidence.
 - Legacy migrations: safe readers, explicit semantic loss reports, sanitized positive/negative fixtures and tool/media separation. A preserved specification does not migrate its current consumers.
 - Security/operations: scoped delegation, revocation and bounded work; actionable monitoring, stable maintenance and restore/exit exercises.
 - Adoption: maintainable publisher/user instructions, localization and outside participation. Consent-based popularity must not be fabricated from test traffic.

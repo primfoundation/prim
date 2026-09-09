@@ -2,13 +2,13 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-09. Execution: **portable_definition_distribution_implemented_ci_pending**.
+As of 2026-09-09. Execution: **portable_distribution_merged_research_capture_implemented_ci_pending**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 39; in_review: 11; planned: 28.
+17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 41; in_review: 11; planned: 26.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -344,9 +344,9 @@ State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Question/scope, sources, claims, evidence relationships, counterevidence, methods and uncertainty interoperate without a particular agent harness.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-LIB-IMPL, E-LIB-TEST. Dependencies: CORE-001, RES-001.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-LIB-IMPL, E-LIB-TEST, E-SEP9-CAPTURE-IMPL, E-SEP9-CAPTURE-TEST. Dependencies: CORE-001, RES-001.
 
-Native experimental research.json now has schema, creation template, references, contradiction and recorded review fields through generic tooling. Authenticated review, full lifecycle and ORF semantic migration remain open.
+Native Research records now receive preserved local originals, source provenance and initial capture receipts without inferring claims or support. Existing question/claim/evidence semantics and pins are unchanged; independent research lifecycle acceptance remains.
 
 **RES-003 — Implement research lifecycle and review**
 
@@ -362,9 +362,9 @@ State: `in_progress` · Milestone: M2 · Owner: implementation-lead.
 
 Acceptance: Two independent workers/readers use pinned definitions, preserve evidence and disagreement, render outputs and round-trip legacy examples; outcomes are retained.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: RES-001, RES-002, RES-003, DEV-001, INTEROP-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP9-CAPTURE-IMPL, E-SEP9-CAPTURE-TEST. Dependencies: RES-001, RES-002, RES-003, DEV-001, INTEROP-001.
 
-Research records create/edit/export/reopen with exact pins and preserved unknown fields. Source challenge/review and full research lifecycle remain.
+Installed CLI captures originals, retries after source removal and verifies a transferred complete folder without the source manifest. Actual TypeScript reader preserves captured Research metadata; nanosecond precision uses strings. Independent workers, full challenge/review lifecycle and legacy semantic migration remain.
 
 ### REL — Relationships, history and composition
 
@@ -516,19 +516,23 @@ Delivery responsibility: ecosystem.
 
 **ING-001 — Define extraction contracts**
 
-State: `planned` · Milestone: M4 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Connectors preserve original evidence, source IDs, timestamps, permissions and allowed inferences; contract tests cover incrementality and idempotency.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: CORE-001, AUTH-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP9-CAPTURE-IMPL, E-SEP9-CAPTURE-TEST. Dependencies: CORE-001, AUTH-001.
+
+Installed local capture preserves exact binary originals, source identities, timestamps, recorded permissions and unknown bounded metadata in a new Research draft. Receipt-based retries and complete-folder transfer pass; no claims are inferred. Authenticated remote extraction/permission enforcement and independent real use remain.
 
 **ING-002 — Bound recursive artifact handling**
 
-State: `planned` · Milestone: M4 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Nested archives/media, duplicate children, encryption, malformed/hostile inputs and partial parse failures have quotas, lineage and resumability.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: ING-001, SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP9-CAPTURE-IMPL, E-SEP9-CAPTURE-TEST. Dependencies: ING-001, SEC-001.
+
+Explicit file/count/total-byte bounds, duplicate-byte handling, source-change/symlink/special-file rejection and opaque archive/script preservation are tested. Recursive/encrypted/media parsing, partial parse resumability and broader hostile-input review remain.
 
 **ING-003 — Respect change, revocation and deletion**
 

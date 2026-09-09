@@ -22,7 +22,7 @@ python -m pip install -c services/library/constraints.txt ./services/library
 prim-foundation-mcp
 ```
 
-Or install the built `prim_foundation_mcp-0.1.0a2-py3-none-any.whl`. The wheel
+Or install the built `prim_foundation_mcp-0.1.0a3-py3-none-any.whl`. The wheel
 includes the compiled definitions; it works away from the source repository.
 There is not yet a PyPI publication. A versioned Git-source install is also
 possible: `pip install 'git+https://github.com/primfoundation/prim.git@COMMIT#subdirectory=services/library'`
@@ -94,6 +94,19 @@ See [the complete workflow and contract](../../program/DEFINITION-DISTRIBUTION.m
 and [the synthetic external note example](examples/external-note/PROFILE.md).
 Local publication is implemented; authenticated publisher identity, automatic
 remote refresh, aliases/transfers and a real outside-author trial remain open.
+
+## Capture original evidence into a Research draft
+
+`capture-research` turns an explicit local file manifest into a new private
+Research draft with byte-preserved artifacts and an ingestion receipt. It keeps
+source identity, capture time and recorded permissions separate from claims.
+Retries verify the prior capture without overwriting later edits. `check-capture`
+checks a transferred complete folder against the retained receipt digest.
+
+See [the capture workflow and limits](../../program/ARTIFACT-CAPTURE.md) and
+[the runnable synthetic example](examples/research-capture/capture.json).
+Archives remain opaque bytes. Record-only exporters do not migrate attachments;
+transfer the complete captured folder to preserve its original evidence.
 
 ## Run the remotely connectable service
 

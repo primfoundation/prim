@@ -71,7 +71,90 @@
     }
   ],
   "ci": {
-    "state": "pending_publication"
+    "state": "passed_and_merged",
+    "pull_request": 17,
+    "url": "https://github.com/primfoundation/prim/pull/17",
+    "tested_head": "4f1122bd45cd7b86fd392450b966204d142bbc8a",
+    "tested_tree": "b168200bfb50eecbfa4d66f71440c4dd00ecf245",
+    "merge_commit": "fc4626fe3b597639725feff65c4cac6a3088b129",
+    "runs": [
+      {
+        "id": 34390244984,
+        "name": "Foundation Library MCP",
+        "conclusion": "success"
+      },
+      {
+        "id": 34390245018,
+        "name": "Foundation program verification",
+        "conclusion": "success"
+      },
+      {
+        "id": 34390245136,
+        "name": "Foundation SDK distribution",
+        "conclusion": "success"
+      }
+    ],
+    "artifact": {
+      "id": 10119349856,
+      "sha256": "9b5f3989700245dffbe16754a05b12e9b612ee8703a698ccd46f08d5e2c8f6b5",
+      "expires_at": "2026-10-09T18:39:19Z"
+    },
+    "installed_smoke": {
+      "success": true,
+      "version": "0.1.0a2",
+      "installed_from_site_packages": true,
+      "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+      "profiles": [
+        {
+          "profile": "primfoundation/decision",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/person",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/research",
+          "version": "0.3.0-dev.3",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/workbook",
+          "version": "0.1.0-dev.1",
+          "created": true
+        }
+      ],
+      "stdio_client_modes": [
+        "auto",
+        "legacy"
+      ],
+      "distribution": {
+        "external_publish_resolve_restore_create_check": "passed",
+        "original_source_removed_before_restore": true,
+        "snapshot_sha256": "461d031622a83f94b8ec48af4f7846a2e4b98d6ebf1356a244e572238501dd7f"
+      },
+      "not_established": [
+        "public deployment",
+        "all client UIs",
+        "independent security review"
+      ]
+    },
+    "packages": [
+      {
+        "name": "prim/prim/services/library/dist/prim_foundation_mcp-0.1.0a2-py3-none-any.whl",
+        "bytes": 67675,
+        "sha256": "75ef17dd608baf3602e8aea92e82eb70b032fb09aaab3be76f1e94afc8db5c87"
+      },
+      {
+        "name": "prim/prim/services/library/dist/prim_foundation_mcp-0.1.0a2.tar.gz",
+        "bytes": 61315,
+        "sha256": "aa0b2112a7a5d197df1fd9cc2f241e950cc729b86837e82bb63ff555a2fe22cd"
+      }
+    ],
+    "library_tests": 77,
+    "foundation_tests": 97
   },
   "not_established": [
     "75 percent overall completion",

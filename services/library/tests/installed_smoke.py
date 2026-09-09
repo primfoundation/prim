@@ -84,6 +84,28 @@ A synthetic note definition; no external publisher endorsement is claimed.
         pack = Path(tmp) / 'external-note'
         cli('--library', restored / 'library.json', 'create', 'example/note', '--version', '0.1.0-dev.1', '--output', pack)
         assert cli('--library', restored / 'library.json', 'check-pack', pack)['status'] == 'passed'
+        original = Path(tmp) / 'original.bin'
+        original.write_bytes(b'Synthetic original evidence\r\n\x00\xff')
+        capture_manifest = Path(tmp) / 'capture.json'
+        capture_manifest.write_text(json.dumps({'format': 'prim-artifact-capture', 'version': 1,
+            'operation_id': 'installed-capture', 'title': 'Installed capture proof', 'question': None,
+            'sources': [{'id': 'source-1', 'path': 'original.bin', 'locator': 'urn:example:original',
+                'sha256': hashlib.sha256(original.read_bytes()).hexdigest(), 'media_type': 'application/octet-stream',
+                'observed_at': None, 'permissions': {'may_store': True, 'may_share': False,
+                                                    'basis_as_recorded': 'Synthetic fixture owner grant'}}]}))
+        captured = Path(tmp) / 'captured-research'
+        capture_result = cli('capture-research', capture_manifest, '--version', '0.3.0-dev.3', '--output', captured)
+        original.unlink()
+        retried = cli('capture-research', capture_manifest, '--version', '0.3.0-dev.3', '--output', captured)
+        assert retried['status'] == 'replayed' and retried['receipt_sha256'] == capture_result['receipt_sha256']
+        capture_manifest.unlink()
+        transferred = Path(tmp) / 'transferred-research'
+        shutil.copytree(captured, transferred)
+        shutil.rmtree(captured)
+        assert cli('check-capture', transferred, '--expected-sha256', capture_result['receipt_sha256'])['status'] == 'passed'
+        assert cli('check-pack', transferred)['status'] == 'passed'
+        capture_proof = {'original_binary_capture': 'passed', 'retry_after_source_removal': 'passed',
+                         'complete_folder_transfer_without_source_or_manifest': 'passed', 'claims_created': 0}
         distribution = {'external_publish_resolve_restore_create_check': 'passed',
                         'original_source_removed_before_restore': True,
                         'snapshot_sha256': resolution['snapshot_sha256']}
@@ -104,7 +126,7 @@ A synthetic note definition; no external publisher endorsement is claimed.
             os.chdir(old)
     print(json.dumps({'success': True, 'version': __version__, 'installed_from_site_packages': True,
                       'snapshot_sha256': library.snapshot_id, 'profiles': outcomes,
-                      'stdio_client_modes': ['auto', 'legacy'], 'distribution': distribution,
+                      'stdio_client_modes': ['auto', 'legacy'], 'distribution': distribution, 'capture': capture_proof,
                       'not_established': ['public deployment', 'all client UIs', 'independent security review']}))
 
 
