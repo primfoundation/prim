@@ -1,0 +1,10 @@
+{
+  "schema_resource": "schema",
+  "template_resource": "template",
+  "authority_file": "note.json",
+  "identity_field": "id",
+  "title_field": "title",
+  "rules": {},
+  "privacy": "Records stay local unless the owner chooses to share them.",
+  "scope": "Synthetic external-publisher tutorial. No official status or truth claim."
+}

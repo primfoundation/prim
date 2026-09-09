@@ -1,13 +1,13 @@
 {
   "format_version": 1,
   "program": "Prim Foundation",
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-09",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "portable_hosts_native_library_hub_registry_and_selected_incubator_baselines_implemented",
+    "state": "portable_definition_distribution_implemented_ci_pending",
     "target_repository": "primfoundation/prim",
-    "base_commit": "f70f06f646115dd74c863992fd5d9af7087c7483",
-    "target_branch": "codex/lineage-and-interop",
+    "base_commit": "192ee364a1da3d8b103cc7d7578b916d493c8044",
+    "target_branch": "codex/offline-definition-distribution",
     "background_jobs": "No background agents; bounded repository CI and the configured six-hour public health workflow only."
   },
   "workstreams": [
@@ -326,6 +326,18 @@
       "stage": "tests",
       "path": "program/evidence/2026-09-08-incubator-conformance.json",
       "summary": "28 exact source blobs and selected-file ZIP preservation; 27 fixed CLI invocations including original six OPF tests and five known unsafe acceptance regressions. No semantic migration or untrusted runtime certification."
+    },
+    {
+      "id": "E-SEP9-DIST-IMPL",
+      "stage": "implementation",
+      "path": "program/DEFINITION-DISTRIBUTION.md",
+      "summary": "Installed local publisher, explicit namespace-scoped resolver, lifecycle/dependency policy and portable offline restore; authentication and identity governance remain open."
+    },
+    {
+      "id": "E-SEP9-DIST-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-09-distribution.json",
+      "summary": "77 Library tests (20 distribution cases), 97 inherited Foundation tests, existing SDK suites and actual clean-wheel external publish/resolve/source deletion/restore/create/check smoke; not outside-user acceptance."
     }
   ],
   "requirements": [
@@ -655,9 +667,11 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP9-DIST-IMPL",
+        "E-SEP9-DIST-TEST"
       ],
-      "note": "Verified complete definition pins, host catalog digest and pinned legacy registry shipped. Authenticated publisher distribution and stable release trust remain."
+      "note": "Installed complete-source and definition digests, transitive locks, source deletion/moves, new-directory updates and offline rollback pass local and clean-wheel tests. Authenticated provenance and independent review remain."
     },
     {
       "id": "PUB-003",
@@ -665,7 +679,7 @@
       "title": "Resolve versions, names and dependencies",
       "acceptance": "Publisher namespaces, aliases, transfers, version negotiation, dependency cycles and deprecated/retracted packages have explicit tested behavior.",
       "milestone": "M1",
-      "status": "planned",
+      "status": "in_progress",
       "owner": "implementation-lead",
       "depends_on": [
         "PUB-001"
@@ -675,8 +689,11 @@
         "tests",
         "review"
       ],
-      "evidence": [],
-      "note": ""
+      "evidence": [
+        "E-SEP9-DIST-IMPL",
+        "E-SEP9-DIST-TEST"
+      ],
+      "note": "Experimental scoped namespaces, bounded SemVer intervals, exact dependency closure, cycles/conflicts and deprecated/withdrawn behavior are implemented and tested. Permanent ownership, aliases/transfers and independent review remain under D102."
     },
     {
       "id": "PUB-004",
@@ -700,9 +717,11 @@
         "E-SEP7-IMPL",
         "E-SEP7-TEST",
         "E-SEP8-HOST-IMPL",
-        "E-SEP8-HOST-TEST"
+        "E-SEP8-HOST-TEST",
+        "E-SEP9-DIST-IMPL",
+        "E-SEP9-DIST-TEST"
       ],
-      "note": "Data-only external publisher fixture loads without bespoke SDK code; actual outside author/publisher acceptance remains."
+      "note": "Installed console publishes a synthetic externally authored PROFILE.md package outside the checkout, then resolves/restores/creates/checks it after source deletion. A real independent publisher trial remains."
     },
     {
       "id": "DIR-001",
@@ -734,7 +753,7 @@
       "title": "Implement private and external resolution",
       "acceptance": "Public/private sources, permissions, credentials, mirrors, origin policy and offline failures are tested without leaking instance contents.",
       "milestone": "M5",
-      "status": "planned",
+      "status": "in_progress",
       "owner": "implementation-lead",
       "depends_on": [
         "PUB-002",
@@ -745,8 +764,11 @@
         "tests",
         "review"
       ],
-      "evidence": [],
-      "note": ""
+      "evidence": [
+        "E-SEP9-DIST-IMPL",
+        "E-SEP9-DIST-TEST"
+      ],
+      "note": "Explicit public/private source policy, namespace allowlists, identical mirrors, origin labels without original paths, private POSIX cache permissions and offline failures are tested. Remote permissions/credentials and independent review remain."
     },
     {
       "id": "DIR-003",
@@ -2060,7 +2082,7 @@
       "title": "Automate approved definition publication and refresh",
       "acceptance": "Multiple external/local sources are indexed into immutable snapshots with maintainer provenance, withdrawal and review; installations can update with digest pins and rollback without one repository per type.",
       "milestone": "M5",
-      "status": "planned",
+      "status": "in_progress",
       "owner": "implementation-lead",
       "depends_on": [
         "PUB-002",
@@ -2072,8 +2094,11 @@
         "tests",
         "review"
       ],
-      "evidence": [],
-      "note": ""
+      "evidence": [
+        "E-SEP9-DIST-IMPL",
+        "E-SEP9-DIST-TEST"
+      ],
+      "note": "Explicit multi-source snapshots, source provenance labels, withdrawal tombstones and reviewed digest update/offline rollback are implemented. Automated authenticated remote refresh, maintainer verification and independent review remain."
     },
     {
       "id": "OPS-005",

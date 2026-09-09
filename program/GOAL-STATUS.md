@@ -1,10 +1,10 @@
-# Major-goal execution status — September 8, 2026
+# Major-goal execution status — September 9, 2026
 
 `MAJOR-GOALS.md` defines completion. All 79 requirements, 17 workstreams and seven milestones remain in `plan.json`; `../ROADMAP.md` is generated from it. The target of 75% overall delivery has **not been established**. Implementation, automated tests, release artifacts, deployment and independent real use remain distinct. No equal-weight task count is presented as mission completion.
 
 | Goal | State | Current proof | Remaining acceptance |
 | --- | --- | --- | --- |
-| G1 Canonical standards | in progress | Four exact development profiles; installable Library/MCP and compiled SDK; 83 shared cases across Python, TypeScript and Swift; real Python/SDK file roundtrips | Authenticated stable distribution, namespace/version lifecycle, broader reference cases and independent outside author/reader review |
+| G1 Canonical standards | in progress | Four exact development profiles; installable Library/MCP and compiled SDK; 83 shared cases across Python, TypeScript and Swift; real Python/SDK file roundtrips; installed source publisher, scoped dependency/lifecycle resolution and offline restore | Authenticated stable distribution, permanent namespace/alias/transfer policy, broader reference cases and independent outside author/reader review |
 | G2 Public Hub | in progress | Cloudflare preview serves human/JSON/MCP and all legacy registry contracts; actual desktop/phone-size downloads and offline reopen; automated accessibility; hosted HTTP/MCP and exact-file health | Production old-site/client migration, route/rollback acceptance, named ownership/escalation, independent usability and actual connector-host acceptance |
 | G3 Primboard | in progress | Encrypted index/journal, concurrent-write protection, guided recovery, same-key backup/restore and generic native/CLI editing; macOS CI and assembled-app selftests pass | Signed/notarized installed Mac, existing private-store/Touch ID/TCC, physical-device and large-store performance; lost-key design and independent review |
 | G4 Browsers | in progress | Login/gateway source consolidated with provenance; shared session/assets, signed Apple identity checks; 13 tests and both dry builds | Preview cookie domain, real Apple/session/container acceptance, production routes and rollback before old-service retirement |
@@ -15,3 +15,5 @@
 Exact shipped evidence is in `evidence/2026-09-08-portable-delivery.json`. Earlier release and journal evidence remains retained. Incubator read scope and limitations have separate audit/conformance records. A regression recording unsafe legacy acceptance is evidence of a gap, not input safety.
 
 `REMAINING-GATES.md` separates device/account/authority gates from remaining implementation. The full project is not merely waiting for a Mac signature.
+
+September 9 local distribution implementation and installed-wheel evidence are in `evidence/2026-09-09-distribution.json`; its CI/publication field records the current shipping state.

@@ -2,13 +2,13 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-08. Execution: **portable_hosts_native_library_hub_registry_and_selected_incubator_baselines_implemented**.
+As of 2026-09-09. Execution: **portable_definition_distribution_implemented_ci_pending**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
 ## Current evidence, not a mission percentage
 
-17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 36; in_review: 11; planned: 31.
+17 workstreams; 79 tracked requirements. blocked: 1; complete: 0; in_progress: 39; in_review: 11; planned: 28.
 
 Counts are an inventory, not equal-weight progress. In review is not accepted, released, deployed, or verified in real use.
 
@@ -210,17 +210,19 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Complete package digests, authenticated provenance, lockfiles, source moves, rollback and offline caches are tested; hashes are not truth claims.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: PUB-001, SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP9-DIST-IMPL, E-SEP9-DIST-TEST. Dependencies: PUB-001, SEC-001.
 
-Verified complete definition pins, host catalog digest and pinned legacy registry shipped. Authenticated publisher distribution and stable release trust remain.
+Installed complete-source and definition digests, transitive locks, source deletion/moves, new-directory updates and offline rollback pass local and clean-wheel tests. Authenticated provenance and independent review remain.
 
 **PUB-003 — Resolve versions, names and dependencies**
 
-State: `planned` · Milestone: M1 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Publisher namespaces, aliases, transfers, version negotiation, dependency cycles and deprecated/retracted packages have explicit tested behavior.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP9-DIST-IMPL, E-SEP9-DIST-TEST. Dependencies: PUB-001.
+
+Experimental scoped namespaces, bounded SemVer intervals, exact dependency closure, cycles/conflicts and deprecated/withdrawn behavior are implemented and tested. Permanent ownership, aliases/transfers and independent review remain under D102.
 
 **PUB-004 — Make authoring independent of Foundation hosting**
 
@@ -228,9 +230,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: A third party authors, tests and publishes from another repository/private source with useful errors and without creating a Foundation repo.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST. Dependencies: PUB-002, PUB-003, DEV-002.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP9-DIST-IMPL, E-SEP9-DIST-TEST. Dependencies: PUB-002, PUB-003, DEV-002.
 
-Data-only external publisher fixture loads without bespoke SDK code; actual outside author/publisher acceptance remains.
+Installed console publishes a synthetic externally authored PROFILE.md package outside the checkout, then resolves/restores/creates/checks it after source deletion. A real independent publisher trial remains.
 
 **PUB-005 — Provide generic version-pinned creation kits**
 
@@ -244,11 +246,13 @@ Research, Person, Decision and Workbook creation kits match canonical schemas/te
 
 **PUB-006 — Automate approved definition publication and refresh**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Multiple external/local sources are indexed into immutable snapshots with maintainer provenance, withdrawal and review; installations can update with digest pins and rollback without one repository per type.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-002, PUB-003, DIR-005.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP9-DIST-IMPL, E-SEP9-DIST-TEST. Dependencies: PUB-002, PUB-003, DIR-005.
+
+Explicit multi-source snapshots, source provenance labels, withdrawal tombstones and reviewed digest update/offline rollback are implemented. Automated authenticated remote refresh, maintainer verification and independent review remain.
 
 ### DIR — Registry and discovery
 
@@ -266,11 +270,13 @@ Four-profile development catalog now feeds the Library and side-by-side Cloudfla
 
 **DIR-002 — Implement private and external resolution**
 
-State: `planned` · Milestone: M5 · Owner: implementation-lead.
+State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Public/private sources, permissions, credentials, mirrors, origin policy and offline failures are tested without leaking instance contents.
 
-Required evidence: implementation, tests, review. Evidence retained: none. Dependencies: PUB-002, SEC-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP9-DIST-IMPL, E-SEP9-DIST-TEST. Dependencies: PUB-002, SEC-001.
+
+Explicit public/private source policy, namespace allowlists, identical mirrors, origin labels without original paths, private POSIX cache permissions and offline failures are tested. Remote permissions/credentials and independent review remain.
 
 **DIR-003 — Ship human and agent discovery surfaces**
 

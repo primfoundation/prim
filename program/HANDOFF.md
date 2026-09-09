@@ -1,10 +1,24 @@
-# Foundation execution handoff — September 8, 2026
+# Foundation execution handoff — September 9, 2026
 
 ## Current state
 
 The Foundation bootstrap (#5), ORF compatibility (#6), Library/MCP alpha (#7) and sanitized Workbook import (#10) are merged into `primfoundation/prim`. The reorganization work (#8) is merged at `cc640009089cd8663021fbd6a8211c7a605c68ea`. September 8 Hub and Primboard release work is recorded in `evidence/2026-09-08-release.json`.
 
 Four development profiles are available through generic local creation tooling: Research, Person, Decision and Workbook. Source/workbook provenance is preserved; no customer-history import or stable-standard release is implied. All 17 workstreams, seven milestones and 79 requirement IDs remain. Whole-life contexts, diagnostics, ingestion, authority/privacy, governance, community, sustainability and the remaining diverse reference cases are still obligations.
+
+## September 9 portable distribution increment
+
+Library 0.1.0a2 adds installed `publish`, `resolve` and `restore` commands.
+An external folder can become a data-only source without a Foundation checkout;
+explicit namespace scopes, immutable source/definition pins, dependency closure,
+withdrawals and a portable cache preserve offline installation and rollback.
+77 Library and 97 Foundation tests pass locally, as do the SDK checks and actual
+clean-wheel installed CLI/MCP smoke. The source is deleted before the restore
+proof. Exact source hashes, test scope and publication state are retained in
+`evidence/2026-09-09-distribution.json`. See `DEFINITION-DISTRIBUTION.md` for the
+runnable example, limits and remaining authenticated-publisher/identity gates.
+No requirement is marked complete by these tests; the overall 75% target is
+still not established. Continue the available non-Mac implementation lanes.
 
 ## Integrated product increments
 
@@ -42,7 +56,7 @@ source, merge, CI identifiers and limitations are retained in that evidence file
 2. **Hub acceptance:** PR #11 actual desktop Chromium and phone-size WebKit downloads, offline HTML and pack reopen passed, as did automated accessibility/overflow and desktop keyboard checks. PR #13 also enforces native portable-export budgets and passes real Hub ZIP-to-SDK tests, including the exact 512 KiB boundary. PR #12 adds all pinned category registry routes beside the four profiles; postmerge hosted HTTP/MCP passes. These checks supersede the earlier browser-engine download gap; they do not establish this chat's download bridge or independent real-user/assistive-technology acceptance.
 3. **Compatibility follow-up:** five selected public incubator baselines retain 28 exact source blobs and 27 fixed CLI checks, including the original six OPF tests. Five cases deliberately record known unsafe acceptance. No semantic migration or arbitrary user-input safety is claimed. SDK export now checks actual formatted bytes before creating a folder, preventing an export its own reader cannot reopen. The audit retains source selection/privacy/license limits.
 4. **Public operations:** current portable-export preview version `2dd0054f-5f19-4a93-9d2b-907b14a99752` has immediate rollback target `1bf1e03e-6899-4c0e-b9b9-e992a3ccc891`. Existing Free defaults remain; custom CPU limits were rejected without paid activation. Apex/www remain on Pages and production registry/login/browsers retain old Workers. Resolve ownership, cost/escalation, old clients and Railway mapping before cutover.
-5. **Mac/source gates:** use `MAC-RELEASE.md` in the Primboard repository for signed installed existing-store/Keychain/TCC acceptance. No Mac executor is connected here. Recover authoritative Desktop prim-sim source/revision/license; preserve integration PRs and never substitute a stub. Real Apple/session/container and independent outside-user/stewardship acceptance also remain.
+5. **Mac/source gates:** use `MAC-RELEASE.md` in the Primboard repository for signed installed existing-store/Keychain/TCC acceptance. The September 9 Fleetstrap machine-list calls failed internally; no Mac execution was verified. Recover authoritative Desktop prim-sim source/revision/license; preserve integration PRs and never substitute a stub. Real Apple/session/container and independent outside-user/stewardship acceptance also remain.
 6. **Broader implementation:** `REMAINING-GATES.md` names available publishing, resolution, reference cases, ingestion, composition and migration work. The full project is not merely waiting for the Mac. All 79 requirements remain; no 75% claim follows from these increments.
 
 ## Stable boundaries

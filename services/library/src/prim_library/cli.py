@@ -52,6 +52,18 @@ def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--library", type=Path, help="Explicit local compiled library; no URL fetch")
     sub = ap.add_subparsers(dest="command", required=True)
+    publish = sub.add_parser("publish", help="Build a local, data-only source from an explicit PROFILE.md root")
+    publish.add_argument("root", type=Path)
+    publish.add_argument("--output", type=Path, required=True)
+    publish.add_argument("--withdrawals", type=Path, help="Explicit JSON list of withdrawn definition pins and reasons")
+    resolve = sub.add_parser("resolve", help="Resolve explicitly scoped, digest-pinned local sources")
+    resolve.add_argument("request", type=Path)
+    resolve.add_argument("--output", type=Path, required=True)
+    restore = sub.add_parser("restore", help="Reproduce an approved lock using only its portable cache")
+    restore.add_argument("lock", type=Path)
+    restore.add_argument("--cache", type=Path, required=True)
+    restore.add_argument("--expected-sha256", required=True, help="Lock digest obtained through a trusted channel")
+    restore.add_argument("--output", type=Path, required=True)
     host = sub.add_parser("export-host", help="Emit public, data-only kits for an offline native or SDK host")
     host.add_argument("--source-commit", default="unrecorded", help="Optional source provenance; not publisher authentication")
     pack = sub.add_parser("check-pack", help="Check a local Prim folder using its exact definition lock")
@@ -70,6 +82,20 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("input", type=Path)
     args = ap.parse_args(argv)
     try:
+        if args.command in {"publish", "resolve", "restore"}:
+            from .publishing import publish, read_local
+            from .resolution import resolve_file, restore
+            if args.library:
+                raise LibraryError("--library does not apply to distribution commands")
+            if args.command == "publish":
+                result = publish(args.root, args.output,
+                                 load_json(read_local(args.withdrawals)) if args.withdrawals else None)
+            elif args.command == "resolve":
+                result = resolve_file(args.request, args.output)
+            else:
+                result = restore(args.lock, args.cache, args.output, args.expected_sha256)
+            print(json.dumps(result, ensure_ascii=True, indent=2))
+            return 0
         library = Library(load_json(args.library.read_bytes(), MAX_SNAPSHOT)) if args.library else Library()
         if args.command == "export-host":
             from .host_catalog import export_host_catalog
@@ -91,7 +117,7 @@ def main(argv: list[str] | None = None) -> int:
             result = library.validate(args.profile_id, args.version, load_json(args.input.read_bytes()))
         print(json.dumps(result, ensure_ascii=True, indent=2))
         return 1 if result.get("status") == "failed" else 0
-    except (LibraryError, OSError) as exc:
+    except (LibraryError, OSError, ValueError) as exc:
         print(f"Prim Library: {exc}", file=__import__('sys').stderr)
         return 2
 

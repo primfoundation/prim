@@ -187,3 +187,19 @@ large-store latency, independent review and signed installed acceptance remain
 separate obligations. The shared cloud Apple release system is not activated.
 
 Evidence and exact scope: `evidence/2026-09-08-primboard-journal.json`.
+
+## D018 — Explicit source policy and offline resolution
+
+Status: experimental implementation; independent review and D102 remain open.
+
+Ship the installed data-only publisher, scoped local source resolver and
+portable lock/cache restore in Library 0.1.0a2. Source bytes, definition bytes,
+namespace allowlists and lifecycle assertions have separate roles. Refuse
+conflicting ID/version bytes, missing dependencies, cycles and withdrawn pins.
+Pin all transitive selections; preserve complete source bytes for offline
+replay. Never infer publisher authority from a name or checksum. Source moves
+do not change identity, and an old offline lock cannot discover later
+withdrawals. No automatic alias/transfer, remote fetch, profile execution or
+credential acquisition. See DEFINITION-DISTRIBUTION.md for exact semantics,
+resource bounds and filesystem assumptions. This advances PUB-002/003/004/006
+and DIR-002 without ratifying permanent identity or removing any acceptance gate.

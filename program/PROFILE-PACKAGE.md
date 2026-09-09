@@ -36,3 +36,13 @@ The reader bounds file size (64 KiB), YAML events (2,048), nesting (16), and dis
 `--check registry/profiles.generated.json` checks deterministic regeneration.
 
 This is reference tooling, not a published `prim profile add` command. Git/HTTP installation, production SDK integration, and website publication remain unimplemented.
+
+## Installed distribution implementation (September 9)
+
+The same parser/compiler is now included in Library 0.1.0a2; repository commands
+remain compatibility entrypoints. `prim-library publish` packages explicitly
+declared text resources and `resolve`/`restore` provide scoped multi-source pins
+and an offline cache. The older prototype limitations above describe the initial
+manifest parser, not the installed distribution workflow. See
+[DEFINITION-DISTRIBUTION.md](DEFINITION-DISTRIBUTION.md) for complete-byte hashes,
+experimental dependency/lifecycle behavior and remaining authentication gates.
