@@ -3,6 +3,9 @@ from __future__ import annotations
 
 import asyncio
 import json
+import hashlib
+import shutil
+import subprocess
 import os
 from pathlib import Path
 import sys
@@ -29,6 +32,61 @@ async def main():
             pin = json.loads((Path(tmp) / str(index) / 'prim-definition.lock.json').read_text())
             assert pin['definition_sha256'] == row['definition_sha256']
             outcomes.append({'profile': row['id'], 'version': row['version'], 'created': True})
+        # Exercise the real installed CLI against a new external definition
+        # authored here, with no imports from repository tooling or fixtures.
+        publisher = Path(tmp) / 'external-publisher'
+        publisher.mkdir()
+        (publisher / 'PROFILE.md').write_text("""---
+format: prim-profile
+manifest_version: '0.1'
+id: example/note
+name: Example note
+description: Synthetic outside-publisher installation fixture.
+version: 0.1.0-dev.1
+maturity: development
+kinds: [note]
+resources:
+  creation: creation.json
+  schema: schema.json
+  template: template.json
+---
+A synthetic note definition; no external publisher endorsement is claimed.
+""")
+        (publisher / 'schema.json').write_text(json.dumps({'type': 'object', 'required': ['id', 'title'],
+            'properties': {'id': {'type': 'string'}, 'title': {'type': 'string'}}}))
+        (publisher / 'template.json').write_text('{"id":"", "title":"External note"}')
+        (publisher / 'creation.json').write_text(json.dumps({'schema_resource': 'schema',
+            'template_resource': 'template', 'authority_file': 'note.json', 'rules': {},
+            'identity_field': 'id', 'title_field': 'title', 'privacy': 'local', 'scope': 'synthetic test'}))
+        executable = shutil.which('prim-library', path=str(Path(sys.executable).parent))
+        assert executable, 'installed console entrypoint must exist'
+        def cli(*args):
+            result = subprocess.run([executable, *map(str, args)], cwd=tmp, capture_output=True, text=True, timeout=30)
+            assert result.returncode == 0, result.stderr
+            return json.loads(result.stdout)
+        source_path = Path(tmp) / 'source.json'
+        publication = cli('publish', publisher, '--output', source_path)
+        assert publication['sha256'] == hashlib.sha256(source_path.read_bytes()).hexdigest()
+        request_path = Path(tmp) / 'request.json'
+        request_path.write_text(json.dumps({'format': 'prim-library-request', 'version': 1,
+            'allow_deprecated': False,
+            'sources': [{'name': 'example', 'path': 'source.json', 'sha256': publication['sha256'],
+                         'namespaces': ['example'], 'visibility': 'private'}],
+            'requirements': [{'id': 'example/note', 'version': '0.1.0-dev.1'}]}))
+        bundle = Path(tmp) / 'resolved'
+        resolution = cli('resolve', request_path, '--output', bundle)
+        source_path.unlink()
+        shutil.rmtree(publisher)
+        restored = Path(tmp) / 'restored'
+        replay = cli('restore', bundle / 'prim-library.lock.json', '--cache', bundle / 'sources',
+                     '--expected-sha256', resolution['lock_sha256'], '--output', restored)
+        assert replay['snapshot_sha256'] == resolution['snapshot_sha256']
+        pack = Path(tmp) / 'external-note'
+        cli('--library', restored / 'library.json', 'create', 'example/note', '--version', '0.1.0-dev.1', '--output', pack)
+        assert cli('--library', restored / 'library.json', 'check-pack', pack)['status'] == 'passed'
+        distribution = {'external_publish_resolve_restore_create_check': 'passed',
+                        'original_source_removed_before_restore': True,
+                        'snapshot_sha256': resolution['snapshot_sha256']}
         old = os.getcwd()
         try:
             os.chdir(tmp)
@@ -46,7 +104,7 @@ async def main():
             os.chdir(old)
     print(json.dumps({'success': True, 'version': __version__, 'installed_from_site_packages': True,
                       'snapshot_sha256': library.snapshot_id, 'profiles': outcomes,
-                      'stdio_client_modes': ['auto', 'legacy'],
+                      'stdio_client_modes': ['auto', 'legacy'], 'distribution': distribution,
                       'not_established': ['public deployment', 'all client UIs', 'independent security review']}))
 
 

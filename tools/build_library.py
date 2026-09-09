@@ -3,45 +3,18 @@
 from __future__ import annotations
 import argparse
 from copy import deepcopy
-import hashlib
 import json
 from pathlib import Path
 import sys
-from profile_catalog import discover_profiles, _local_path, ProfileError
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'services/library/src'))
-from prim_library.library import Library, fingerprint, MAX_DOCUMENT
-from prim_library.popularity import POLICY
 
 OUTPUT = ROOT / 'services/library/src/prim_library/data/library.json'
 RANKINGS = ROOT / 'services/library/src/prim_library/data/rankings.json'
 
 
-def compile_library(root: Path) -> dict:
-    discovered = discover_profiles(root)
-    definitions = []
-    for entry in discovered['profiles']:
-        folder = (root / entry['location']).parent.resolve()
-        resources = {}
-        # Only explicitly declared textual files are distributed, not directories,
-        # user records, executable validators, or an entire repository.
-        declared = {'manifest': 'PROFILE.md', **entry['metadata'].get('resources', {})}
-        for name, rel in declared.items():
-            p = _local_path(folder, rel)
-            if p.is_dir():
-                continue
-            if p.suffix not in {'.md', '.json'} or p.stat().st_size > MAX_DOCUMENT:
-                raise ProfileError('library resources must be bounded .md/.json files')
-            raw = p.read_bytes()
-            resources[name] = {'text': raw.decode('utf-8'), 'sha256': hashlib.sha256(raw).hexdigest()}
-        item = {'metadata': entry['metadata'], 'resources': resources}
-        item['definition_sha256'] = fingerprint(item)
-        definitions.append(item)
-    result = {'format': 'prim-library', 'version': 1, 'definitions': definitions,
-              'snapshot_sha256': fingerprint(definitions)}
-    Library(result, {'format': 'prim-popularity', 'version': 1, 'profiles': {}})
-    return result
+from prim_library.publishing import compile_library
 
 
 def main():

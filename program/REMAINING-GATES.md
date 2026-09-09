@@ -20,7 +20,7 @@ The Mac work is already specified in the product work order. Cloudflare does not
 
 These items are not all blocked on the user. Continue in bounded branches with their own source and acceptance evidence:
 
-- Publishing/resolution: authenticated publishers, aliases, namespace transfers, dependency cycles, deprecation/retraction and approved refresh pipelines; real external/private-source publication.
+- Publishing/resolution: authenticated publishers, aliases, namespace transfers and automatic approved remote refresh; real external/private-source publisher acceptance. Installed local source publication, dependency/cycle policy, deprecation/withdrawal and offline restore are implemented with evidence in the September 9 distribution record.
 - Reference cases and composition: Receipt, Contract, Project and System alongside Person/Decision; identity, correction, context and cross-pack authority semantics that preserve real legacy meanings.
 - Research/ingestion: challenge/review lifecycle, extraction provenance, recursive artifact budgets and changed/revoked/deleted source handling; useful life-domain diagnostics.
 - Legacy migrations: safe readers, explicit semantic loss reports, sanitized positive/negative fixtures and tool/media separation. A preserved specification does not migrate its current consumers.

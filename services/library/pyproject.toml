@@ -4,12 +4,12 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "prim-foundation-mcp"
-version = "0.1.0a1"
+version = "0.1.0a2"
 description = "Prim Foundation Library: versioned definitions, creation kits, and MCP discovery"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-dependencies = ["mcp==2.1.1", "jsonschema==4.26.0", "uvicorn==0.52.4"]
+dependencies = ["mcp==2.1.1", "jsonschema==4.26.0", "uvicorn==0.52.4", "PyYAML==6.0.3"]
 
 [project.scripts]
 prim-library = "prim_library.cli:main"

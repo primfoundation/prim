@@ -1,0 +1,86 @@
+{
+  "recorded_at": "2026-09-09T18:33:39.656871+00:00",
+  "requirements": [
+    "PUB-002",
+    "PUB-003",
+    "PUB-004",
+    "PUB-006",
+    "DIR-002"
+  ],
+  "base_commit": "192ee364a1da3d8b103cc7d7578b916d493c8044",
+  "implementation": "Installed local source publication, namespace-scoped multi-source resolution, immutable dependency locks, withdrawals and portable offline cache restore. Shared parser/compiler preserves repository generated snapshots.",
+  "version": "0.1.0a2",
+  "local_tests": {
+    "library": 77,
+    "foundation": 97,
+    "report": "program/evidence/2026-09-09-distribution-tests.json",
+    "success": true
+  },
+  "installed_smoke": {
+    "success": true,
+    "version": "0.1.0a2",
+    "installed_from_site_packages": true,
+    "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+    "profiles": [
+      {
+        "profile": "primfoundation/decision",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/person",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/research",
+        "version": "0.3.0-dev.3",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/workbook",
+        "version": "0.1.0-dev.1",
+        "created": true
+      }
+    ],
+    "stdio_client_modes": [
+      "auto",
+      "legacy"
+    ],
+    "distribution": {
+      "external_publish_resolve_restore_create_check": "passed",
+      "original_source_removed_before_restore": true,
+      "snapshot_sha256": "461d031622a83f94b8ec48af4f7846a2e4b98d6ebf1356a244e572238501dd7f"
+    },
+    "not_established": [
+      "public deployment",
+      "all client UIs",
+      "independent security review"
+    ]
+  },
+  "local_build_artifacts": [
+    {
+      "name": "prim_foundation_mcp-0.1.0a2-py3-none-any.whl",
+      "sha256": "267d300896a22dbfc828d9360380b988a37f7724ce1869c3e68bb08be0fa4a40",
+      "bytes": 67342
+    },
+    {
+      "name": "prim_foundation_mcp-0.1.0a2.tar.gz",
+      "sha256": "4e4f9445bb5b67fc8e229ccb2aa4016c0e1c1c75210a9495b3e77dc4ce6897b8",
+      "bytes": 61091
+    }
+  ],
+  "ci": {
+    "state": "pending_publication"
+  },
+  "not_established": [
+    "75 percent overall completion",
+    "Authenticated publisher or namespace ownership",
+    "Aliases or namespace transfers",
+    "Independent third-party author trial or security review",
+    "Remote registry or credential service",
+    "PyPI publication or stable release",
+    "Production deployment",
+    "Live withdrawal freshness while offline"
+  ]
+}

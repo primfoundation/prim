@@ -9,8 +9,8 @@ not a claim that every client UI or Foundation acceptance gate is complete.
 
 The same immutable public library powers MCP, a small human catalog, a JSON API,
 and local creation/validation. There is no per-profile endpoint or application.
-The initial snapshot contains development definitions for Research, Person and
-Decision. Other legacy profiles are NOT automatically advertised as supported.
+The initial snapshot contains development definitions for Research, Person, Decision and
+Workbook. Other legacy profiles are NOT automatically advertised as supported.
 A new publisher adds a definition package, not a Foundation repository.
 
 ## Install and run
@@ -22,7 +22,7 @@ python -m pip install -c services/library/constraints.txt ./services/library
 prim-foundation-mcp
 ```
 
-Or install the built `prim_foundation_mcp-0.1.0a1-py3-none-any.whl`. The wheel
+Or install the built `prim_foundation_mcp-0.1.0a2-py3-none-any.whl`. The wheel
 includes the compiled definitions; it works away from the source repository.
 There is not yet a PyPI publication. A versioned Git-source install is also
 possible: `pip install 'git+https://github.com/primfoundation/prim.git@COMMIT#subdirectory=services/library'`
@@ -80,6 +80,20 @@ It does not establish factual accuracy, source independence, reviewer identity
 or permission. Native Research is explicitly experimental. Historical ORF uses
 the separate pinned compatibility tool; automatic semantic migration is not
 implemented by renaming an ORF file. See `profiles/research/NATIVE.md`.
+
+## Independent publishing and offline installation
+
+The installed CLI now supports `publish`, `resolve` and `restore`. A publisher
+can build a data-only distribution from their own `PROFILE.md` directory.
+Consumers combine explicitly scoped, digest-pinned sources into a new local
+library and portable cache. Exact locks survive source moves, deletion and
+rollback; version conflicts, withdrawn definitions and dependency cycles fail.
+No source URLs are fetched and no profile code is run.
+
+See [the complete workflow and contract](../../program/DEFINITION-DISTRIBUTION.md)
+and [the synthetic external note example](examples/external-note/PROFILE.md).
+Local publication is implemented; authenticated publisher identity, automatic
+remote refresh, aliases/transfers and a real outside-author trial remain open.
 
 ## Run the remotely connectable service
 
