@@ -31,7 +31,10 @@ record metadata, including exact nanosecond strings. Transfer the whole folder:
 existing record-only host exporters do not migrate attachments.
 
 96 Library tests (19 capture cases), 97 Foundation tests, existing SDK checks and
-an actual installed-wheel capture/retry/folder-transfer smoke pass locally.
+an actual installed-wheel capture/retry/folder-transfer smoke pass locally and
+in all three CI workflows on PR #18 implementation head
+`20ff9e3cab126e6b6af8a0f8ff8a123821184edb`. The PR retains the final ledger head
+and merge identity; code evidence belongs to the exact tested source.
 `evidence/2026-09-09-capture.json` retains the exact test/publication state and
 `ARTIFACT-CAPTURE.md` provides the runnable example and limits. Source authority,
 remote extraction, recursive media/archive parsing, revocation and independent

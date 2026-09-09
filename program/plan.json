@@ -4,7 +4,7 @@
   "as_of": "2026-09-09",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "portable_distribution_merged_research_capture_implemented_ci_pending",
+    "state": "portable_distribution_shipped_and_research_capture_verified",
     "target_repository": "primfoundation/prim",
     "base_commit": "fc4626fe3b597639725feff65c4cac6a3088b129",
     "target_branch": "codex/research-artifact-capture",

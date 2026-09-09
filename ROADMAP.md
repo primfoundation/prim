@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-09. Execution: **portable_distribution_merged_research_capture_implemented_ci_pending**.
+As of 2026-09-09. Execution: **portable_distribution_shipped_and_research_capture_verified**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
