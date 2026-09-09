@@ -1,0 +1,187 @@
+{
+  "recorded_at": "2026-09-09T18:51:00.126601+00:00",
+  "requirements": [
+    "ING-001",
+    "ING-002",
+    "RES-002",
+    "RES-004"
+  ],
+  "base_commit": "fc4626fe3b597639725feff65c4cac6a3088b129",
+  "version": "0.1.0a3",
+  "implementation": "Explicit bounded local file capture into a pinned native Research draft, original binary blobs, source/permission/time provenance, private receipts, idempotent retry and complete-folder integrity check.",
+  "local_tests": {
+    "library": 96,
+    "foundation": 97,
+    "capture_cases": 19,
+    "report": "program/evidence/2026-09-09-capture-tests.json",
+    "success": true
+  },
+  "installed_smoke": {
+    "success": true,
+    "version": "0.1.0a3",
+    "installed_from_site_packages": true,
+    "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+    "profiles": [
+      {
+        "profile": "primfoundation/decision",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/person",
+        "version": "0.1.0-dev.1",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/research",
+        "version": "0.3.0-dev.3",
+        "created": true
+      },
+      {
+        "profile": "primfoundation/workbook",
+        "version": "0.1.0-dev.1",
+        "created": true
+      }
+    ],
+    "stdio_client_modes": [
+      "auto",
+      "legacy"
+    ],
+    "distribution": {
+      "external_publish_resolve_restore_create_check": "passed",
+      "original_source_removed_before_restore": true,
+      "snapshot_sha256": "461d031622a83f94b8ec48af4f7846a2e4b98d6ebf1356a244e572238501dd7f"
+    },
+    "capture": {
+      "original_binary_capture": "passed",
+      "retry_after_source_removal": "passed",
+      "complete_folder_transfer_without_source_or_manifest": "passed",
+      "claims_created": 0
+    },
+    "not_established": [
+      "public deployment",
+      "all client UIs",
+      "independent security review"
+    ]
+  },
+  "local_build_artifacts": [
+    {
+      "name": "prim_foundation_mcp-0.1.0a3-py3-none-any.whl",
+      "sha256": "f47e2e9d7809bed46a7e5845453fd5b2710e91c07c95c77bc89da33da1d83c51",
+      "bytes": 72733
+    },
+    {
+      "name": "prim_foundation_mcp-0.1.0a3.tar.gz",
+      "sha256": "c42d327b80a97d6daf69cf48b78ca8eaf8969ae839fc48aab946e5fcb8ba831d",
+      "bytes": 69444
+    }
+  ],
+  "ci": {
+    "state": "passed_on_implementation_head",
+    "pull_request": 18,
+    "url": "https://github.com/primfoundation/prim/pull/18",
+    "tested_head": "20ff9e3cab126e6b6af8a0f8ff8a123821184edb",
+    "tested_tree": "f635efcf8b74700d635e6ec513d9857886b5b60d",
+    "runs": [
+      {
+        "id": 34391838921,
+        "name": "Foundation Library MCP",
+        "conclusion": "success"
+      },
+      {
+        "id": 34391838923,
+        "name": "Foundation program verification",
+        "conclusion": "success"
+      },
+      {
+        "id": 34391838963,
+        "name": "Foundation SDK distribution",
+        "conclusion": "success"
+      }
+    ],
+    "artifact": {
+      "id": 10119959764,
+      "sha256": "b8e6a9a0190fec266e91db7a493e0013f0d0a24a5235bea9dadffa29731649a7",
+      "expires_at": "2026-10-09T18:55:04Z"
+    },
+    "installed_smoke": {
+      "success": true,
+      "version": "0.1.0a3",
+      "installed_from_site_packages": true,
+      "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+      "profiles": [
+        {
+          "profile": "primfoundation/decision",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/person",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/research",
+          "version": "0.3.0-dev.3",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/workbook",
+          "version": "0.1.0-dev.1",
+          "created": true
+        }
+      ],
+      "stdio_client_modes": [
+        "auto",
+        "legacy"
+      ],
+      "distribution": {
+        "external_publish_resolve_restore_create_check": "passed",
+        "original_source_removed_before_restore": true,
+        "snapshot_sha256": "461d031622a83f94b8ec48af4f7846a2e4b98d6ebf1356a244e572238501dd7f"
+      },
+      "capture": {
+        "original_binary_capture": "passed",
+        "retry_after_source_removal": "passed",
+        "complete_folder_transfer_without_source_or_manifest": "passed",
+        "claims_created": 0
+      },
+      "not_established": [
+        "public deployment",
+        "all client UIs",
+        "independent security review"
+      ]
+    },
+    "packages": [
+      {
+        "name": "prim/prim/services/library/dist/prim_foundation_mcp-0.1.0a3-py3-none-any.whl",
+        "bytes": 72733,
+        "sha256": "b37a7cc272538c8b82a7be7909f28ef638ae2be8a2715fc01d4d0414d3aa0392"
+      },
+      {
+        "name": "prim/prim/services/library/dist/prim_foundation_mcp-0.1.0a3.tar.gz",
+        "bytes": 69309,
+        "sha256": "f0af26986ce5031de565bffcd5f0c5c8e9fa9a57dab63676d088f5b143939443"
+      }
+    ],
+    "library_tests": 96,
+    "foundation_tests": 97,
+    "scope": "Actual CI package and protocol/SDK/capture proof on the exact implementation head. Later ledger-only commits must pass their own CI before merge; PR retains final head and merge identity."
+  },
+  "not_established": [
+    "75 percent overall project completion",
+    "Verified real-source authorization or factual correctness",
+    "Remote connectors and credential handling",
+    "Content extraction or recursive archive/media parsing",
+    "Automatic revocation/deletion/refresh propagation",
+    "Cross-device concurrent transactions or power-loss durability",
+    "Attachment transport through existing record-only host exporters",
+    "Independent outside-user/security acceptance",
+    "PyPI publication or stable release",
+    "Production deployment"
+  ],
+  "mac_access_recheck": {
+    "date": "2026-09-09",
+    "result": "Fleetstrap machine-list tool returned internal MCP error -32603; no machine could be selected and no Mac command ran."
+  }
+}

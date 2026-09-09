@@ -203,3 +203,18 @@ withdrawals. No automatic alias/transfer, remote fetch, profile execution or
 credential acquisition. See DEFINITION-DISTRIBUTION.md for exact semantics,
 resource bounds and filesystem assumptions. This advances PUB-002/003/004/006
 and DIR-002 without ratifying permanent identity or removing any acceptance gate.
+
+## D019 — Capture originals before inferring claims
+
+Status: experimental implementation; remote/independent ingestion gates remain.
+
+Use explicit, expected-digest local file manifests to create new native Research
+drafts with private original blobs and bounded receipts. Preserve distinct source
+IDs even when bytes deduplicate. Never infer claims, supporting evidence or
+permission from capture. Unknown observation times stay unknown; filesystem
+nanosecond metadata uses strings for cross-language precision. Idempotent retries
+verify the initial folder and refuse changed requests or later edits. A separate
+complete-capture check requires a trusted receipt digest. Existing definitions
+and record-only host exporters remain unchanged; full-folder transfer is required
+for artifacts. See ARTIFACT-CAPTURE.md for budgets, failure policy and remaining
+extraction, revocation, remote connector, durability and outside-review gates.

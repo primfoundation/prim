@@ -14,11 +14,31 @@ explicit namespace scopes, immutable source/definition pins, dependency closure,
 withdrawals and a portable cache preserve offline installation and rollback.
 77 Library and 97 Foundation tests pass locally, as do the SDK checks and actual
 clean-wheel installed CLI/MCP smoke. The source is deleted before the restore
-proof. Exact source hashes, test scope and publication state are retained in
+proof. PR #17 is merged at `fc4626fe3b597639725feff65c4cac6a3088b129`; all three CI workflows passed on `4f1122bd45cd7b86fd392450b966204d142bbc8a`. Exact source/artifact hashes and test scope are retained in
 `evidence/2026-09-09-distribution.json`. See `DEFINITION-DISTRIBUTION.md` for the
 runnable example, limits and remaining authenticated-publisher/identity gates.
 No requirement is marked complete by these tests; the overall 75% target is
 still not established. Continue the available non-Mac implementation lanes.
+
+## September 9 Research capture increment
+
+Library 0.1.0a3 adds `capture-research` and `check-capture`: explicit local files
+become a private native Research draft with byte-preserved originals, source
+and permission provenance, and an initial capture receipt. Retry verifies the
+prior operation without overwriting later edits. Complete-folder checks detect
+missing or changed evidence. The current TypeScript reader preserves captured
+record metadata, including exact nanosecond strings. Transfer the whole folder:
+existing record-only host exporters do not migrate attachments.
+
+96 Library tests (19 capture cases), 97 Foundation tests, existing SDK checks and
+an actual installed-wheel capture/retry/folder-transfer smoke pass locally and
+in all three CI workflows on PR #18 implementation head
+`20ff9e3cab126e6b6af8a0f8ff8a123821184edb`. The PR retains the final ledger head
+and merge identity; code evidence belongs to the exact tested source.
+`evidence/2026-09-09-capture.json` retains the exact test/publication state and
+`ARTIFACT-CAPTURE.md` provides the runnable example and limits. Source authority,
+remote extraction, recursive media/archive parsing, revocation and independent
+research/user review remain. All 79 requirements are still present.
 
 ## Integrated product increments
 

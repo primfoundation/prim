@@ -64,6 +64,13 @@ def main(argv: list[str] | None = None) -> int:
     restore.add_argument("--cache", type=Path, required=True)
     restore.add_argument("--expected-sha256", required=True, help="Lock digest obtained through a trusted channel")
     restore.add_argument("--output", type=Path, required=True)
+    capture = sub.add_parser("capture-research", help="Preserve explicitly selected local artifacts in a new Research draft")
+    capture.add_argument("manifest", type=Path)
+    capture.add_argument("--version", required=True)
+    capture.add_argument("--output", type=Path, required=True)
+    capture_check = sub.add_parser("check-capture", help="Verify a complete captured Research folder and all original bytes")
+    capture_check.add_argument("path", type=Path)
+    capture_check.add_argument("--expected-sha256", required=True, help="Receipt digest obtained through a trusted channel")
     host = sub.add_parser("export-host", help="Emit public, data-only kits for an offline native or SDK host")
     host.add_argument("--source-commit", default="unrecorded", help="Optional source provenance; not publisher authentication")
     pack = sub.add_parser("check-pack", help="Check a local Prim folder using its exact definition lock")
@@ -97,7 +104,13 @@ def main(argv: list[str] | None = None) -> int:
             print(json.dumps(result, ensure_ascii=True, indent=2))
             return 0
         library = Library(load_json(args.library.read_bytes(), MAX_SNAPSHOT)) if args.library else Library()
-        if args.command == "export-host":
+        if args.command == "check-capture":
+            from .ingestion import check_capture
+            result = check_capture(library, args.path, args.expected_sha256)
+        elif args.command == "capture-research":
+            from .ingestion import capture_research
+            result = capture_research(library, args.version, args.manifest, args.output)
+        elif args.command == "export-host":
             from .host_catalog import export_host_catalog
             result = export_host_catalog(library, args.source_commit)
         elif args.command == "check-pack":

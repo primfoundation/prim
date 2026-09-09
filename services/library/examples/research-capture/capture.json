@@ -1,0 +1,25 @@
+{
+  "format": "prim-artifact-capture",
+  "version": 1,
+  "operation_id": "tutorial-capture-1",
+  "title": "Inspect a preserved source",
+  "question": "What does the captured source actually establish?",
+  "sources": [
+    {
+      "id": "tutorial-source",
+      "path": "source.txt",
+      "locator": "urn:example:research-capture:source",
+      "sha256": "f17788b68a3234cf62217dee8bdc08d47ef2b63e1f6b1a686edf38918f3c0c91",
+      "media_type": "text/plain",
+      "observed_at": null,
+      "permissions": {
+        "may_store": true,
+        "may_share": false,
+        "basis_as_recorded": "Synthetic tutorial fixture, intentionally provided for local testing."
+      },
+      "extensions": {
+        "note": "Observed event time is unknown; capture time is recorded separately."
+      }
+    }
+  ]
+}
