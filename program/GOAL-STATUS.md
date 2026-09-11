@@ -1,6 +1,6 @@
-# Major-goal execution status — September 9, 2026
+# Major-goal execution status — September 11, 2026
 
-`MAJOR-GOALS.md` defines completion. All 79 requirements, 17 workstreams and seven milestones remain in `plan.json`; `../ROADMAP.md` is generated from it. The target of 75% overall delivery has **not been established**. Implementation, automated tests, release artifacts, deployment and independent real use remain distinct. No equal-weight task count is presented as mission completion.
+`MAJOR-GOALS.md` defines completion. All 79 requirements, 17 workstreams and seven milestones remain in `plan.json`; `../ROADMAP.md` is generated from it. The user now targets 95%; [DELIVERY-95.md](DELIVERY-95.md) sequences 26 packages and defines a proposed weighted acceptance rubric with critical-gate vetoes. A current 75% or 95% overall result has **not been established**. Implementation, automated tests, release artifacts, deployment and independent real use remain distinct. No equal-weight task count is presented as mission completion.
 
 | Goal | State | Current proof | Remaining acceptance |
 | --- | --- | --- | --- |
@@ -8,13 +8,13 @@
 | G2 Public Hub | in progress | Cloudflare preview serves human/JSON/MCP and all legacy registry contracts; actual desktop/phone-size downloads and offline reopen; automated accessibility; hosted HTTP/MCP and exact-file health | Production old-site/client migration, route/rollback acceptance, named ownership/escalation, independent usability and actual connector-host acceptance |
 | G3 Primboard | in progress | Encrypted index/journal, concurrent-write protection, guided recovery, same-key backup/restore and generic native/CLI editing; macOS CI and assembled-app selftests pass | Signed/notarized installed Mac, existing private-store/Touch ID/TCC, physical-device and large-store performance; lost-key design and independent review |
 | G4 Browsers | in progress | Login/gateway source consolidated with provenance; shared session/assets, signed Apple identity checks; 13 tests and both dry builds | Preview cookie domain, real Apple/session/container acceptance, production routes and rollback before old-service retirement |
-| G5 Desktop | blocked on source | Honest required-source preflight; existing integration PRs preserved | Authoritative prim-sim / PrimSimCore source, revision and license; clean Mac build, generic host and installed acceptance |
+| G5 Desktop | blocked on source provenance and native acceptance | Required-source preflight; Fleet found a local PrimSimCore candidate with 10 source/four test files, but no Git repository or root license; existing PRs preserved | Recover lineage/reuse authority, checkpoint dirty work, prove dependency/build and reconcile PRs; generic host and signed installed acceptance |
 | G6 Incubator migration | in progress | Existing ORF/Workbook preservation; 17 further inventory rows; five selected public baselines with 28 exact blobs and synthetic legacy checks | Semantic mappings and second-reader migration, remaining normative audits, private/licensing holds, excluded media/tools and actual consumers |
 | G7 Institutional durability | in progress | Canonical evidence, installable artifact CI, exact Worker releases, scheduled health, prior real rollback/return and contributor/security/lifecycle documents | Actual administrators, decision/cost ownership, reporting/escalation, independent review and new-maintainer restore/deploy/exit exercise |
 
 Exact shipped evidence is in `evidence/2026-09-08-portable-delivery.json`. Earlier release and journal evidence remains retained. Incubator read scope and limitations have separate audit/conformance records. A regression recording unsafe legacy acceptance is evidence of a gap, not input safety.
 
-`REMAINING-GATES.md` separates device/account/authority gates from remaining implementation. The full project is not merely waiting for a Mac signature.
+`REMAINING-GATES.md` separates device/account/authority gates from remaining implementation. Fleet now works on both Macs; company identity/signature metadata was observed on the laptop, but no new signed candidate or installed acceptance was run. Two Desktop installations have different bundle IDs and all four laptop Prim source trees are dirty. The full project is not merely waiting for a Mac signature. See `evidence/2026-09-11-delivery-audit.json` for scope and limitations.
 
 September 9 local distribution implementation and installed-wheel evidence are in `evidence/2026-09-09-distribution.json`; its CI/publication field records the current shipping state.
 

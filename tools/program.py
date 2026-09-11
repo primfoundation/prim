@@ -163,6 +163,37 @@ def validate_plan(plan: Any, root: Path) -> None:
 
     for identifier in requirements:
         visit(identifier)
+    if "delivery_packages" in plan:
+        packages = _records(plan, "delivery_packages")
+        assigned: Counter[str] = Counter()
+        for row in packages.values():
+            for key in ("title", "owner", "entry_gate", "exit_gate"):
+                _string(row.get(key), f"{row['id']}.{key}")
+            if "status" in row:
+                raise PlanError("delivery packages must not duplicate requirement status")
+            if type(row.get("wave")) is not int or not 0 <= row["wave"] <= 6:
+                raise PlanError("delivery package wave must be an integer from 0 to 6")
+            _list(row, "goals", {f"G{i}" for i in range(1, 8)}, nonempty=True)
+            _list(row, "entry_from", set(packages))
+            assigned.update(_list(row, "requirements", set(requirements), nonempty=True))
+        if set(assigned) != set(requirements) or any(count != 1 for count in assigned.values()):
+            raise PlanError("delivery packages must assign every requirement exactly once")
+        active.clear()
+        done.clear()
+
+        def visit_package(identifier: str) -> None:
+            if identifier in active:
+                raise PlanError(f"delivery package dependency cycle at {identifier}")
+            if identifier in done:
+                return
+            active.add(identifier)
+            for dependency in packages[identifier]["entry_from"]:
+                visit_package(dependency)
+            active.remove(identifier)
+            done.add(identifier)
+
+        for identifier in packages:
+            visit_package(identifier)
     for key in ("life_domains", "coverage_lenses"):
         values = plan.get(key)
         if not isinstance(values, list) or not values:
@@ -185,6 +216,14 @@ def render(plan: dict[str, Any]) -> str:
              "## Milestone acceptance gates", ""]
     for item in plan["milestones"]:
         lines += [f"### {item['id']} — {item['name']}", "", item["gate"], ""]
+    if "delivery_packages" in plan:
+        lines += ["## Delivery order toward 95%", "",
+                  "[Execution plan](program/DELIVERY-95.md). Packages organize work; requirement status below remains authoritative. "
+                  "Waves are scheduling guides, not completion percentages or replacement milestones.", "",
+                  "| Package | Start wave | Outcome | Primary requirements |", "| --- | --- | --- | --- |"]
+        for row in plan["delivery_packages"]:
+            lines.append(f"| {row['id']} | {row['wave']} | {row['title']} | {', '.join(row['requirements'])} |")
+        lines.append("")
     lines += ["## Full coverage and delivery obligations", ""]
     for stream in plan["workstreams"]:
         lines += [f"### {stream['id']} — {stream['name']}", "", f"Delivery responsibility: {stream['delivery']}.", ""]

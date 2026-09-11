@@ -1,4 +1,36 @@
-# Foundation execution handoff — September 9, 2026
+# Foundation execution handoff — September 11, 2026
+
+## Current delivery target and recovered Mac access
+
+The user requested a comprehensive autonomous path to 95%. [DELIVERY-95.md](DELIVERY-95.md)
+defines 26 work packages over the preserved 79 requirements, seven start waves,
+critical release gates, a proposed weighted outcome rubric and exact next actions.
+`plan.json` owns the package mapping and requirement status; no current 75% or 95%
+claim has been established. The planning change does not complete requirements.
+
+Fleet now reaches both enrolled Macs. The September 11 read-only audit found
+dirty laptop checkouts for all four Prim repositories and a dirty Primboard mini
+checkout, a local `prim-sim` candidate declaring `PrimSimCore` with 10 Swift source
+files/four test files but no observed Git repository/root license, and company
+Developer ID metadata on the laptop. Two installed Desktop apps have different
+bundle IDs. This supersedes the earlier unavailable-executor observation; it does
+not prove current-source builds, usable signing keys, notarization or installed
+acceptance. Sanitized facts, remote main/PR heads and completed Fleet receipts are
+retained in [the audit](evidence/2026-09-11-delivery-audit.json).
+
+**Next execution:** privately checkpoint/verify dirty work, create isolated pinned
+work areas, inspect candidate API/provenance and reconcile Desktop PRs #2/#3/#4/#6.
+Proceed with complete-pack attachment transport and the remaining reference cases
+while any source-rights gate is resolved. Current record-only exporters omit
+captured attachments; this is a critical integration gap. Use the existing
+Primboard Mac work order for a fresh isolated candidate, not an overwrite of the
+working installation. Do not copy signing keys or reset private stores.
+
+Foundation PR #18 is merged at `4578d78ad1c7d03420ca3b88fd8cad7693b3dce0`.
+This is the input revision for the 95% planning branch. Release evidence remains
+attached to its exact tested implementation and final PR heads. Planning-branch
+publication is identifiable from the PR targeting `codex/delivery-95-plan`.
+No continuing Fleet job or background agent was started by this audit.
 
 ## Current state
 
@@ -18,7 +50,7 @@ proof. PR #17 is merged at `fc4626fe3b597639725feff65c4cac6a3088b129`; all three
 `evidence/2026-09-09-distribution.json`. See `DEFINITION-DISTRIBUTION.md` for the
 runnable example, limits and remaining authenticated-publisher/identity gates.
 No requirement is marked complete by these tests; the overall 75% target is
-still not established. Continue the available non-Mac implementation lanes.
+still not established by that increment. The September 11 plan now includes direct Fleet Mac execution.
 
 ## September 9 Research capture increment
 
@@ -76,7 +108,7 @@ source, merge, CI identifiers and limitations are retained in that evidence file
 2. **Hub acceptance:** PR #11 actual desktop Chromium and phone-size WebKit downloads, offline HTML and pack reopen passed, as did automated accessibility/overflow and desktop keyboard checks. PR #13 also enforces native portable-export budgets and passes real Hub ZIP-to-SDK tests, including the exact 512 KiB boundary. PR #12 adds all pinned category registry routes beside the four profiles; postmerge hosted HTTP/MCP passes. These checks supersede the earlier browser-engine download gap; they do not establish this chat's download bridge or independent real-user/assistive-technology acceptance.
 3. **Compatibility follow-up:** five selected public incubator baselines retain 28 exact source blobs and 27 fixed CLI checks, including the original six OPF tests. Five cases deliberately record known unsafe acceptance. No semantic migration or arbitrary user-input safety is claimed. SDK export now checks actual formatted bytes before creating a folder, preventing an export its own reader cannot reopen. The audit retains source selection/privacy/license limits.
 4. **Public operations:** current portable-export preview version `2dd0054f-5f19-4a93-9d2b-907b14a99752` has immediate rollback target `1bf1e03e-6899-4c0e-b9b9-e992a3ccc891`. Existing Free defaults remain; custom CPU limits were rejected without paid activation. Apex/www remain on Pages and production registry/login/browsers retain old Workers. Resolve ownership, cost/escalation, old clients and Railway mapping before cutover.
-5. **Mac/source gates:** use `MAC-RELEASE.md` in the Primboard repository for signed installed existing-store/Keychain/TCC acceptance. The September 9 Fleetstrap machine-list calls failed internally; no Mac execution was verified. Recover authoritative Desktop prim-sim source/revision/license; preserve integration PRs and never substitute a stub. Real Apple/session/container and independent outside-user/stewardship acceptance also remain.
+5. **Mac/source gates:** use `MAC-RELEASE.md` in the Primboard repository for signed installed existing-store/Keychain/TCC acceptance. September 11 Fleet execution now works; preserve dirty work and verify the discovered prim-sim candidate's source lineage/reuse authority and actual build. Preserve integration PRs and never substitute a stub. Real Apple/session/container and independent outside-user/stewardship acceptance also remain.
 6. **Broader implementation:** `REMAINING-GATES.md` names available publishing, resolution, reference cases, ingestion, composition and migration work. The full project is not merely waiting for the Mac. All 79 requirements remain; no 75% claim follows from these increments.
 
 ## Stable boundaries

@@ -36,3 +36,19 @@ added and legitimate completion recorded without changing test fixtures.
 The initial map had 17 workstreams and 70 requirements. The current preserved
 map has 79 requirements, including delivery control. This is a baseline decomposition, not a proof that no future obligation
 can be discovered. New findings get stable IDs and explicit acceptance criteria.
+
+## Delivery packages
+
+The optional `delivery_packages` extension groups execution without duplicating
+status. Each package has a unique ID, title, coordinating owner, integer start
+`wave` from 0 to 6, `goals` from G1 through G7, primary `requirements`,
+`entry_from` package IDs and explicit `entry_gate`/`exit_gate` text. Every current
+requirement must be assigned exactly once. Unknown references, missing/duplicate
+coverage and package cycles fail validation. A package `status` field is rejected.
+
+Entry dependencies describe artifacts needed to start work; they do not replace
+the canonical requirements' completion dependencies. Waves are scheduling guides,
+not replacement milestones. The roadmap renders package assignments from the
+same ledger. `DELIVERY-95.md` explains detailed work orders and the proposed fixed
+outcome rubric; any readiness calculation is dated evidence with limitations,
+never an automatically inferred percentage from statuses or test counts.

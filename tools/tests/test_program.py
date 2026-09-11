@@ -160,6 +160,45 @@ class ProgramTests(unittest.TestCase):
         self.assertTrue(plan["requirements"])
         self.assertEqual(plan["program"], "Prim Foundation")
 
+    def delivery_package(self):
+        return {"id": "D95-01", "title": "Keep scope", "owner": "test-owner", "wave": 0,
+                "goals": ["G7"], "entry_from": [], "requirements": ["W-001"],
+                "entry_gate": "Inputs observed.", "exit_gate": "Scope is preserved."}
+
+    def test_delivery_mapping_cannot_lose_duplicate_or_invent_requirements(self):
+        package = self.delivery_package()
+        self.plan["delivery_packages"] = [package]
+        validate_plan(self.plan, self.root)
+        variants = [[], [dict(package, requirements=["W-999"])],
+                    [package, dict(package, id="D95-02")]]
+        for packages in variants:
+            with self.subTest(packages=packages):
+                plan = copy.deepcopy(self.plan)
+                plan["delivery_packages"] = packages
+                with self.assertRaises(PlanError):
+                    validate_plan(plan, self.root)
+        self.plan["requirements"].append(dict(self.plan["requirements"][0], id="W-002"))
+        with self.assertRaisesRegex(PlanError, "every requirement exactly once"):
+            validate_plan(self.plan, self.root)
+
+    def test_delivery_dependencies_cannot_be_unknown_or_cyclic(self):
+        package = self.delivery_package()
+        self.plan["requirements"].append(dict(self.plan["requirements"][0], id="W-002"))
+        self.plan["delivery_packages"] = [package, dict(package, id="D95-02",
+                                                       requirements=["W-002"], entry_from=["D95-01"])]
+        validate_plan(self.plan, self.root)
+        for deps in (["D95-99"], ["D95-01"], ["D95-02"]):
+            with self.subTest(deps=deps):
+                plan = copy.deepcopy(self.plan)
+                plan["delivery_packages"][0]["entry_from"] = deps
+                with self.assertRaises(PlanError):
+                    validate_plan(plan, self.root)
+
+    def test_delivery_packages_cannot_create_parallel_status_authority(self):
+        self.plan["delivery_packages"] = [dict(self.delivery_package(), status="complete")]
+        with self.assertRaisesRegex(PlanError, "must not duplicate requirement status"):
+            validate_plan(self.plan, self.root)
+
 
 if __name__ == "__main__":
     unittest.main()
