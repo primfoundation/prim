@@ -1,0 +1,289 @@
+{
+  "format": "prim-foundation-delivery-audit",
+  "version": 1,
+  "as_of": "2026-09-11",
+  "scope": "Read-only Fleet project/toolchain/package/signature metadata and GitHub main/PR metadata; no source modifications or application execution on either Mac.",
+  "observed_requirement_states": {
+    "complete": 0,
+    "in_review": 11,
+    "in_progress": 41,
+    "planned": 26,
+    "blocked": 1
+  },
+  "percentage": {
+    "current": null,
+    "target": 95,
+    "reason": "No previously accepted weighted whole-project baseline. Inventory counts and component test passes do not establish overall completion.",
+    "rubric": "program/DELIVERY-95.md"
+  },
+  "remote_main": {
+    "prim": "4578d78ad1c7d03420ca3b88fd8cad7693b3dce0",
+    "prim-web": "356c20dc7e4b1dca04a311fd3b6a155268391e94",
+    "prims-paste-desktop": "9f7a0086ad0f9ecf72e4a9c495915485a257e8a0",
+    "prims-desktop": "ab5b11401eaadefc0c2ea68eada1f021fbd6dd8d",
+    "prims-browsers": "8b687f1a821ee4dee661158a701a35f25c973758"
+  },
+  "fleet": {
+    "connection": "identity, machine list and four read-only queued commands succeeded",
+    "devices": [
+      {
+        "alias": "laptop",
+        "online_at_observation": true,
+        "os": "macOS 26.6",
+        "architecture": "arm64",
+        "swift": "6.3.3",
+        "xcode_selected": true,
+        "matching_company_developer_id_identities": 1,
+        "local_projects": [
+          {
+            "repository": "primfoundation/prim",
+            "head": "08760405325ca3f9c9b63648c7398ffc4c96e831",
+            "branch": "main",
+            "dirty_porcelain_records": 14
+          },
+          {
+            "repository": "primfoundation/prims-paste-desktop",
+            "head": "8f42f1bdc0c55104a9f7fd868240ecd774a17115",
+            "branch": "main",
+            "dirty_porcelain_records": 111
+          },
+          {
+            "repository": "primfoundation/prims-desktop",
+            "head": "956233b38bf9fdc4565c86b76a95965fe69c356d",
+            "branch": "main",
+            "dirty_porcelain_records": 13
+          },
+          {
+            "repository": "primfoundation/prims-browsers",
+            "head": "2fd507bc0619c6bc0da0098bbe9334c951668a91",
+            "branch": "main",
+            "dirty_porcelain_records": 2
+          }
+        ],
+        "installed_apps": [
+          {
+            "product": "Primboard",
+            "location_class": "user Applications",
+            "bundle_id": "sh.prims.paste",
+            "version": "0.1.0",
+            "build": "1",
+            "codesign_display": "Company Developer ID authority and team match observed"
+          },
+          {
+            "product": "Prims Desktop",
+            "location_class": "user Applications",
+            "bundle_id": "com.eidosagi.prim",
+            "version": "0.1.0",
+            "build": "1",
+            "codesign_display": "Company Developer ID authority and team match observed"
+          },
+          {
+            "product": "Prims Desktop",
+            "location_class": "system Applications",
+            "bundle_id": "sh.prims.desktop",
+            "version": "0.1.0",
+            "build": "1",
+            "codesign_display": "Company Developer ID authority and team match observed"
+          }
+        ]
+      },
+      {
+        "alias": "mini",
+        "online_at_observation": true,
+        "os": "macOS 26.4",
+        "architecture": "arm64",
+        "swift": "6.3.3",
+        "xcode_selected": true,
+        "matching_company_developer_id_identities": 0,
+        "local_projects": [
+          {
+            "repository": "primfoundation/prims-paste-desktop",
+            "head": "8f42f1bdc0c55104a9f7fd868240ecd774a17115",
+            "branch": "main",
+            "dirty": true
+          }
+        ],
+        "installed_apps": [
+          {
+            "product": "Primboard",
+            "bundle_id": "sh.prims.paste",
+            "version": "0.1.0",
+            "build": "1",
+            "codesign_display": "Not inspected on this device"
+          }
+        ]
+      }
+    ],
+    "command_receipts": [
+      {
+        "receipt_id": "ad5f9f9ffa66dab00c3393db8d2a9bfcb728bc4c594048154cca4b9db573edb6",
+        "device": "laptop",
+        "purpose": "Initial project and toolchain audit",
+        "status": "succeeded",
+        "exit_code": 0
+      },
+      {
+        "receipt_id": "0391432307ee3126e1fc2ac49c3ae4d4ab7617ab0e22a552b740a56eab751ba6",
+        "device": "mini",
+        "purpose": "Initial project and toolchain audit",
+        "status": "succeeded",
+        "exit_code": 0
+      },
+      {
+        "receipt_id": "a30ad6c82ea6cfbf40899761d9913e94f482e023318c4d1b3f27feef24df6a9b",
+        "device": "laptop",
+        "purpose": "Targeted source resolution and signature metadata",
+        "status": "succeeded",
+        "exit_code": 0
+      },
+      {
+        "receipt_id": "6f94559788c1f89b0139ea405093d97c27e42ebc48bd06a8ec54454f7b8a7b15",
+        "device": "laptop",
+        "purpose": "Bounded prim-sim source metadata inventory",
+        "status": "succeeded",
+        "exit_code": 0
+      }
+    ]
+  },
+  "desktop_dependency_candidate": {
+    "name": "prim-sim",
+    "required_product": "PrimSimCore",
+    "resolved_desktop_dependency_exists": true,
+    "manifest_present": true,
+    "manifest_sha256": "b326964b22c302952e92c8b56b8d50d5e57e559d2aeb2595dd29623ae30fcc1f",
+    "manifest_bytes": 662,
+    "declares_required_product": true,
+    "swift_source_files": 10,
+    "swift_test_files": 4,
+    "inventory_scope": "All Swift files found beneath candidate Sources and Tests within the 200-file inventory cap",
+    "source_inventory_complete_within_scope": true,
+    "git_repository_found": false,
+    "root_license_found": false,
+    "accepted_source": false,
+    "build_verified": false,
+    "reuse_authority_verified": false,
+    "next_step": "Privately preserve the candidate, review API completeness against actual consumers, recover source lineage and reuse authority, then build in an isolated work area. Do not publish unidentified source or substitute a stub."
+  },
+  "open_prs": [
+    {
+      "repository": "primfoundation/prims-desktop",
+      "number": 2,
+      "url": "https://github.com/primfoundation/prims-desktop/pull/2",
+      "state": "open",
+      "draft": false,
+      "head_sha": "3e3f9c6a7e90713f7481b6556e592ad6cf87ceb4",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Preserve documented native acceptance and integration gates."
+    },
+    {
+      "repository": "primfoundation/prims-desktop",
+      "number": 3,
+      "url": "https://github.com/primfoundation/prims-desktop/pull/3",
+      "state": "open",
+      "draft": true,
+      "head_sha": "5496a368b0856b85b61c835b0004d89ccdb530dd",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Preserve documented native acceptance and integration gates."
+    },
+    {
+      "repository": "primfoundation/prims-desktop",
+      "number": 4,
+      "url": "https://github.com/primfoundation/prims-desktop/pull/4",
+      "state": "open",
+      "draft": true,
+      "head_sha": "bf802ae8621ee094cf6283968dc4fe27563c22a6",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Preserve documented native acceptance and integration gates."
+    },
+    {
+      "repository": "primfoundation/prims-desktop",
+      "number": 6,
+      "url": "https://github.com/primfoundation/prims-desktop/pull/6",
+      "state": "open",
+      "draft": true,
+      "head_sha": "16d4466a03d488e4700f587e1400d86bb0e9d65e",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Preserve documented native acceptance and integration gates."
+    },
+    {
+      "repository": "primfoundation/prim-web",
+      "number": 1,
+      "url": "https://github.com/primfoundation/prim-web/pull/1",
+      "state": "open",
+      "draft": false,
+      "head_sha": "29871fb60fc9ef573e78066d911bc175322ccc66",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Production migration and compatibility gates remain."
+    },
+    {
+      "repository": "primfoundation/prim-registry",
+      "number": 1,
+      "url": "https://github.com/primfoundation/prim-registry/pull/1",
+      "state": "open",
+      "draft": true,
+      "head_sha": "e0ab6bd0909cbfaeee0fb8231615c3c019789643",
+      "merged": false,
+      "mergeable_at_observation": false,
+      "gate": "Production migration and compatibility gates remain."
+    },
+    {
+      "repository": "primfoundation/prim.workbook",
+      "number": 1,
+      "url": "https://github.com/primfoundation/prim.workbook/pull/1",
+      "state": "open",
+      "draft": false,
+      "head_sha": "8e997f0e349d788c56722ea8bd0c3d0afbdb99e5",
+      "merged": false,
+      "mergeable_at_observation": true,
+      "gate": "Private-history and consumer gates remain."
+    }
+  ],
+  "limitations": [
+    "The initial laptop directory search exceeded its budget; targeted follow-up resolved the known Desktop dependency. This is not an exhaustive disk inventory.",
+    "Dirty counts are NUL-separated porcelain records, not exact changed-file counts; rename records can occupy multiple entries.",
+    "All four laptop project heads differ from the observed remote mains; ahead/behind and patch overlap were not computed on the Macs.",
+    "Finding source files does not establish complete behavior, clean-room provenance, licensing, API compatibility or a successful build.",
+    "codesign display and identity enumeration do not verify strict signature validity, key usability, notarization, Gatekeeper acceptance or the installed app's source commit.",
+    "Zero matching identities applies only to the enrolled mini account lookup; no signing key was exported or copied.",
+    "No notebook, Messages database, private record, key value, session, unrelated process or unrelated repository contents were inspected.",
+    "No Mac working tree, app installation, keychain, permission, production route, repository lifecycle or visibility was changed.",
+    "Hub production/preview observations from September 8 remain dated evidence; no fresh public route/deployment check occurred in this audit.",
+    "Private home paths, account bindings, hostnames and unrelated project names are omitted from this public record.",
+    "All four Fleet commands completed; this audit did not start a continuing worker."
+  ],
+  "plan_validation": {
+    "scope": "Local planning/checker change, before publication; not native, production or independent acceptance.",
+    "base_commit": "4578d78ad1c7d03420ca3b88fd8cad7693b3dce0",
+    "branch": "codex/delivery-95-plan",
+    "python": "3.12.14",
+    "foundation_unittest_count": 100,
+    "foundation_unittest_result": "passed",
+    "new_regressions": [
+      "Lost, duplicate, invented or newly unmapped requirements are rejected.",
+      "Unknown and direct/indirect cyclic package dependencies are rejected.",
+      "Package status cannot duplicate requirement status authority."
+    ],
+    "commands_passed": [
+      "python -m unittest discover -s tools/tests",
+      "python tools/program.py check",
+      "python tools/program.py render --check",
+      "python tools/profile_catalog.py inspect profiles/research",
+      "python tools/orf_conformance.py",
+      "python tools/incubator_conformance.py",
+      "python tools/profile_catalog.py discover profiles --check registry/profiles.generated.json",
+      "git diff --check"
+    ],
+    "preservation_check": "All 79 requirement IDs, statuses, acceptances, dependencies, required evidence stages, milestones, owners, workstreams and domain/coverage lenses match the base; all 26 work orders exist.",
+    "tested_files": {
+      "tools/program.py": "cd83d041fe120872bdad24c9147e17c09f6235bc53fa78853f7d21aebd74457a",
+      "tools/tests/test_program.py": "453d321173e6312b1795b1d191dfd603deaace7c22b600046c1c1b574acb60d2",
+      "program/DELIVERY-95.md": "fd27df3e1a0bbc83de41be156c0fdf69f53047ac8fdc209b04ce80775baac197"
+    },
+    "repository_ci": "Pending at local evidence capture; consult exact publication commit PR checks for remote CI."
+  }
+}

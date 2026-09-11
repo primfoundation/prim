@@ -2,6 +2,13 @@
 
 This is the durable record of the Foundation-wide build authorized on September 6, 2026. Research is the first implementation path, not the boundary of the mission.
 
+**September 11 delivery target:** [DELIVERY-95.md](DELIVERY-95.md) provides the
+26-package execution order toward 95%, critical acceptance gates, proposed
+outcome rubric and exact next steps. The [Fleet/source audit](evidence/2026-09-11-delivery-audit.json)
+confirms Mac access and a local Desktop dependency candidate while preserving
+source-rights, dirty-work and installed-release gates. Package assignments live
+in `plan.json` and are checked with the existing program command.
+
 **Current publication state:** Foundation bootstrap, ORF compatibility, Library/MCP alpha and sanitized Workbook migration are merged in PRs #5/#6/#7/#10. Verified Hub, Browsers, Primboard, Desktop proof-preflight and organization policy increments are also merged in their owning repositories. `HANDOFF.md` and `evidence/2026-09-07-execution.json` record exact tested commits, CI and unresolved gates. The isolated Cloudflare Hub workbench is deployed; Primboard encrypted-index and recovery changes are merged. See `evidence/2026-09-08-release.json` for exact release evidence. Production cutover, stable/signed releases and independent real-use acceptance remain open.
 
 The later September 8 increments are in `evidence/2026-09-08-portable-delivery.json`: Foundation PR #15 portable hosts, Primboard PR #5 native editing/recovery and Hub PRs #11/#12 actual browser downloads and legacy registry compatibility. `GOAL-STATUS.md` and `REMAINING-GATES.md` describe the remaining scope.
@@ -22,6 +29,7 @@ validation remain open.
 | `BASELINE.md` | Observed repository state, read scope, and migration constraints. |
 | `evidence/` | Dated commands/results, tested file hashes, limitations, and release evidence. |
 | `HANDOFF.md` | Current bounded work, publication evidence, next step, and overlap warnings. |
+| `DELIVERY-95.md` | Detailed execution work orders, critical gates and proposed acceptance rubric; no duplicate requirement status. |
 
 GitHub issues and PRs are coordination surfaces referencing requirement IDs, not another canonical roadmap. Conversations propose changes; reviewed repository changes preserve them. Private source material, credentials, personal records, and sensitive operating details do not belong in this public program record.
 

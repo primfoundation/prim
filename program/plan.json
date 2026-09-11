@@ -1,14 +1,14 @@
 {
   "format_version": 1,
   "program": "Prim Foundation",
-  "as_of": "2026-09-09",
+  "as_of": "2026-09-11",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "portable_distribution_shipped_and_research_capture_verified",
+    "state": "delivery_95_plan_and_fleet_mac_audit",
     "target_repository": "primfoundation/prim",
-    "base_commit": "fc4626fe3b597639725feff65c4cac6a3088b129",
-    "target_branch": "codex/research-artifact-capture",
-    "background_jobs": "No background agents; bounded repository CI and the configured six-hour public health workflow only."
+    "base_commit": "4578d78ad1c7d03420ca3b88fd8cad7693b3dce0",
+    "target_branch": "codex/delivery-95-plan",
+    "background_jobs": "No background agents or continuing Fleet job. Read-only Fleet commands completed; bounded repository CI and the existing six-hour public health workflow are the only configured unattended checks."
   },
   "workstreams": [
     {
@@ -350,6 +350,18 @@
       "stage": "tests",
       "path": "program/evidence/2026-09-09-capture.json",
       "summary": "96 Library tests including 19 capture cases, 97 inherited Foundation tests, actual TypeScript record read and installed CLI capture/retry/full-folder transfer proof. Remote/recursive/independent real-use gates remain."
+    },
+    {
+      "id": "E-SEP11-FLEET-AUDIT",
+      "stage": "implementation",
+      "path": "program/evidence/2026-09-11-delivery-audit.json",
+      "summary": "Read-only Fleet and GitHub source/toolchain inventory informs the 95% work plan. Local prim-sim candidate and company signature metadata are observed; no build, installed acceptance, notary proof or private-store access is claimed."
+    },
+    {
+      "id": "E-SEP11-PLAN-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-11-delivery-audit.json",
+      "summary": "100 local Foundation tests and required program/catalog/compatibility checks passed; added delivery coverage/cycle/status regressions. Original requirement contracts preserved; no release or real-use acceptance implied."
     }
   ],
   "requirements": [
@@ -387,7 +399,8 @@
       ],
       "evidence": [
         "E-IMPL",
-        "E-TEST"
+        "E-TEST",
+        "E-SEP11-PLAN-TEST"
       ],
       "note": "Local checker and negative tests; external review pending."
     },
@@ -429,7 +442,8 @@
         "E-SEP7-IMPL",
         "E-SEP7-TEST",
         "E-SEP8-INCUBATOR-IMPL",
-        "E-SEP8-INCUBATOR-TEST"
+        "E-SEP8-INCUBATOR-TEST",
+        "E-SEP11-FLEET-AUDIT"
       ],
       "note": "Source/consumer work remains tracked per repository, including private and license holds; no open integration branches discarded."
     },
@@ -454,7 +468,8 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP11-PLAN-TEST"
       ],
       "note": "Current implementation PRs cite stable requirements and retain exact source/CI evidence; automated coordination and independent review remain."
     },
@@ -481,9 +496,10 @@
         "E-SEP8-PACK-TEST",
         "E-SEP8-PACK-DEPLOY",
         "E-SEP8-INCUBATOR-IMPL",
-        "E-SEP8-INCUBATOR-TEST"
+        "E-SEP8-INCUBATOR-TEST",
+        "E-SEP11-FLEET-AUDIT"
       ],
-      "note": "Current host, native, Hub and incubator source evidence retained; human and device gates are explicit."
+      "note": "Current host, native, Hub and incubator source evidence retained; human and device gates are explicit. September 11 Fleet/source audit and DELIVERY-95.md give a 26-package resumable plan; no continuing background execution or overall completion percentage is claimed."
     },
     {
       "id": "GOV-001",
@@ -1156,9 +1172,10 @@
       ],
       "evidence": [
         "E-SEP7-IMPL",
-        "E-SEP7-TEST"
+        "E-SEP7-TEST",
+        "E-SEP11-FLEET-AUDIT"
       ],
-      "note": "Desktop still imports an unavailable sibling PrimSimCore source. Proof now fails before live probes instead of skipping source tests and claiming success. Recover authoritative source, then reconcile Mac integration PRs and verify signed-device behavior."
+      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates."
     },
     {
       "id": "HUM-003",
@@ -1665,7 +1682,8 @@
         "E-SEP8-INCUBATOR-IMPL",
         "E-SEP8-INCUBATOR-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP11-FLEET-AUDIT"
       ],
       "note": "Legacy service contracts/routing and per-incubator sources inventoried; current downstream consumers and excluded private/media/runtime histories remain."
     },
@@ -2180,6 +2198,586 @@
         "E-SEP8-PACK-TEST"
       ],
       "note": "Self-service instructions, installable SDK, local/offline workbench and native workflow implemented; outside adoption evidence remains."
+    }
+  ],
+  "delivery_packages": [
+    {
+      "id": "D95-01",
+      "wave": 0,
+      "title": "Recover source and reconcile current work",
+      "owner": "implementation-lead",
+      "goals": [
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "requirements": [
+        "PRG-001",
+        "PRG-004",
+        "PRG-006",
+        "RELENG-001"
+      ],
+      "entry_from": [],
+      "entry_gate": "Read-only inventory and current remote heads retained.",
+      "exit_gate": "Protected checkpoints, exact branch/PR overlap map and prim-sim provenance disposition are retained; no dirty working tree is overwritten."
+    },
+    {
+      "id": "D95-02",
+      "wave": 0,
+      "title": "Make delivery and evidence mechanically checkable",
+      "owner": "implementation-lead",
+      "goals": [
+        "G7"
+      ],
+      "requirements": [
+        "PRG-002",
+        "PRG-003",
+        "PRG-005"
+      ],
+      "entry_from": [
+        "D95-01"
+      ],
+      "entry_gate": "The original 79 requirement IDs are retained.",
+      "exit_gate": "Every requirement has one delivery package; CI rejects drift and invalid dependencies; each increment has exact source and evidence."
+    },
+    {
+      "id": "D95-03",
+      "wave": 1,
+      "title": "Finish the small common contract",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G5"
+      ],
+      "requirements": [
+        "CORE-001",
+        "CORE-002",
+        "CORE-004",
+        "REL-004"
+      ],
+      "entry_from": [
+        "D95-01"
+      ],
+      "entry_gate": "Current profile and legacy fixtures are pinned.",
+      "exit_gate": "Identity, revision, references, authoritative records and context boundaries pass shared positive and negative cases."
+    },
+    {
+      "id": "D95-04",
+      "wave": 1,
+      "title": "Transfer complete packs and preserve attachments",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "requirements": [
+        "CORE-003",
+        "HUM-001"
+      ],
+      "entry_from": [
+        "D95-03"
+      ],
+      "entry_gate": "Captured folder format, digest rules and export limits are explicit.",
+      "exit_gate": "Python, TypeScript, Hub and native hosts reopen transferred packs after originals are removed; attachment loss, unsafe paths and unsupported content are handled explicitly."
+    },
+    {
+      "id": "D95-05",
+      "wave": 2,
+      "title": "Complete the Research lifecycle",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "RES-003"
+      ],
+      "entry_from": [
+        "D95-03",
+        "D95-04"
+      ],
+      "entry_gate": "Original ORF fixtures and byte-preserved capture are available.",
+      "exit_gate": "Continue, challenge, correct, refresh, redact, supersede and retract retain evidence, disagreement, permission and migration loss receipts."
+    },
+    {
+      "id": "D95-06",
+      "wave": 5,
+      "title": "Prove independent Research exchange",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G5"
+      ],
+      "requirements": [
+        "RES-004",
+        "INTEROP-004"
+      ],
+      "entry_from": [
+        "D95-05",
+        "D95-08",
+        "D95-13",
+        "D95-14",
+        "D95-15"
+      ],
+      "entry_gate": "Two installed implementations support the same pinned Research case.",
+      "exit_gate": "Independent workers exchange, revise and reopen a real investigation offline with source bytes, unknown fields and disagreement intact."
+    },
+    {
+      "id": "D95-07",
+      "wave": 1,
+      "title": "Complete the six reference cases and context map",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1"
+      ],
+      "requirements": [
+        "LIFE-001",
+        "LIFE-002"
+      ],
+      "entry_from": [
+        "D95-03"
+      ],
+      "entry_gate": "Small-substrate scenarios expose unresolved semantics.",
+      "exit_gate": "Person, Receipt, Contract, Project, Decision and System have fixtures and usable views; Research remains first and Workbook remains additional."
+    },
+    {
+      "id": "D95-08",
+      "wave": 2,
+      "title": "Handle identity, composition and concurrent history",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G3",
+        "G5"
+      ],
+      "requirements": [
+        "REL-001",
+        "REL-002",
+        "REL-003"
+      ],
+      "entry_from": [
+        "D95-03",
+        "D95-04"
+      ],
+      "entry_gate": "Identity and authority boundaries are fixed for this increment.",
+      "exit_gate": "Ambiguous matches are reversible; cyclic or unavailable references are bounded; stale edits and cross-device conflicts cannot silently lose data."
+    },
+    {
+      "id": "D95-09",
+      "wave": 2,
+      "title": "Make profile authoring self-service",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1"
+      ],
+      "requirements": [
+        "PUB-001",
+        "PUB-004",
+        "PUB-005",
+        "DEV-002"
+      ],
+      "entry_from": [
+        "D95-02",
+        "D95-03"
+      ],
+      "entry_gate": "Local publication and creation kits already work.",
+      "exit_gate": "An unfamiliar author scaffolds, validates, explains and publishes a separate data-only profile with actionable failures and no Foundation repository dependency."
+    },
+    {
+      "id": "D95-10",
+      "wave": 4,
+      "title": "Authenticate publishing and remote resolution",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G2"
+      ],
+      "requirements": [
+        "PUB-002",
+        "PUB-003",
+        "PUB-006",
+        "DIR-002"
+      ],
+      "entry_from": [
+        "D95-09",
+        "D95-19"
+      ],
+      "entry_gate": "Publisher trust model and namespace proposal are reviewed for implementation.",
+      "exit_gate": "Authorized publication, alias and ownership changes, revocation, approved refresh and private sources pass immutable-pin, rollback and offline tests."
+    },
+    {
+      "id": "D95-11",
+      "wave": 2,
+      "title": "Finish one Hub discovery and authoring surface",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2"
+      ],
+      "requirements": [
+        "DIR-001",
+        "DIR-003",
+        "DIR-005",
+        "DEV-005"
+      ],
+      "entry_from": [
+        "D95-04",
+        "D95-09"
+      ],
+      "entry_gate": "Canonical catalog and complete-pack contracts are available.",
+      "exit_gate": "Human, JSON and MCP versions agree; desktop and phone flows create, find, edit and export useful local packs with explicit offline/error states."
+    },
+    {
+      "id": "D95-12",
+      "wave": 4,
+      "title": "Operate moderation and honest adoption signals",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2",
+        "G7"
+      ],
+      "requirements": [
+        "DIR-004",
+        "DIR-006",
+        "DIR-007"
+      ],
+      "entry_from": [
+        "D95-10",
+        "D95-19",
+        "D95-24"
+      ],
+      "entry_gate": "Publisher identity, privacy policy and reporting ownership are defined.",
+      "exit_gate": "Moderation, reports, appeals and retention work; optional collection has authenticated consent, revocation and anti-abuse proof before activation."
+    },
+    {
+      "id": "D95-13",
+      "wave": 2,
+      "title": "Release supported packages and clients",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "requirements": [
+        "DEV-001",
+        "DEV-004",
+        "DEV-006",
+        "RELENG-002"
+      ],
+      "entry_from": [
+        "D95-04",
+        "D95-09"
+      ],
+      "entry_gate": "Portable formats and package boundaries are pinned.",
+      "exit_gate": "Clean installed Python, TypeScript and native artifacts pass exact-version compatibility; release artifacts, provenance and supported client instructions are durable."
+    },
+    {
+      "id": "D95-14",
+      "wave": 3,
+      "title": "Accept Primboard as a trustworthy daily product",
+      "owner": "implementation-lead",
+      "goals": [
+        "G3"
+      ],
+      "requirements": [
+        "HUM-004"
+      ],
+      "entry_from": [
+        "D95-04",
+        "D95-08",
+        "D95-19"
+      ],
+      "entry_gate": "Dirty Mac work is protected and a clean candidate is built.",
+      "exit_gate": "Signed installed capture, convert, edit, search, recovery and complete export pass with the existing identity; private-store and Keychain proofs remain private."
+    },
+    {
+      "id": "D95-15",
+      "wave": 3,
+      "title": "Recover and ship the generic Desktop host",
+      "owner": "implementation-lead",
+      "goals": [
+        "G5"
+      ],
+      "requirements": [
+        "HUM-002"
+      ],
+      "entry_from": [
+        "D95-01",
+        "D95-04",
+        "D95-08",
+        "D95-19"
+      ],
+      "entry_gate": "prim-sim source scope, provenance and reuse authority are resolved.",
+      "exit_gate": "Clean native build, reconciled integration PRs and real signed open-edit-save/attachments/FDA/XPC acceptance pass on supported Macs."
+    },
+    {
+      "id": "D95-16",
+      "wave": 3,
+      "title": "Prove accessibility and representative environments",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "requirements": [
+        "HUM-003",
+        "LIFE-004"
+      ],
+      "entry_from": [
+        "D95-11",
+        "D95-14",
+        "D95-15"
+      ],
+      "entry_gate": "Working public and native candidate journeys are available.",
+      "exit_gate": "Screen reader, keyboard, phone, localization, low-resource/offline and representative household/organization continuity tasks have retained results."
+    },
+    {
+      "id": "D95-17",
+      "wave": 5,
+      "title": "Finish trustworthy local and remote ingestion",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G5"
+      ],
+      "requirements": [
+        "ING-001",
+        "ING-002",
+        "ING-003",
+        "ING-004"
+      ],
+      "entry_from": [
+        "D95-04",
+        "D95-05",
+        "D95-18"
+      ],
+      "entry_gate": "Artifact lineage and scoped operation contracts exist.",
+      "exit_gate": "Original bytes, source change/revocation/deletion, hostile recursion, cancellation, quotas and resumability pass local plus authorized remote connector tests."
+    },
+    {
+      "id": "D95-18",
+      "wave": 2,
+      "title": "Enforce bounded agent operations",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G5",
+        "G7"
+      ],
+      "requirements": [
+        "DEV-003",
+        "AUTH-001",
+        "AUTH-002",
+        "AUTH-003",
+        "AUTH-004"
+      ],
+      "entry_from": [
+        "D95-03",
+        "D95-19"
+      ],
+      "entry_gate": "Threat boundaries and knowledge-versus-authority semantics are explicit.",
+      "exit_gate": "Actual runtime enforcement rejects unauthorized, expired, revoked and over-budget work; receipts, idempotency and emergency stop survive restart."
+    },
+    {
+      "id": "D95-19",
+      "wave": 1,
+      "title": "Close security and private-data failure modes",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G7"
+      ],
+      "requirements": [
+        "SEC-001",
+        "SEC-002",
+        "SEC-003",
+        "SEC-004"
+      ],
+      "entry_from": [
+        "D95-01"
+      ],
+      "entry_gate": "Source and data boundaries are inventoried without exporting private material.",
+      "exit_gate": "Threat-led tests, key recovery, renderer/parser isolation, supply-chain controls and scoped independent security/incident review meet the declared release scope."
+    },
+    {
+      "id": "D95-20",
+      "wave": 5,
+      "title": "Migrate incubators and prove compatibility",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G6"
+      ],
+      "requirements": [
+        "INTEROP-001",
+        "INTEROP-002",
+        "INTEROP-003",
+        "RELENG-003"
+      ],
+      "entry_from": [
+        "D95-03",
+        "D95-07",
+        "D95-08"
+      ],
+      "entry_gate": "Per-repository privacy, license and consumer classifications exist.",
+      "exit_gate": "Every migration retains originals, versioned loss reports and second-reader proof; every remaining repository has an explicit private, tooling or historical disposition."
+    },
+    {
+      "id": "D95-21",
+      "wave": 4,
+      "title": "Cut the public Hub over with verified ownership",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2",
+        "G7"
+      ],
+      "requirements": [
+        "OPS-001",
+        "OPS-005"
+      ],
+      "entry_from": [
+        "D95-11",
+        "D95-13",
+        "D95-23"
+      ],
+      "entry_gate": "Old clients, provider ownership, costs and rollback artifacts are mapped.",
+      "exit_gate": "A reviewed production route change passes TLS, quotas, legacy clients, real external MCP host and observed rollback/return with accountable operators."
+    },
+    {
+      "id": "D95-22",
+      "wave": 4,
+      "title": "Prove Browsers and consolidate its live services",
+      "owner": "implementation-lead",
+      "goals": [
+        "G4"
+      ],
+      "requirements": [
+        "OPS-002"
+      ],
+      "entry_from": [
+        "D95-01",
+        "D95-19",
+        "D95-23"
+      ],
+      "entry_gate": "Login/gateway source is consolidated and the real-account test boundary is authorized.",
+      "exit_gate": "Real Apple login, cookies, container routing, tenant isolation, expiry, monitoring and production rollback pass; old services retire only after compatibility gates."
+    },
+    {
+      "id": "D95-23",
+      "wave": 1,
+      "title": "Make recovery, maintenance and free operation sustainable",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G7"
+      ],
+      "requirements": [
+        "OPS-003",
+        "OPS-004",
+        "RELENG-004"
+      ],
+      "entry_from": [
+        "D95-01",
+        "D95-19",
+        "D95-24"
+      ],
+      "entry_gate": "Current services and authority boundaries are inventoried.",
+      "exit_gate": "Named operators, approved costs, supported versions, recovery goals and backup/key-loss/vendor-exit drills are exercised by a replacement maintainer."
+    },
+    {
+      "id": "D95-24",
+      "wave": 1,
+      "title": "Establish actual stewardship and policy ownership",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G7"
+      ],
+      "requirements": [
+        "GOV-001",
+        "GOV-002",
+        "GOV-003",
+        "GOV-004"
+      ],
+      "entry_from": [
+        "D95-01"
+      ],
+      "entry_gate": "Existing charter and reserved human decisions are retained.",
+      "exit_gate": "Human-approved rights, licensing and standards policies have actual owners; outside contribution, transfer, succession and abandoned-maintainer cases are resolved."
+    },
+    {
+      "id": "D95-25",
+      "wave": 5,
+      "title": "Deliver useful diagnostics, onboarding and support",
+      "owner": "implementation-lead",
+      "goals": [
+        "G2",
+        "G3",
+        "G5",
+        "G7"
+      ],
+      "requirements": [
+        "LIFE-003",
+        "COMM-001",
+        "COMM-002",
+        "COMM-005"
+      ],
+      "entry_from": [
+        "D95-07",
+        "D95-11",
+        "D95-14",
+        "D95-15",
+        "D95-16"
+      ],
+      "entry_gate": "Representative cases and accessible product journeys are usable.",
+      "exit_gate": "Coverage, Fidelity and Operability preserve unknowns; new user/publisher tasks need no founder help; maintained docs, examples, releases and support paths exist."
+    },
+    {
+      "id": "D95-26",
+      "wave": 6,
+      "title": "Run independent acceptance and close the release",
+      "owner": "implementation-lead",
+      "goals": [
+        "G1",
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "requirements": [
+        "COMM-003",
+        "COMM-004"
+      ],
+      "entry_from": [
+        "D95-06",
+        "D95-10",
+        "D95-12",
+        "D95-16",
+        "D95-17",
+        "D95-18",
+        "D95-20",
+        "D95-21",
+        "D95-22",
+        "D95-23",
+        "D95-24",
+        "D95-25"
+      ],
+      "entry_gate": "Release candidates and scoped review materials are reproducible.",
+      "exit_gate": "Consented outside feedback changes tracked requirements; all critical gates pass and the weighted readiness assessment retains any explicitly accepted final-five-percent deferrals."
     }
   ]
 }

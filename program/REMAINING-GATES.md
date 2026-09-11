@@ -1,20 +1,21 @@
 # Remaining delivery gates
 
-The original Foundation scope remains intact. The 75% target does not remove unfinished requirements or turn tests into outside acceptance.
+The original Foundation scope remains intact. The user's new 95% target is sequenced in [DELIVERY-95.md](DELIVERY-95.md); it does not remove unfinished requirements or turn tests into outside acceptance. The September 11 Fleet audit replaces the earlier lack-of-Mac-access assumption.
 
 ## Source, device, account and human gates
 
 | Gate | Ready | Needed |
 | --- | --- | --- |
-| Desktop source | Required-source preflight and existing integration branches | Actual prim-sim / PrimSimCore repository or checkout, remote, commit and license. Never use a stub to make the build pass. |
-| Primboard Mac release | MAC-RELEASE.md and safe candidate/notarization tooling; PR #5 macOS CI | Run that repository work order on the authorized Mac with its existing Developer ID. Retain signing/notary/Gatekeeper and installed existing-store, Touch ID/TCC and app/CLI results. Keep keys/private records out of public issues. |
+| Desktop source | Fleet located a local package declaring PrimSimCore, with 10 source/four test files; preflight and integration branches retained | Recover source lineage/reuse authority (no Git/root license observed), verify API/build and preserve dirty work before integration. Never use a stub to make the build pass. |
+| Primboard Mac release | Fleet works on both Macs; company identity/signature metadata observed on laptop; MAC-RELEASE.md, safe candidate/notarization tooling and PR #5 macOS CI | Checkpoint dirty work, prepare isolated current-source candidate, prove usable signing/notary/Gatekeeper and installed existing-store, Touch ID/TCC and app/CLI results. Metadata inspection did not establish these gates. Keep keys/private records out of public issues. |
+| Desktop installation identity | Two installed copies observed with different bundle IDs | Map launch/file association and permission principal before choosing a signed candidate. Do not delete either installation or rename runtime identities as cleanup. |
 | Native durability | Encrypted journal and controlled abrupt-process tests; same-key backup | Real device/disk-exhaustion/physical power-loss and representative large-store tests, plus independent review. Same-key backup cannot recover a lost key. |
 | Browsers accounts | Synthetic signed Apple identity/session tests and dry builds | Preview cookie domain and real Apple/login/gateway/container session, then observed production route and rollback acceptance. |
 | Public production | Hub preview, pinned legacy API, exact assets and rollback target | Current old-site clients, separate Railway service mapping, named operator/cost/escalation ownership, then a reviewable cutover and rollback plan. |
 | Private/licensing migration | Per-repository inventory and public selected baselines | Scoped private-history/consumer audit; explicit reuse authority where no license was observed; ownership decision for private company products. |
 | Independent stewardship | Governance, contribution and security documents | Actual role acceptance, private reporting/escalation, independent technical/domain review and an outside maintainer exercising the records. |
 
-The Mac work is already specified in the product work order. Cloudflare does not provide a local Mac executor. No additional Mac installation is needed to use the public Hub's local/offline authoring.
+The Mac work is already specified in the product work order and can now be executed through the selected Fleet connection. No additional general-purpose Mac executor installation is indicated. Actual OS consent, keychain interaction or source-owner decisions may still require a person at the specific gate. Prepare concrete candidates and evidence before asking.
 
 ## Remaining implementation
 

@@ -255,6 +255,11 @@ Do not copy AIC Hub's enterprise identity/data model: Prim Foundation is anonymo
 
 ## Immediate execution order
 
+The list below is the original September 6 sequence. Its early implementation
+steps have since shipped. Use [DELIVERY-95.md](DELIVERY-95.md), `plan.json` and
+`HANDOFF.md` for the September 11 execution queue and Fleet/source findings;
+retain the migration gates and topology in this document.
+
 1. reconcile current stacked `prim` PRs #5–#8 and preserve their evidence;
 2. finish inventory of current Foundation + Eidos incubators and open PRs;
 3. audit `prim-web` and build `prims-hub` Cloudflare preview without production cutover;

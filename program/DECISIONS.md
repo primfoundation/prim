@@ -218,3 +218,26 @@ complete-capture check requires a trusted receipt digest. Existing definitions
 and record-only host exporters remain unchanged; full-folder transfer is required
 for artifacts. See ARTIFACT-CAPTURE.md for budgets, failure policy and remaining
 extraction, revocation, remote connector, durability and outside-review gates.
+
+## D020 — Execute the preserved scope toward a measurable 95% target
+
+Status: user-directed delivery target; execution grouping adopted; numerical
+release-readiness rubric proposed, with no current score or scope reduction.
+
+Preserve all 79 requirements and their acceptance/evidence/dependency contracts.
+Coordinate them through 26 packages in the same ledger, without package statuses.
+The checker enforces complete unique coverage and an acyclic entry-artifact map.
+DELIVERY-95.md defines seven start waves, concrete work orders, a fixed proposed
+35-outcome/100-point rubric and critical gates that veto any 95% claim. The only
+candidate final-five-percent deferrals are optional consented popularity
+activation and administrative repository renames/archives after successors pass.
+Any deferral stays visible with an owner, reason and review date; no missing core
+product, data protection, real-use or independent-review gate is hidden there.
+
+The September 11 Fleet audit supersedes the prior lack-of-Mac-execution observation.
+It found dirty local checkouts, two Desktop bundle identities and a local prim-sim
+candidate without observed Git/root-license provenance. Checkpoint before integration;
+verify source rights/build before publication; preserve native proof and private
+data boundaries. Company signing metadata is not an installed-release pass.
+The audit itself makes no source/app/permission/production changes and starts no
+continuing worker. See evidence/2026-09-11-delivery-audit.json.

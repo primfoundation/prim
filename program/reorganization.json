@@ -1,7 +1,7 @@
 {
   "format": "prim-foundation-reorganization",
   "version": 1,
-  "as_of": "2026-09-08",
+  "as_of": "2026-09-11",
   "target_active_repositories": [
     "primfoundation/.github",
     "primfoundation/prim",
@@ -109,7 +109,7 @@
         6
       ],
       "notes": "Preserve Mac proof gates; reconcile existing connector, XPC/Messages, logging and person-resolution work before broad refactor.",
-      "source_gate": "../prim-sim is required but authoritative source provenance is unavailable; proof preflight PR #7 merged."
+      "source_gate": "September 11 Fleet audit found a local prim-sim / PrimSimCore package: 10 Swift source files, four test files, no Git repository or root license observed. Provenance/reuse authority and actual build/API compatibility remain unresolved; preserve dirty checkout and PRs #2/#3/#4/#6. See evidence/2026-09-11-delivery-audit.json."
     },
     {
       "source": "primfoundation/prims-browsers",

@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-09. Execution: **portable_distribution_shipped_and_research_capture_verified**.
+As of 2026-09-11. Execution: **delivery_95_plan_and_fleet_mac_audit**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
@@ -42,6 +42,39 @@ External contributors publish and use profiles; public discovery, documentation,
 
 Governance, independent evidence, real-user success, operations, recovery, support and sustainability pass the declared release scope.
 
+## Delivery order toward 95%
+
+[Execution plan](program/DELIVERY-95.md). Packages organize work; requirement status below remains authoritative. Waves are scheduling guides, not completion percentages or replacement milestones.
+
+| Package | Start wave | Outcome | Primary requirements |
+| --- | --- | --- | --- |
+| D95-01 | 0 | Recover source and reconcile current work | PRG-001, PRG-004, PRG-006, RELENG-001 |
+| D95-02 | 0 | Make delivery and evidence mechanically checkable | PRG-002, PRG-003, PRG-005 |
+| D95-03 | 1 | Finish the small common contract | CORE-001, CORE-002, CORE-004, REL-004 |
+| D95-04 | 1 | Transfer complete packs and preserve attachments | CORE-003, HUM-001 |
+| D95-05 | 2 | Complete the Research lifecycle | RES-001, RES-002, RES-003 |
+| D95-06 | 5 | Prove independent Research exchange | RES-004, INTEROP-004 |
+| D95-07 | 1 | Complete the six reference cases and context map | LIFE-001, LIFE-002 |
+| D95-08 | 2 | Handle identity, composition and concurrent history | REL-001, REL-002, REL-003 |
+| D95-09 | 2 | Make profile authoring self-service | PUB-001, PUB-004, PUB-005, DEV-002 |
+| D95-10 | 4 | Authenticate publishing and remote resolution | PUB-002, PUB-003, PUB-006, DIR-002 |
+| D95-11 | 2 | Finish one Hub discovery and authoring surface | DIR-001, DIR-003, DIR-005, DEV-005 |
+| D95-12 | 4 | Operate moderation and honest adoption signals | DIR-004, DIR-006, DIR-007 |
+| D95-13 | 2 | Release supported packages and clients | DEV-001, DEV-004, DEV-006, RELENG-002 |
+| D95-14 | 3 | Accept Primboard as a trustworthy daily product | HUM-004 |
+| D95-15 | 3 | Recover and ship the generic Desktop host | HUM-002 |
+| D95-16 | 3 | Prove accessibility and representative environments | HUM-003, LIFE-004 |
+| D95-17 | 5 | Finish trustworthy local and remote ingestion | ING-001, ING-002, ING-003, ING-004 |
+| D95-18 | 2 | Enforce bounded agent operations | DEV-003, AUTH-001, AUTH-002, AUTH-003, AUTH-004 |
+| D95-19 | 1 | Close security and private-data failure modes | SEC-001, SEC-002, SEC-003, SEC-004 |
+| D95-20 | 5 | Migrate incubators and prove compatibility | INTEROP-001, INTEROP-002, INTEROP-003, RELENG-003 |
+| D95-21 | 4 | Cut the public Hub over with verified ownership | OPS-001, OPS-005 |
+| D95-22 | 4 | Prove Browsers and consolidate its live services | OPS-002 |
+| D95-23 | 1 | Make recovery, maintenance and free operation sustainable | OPS-003, OPS-004, RELENG-004 |
+| D95-24 | 1 | Establish actual stewardship and policy ownership | GOV-001, GOV-002, GOV-003, GOV-004 |
+| D95-25 | 5 | Deliver useful diagnostics, onboarding and support | LIFE-003, COMM-001, COMM-002, COMM-005 |
+| D95-26 | 6 | Run independent acceptance and close the release | COMM-003, COMM-004 |
+
 ## Full coverage and delivery obligations
 
 ### PRG — Program record and delivery control
@@ -64,7 +97,7 @@ State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: All workstreams have requirements; dependencies and evidence resolve; cycles and false completed states fail; the generated roadmap cannot drift unnoticed.
 
-Required evidence: implementation, tests, review. Evidence retained: E-IMPL, E-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-IMPL, E-TEST, E-SEP11-PLAN-TEST. Dependencies: none.
 
 Local checker and negative tests; external review pending.
 
@@ -84,7 +117,7 @@ State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Cross-repository inventory retains docs/opf and branch work, records owners/overlap and preserves incomplete acceptance gates.
 
-Required evidence: implementation, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP11-FLEET-AUDIT. Dependencies: none.
 
 Source/consumer work remains tracked per repository, including private and license holds; no open integration branches discarded.
 
@@ -94,7 +127,7 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Issues/PRs and future UI cite stable requirement IDs; scope changes, decisions, risks and evidence remain traceable to the ledger.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: PRG-002, PRG-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP11-PLAN-TEST. Dependencies: PRG-002, PRG-003.
 
 Current implementation PRs cite stable requirements and retain exact source/CI evidence; automated coordination and independent review remain.
 
@@ -104,9 +137,9 @@ State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: A replacement worker can identify inputs, changes, commands, evidence, blocked publication and the exact next step without private chat reconstruction.
 
-Required evidence: implementation, review. Evidence retained: E-IMPL, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-IMPL, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP11-FLEET-AUDIT. Dependencies: none.
 
-Current host, native, Hub and incubator source evidence retained; human and device gates are explicit.
+Current host, native, Hub and incubator source evidence retained; human and device gates are explicit. September 11 Fleet/source audit and DELIVERY-95.md give a 26-package resumable plan; no continuing background execution or overall completion percentage is claimed.
 
 ### GOV — Mission and governance
 
@@ -486,9 +519,9 @@ State: `blocked` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Supported platforms have explicit matrices; a real app opens attachments, edits, saves and exports the actual file with no hidden competing store.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST. Dependencies: HUM-001, REL-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT. Dependencies: HUM-001, REL-003.
 
-Desktop still imports an unavailable sibling PrimSimCore source. Proof now fails before live probes instead of skipping source tests and claiming success. Recover authoritative source, then reconcile Mac integration PRs and verify signed-device behavior.
+Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates.
 
 **HUM-003 — Support mobile and accessible use**
 
@@ -718,7 +751,7 @@ State: `in_progress` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: Existing registries, profiles, SDKs, products and in-flight branches have owners and dependency maps; compatibility decisions preserve open obligations.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP11-FLEET-AUDIT. Dependencies: none.
 
 Legacy service contracts/routing and per-incubator sources inventoried; current downstream consumers and excluded private/media/runtime histories remain.
 
