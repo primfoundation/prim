@@ -62,6 +62,29 @@ That does not mean zero implementation. It means the existing 75% claim was
 never established against a whole-project acceptance denominator. The fresh
 audit does not manufacture a current percentage.
 
+## September 12 execution update
+
+The complete-pack dependency now ships in merged Foundation PR #20 and live Hub
+PR #15. Library/SDK installed binary roundtrips retain all payloads after original
+source deletion; Hub editing retains attachments and receipts and passed 15 real
+browser tests plus post-deployment exact-file health. Native complete-pack storage
+still prevents closing D95-04.
+
+D95-05 reached company signing, Apple notarization, stapling and Gatekeeper, then
+found an actual existing-store incompatibility: the installed development notebook
+contains newer item types and metadata absent from clean main. Verified app/store
+checkpoints allowed restoration of the prior app/CLI without changing original
+notebook bytes. Primboard PR #6 now refuses lossy upgrades, unsafe replacement-key
+creation and attachment-dropping imports; macOS CI and 172 laptop tests passed
+with one intentional crash-worker skip. Source/feature reconciliation is the next
+native prerequisite, not another notary submission or deletion of newer metadata.
+
+Exact commits, deployment/rollback identifiers, test scope and sanitized Fleet
+receipts are linked from `plan.json` and `HANDOFF.md`. These facts advance the
+existing packages and do not change the acceptance denominator or authorize a
+95% claim. The remaining reference, lifecycle, authenticated publisher, Browsers,
+production/operator and independent-review work remains in the work orders below.
+
 ## A measurable definition of 95%
 
 Use the following **proposed release-readiness rubric**, fixed before the next

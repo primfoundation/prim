@@ -1,0 +1,117 @@
+{
+  "recorded_at": "2026-09-12",
+  "scope": "D95-04 complete-pack Hub editing; verified exact CI artifact deployed only to the existing isolated preview",
+  "repository": "primfoundation/prim-web",
+  "pull_request": "https://github.com/primfoundation/prim-web/pull/15",
+  "version": "0.2.0-alpha.2",
+  "tested_head": "a30a851d82b696fcfc54ec8fdf953708ede76f00",
+  "tested_tree": "beda0731ef569d171fccc4f11474a440bce83c61",
+  "merge_commit": "d14e43c988e2db4ffb9335e7662596b9db43ca7b",
+  "foundation_transport_commit": "67e24c4a4a8480beef6a3b9427737578c1978998",
+  "implementation": {
+    "complete_pack": "Open, validate, edit and save all original payload files, captured artifacts and initial receipts; preserve unknown bytes and reject missing/changed referenced artifacts",
+    "receipt": "Initial capture receipt stays unchanged and does not endorse later edits",
+    "races": "Late file-open or save completion cannot replace newer edits or mark them saved",
+    "data_boundary": "Private records remain in the user browser; no hosted private-instance store or telemetry"
+  },
+  "validation": {
+    "unit_dom_drift_and_typechecks": "40 checks passed",
+    "real_python_hub_sdk_exchange": "Capture binary originals in Python, edit through Hub, reopen with SDK and Python after original deletion; passed",
+    "ci_preview_release": 34661616745,
+    "ci_browser": 34661616743,
+    "browser_tests_passed": 15,
+    "browser_tests_skipped": 1,
+    "skip_reason": "Intentional phone-profile hardware-keyboard test skip",
+    "browser_scope": "Chromium desktop and phone-size WebKit downloads, attachment edit/reopen offline, accessibility and overflow",
+    "live_browser": "Hosted workbench opened, new Research created and structural validation passed; synthetic data only"
+  },
+  "artifact": {
+    "ci_artifact_id": 10286904593,
+    "zip_sha256": "f70b4119173851a252a954103905d93f27c618f95215e65e66c1c20bd99ee9ba",
+    "ci_build_commit": "27a251c7b784802de732fcb56d28868c26fc0e84",
+    "ci_build_note": "GitHub pull-request test merge; full tree verified equal to the tested PR head",
+    "worker_module_sha256": "b7577431a28e1236580f2e1091559ddcbd46d9c2f3283028c6b15d0e612377b9",
+    "worker_module_bytes": 742233,
+    "asset_count": 36,
+    "local_verification": "Downloaded archive digest, module digest and all asset hashes verified before deployment; no locally rebuilt substitute"
+  },
+  "deployment": {
+    "url": "https://prims-hub-preview.eidos-agi.workers.dev",
+    "worker": "prims-hub-preview",
+    "version": "7a794e4c-c6d2-4ab0-8e72-498a007e3b2f",
+    "deployment_id": "f32784e0-f03b-459b-8e4f-1a3a81a88a9d",
+    "traffic_percent": 100,
+    "previous_version": "2dd0054f-5f19-4a93-9d2b-907b14a99752",
+    "production_domain_cutover": false,
+    "dns_change": false,
+    "plan_upgrade": false
+  },
+  "post_deployment_health": {
+    "run": 34661766079,
+    "job": 103467059474,
+    "artifact_id": 10288275308,
+    "artifact_sha256": "9d403b6e5d2628a9dc7f9dbe79d8eef7350a83b4ab9cb0b4e9b2677c96448f27",
+    "rerun_note": "First run correctly failed before new release deployment; rerun passed after deployment",
+    "result": {
+      "observed_at": "2026-09-12T00:38:03.954899+00:00",
+      "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+      "scope": "public availability and exact release bytes; no user-record data",
+      "checks": [
+        {
+          "route": "/healthz",
+          "success": true,
+          "status": 200,
+          "elapsed_ms": 376
+        },
+        {
+          "route": "/",
+          "success": true,
+          "status": 200,
+          "sha256": "9748ad25aed089481583eb1f8db3fbaf9b4e1c30e8a263f75cf90aa9df37f96b",
+          "elapsed_ms": 112
+        },
+        {
+          "route": "/workbench/",
+          "success": true,
+          "status": 200,
+          "sha256": "0d6fdae85fd15490dfc2a4073ece7b06b7a0fd38418639623d43acc28482d6f2",
+          "elapsed_ms": 454
+        },
+        {
+          "route": "/connect/",
+          "success": true,
+          "status": 200,
+          "sha256": "aedc4d09de1ebb1bf7653e6b569a687877b5c7595c2896de7705d5a1dbf7a29f",
+          "elapsed_ms": 223
+        },
+        {
+          "route": "/assets/workbench.js",
+          "success": true,
+          "status": 200,
+          "sha256": "ce1eb690d7afa7cba7e2d885e0b79d33479d41bd58b4a7e4e7bde3778d96a3f4",
+          "elapsed_ms": 231
+        },
+        {
+          "route": "/downloads/prim-workbench.html",
+          "success": true,
+          "status": 200,
+          "sha256": "01b177346f4b82def517bec57335047bceb31ed57d12198cc3909244fabbcdea",
+          "elapsed_ms": 292
+        }
+      ],
+      "success": true
+    }
+  },
+  "other_checks": {
+    "hosted_http_mcp_run": 34661766110,
+    "conclusion": "success",
+    "timing": "Completed on merge before this deployment; not represented as post-deployment protocol proof"
+  },
+  "not_established": [
+    "Native attachment-preserving import/export",
+    "Production old-site and client cutover",
+    "Independent user or assistive-technology acceptance",
+    "Publisher authentication, factual truth or permission to share",
+    "Overall 95% acceptance"
+  ]
+}

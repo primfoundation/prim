@@ -11,28 +11,49 @@ claim has been established. The planning change does not complete requirements.
 The September 12 execution preserved and reconstructed Desktop, Primboard (both
 Macs) and Browsers source snapshots privately. Foundation's current 97 files are
 verified separately because its existing Git history has a missing object. Original
-working trees and installed applications remain intact. The recovered private
-PrimSimCore candidate and clean Desktop main build successfully; provenance is
-still unresolved. Desktop's test compile fix reveals 27 legacy registry/pairing
-assertion failures across 20 tests. A clean Primboard main candidate is now actually
-company-signed; the existing notarization profile works and the saved submission
-is in progress. Resume that submission rather than resubmitting. Sanitized receipts
-are in [Mac execution evidence](evidence/2026-09-12-mac-execution.json).
+working trees remain intact. The recovered private PrimSimCore candidate and clean
+Desktop main build successfully; provenance remains unresolved. Desktop's test
+compile fix reveals 27 legacy host assertion failures across 20 tests.
 
-Library 0.1.0a4 and SDK 0.5.0-dev.3 implement complete-pack ZIP transport. All
-payload bytes, unknown files and capture receipts survive; Research with missing
-or changed embedded evidence is refused. Actual Python → TypeScript → Python
-archives are byte-identical after deleting originals. 110 Library tests, 100
-Foundation tests, SDK checks and installed wheel/tarball checks pass locally.
+Library 0.1.0a4 and SDK 0.5.0-dev.3 complete-pack transport is merged in PR #20 at
+`d01805f831f9c9a15ac8458409d3ab929886a026`, after all three CI workflows passed.
+Python → TypeScript → Python archives are byte-identical after deleting originals;
+110 Library tests, 100 Foundation tests, SDK and installed wheel/tarball checks pass.
 See [the contract](COMPLETE-PACK-TRANSFER.md) and
-[verification evidence](evidence/2026-09-12-complete-pack.json). Exact publication
-state belongs to the PR and its CI runs; this evidence begins with local checks.
+[verification/publication evidence](evidence/2026-09-12-complete-pack.json).
 
-**Next execution:** finish Hub complete-pack open/edit/save and native integration;
-resume the existing Primboard notarization and verify Gatekeeper before installation;
-reconcile Desktop source provenance and legacy host failures without changing old
-working trees. Continue remaining reference cases and lifecycle packages while
-actual identity/review gates are resolved. No overall 95% claim is established.
+Hub PR #15 is merged at `d14e43c988e2db4ffb9335e7662596b9db43ca7b` and the exact CI
+artifact is deployed to the existing isolated preview. Complete packs open, edit,
+save and reopen with original attachments, unknown files and capture receipts.
+40 unit/DOM/type checks and 15 real browser tests pass; one phone hardware-keyboard
+case is intentionally skipped. Post-deployment health verifies all essential routes
+and release bytes. [Hub release evidence](evidence/2026-09-12-hub-transfer-release.json)
+retains source, artifact, Worker version, rollback and checks. Production domain
+cutover and independent user acceptance remain separate gates.
+
+Primboard's clean-main candidate was company-signed, Apple-notarized, stapled and
+Gatekeeper-accepted; its freshly extracted selftest passed. After a verified app/store
+checkpoint it was temporarily installed with the matching CLI. **Existing-store
+acceptance failed before migration:** the installed development notebook uses video
+and newer metadata that clean main does not support. The original app and CLI were
+restored, and every original notebook file remains byte-identical. Do not retry the
+installation by removing metadata or treating this valid newer format as corruption.
+[Mac execution evidence](evidence/2026-09-12-mac-execution.json) retains sanitized
+receipts; private source, notebooks, keys and diagnostic logs remain on the Macs.
+
+Primboard PR #6 is now merged at `f9161fc8d8a503d9dcf974c78361727f47f29667`
+after macOS CI passed. It refuses unsupported notebook formats before lossy
+migration, protects missing/concurrently created encryption keys, and refuses
+attachment-dropping record-only imports/exports. Eleven new synthetic regressions
+cover these boundaries. This source increment is not installed over the restored
+app and does not resolve the newer private notebook's feature compatibility.
+
+**Next execution:** reconcile the newer installed Primboard source/features, then
+complete native attachment-preserving storage before another existing-store upgrade.
+Finish Desktop source provenance and legacy host failures without changing old
+working trees. Continue remaining reference cases, Research lifecycle, authenticated
+distribution, Browsers real-account and production/operator/reviewer work packages.
+No overall 75% or 95% acceptance claim is established.
 
 Foundation PR #19 is merged at `eed0e6eae3f08352d587ff33738613bd377d98ac`, the
 input main for the complete-pack increment. The original 79 requirement contracts
