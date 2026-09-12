@@ -6,6 +6,7 @@ import { getApplet, getTool, getType, listApplets, listTools, listTypes } from "
 import { ProfileLibrary, ProfileError, parseProfileJSON } from "./profile-library.ts";
 import { object } from "./profile-schema.ts";
 import { lstatSync, readFileSync } from "node:fs";
+import { exportCompletePack, importCompletePack, checkCompletePack } from './pack-transfer.ts';
 
 const args = process.argv.slice(2);
 const cmd = args[0];
@@ -17,7 +18,7 @@ if (!cmd) {
 
 try {
   if (cmd === "profile") {
-    profileCmd(args.slice(1));
+    await profileCmd(args.slice(1));
     process.exit(0);
   }
   if (cmd === "registry") {
@@ -75,9 +76,26 @@ function usage(): void {
   console.error("       prim profile list");
   console.error("       prim profile create <namespace/name> --version <exact-version> --output <new-folder> [--input <record.json>]");
   console.error("       prim profile check <folder>");
+  console.error("       prim profile export-pack <folder> --output <new.zip>");
+  console.error("       prim profile import-pack <pack.zip> --output <new-folder> [--expected-sha256 <digest>]");
+  console.error("       prim profile check-transfer <pack.zip> [--expected-sha256 <digest>]");
 }
 
-function profileCmd(rest: string[]): void {
+async function profileCmd(rest: string[]): Promise<void> {
+  if (['export-pack', 'import-pack', 'check-transfer'].includes(rest[0])) {
+    if (!rest[1]) throw new ProfileError('Choose a local pack source');
+    const flags = new Map<string, string>();
+    for (let i = 2; i < rest.length; i += 2) {
+      if (!['--output', '--expected-sha256'].includes(rest[i]) || flags.has(rest[i]) || !rest[i + 1]) throw new ProfileError('Unknown, duplicate or incomplete transfer option');
+      flags.set(rest[i], rest[i + 1]);
+    }
+    if (rest[0] === 'export-pack' && flags.has('--expected-sha256') || rest[0] === 'check-transfer' && flags.has('--output')) throw new ProfileError('Unsupported transfer option');
+    if (rest[0] !== 'check-transfer' && !flags.has('--output')) throw new ProfileError('A new output destination is required');
+    const result = rest[0] === 'export-pack' ? await exportCompletePack(rest[1], flags.get('--output')!)
+      : rest[0] === 'import-pack' ? await importCompletePack(rest[1], flags.get('--output')!, flags.get('--expected-sha256'))
+      : await checkCompletePack(rest[1], flags.get('--expected-sha256'));
+    process.stdout.write(JSON.stringify({ status: 'passed', ...result }) + '\n'); return;
+  }
   const library = new ProfileLibrary();
   if (rest.length === 1 && rest[0] === "list") {
     for (const kit of library.list()) process.stdout.write(JSON.stringify({ ...library.pin(kit), name: kit.name }) + "\n");

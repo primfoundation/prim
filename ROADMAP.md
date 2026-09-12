@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-11. Execution: **delivery_95_plan_and_fleet_mac_audit**.
+As of 2026-09-12. Execution: **delivery_95_plan_and_fleet_mac_audit**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
@@ -209,9 +209,9 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Archive, media, encoding, resource limits and generic human entry points work without a hosted account; unsupported content is preserved.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: none.
 
-Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain.
+Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain.
 
 **CORE-004 — Separate authoritative records and views**
 
@@ -509,9 +509,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Unfamiliar profiles, missing viewers and offline packs remain readable; semantic data and evidence are accessible without running arbitrary embedded code.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: CORE-003, DEV-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: CORE-003, DEV-001.
 
-Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain.
+Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain.
 
 **HUM-002 — Prove desktop open-edit-save**
 
@@ -519,9 +519,9 @@ State: `blocked` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Supported platforms have explicit matrices; a real app opens attachments, edits, saves and exports the actual file with no hidden competing store.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT. Dependencies: HUM-001, REL-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-MAC-EXEC. Dependencies: HUM-001, REL-003.
 
-Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates.
+Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
 
 **HUM-003 — Support mobile and accessible use**
 
@@ -539,9 +539,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Import, search, relationships, corrections, recovery and export work without GitHub/terminal/ontology knowledge; unsupported cases remain visible.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: HUM-001, ING-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-MAC-EXEC. Dependencies: HUM-001, ING-001.
 
-Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain.
+Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
 
 ### ING — Connectors and ingestion
 

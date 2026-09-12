@@ -22,7 +22,7 @@ python -m pip install -c services/library/constraints.txt ./services/library
 prim-foundation-mcp
 ```
 
-Or install the built `prim_foundation_mcp-0.1.0a3-py3-none-any.whl`. The wheel
+Or install the built `prim_foundation_mcp-0.1.0a4-py3-none-any.whl`. The wheel
 includes the compiled definitions; it works away from the source repository.
 There is not yet a PyPI publication. A versioned Git-source install is also
 possible: `pip install 'git+https://github.com/primfoundation/prim.git@COMMIT#subdirectory=services/library'`
@@ -105,8 +105,11 @@ checks a transferred complete folder against the retained receipt digest.
 
 See [the capture workflow and limits](../../program/ARTIFACT-CAPTURE.md) and
 [the runnable synthetic example](examples/research-capture/capture.json).
-Archives remain opaque bytes. Record-only exporters do not migrate attachments;
-transfer the complete captured folder to preserve its original evidence.
+Archives captured as evidence remain opaque bytes. Use `export-pack`,
+`check-transfer` and `import-pack` to move the complete folder through a verified
+ZIP envelope, preserving attachments, receipts and unknown files. See the
+[complete-pack contract](../../program/COMPLETE-PACK-TRANSFER.md) for commands,
+limits and the distinction between byte integrity and source authentication.
 
 ## Run the remotely connectable service
 

@@ -100,12 +100,15 @@ A synthetic note definition; no external publisher endorsement is claimed.
         assert retried['status'] == 'replayed' and retried['receipt_sha256'] == capture_result['receipt_sha256']
         capture_manifest.unlink()
         transferred = Path(tmp) / 'transferred-research'
-        shutil.copytree(captured, transferred)
+        archive = Path(tmp) / 'captured-research.zip'
+        transfer = cli('export-pack', captured, '--output', archive)
         shutil.rmtree(captured)
+        assert cli('check-transfer', archive, '--expected-sha256', transfer['archive_sha256'])['integrity'] == 'passed'
+        cli('import-pack', archive, '--output', transferred, '--expected-sha256', transfer['archive_sha256'])
         assert cli('check-capture', transferred, '--expected-sha256', capture_result['receipt_sha256'])['status'] == 'passed'
         assert cli('check-pack', transferred)['status'] == 'passed'
         capture_proof = {'original_binary_capture': 'passed', 'retry_after_source_removal': 'passed',
-                         'complete_folder_transfer_without_source_or_manifest': 'passed', 'claims_created': 0}
+                         'complete_zip_transfer_without_source_or_manifest': 'passed', 'claims_created': 0}
         distribution = {'external_publish_resolve_restore_create_check': 'passed',
                         'original_source_removed_before_restore': True,
                         'snapshot_sha256': resolution['snapshot_sha256']}

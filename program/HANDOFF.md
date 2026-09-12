@@ -1,4 +1,4 @@
-# Foundation execution handoff — September 11, 2026
+# Foundation execution handoff — September 12, 2026
 
 ## Current delivery target and recovered Mac access
 
@@ -8,29 +8,35 @@ critical release gates, a proposed weighted outcome rubric and exact next action
 `plan.json` owns the package mapping and requirement status; no current 75% or 95%
 claim has been established. The planning change does not complete requirements.
 
-Fleet now reaches both enrolled Macs. The September 11 read-only audit found
-dirty laptop checkouts for all four Prim repositories and a dirty Primboard mini
-checkout, a local `prim-sim` candidate declaring `PrimSimCore` with 10 Swift source
-files/four test files but no observed Git repository/root license, and company
-Developer ID metadata on the laptop. Two installed Desktop apps have different
-bundle IDs. This supersedes the earlier unavailable-executor observation; it does
-not prove current-source builds, usable signing keys, notarization or installed
-acceptance. Sanitized facts, remote main/PR heads and completed Fleet receipts are
-retained in [the audit](evidence/2026-09-11-delivery-audit.json).
+The September 12 execution preserved and reconstructed Desktop, Primboard (both
+Macs) and Browsers source snapshots privately. Foundation's current 97 files are
+verified separately because its existing Git history has a missing object. Original
+working trees and installed applications remain intact. The recovered private
+PrimSimCore candidate and clean Desktop main build successfully; provenance is
+still unresolved. Desktop's test compile fix reveals 27 legacy registry/pairing
+assertion failures across 20 tests. A clean Primboard main candidate is now actually
+company-signed; the existing notarization profile works and the saved submission
+is in progress. Resume that submission rather than resubmitting. Sanitized receipts
+are in [Mac execution evidence](evidence/2026-09-12-mac-execution.json).
 
-**Next execution:** privately checkpoint/verify dirty work, create isolated pinned
-work areas, inspect candidate API/provenance and reconcile Desktop PRs #2/#3/#4/#6.
-Proceed with complete-pack attachment transport and the remaining reference cases
-while any source-rights gate is resolved. Current record-only exporters omit
-captured attachments; this is a critical integration gap. Use the existing
-Primboard Mac work order for a fresh isolated candidate, not an overwrite of the
-working installation. Do not copy signing keys or reset private stores.
+Library 0.1.0a4 and SDK 0.5.0-dev.3 implement complete-pack ZIP transport. All
+payload bytes, unknown files and capture receipts survive; Research with missing
+or changed embedded evidence is refused. Actual Python → TypeScript → Python
+archives are byte-identical after deleting originals. 110 Library tests, 100
+Foundation tests, SDK checks and installed wheel/tarball checks pass locally.
+See [the contract](COMPLETE-PACK-TRANSFER.md) and
+[verification evidence](evidence/2026-09-12-complete-pack.json). Exact publication
+state belongs to the PR and its CI runs; this evidence begins with local checks.
 
-Foundation PR #18 is merged at `4578d78ad1c7d03420ca3b88fd8cad7693b3dce0`.
-This is the input revision for the 95% planning branch. Release evidence remains
-attached to its exact tested implementation and final PR heads. Planning-branch
-publication is identifiable from the PR targeting `codex/delivery-95-plan`.
-No continuing Fleet job or background agent was started by this audit.
+**Next execution:** finish Hub complete-pack open/edit/save and native integration;
+resume the existing Primboard notarization and verify Gatekeeper before installation;
+reconcile Desktop source provenance and legacy host failures without changing old
+working trees. Continue remaining reference cases and lifecycle packages while
+actual identity/review gates are resolved. No overall 95% claim is established.
+
+Foundation PR #19 is merged at `eed0e6eae3f08352d587ff33738613bd377d98ac`, the
+input main for the complete-pack increment. The original 79 requirement contracts
+and all 26 delivery packages remain unchanged.
 
 ## Current state
 

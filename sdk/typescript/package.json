@@ -1,6 +1,6 @@
 {
   "name": "@eidos-agi/prim",
-  "version": "0.5.0-dev.2",
+  "version": "0.5.0-dev.3",
   "type": "module",
   "description": "Category-level Prim SDK \u2014 primitives plus Prim Tools (surface / connector)",
   "exports": {
@@ -16,7 +16,7 @@
     "prim": "./dist/cli.js"
   },
   "scripts": {
-    "test": "node --experimental-strip-types tests/pack.test.ts && node --experimental-strip-types tests/registry.test.ts && node --experimental-strip-types tests/profile.test.ts",
+    "test": "node --experimental-strip-types tests/pack.test.ts && node --experimental-strip-types tests/registry.test.ts && node --experimental-strip-types tests/profile.test.ts && node --experimental-strip-types --test tests/transfer.test.ts",
     "prim": "node --experimental-strip-types src/cli.ts",
     "build": "node scripts/build.mjs",
     "typecheck": "tsc --noEmit --allowImportingTsExtensions",

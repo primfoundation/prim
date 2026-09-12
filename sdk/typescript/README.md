@@ -76,3 +76,11 @@ const reopened = library.readPack('./new-person.prim');
 and unencrypted. Validation checks structure and declared references, not facts or
 authority. Exact definition pins are required; a missing version never upgrades
 silently. [Host contract](../../program/OFFLINE-HOST-CONTRACT.md).
+
+For an existing folder with attachments, use `await exportCompletePack(source,
+newArchive)` and `await importCompletePack(archive, newFolder, expectedSHA256)`.
+The installed `prim profile export-pack`, `import-pack` and `check-transfer`
+commands expose the same bounded, byte-preserving transport. It retains unknown
+files and capture receipts and rejects missing Research artifacts. Browser hosts
+can use the filesystem-free `encodeCompletePack`/`decodeCompletePack` functions.
+[Transport contract and limits](../../program/COMPLETE-PACK-TRANSFER.md).

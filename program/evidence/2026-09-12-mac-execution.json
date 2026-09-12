@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-09-12",
+  "scope": "Sanitized Fleet execution facts; private source snapshots, logs, stores and signing keys are not published",
+  "source_recovery": {
+    "laptop_desktop": "bundle, patches, untracked files and reconstructed restore verified",
+    "laptop_primboard": "bundle, patches, untracked files and reconstructed restore verified",
+    "mini_primboard": "bundle, patches, untracked files and reconstructed restore verified",
+    "laptop_browsers": "bundle, patches, untracked files and reconstructed restore verified",
+    "laptop_prim": "97 current nonignored source files byte-verified; full Git history bundle failed on a pre-existing missing object",
+    "original_worktrees": "preserved without reset or edits"
+  },
+  "dependency": {
+    "source": "private local prim-sim candidate",
+    "swift_build": "passed",
+    "provenance_and_reuse_authority": "unresolved; source not published"
+  },
+  "desktop": {
+    "clean_main": "ab5b11401eaadefc0c2ea68eada1f021fbd6dd8d",
+    "swift_build": "passed against private dependency candidate",
+    "host_tests": "initial compile failure from internal initializer access; diagnostic @testable import allowed 20 tests to run, with 27 assertion failures in legacy registry/pairing expectations",
+    "test_fix": "private isolated checkout only; no passing-suite or release claim"
+  },
+  "primboard": {
+    "clean_main": "9f7a0086ad0f9ecf72e4a9c495915485a257e8a0",
+    "release_preflight": "passed",
+    "candidate_build": "passed and company-signed",
+    "notary_keychain_profile": "usable without credential export",
+    "notarization": "submitted once; In Progress; resume saved submission ID",
+    "installation": "not performed; original installed applications and private stores preserved"
+  },
+  "completed_receipts": {
+    "laptop_checkpoint": "f84ea794fe2675658d6e12547c037239f64a43a1ff7fb71f344451aad93e03c0",
+    "prim_file_fallback_and_dependency_copy": "2ba926f963ce6c3320754b367847630ec7c70d898613fa68b773b673e158b902",
+    "mini_checkpoint": "48863f143cff3211f8175a5b54a65159f4ef9f5ffa3ff67d8b8c7a944b89d6ce",
+    "dependency_build": "fa5dc34ad8fccb266f6214084e1ac64a0943ada2de058e57d88e190d2bf2a405",
+    "desktop_build": "b8d437523c0e87ae074dd728c82daca984d3fa19a47e6d4f48c682a681117e1f",
+    "primboard_signed_build": "775533e74413a6f9ce601f77040ab838134068011949a33655d5c89aed2b86f8",
+    "desktop_initial_tests_and_notary_profile": "729bea8aef52d6e3f31f0aeec5deb48f66b6c702a2a37c686fd19ec1abf2cfdc",
+    "desktop_diagnostic_tests": "d95a7ea18313df7dc155c3df31f20b49beb9b0cef3cbb611fa0ea03bc592e1cb",
+    "notary_submission": "ee5bab6b25544f3376984f52861facc00cf726c94b4c45b3986c5d632df5963f"
+  },
+  "not_established": [
+    "full Foundation checkout Git history recovery",
+    "prim-sim provenance/reuse authority",
+    "Desktop passing host tests",
+    "Apple notarization acceptance and Gatekeeper",
+    "installed private-store and OS-consent acceptance",
+    "independent review"
+  ]
+}
