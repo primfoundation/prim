@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-12. Execution: **verified_complete_pack_delivery_and_native_upgrade_gate**.
+As of 2026-09-12. Execution: **verified_native_metadata_compatibility_with_installed_acceptance_open**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
@@ -519,9 +519,9 @@ State: `blocked` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Supported platforms have explicit matrices; a real app opens attachments, edits, saves and exports the actual file with no hidden competing store.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: HUM-001, REL-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-COMPAT-IMPL, E-SEP12-COMPAT-TEST. Dependencies: HUM-001, REL-003.
 
-Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
+Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain.
 
 **HUM-003 — Support mobile and accessible use**
 
@@ -539,9 +539,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Import, search, relationships, corrections, recovery and export work without GitHub/terminal/ontology knowledge; unsupported cases remain visible.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-MAC-EXEC, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-NATIVE-TEST. Dependencies: HUM-001, ING-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-MAC-EXEC, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-NATIVE-TEST, E-SEP12-COMPAT-IMPL, E-SEP12-COMPAT-TEST. Dependencies: HUM-001, ING-001.
 
-Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
+Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain.
 
 ### ING — Connectors and ingestion
 
@@ -629,9 +629,9 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Untrusted definitions, instance data, scripts, renderers, sources, agents, logs and indexes have abuse cases and trust boundaries before network execution.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-COMPAT-IMPL, E-SEP12-COMPAT-TEST. Dependencies: none.
 
-Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained.
+Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain.
 
 **SEC-002 — Protect sensitive records and keys**
 
@@ -761,9 +761,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Clean installs/builds, pinned dependencies, supported-platform tests, signing where applicable and artifact provenance are demonstrated.
 
-Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: RELENG-001.
+Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST, E-SEP12-COMPAT-IMPL, E-SEP12-COMPAT-TEST. Dependencies: RELENG-001.
 
-Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain.
+Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain.
 
 **RELENG-003 — Migrate without a flag day**
 
@@ -771,9 +771,9 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Aliases, read-old/write-new policy, migration receipts, originals, restore/rollback and deprecated repositories have tested, authorized procedures.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-COMPAT-IMPL, E-SEP12-COMPAT-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
 
-Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain.
+Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain.
 
 **RELENG-004 — Define stable acceptance and maintenance**
 
