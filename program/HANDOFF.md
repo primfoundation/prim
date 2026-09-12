@@ -1,5 +1,9 @@
 # Foundation execution handoff — September 12, 2026
 
+## GitHub execution is now established
+
+[Issue #9](https://github.com/primfoundation/prim/issues/9) links all 26 package trackers and 16 executable tasks. Read live issues before selecting work; `github-execution.json` is a mapping and initial snapshot, not live state. [TASK-SYSTEM.md](TASK-SYSTEM.md) defines claiming, handoff, evidence, closure and staged Project Prim adoption. Start with #50/#51/#53/#55/#49. Projects-board access is explicitly blocked in #64; the issue index works now. No unattended worker or Project exporter is claimed.
+
 ## Current delivery target and recovered Mac access
 
 The user requested a comprehensive autonomous path to 95%. [DELIVERY-95.md](DELIVERY-95.md)
