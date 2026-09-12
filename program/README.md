@@ -13,6 +13,10 @@ in `plan.json` and are checked with the existing program command.
 
 The later September 8 increments are in `evidence/2026-09-08-portable-delivery.json`: Foundation PR #15 portable hosts, Primboard PR #5 native editing/recovery and Hub PRs #11/#12 actual browser downloads and legacy registry compatibility. `GOAL-STATUS.md` and `REMAINING-GATES.md` describe the remaining scope.
 
+## Execution queue
+
+[GitHub tracker #9](https://github.com/primfoundation/prim/issues/9) now links the 26 delivery packages and a bounded executable queue. [TASK-SYSTEM.md](TASK-SYSTEM.md) defines operational ownership, evidence and Project Prim adoption; `github-execution.json` maps issues to the unchanged canonical requirements. GitHub owns task state; `plan.json` owns requirement state.
+
 ## One record, several views
 
 Primboard's subsequent safe Mac candidate tooling and encrypted process-crash
