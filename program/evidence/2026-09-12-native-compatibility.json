@@ -1,0 +1,97 @@
+{
+  "recorded_at": "2026-09-12",
+  "scope": "Native notebook metadata reconciliation; sanitized component evidence, not installed-release or whole-program acceptance",
+  "requirements": [
+    "HUM-002",
+    "HUM-004",
+    "RELENG-002",
+    "RELENG-003",
+    "SEC-001"
+  ],
+  "delivery_package": "D95-05",
+  "repository": "primfoundation/prims-paste-desktop",
+  "pull_request": "https://github.com/primfoundation/prims-paste-desktop/pull/7",
+  "tested_head": "2e81de7b38c5a77a65bd7549522d22df013e5c61",
+  "tested_tree": "76b0c0e04ace4eceee098d688bdac591bdaad216",
+  "source_tree_verification": "Full resulting Git tree reconstructed independently from pinned base entries and exact changed file bytes; matches published tree",
+  "changes": [
+    "Retain file/video kinds and encrypted binary payloads; show honest retained-media cards",
+    "Retain caption provenance, exact lane strings, fill default, worker records and string/structured conversion comments",
+    "Match observed legacy audio/video caption-origin defaults without overriding explicit values",
+    "Retain existing secret conversion links as data; exclude creation menu and refuse create/revert before external execution",
+    "Preserve unknown-field fail-closed boundary, encrypted migration backup, revision checks and journal recovery",
+    "Add synthetic migration/backup/restore regressions and explicit private snapshot checks"
+  ],
+  "private_data_boundary": {
+    "source_records_uploaded": false,
+    "keys_exported_or_created": false,
+    "original_worktree_edited": false,
+    "installed_app_changed": false,
+    "private_logs": "retained on the selected Mac; record contents and paths omitted here"
+  },
+  "earlier_attempts": [
+    {
+      "head": "1ce1c43ff5edb4119aa8fd576f2a4f6deec128a8",
+      "receipt": "00e71b7c3f66b01602c827a004659a839c58c03d5bbc626388367267720ca54f",
+      "result": "swift test private roundtrip invocation timed out during build planning before test start"
+    },
+    {
+      "head": "1ce1c43ff5edb4119aa8fd576f2a4f6deec128a8",
+      "receipt": "6fc4d1a62afe04a16e63edb08bf060b0be86f0764c4cc80a4c4eae1b1855dc93",
+      "result": "Direct xctest private encrypted roundtrip started but timed out after 65 seconds; cause not established. Active notebook and snapshot unchanged; not a pass"
+    },
+    {
+      "head": "44fbea441fcadf2dd53210cb7724f21c01c503fe",
+      "receipt": "ca9b83d7a2e19e0a3e72f11608c3078a3d339be02610c4bd9af673998c614572",
+      "result": "177 scheduled Mac tests, 3 skips, zero failures; separate private metadata check correctly refused an unsupported conversion target. Snapshot unchanged. Fixed by retaining known secret links without enabling execution"
+    }
+  ],
+  "not_established": [
+    "Successful private encrypted migration, backup and restore using the existing Keychain key",
+    "Full richer installed UI reconciliation, video recording/playback, worker and board-column controls",
+    "Native complete-pack attachment preservation",
+    "Signed installed existing-notebook and OS permission acceptance",
+    "Independent review and real-user acceptance",
+    "Whole-program 75% or 95% completion"
+  ],
+  "merge_commit": "2cc43882795f61c060e7b99ef431665a655eb307",
+  "ci": {
+    "run": 34678805051,
+    "job": 103513411153,
+    "result": "passed",
+    "scope": [
+      "Swift tests",
+      "release binaries",
+      "safe release preparation and assembled app",
+      "isolated product selftest",
+      "compatibility identity guards"
+    ]
+  },
+  "laptop_tests": {
+    "receipt": "d5d4d8f4375120964d3e6c000ba548fbdb3cca367cbcd9ad1be8dbfb2ebe9617",
+    "scheduled": 178,
+    "passed": 175,
+    "skipped": 3,
+    "failures": 0,
+    "skips": [
+      "subprocess-only crash helper",
+      "opt-in private metadata check",
+      "opt-in private encrypted roundtrip"
+    ]
+  },
+  "private_metadata_check": {
+    "result": "passed separately on exact tested head",
+    "scope": "Every original JSON metadata field/value retained recursively through actual IndexEnvelope decode and model encode; added optional defaults permitted",
+    "snapshot_bytes_unchanged": true,
+    "keychain_access_attempted": false,
+    "private_values_logged": false,
+    "receipt": "d5d4d8f4375120964d3e6c000ba548fbdb3cca367cbcd9ad1be8dbfb2ebe9617"
+  },
+  "foundation_checks": {
+    "tests": 100,
+    "failures": 0,
+    "program_catalog_roadmap_and_pinned_compatibility": "passed",
+    "original_requirements": 79,
+    "requirement_contracts_and_delivery_packages": "unchanged"
+  }
+}

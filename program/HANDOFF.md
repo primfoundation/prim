@@ -48,8 +48,24 @@ attachment-dropping record-only imports/exports. Eleven new synthetic regression
 cover these boundaries. This source increment is not installed over the restored
 app and does not resolve the newer private notebook's feature compatibility.
 
-**Next execution:** reconcile the newer installed Primboard source/features, then
-complete native attachment-preserving storage before another existing-store upgrade.
+Primboard PR #7 is merged at `2cc43882795f61c060e7b99ef431665a655eb307`.
+It retains file/video kinds, caption provenance, exact board-column strings,
+worker records, fill defaults and conversion comments. Existing secret links
+remain data-only; unsupported create/revert operations refuse before execution.
+CI passed on `2e81de7b38c5a77a65bd7549522d22df013e5c61`; the selected Mac ran
+178 scheduled tests with three intentional skips and zero failures. A separate
+key-free check against the retained actual notebook passed: every original
+metadata field/value survives decode/encode and snapshot bytes are unchanged.
+The private encrypted roundtrip started but timed out; its cause is not proven
+and it is not a pass. The richer installed app remains untouched. Exact scope,
+receipts and limitations are in
+[native compatibility evidence](evidence/2026-09-12-native-compatibility.json).
+
+**Next execution:** implement native complete-pack attachment storage and reconcile
+video/recording, board-column and worker UI with the preserved newer source.
+Resolve the bounded existing-key encrypted snapshot roundtrip before another
+signed existing-store upgrade. Do not mistake metadata-only proof for encrypted
+restore or complete installed-app compatibility.
 Finish Desktop source provenance and legacy host failures without changing old
 working trees. Continue remaining reference cases, Research lifecycle, authenticated
 distribution, Browsers real-account and production/operator/reviewer work packages.

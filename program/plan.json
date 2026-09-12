@@ -4,10 +4,10 @@
   "as_of": "2026-09-12",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "verified_complete_pack_delivery_and_native_upgrade_gate",
+    "state": "verified_native_metadata_compatibility_with_installed_acceptance_open",
     "target_repository": "primfoundation/prim",
-    "base_commit": "d01805f831f9c9a15ac8458409d3ab929886a026",
-    "target_branch": "codex/verified-transfer-release",
+    "base_commit": "33619efb0ac9aa7cf2ec0bd919830ec3bcdc625d",
+    "target_branch": "codex/native-notebook-compatibility",
     "background_jobs": "No continuing agent or Fleet job is promised. Repository CI and the existing six-hour public health workflow are configured unattended checks; bounded execution receipts are retained in the dated evidence."
   },
   "workstreams": [
@@ -404,6 +404,18 @@
       "stage": "tests",
       "path": "program/evidence/2026-09-12-mac-execution.json",
       "summary": "Mac CI passed on 5feb17b with 11 new synthetic missing/racing key, unsupported notebook and attachment-loss regression tests, release builds and app selftest. This is not private-store acceptance."
+    },
+    {
+      "id": "E-SEP12-COMPAT-IMPL",
+      "stage": "implementation",
+      "path": "program/evidence/2026-09-12-native-compatibility.json",
+      "summary": "Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
+    },
+    {
+      "id": "E-SEP12-COMPAT-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-12-native-compatibility.json",
+      "summary": "Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     }
   ],
   "requirements": [
@@ -1236,9 +1248,11 @@
         "E-SEP7-TEST",
         "E-SEP11-FLEET-AUDIT",
         "E-SEP12-MAC-EXEC",
-        "E-SEP12-NATIVE-TEST"
+        "E-SEP12-NATIVE-TEST",
+        "E-SEP12-COMPAT-IMPL",
+        "E-SEP12-COMPAT-TEST"
       ],
-      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
+      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     },
     {
       "id": "HUM-003",
@@ -1292,9 +1306,11 @@
         "E-SEP12-MAC-EXEC",
         "E-SEP12-HUB-IMPL",
         "E-SEP12-HUB-TEST",
-        "E-SEP12-NATIVE-TEST"
+        "E-SEP12-NATIVE-TEST",
+        "E-SEP12-COMPAT-IMPL",
+        "E-SEP12-COMPAT-TEST"
       ],
-      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
+      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     },
     {
       "id": "ING-001",
@@ -1482,9 +1498,11 @@
         "E-SEP8-JOURNAL-IMPL",
         "E-SEP8-JOURNAL-TEST",
         "E-SEP12-MAC-EXEC",
-        "E-SEP12-NATIVE-TEST"
+        "E-SEP12-NATIVE-TEST",
+        "E-SEP12-COMPAT-IMPL",
+        "E-SEP12-COMPAT-TEST"
       ],
-      "note": "Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained."
+      "note": "Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     },
     {
       "id": "SEC-002",
@@ -1794,9 +1812,11 @@
         "E-SEP12-MAC-EXEC",
         "E-SEP12-NATIVE-TEST",
         "E-SEP12-TRANSFER-IMPL",
-        "E-SEP12-TRANSFER-TEST"
+        "E-SEP12-TRANSFER-TEST",
+        "E-SEP12-COMPAT-IMPL",
+        "E-SEP12-COMPAT-TEST"
       ],
-      "note": "Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain."
+      "note": "Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     },
     {
       "id": "RELENG-003",
@@ -1834,9 +1854,11 @@
         "E-SEP12-HUB-TEST",
         "E-SEP12-HUB-DEPLOY",
         "E-SEP12-MAC-EXEC",
-        "E-SEP12-NATIVE-TEST"
+        "E-SEP12-NATIVE-TEST",
+        "E-SEP12-COMPAT-IMPL",
+        "E-SEP12-COMPAT-TEST"
       ],
-      "note": "Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain."
+      "note": "Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain. Primboard PR #7 merged; exact macOS CI and 178 scheduled laptop tests pass with 3 skips. Separate retained actual-notebook metadata roundtrip passes without Keychain access or modifying snapshot. Private encrypted restore timed out; richer UI, native complete-pack and installed acceptance remain."
     },
     {
       "id": "RELENG-004",
