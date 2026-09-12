@@ -2,7 +2,7 @@
 
 Generated from `program/plan.json`. Do not edit statuses here.
 
-As of 2026-09-12. Execution: **delivery_95_plan_and_fleet_mac_audit**.
+As of 2026-09-12. Execution: **verified_complete_pack_delivery_and_native_upgrade_gate**.
 
 Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.
 
@@ -137,7 +137,7 @@ State: `in_review` · Milestone: M0 · Owner: implementation-lead.
 
 Acceptance: A replacement worker can identify inputs, changes, commands, evidence, blocked publication and the exact next step without private chat reconstruction.
 
-Required evidence: implementation, review. Evidence retained: E-IMPL, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP11-FLEET-AUDIT. Dependencies: none.
+Required evidence: implementation, review. Evidence retained: E-IMPL, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST. Dependencies: none.
 
 Current host, native, Hub and incubator source evidence retained; human and device gates are explicit. September 11 Fleet/source audit and DELIVERY-95.md give a 26-package resumable plan; no continuing background execution or overall completion percentage is claimed.
 
@@ -209,9 +209,9 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Archive, media, encoding, resource limits and generic human entry points work without a hosted account; unsupported content is preserved.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST. Dependencies: none.
 
-Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain.
+Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub complete-pack editing is merged/deployed with real browser and interop checks; native complete-pack support and independent review remain.
 
 **CORE-004 — Separate authoritative records and views**
 
@@ -447,7 +447,7 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Reference profile behavior is integrated with the existing SDK/CLI; versioned interfaces, error codes and backwards compatibility pass regression tests.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST. Dependencies: PUB-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: PUB-001.
 
 Existing SDK category API retained alongside profile API/CLI; compiled tarball and actual outside-checkout consumer pass. Stable publication and review remain.
 
@@ -457,7 +457,7 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Scaffolding, validate/explain, migrations, fixtures and examples let unfamiliar developers complete a task without founder help.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: DEV-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST. Dependencies: DEV-001.
 
 Generic GUI, native and CLI authoring are implemented for four exact definitions; larger and external profile workflows remain.
 
@@ -475,7 +475,7 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: At least two implementations share fixtures; packaged install, serialization, large inputs and compatibility tests run from clean environments.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST. Dependencies: DEV-001, INTEROP-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: DEV-001, INTEROP-001.
 
 83 shared cases exercise independent Python, TypeScript and Swift implementations; real directory cross-language roundtrips and installable SDK proof pass. Independent organization review and broader profiles remain.
 
@@ -509,9 +509,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Unfamiliar profiles, missing viewers and offline packs remain readable; semantic data and evidence are accessible without running arbitrary embedded code.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: CORE-003, DEV-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY. Dependencies: CORE-003, DEV-001.
 
-Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain.
+Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub complete-pack editing is merged/deployed with real browser and interop checks; native complete-pack support and independent review remain.
 
 **HUM-002 — Prove desktop open-edit-save**
 
@@ -519,9 +519,9 @@ State: `blocked` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Supported platforms have explicit matrices; a real app opens attachments, edits, saves and exports the actual file with no hidden competing store.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-MAC-EXEC. Dependencies: HUM-001, REL-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP11-FLEET-AUDIT, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: HUM-001, REL-003.
 
-Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
+Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
 
 **HUM-003 — Support mobile and accessible use**
 
@@ -529,7 +529,7 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Phone reading/sharing, keyboard/screen-reader access, low-resource devices, localization and intermittent connectivity pass representative usability tasks.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST. Dependencies: HUM-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST. Dependencies: HUM-001.
 
 Desktop Chromium and phone-size WebKit acceptance, automated WCAG A/AA and overflow checks pass on representative Hub pages. Actual assistive technology, native accessibility and independent users remain.
 
@@ -539,9 +539,9 @@ State: `in_progress` · Milestone: M4 · Owner: implementation-lead.
 
 Acceptance: Import, search, relationships, corrections, recovery and export work without GitHub/terminal/ontology knowledge; unsupported cases remain visible.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-MAC-EXEC. Dependencies: HUM-001, ING-001.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP12-MAC-EXEC, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-NATIVE-TEST. Dependencies: HUM-001, ING-001.
 
-Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
+Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved.
 
 ### ING — Connectors and ingestion
 
@@ -629,7 +629,7 @@ State: `in_progress` · Milestone: M1 · Owner: implementation-lead.
 
 Acceptance: Untrusted definitions, instance data, scripts, renderers, sources, agents, logs and indexes have abuse cases and trust boundaries before network execution.
 
-Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST. Dependencies: none.
+Required evidence: implementation, tests, review. Evidence retained: E-ORF-IMPL, E-ORF-TEST, E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: none.
 
 Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained.
 
@@ -761,7 +761,7 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Clean installs/builds, pinned dependencies, supported-platform tests, signing where applicable and artifact provenance are demonstrated.
 
-Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY. Dependencies: RELENG-001.
+Required evidence: implementation, tests, review, release. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST, E-SEP12-TRANSFER-IMPL, E-SEP12-TRANSFER-TEST. Dependencies: RELENG-001.
 
 Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain.
 
@@ -771,7 +771,7 @@ State: `in_progress` · Milestone: M5 · Owner: implementation-lead.
 
 Acceptance: Aliases, read-old/write-new policy, migration receipts, originals, restore/rollback and deprecated repositories have tested, authorized procedures.
 
-Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
+Required evidence: implementation, tests, review. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-JOURNAL-IMPL, E-SEP8-JOURNAL-TEST, E-SEP8-HOST-IMPL, E-SEP8-HOST-TEST, E-SEP8-PACK-IMPL, E-SEP8-PACK-TEST, E-SEP8-PACK-DEPLOY, E-SEP8-INCUBATOR-IMPL, E-SEP8-INCUBATOR-TEST, E-SEP12-HUB-IMPL, E-SEP12-HUB-TEST, E-SEP12-HUB-DEPLOY, E-SEP12-MAC-EXEC, E-SEP12-NATIVE-TEST. Dependencies: RELENG-001, RES-001, PUB-003.
 
 Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain.
 
@@ -831,7 +831,7 @@ State: `in_progress` · Milestone: M6 · Owner: implementation-lead.
 
 Acceptance: Confirm hosting owner and budget; deploy a pinned reviewed release with TLS, origin/host policies, edge quotas, health monitoring and rollback; connect a real external MCP host.
 
-Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW, E-CF-DEPLOY, E-CF-HOSTED, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY. Dependencies: DEV-006, OPS-001.
+Required evidence: implementation, tests, review, deployment, real_use. Evidence retained: E-SEP7-IMPL, E-SEP7-TEST, E-CF-PREVIEW, E-CF-DEPLOY, E-CF-HOSTED, E-SEP8-IMPL, E-SEP8-TEST, E-SEP8-DEPLOY, E-SEP12-HUB-DEPLOY. Dependencies: DEV-006, OPS-001.
 
 Hub alpha is live with exact-commit hosted HTTP/MCP parity, versioned release artifacts, health workflow and a completed preview rollback drill. This does not establish installation in a particular ChatGPT/Claude host. Named ownership/budget, edge quotas, alert escalation, independent acceptance and production cutover remain open.
 

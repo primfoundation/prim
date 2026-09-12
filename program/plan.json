@@ -4,11 +4,11 @@
   "as_of": "2026-09-12",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
-    "state": "delivery_95_plan_and_fleet_mac_audit",
+    "state": "verified_complete_pack_delivery_and_native_upgrade_gate",
     "target_repository": "primfoundation/prim",
-    "base_commit": "4578d78ad1c7d03420ca3b88fd8cad7693b3dce0",
-    "target_branch": "codex/delivery-95-plan",
-    "background_jobs": "No background agents or continuing Fleet job. Read-only Fleet commands completed; bounded repository CI and the existing six-hour public health workflow are the only configured unattended checks."
+    "base_commit": "d01805f831f9c9a15ac8458409d3ab929886a026",
+    "target_branch": "codex/verified-transfer-release",
+    "background_jobs": "No continuing agent or Fleet job is promised. Repository CI and the existing six-hour public health workflow are configured unattended checks; bounded execution receipts are retained in the dated evidence."
   },
   "workstreams": [
     {
@@ -367,19 +367,43 @@
       "id": "E-SEP12-TRANSFER-IMPL",
       "stage": "implementation",
       "path": "program/evidence/2026-09-12-complete-pack.json",
-      "summary": "Bounded byte-preserving Library/SDK complete-pack transfer; 110 Library and 100 Foundation tests, cross-language binary exchange and installed wheel/tarball checks pass. Hub/native and independent acceptance remain."
+      "summary": "Merged Library/SDK complete-pack transport with three green CI workflows, 110 Library/100 Foundation tests and installed binary roundtrip proof. Hub delivery is separately recorded; native and independent acceptance remain."
     },
     {
       "id": "E-SEP12-TRANSFER-TEST",
       "stage": "tests",
       "path": "program/evidence/2026-09-12-complete-pack.json",
-      "summary": "Bounded byte-preserving Library/SDK complete-pack transfer; 110 Library and 100 Foundation tests, cross-language binary exchange and installed wheel/tarball checks pass. Hub/native and independent acceptance remain."
+      "summary": "Merged Library/SDK complete-pack transport with three green CI workflows, 110 Library/100 Foundation tests and installed binary roundtrip proof. Hub delivery is separately recorded; native and independent acceptance remain."
     },
     {
       "id": "E-SEP12-MAC-EXEC",
       "stage": "implementation",
       "path": "program/evidence/2026-09-12-mac-execution.json",
-      "summary": "Verified private source recovery copies; dependency and Desktop builds pass; Primboard company-signed candidate built and submitted for notarization. Provenance, legacy Desktop test failures and installed acceptance remain."
+      "summary": "Private source recovery, native builds and Apple notarization/Gatekeeper proved. Existing-store installation failed on newer format, then prior app/CLI restored and notebook bytes verified unchanged. Merged safeguard PR #6 passed macOS CI; native feature reconciliation remains."
+    },
+    {
+      "id": "E-SEP12-HUB-IMPL",
+      "stage": "implementation",
+      "path": "program/evidence/2026-09-12-hub-transfer-release.json",
+      "summary": "Merged attachment-preserving Hub editing, save/open race guards and exact Foundation transport pin."
+    },
+    {
+      "id": "E-SEP12-HUB-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-12-hub-transfer-release.json",
+      "summary": "40 checks and 15 real browser tests pass; Python/Hub/SDK attachment exchange after original deletion. One intentional phone keyboard skip."
+    },
+    {
+      "id": "E-SEP12-HUB-DEPLOY",
+      "stage": "deployment",
+      "path": "program/evidence/2026-09-12-hub-transfer-release.json",
+      "summary": "Exact CI artifact deployed to isolated preview, rollback retained; post-deployment essential-route and release-byte health passed."
+    },
+    {
+      "id": "E-SEP12-NATIVE-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-12-mac-execution.json",
+      "summary": "Mac CI passed on 5feb17b with 11 new synthetic missing/racing key, unsupported notebook and attachment-loss regression tests, release builds and app selftest. This is not private-store acceptance."
     }
   ],
   "requirements": [
@@ -515,7 +539,9 @@
         "E-SEP8-PACK-DEPLOY",
         "E-SEP8-INCUBATOR-IMPL",
         "E-SEP8-INCUBATOR-TEST",
-        "E-SEP11-FLEET-AUDIT"
+        "E-SEP11-FLEET-AUDIT",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST"
       ],
       "note": "Current host, native, Hub and incubator source evidence retained; human and device gates are explicit. September 11 Fleet/source audit and DELIVERY-95.md give a 26-package resumable plan; no continuing background execution or overall completion percentage is claimed."
     },
@@ -646,9 +672,11 @@
         "E-SEP8-PACK-IMPL",
         "E-SEP8-PACK-TEST",
         "E-SEP12-TRANSFER-IMPL",
-        "E-SEP12-TRANSFER-TEST"
+        "E-SEP12-TRANSFER-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST"
       ],
-      "note": "Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain."
+      "note": "Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub complete-pack editing is merged/deployed with real browser and interop checks; native complete-pack support and independent review remain."
     },
     {
       "id": "CORE-004",
@@ -1073,7 +1101,9 @@
       ],
       "evidence": [
         "E-SEP8-HOST-IMPL",
-        "E-SEP8-HOST-TEST"
+        "E-SEP8-HOST-TEST",
+        "E-SEP12-TRANSFER-IMPL",
+        "E-SEP12-TRANSFER-TEST"
       ],
       "note": "Existing SDK category API retained alongside profile API/CLI; compiled tarball and actual outside-checkout consumer pass. Stable publication and review remain."
     },
@@ -1099,7 +1129,9 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST"
       ],
       "note": "Generic GUI, native and CLI authoring are implemented for four exact definitions; larger and external profile workflows remain."
     },
@@ -1142,7 +1174,11 @@
       ],
       "evidence": [
         "E-SEP8-HOST-IMPL",
-        "E-SEP8-HOST-TEST"
+        "E-SEP8-HOST-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST",
+        "E-SEP12-TRANSFER-IMPL",
+        "E-SEP12-TRANSFER-TEST"
       ],
       "note": "83 shared cases exercise independent Python, TypeScript and Swift implementations; real directory cross-language roundtrips and installable SDK proof pass. Independent organization review and broader profiles remain."
     },
@@ -1171,9 +1207,12 @@
         "E-SEP8-PACK-IMPL",
         "E-SEP8-PACK-TEST",
         "E-SEP12-TRANSFER-IMPL",
-        "E-SEP12-TRANSFER-TEST"
+        "E-SEP12-TRANSFER-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST",
+        "E-SEP12-HUB-DEPLOY"
       ],
-      "note": "Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain."
+      "note": "Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub complete-pack editing is merged/deployed with real browser and interop checks; native complete-pack support and independent review remain."
     },
     {
       "id": "HUM-002",
@@ -1196,9 +1235,10 @@
         "E-SEP7-IMPL",
         "E-SEP7-TEST",
         "E-SEP11-FLEET-AUDIT",
-        "E-SEP12-MAC-EXEC"
+        "E-SEP12-MAC-EXEC",
+        "E-SEP12-NATIVE-TEST"
       ],
-      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
+      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
     },
     {
       "id": "HUM-003",
@@ -1219,7 +1259,9 @@
       "evidence": [
         "E-SEP8-IMPL",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST"
       ],
       "note": "Desktop Chromium and phone-size WebKit acceptance, automated WCAG A/AA and overflow checks pass on representative Hub pages. Actual assistive technology, native accessibility and independent users remain."
     },
@@ -1247,9 +1289,12 @@
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
         "E-SEP8-PACK-TEST",
-        "E-SEP12-MAC-EXEC"
+        "E-SEP12-MAC-EXEC",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST",
+        "E-SEP12-NATIVE-TEST"
       ],
-      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
+      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard candidate passed notarization/Gatekeeper but existing-store acceptance rejected a newer notebook format; original app/CLI restored and bytes unchanged. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
     },
     {
       "id": "ING-001",
@@ -1435,7 +1480,9 @@
         "E-SEP7-IMPL",
         "E-SEP7-TEST",
         "E-SEP8-JOURNAL-IMPL",
-        "E-SEP8-JOURNAL-TEST"
+        "E-SEP8-JOURNAL-TEST",
+        "E-SEP12-MAC-EXEC",
+        "E-SEP12-NATIVE-TEST"
       ],
       "note": "Public definition/private instance boundary retained. Browser imported authentication defects fixed and tested; Primboard storage and mixed-version limits documented. Independent threat-model review remains. Journal validation now covers authenticated intent, precise old/new state, bounded capture, symlink/path aliases and mixed-version recovery boundaries; software-fault CI evidence is retained."
     },
@@ -1740,7 +1787,14 @@
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
         "E-SEP8-PACK-TEST",
-        "E-SEP8-PACK-DEPLOY"
+        "E-SEP8-PACK-DEPLOY",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST",
+        "E-SEP12-HUB-DEPLOY",
+        "E-SEP12-MAC-EXEC",
+        "E-SEP12-NATIVE-TEST",
+        "E-SEP12-TRANSFER-IMPL",
+        "E-SEP12-TRANSFER-TEST"
       ],
       "note": "Installable SDK, macOS builds, actual browser downloads, exact Worker artifacts and hosted parity gates pass. Stable/signed releases and independent acceptance remain."
     },
@@ -1775,7 +1829,12 @@
         "E-SEP8-PACK-TEST",
         "E-SEP8-PACK-DEPLOY",
         "E-SEP8-INCUBATOR-IMPL",
-        "E-SEP8-INCUBATOR-TEST"
+        "E-SEP8-INCUBATOR-TEST",
+        "E-SEP12-HUB-IMPL",
+        "E-SEP12-HUB-TEST",
+        "E-SEP12-HUB-DEPLOY",
+        "E-SEP12-MAC-EXEC",
+        "E-SEP12-NATIVE-TEST"
       ],
       "note": "Existing pins, native runtime IDs and source blobs preserved with compatibility adapters. Full semantic migration, production cutover and old-consumer acceptance remain."
     },
@@ -2191,7 +2250,8 @@
         "E-CF-HOSTED",
         "E-SEP8-IMPL",
         "E-SEP8-TEST",
-        "E-SEP8-DEPLOY"
+        "E-SEP8-DEPLOY",
+        "E-SEP12-HUB-DEPLOY"
       ],
       "note": "Hub alpha is live with exact-commit hosted HTTP/MCP parity, versioned release artifacts, health workflow and a completed preview rollback drill. This does not establish installation in a particular ChatGPT/Claude host. Named ownership/budget, edge quotas, alert escalation, independent acceptance and production cutover remain open."
     },

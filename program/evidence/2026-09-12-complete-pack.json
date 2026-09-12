@@ -1,6 +1,6 @@
 {
   "recorded_at": "2026-09-12",
-  "scope": "D95-04 Library/SDK complete-pack implementation and local installed-package verification; Mac source recovery and native release progress are separate facts",
+  "scope": "D95-04 Library/SDK complete-pack implementation, installed-package verification and merged CI publication; Hub release and native acceptance have separate evidence",
   "input_main": "eed0e6eae3f08352d587ff33738613bd377d98ac",
   "versions": {
     "library": "0.1.0a4",
@@ -101,11 +101,21 @@
     "eidos-agi-prim-0.5.0-dev.3.tgz": "7d8ebd79a1b7bbdce091dd3db18f1b8a45d2ffc99db028ce5f48974afcd6f978"
   },
   "publication": {
-    "state": "local verification complete; PR and CI pending at evidence creation",
-    "branch": "codex/complete-pack-transport"
+    "state": "merged after all three CI workflows passed",
+    "branch": "codex/complete-pack-transport",
+    "pull_request": "https://github.com/primfoundation/prim/pull/20",
+    "tested_head": "67e24c4a4a8480beef6a3b9427737578c1978998",
+    "tested_tree": "cb6a0cc1684d3270482bfa3137c70c4014d12269",
+    "merge_commit": "d01805f831f9c9a15ac8458409d3ab929886a026",
+    "ci": {
+      "program": 34660993476,
+      "sdk": 34660993496,
+      "library": 34660993503
+    },
+    "package_index_publication": false
   },
   "not_established": [
-    "Hub and native complete-pack acceptance",
+    "Native complete-pack acceptance; Hub shipped separately as recorded in 2026-09-12-hub-transfer-release.json",
     "publisher authentication or permission to share",
     "Desktop dependency provenance",
     "independent security/domain review",

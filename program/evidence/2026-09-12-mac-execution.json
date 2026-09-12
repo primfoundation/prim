@@ -25,8 +25,18 @@
     "release_preflight": "passed",
     "candidate_build": "passed and company-signed",
     "notary_keychain_profile": "usable without credential export",
-    "notarization": "submitted once; In Progress; resume saved submission ID",
-    "installation": "not performed; original installed applications and private stores preserved"
+    "notarization": "Apple accepted the saved submission; stapling, strict signature and Gatekeeper checks passed",
+    "installation": "candidate installed temporarily with matching CLI; existing-notebook backup failed before migration; original app/CLI restored and original store bytes verified unchanged",
+    "apple_submission_id": "94073d53-e1ae-4440-81b1-75b469a075ad",
+    "candidate_architecture": "arm64",
+    "candidate_bundle_version": "0.1.0 (1); current-source acceptance candidate, not a new numbered public release",
+    "notarized_zip_sha256": "f9871885657330c48a00a6ccb37750133c45b6f3f624506c76e559a6b7d997b7",
+    "notarized_zip_bytes": 1320883,
+    "fresh_extraction_selftest": "passed",
+    "premigration_backup": "complete prior app and store independently byte/mode/link verified; original Keychain item exists without key export",
+    "existing_store_result": "unsupported newer item type (video) and metadata in the installed development notebook; not evidence of data corruption",
+    "migration": "not completed; no original notebook file bytes changed",
+    "acceptance": "failed for current private notebook; do not reinstall until installed-feature/source compatibility is reconciled"
   },
   "completed_receipts": {
     "laptop_checkpoint": "f84ea794fe2675658d6e12547c037239f64a43a1ff7fb71f344451aad93e03c0",
@@ -37,14 +47,55 @@
     "primboard_signed_build": "775533e74413a6f9ce601f77040ab838134068011949a33655d5c89aed2b86f8",
     "desktop_initial_tests_and_notary_profile": "729bea8aef52d6e3f31f0aeec5deb48f66b6c702a2a37c686fd19ec1abf2cfdc",
     "desktop_diagnostic_tests": "d95a7ea18313df7dc155c3df31f20b49beb9b0cef3cbb611fa0ea03bc592e1cb",
-    "notary_submission": "ee5bab6b25544f3376984f52861facc00cf726c94b4c45b3986c5d632df5963f"
+    "notary_submission": "ee5bab6b25544f3376984f52861facc00cf726c94b4c45b3986c5d632df5963f",
+    "notary_accepted": "b3348bdfc6f0ebc07de4d78e3699ac3520c0d3da7165f8461f8f3187ec3426ef",
+    "notary_release_evidence": "344a59dc1288aa151f2a04f5af37256637d0518ef904e8dd1c32c7b333152bb5",
+    "premigration_checkpoint": "44384c6e38ff9b59c245a60230bb431ca6bb9dc6b4f65e82d3d8df318d0b2d9f",
+    "key_and_snapshot_guard": "89d7a25683496396b290a7c6b558f44c30da56ee45c174fd71e295e1aafaa8da",
+    "temporary_installation": "b2db304f797e9bf73d748b9142a29c50d78ebaca1aacdd729a73d04a4ae471b2",
+    "existing_notebook_backup_failure": "316a89caa430be5c5f964a932d8cecb5134481ae21e9df652f579594c65455e0",
+    "verified_rollback": "436427a1fb6120e9a2de33e1a830908948e5425a1d078889c4f3b014ffffe182",
+    "private_schema_diagnostic": "657b3bf4c38a4b48871d0277a3d3e0af3517c24f9c67f58cb1c2c84eedce0a9e",
+    "native_safeguard_tests": "215347c7aca0a52254a58837a05ef053ac23273220e3a40799c273835e37b231"
   },
   "not_established": [
     "full Foundation checkout Git history recovery",
     "prim-sim provenance/reuse authority",
     "Desktop passing host tests",
-    "Apple notarization acceptance and Gatekeeper",
     "installed private-store and OS-consent acceptance",
-    "independent review"
-  ]
+    "independent review",
+    "newer installed Primboard feature/schema reconciliation",
+    "native complete-pack preservation",
+    "fresh public download and numbered native release"
+  ],
+  "primboard_upgrade_safeguards": {
+    "repository": "primfoundation/prims-paste-desktop",
+    "pull_request": "https://github.com/primfoundation/prims-paste-desktop/pull/6",
+    "tested_head": "5feb17b63d101856af759a3c78b9f2e6fc8fee9e",
+    "tested_tree": "c445a7778323470b72262ba12e5de6858cfb3d60",
+    "merge_commit": "f9161fc8d8a503d9dcf974c78361727f47f29667",
+    "ci_run": 34663242989,
+    "ci_job": 103469927723,
+    "ci_result": "passed: Swift package tests, release build, assembled-app tooling tests, product selftest and identity checks",
+    "changes": [
+      "refuse unsupported notebook fields/types/versions before lossy migration; distinguish compatibility from corruption",
+      "refuse creating a replacement key when notebook files already exist",
+      "concurrent first creation adopts the existing winning key; no automatic overwrite",
+      "refuse attachment-bearing record-only native imports/exports"
+    ],
+    "synthetic_regressions": 11,
+    "installed": false,
+    "private_data_or_real_keychain_in_tests": false,
+    "remaining": "newer installed feature/schema reconciliation and native complete-pack storage; no successful existing-store upgrade claimed",
+    "laptop_tests": {
+      "receipt": "215347c7aca0a52254a58837a05ef053ac23273220e3a40799c273835e37b231",
+      "executed": 172,
+      "failures": 0,
+      "skipped": 1,
+      "skip_reason": "Crash-worker entrypoint is invoked by the real process-crash parent test, not standalone",
+      "tested_commit": "5feb17b63d101856af759a3c78b9f2e6fc8fee9e",
+      "exact_tree_verified": true,
+      "worktree_clean_after_tests": true
+    }
+  }
 }
