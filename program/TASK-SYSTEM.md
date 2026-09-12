@@ -38,7 +38,7 @@ Stage 3 (#57): prove fresh-executor handoff from the snapshot, then design guard
 
 ## Views and access limitation
 
-The linked issue index is available now. The current connector exposes no GitHub Projects operation. Issue #64 owns creation and verification of a board when project-scoped capability is available; no board or automatic issue synchronization is claimed. A future board references these same issues instead of duplicating them.
+The [Prim Foundation Delivery Project](https://github.com/orgs/primfoundation/projects/1) is now populated through authenticated GitHub CLI on the authorized Fleet laptop. It contains the same 26 packages and 16 tasks, with Status, Kind, Delivery package, Priority, Implementation repository and Blocker fields. Repeated import and read-back verified all 42 memberships and field values. The Project is private. The connector still has no Projects operation; Fleet plus CLI supplies the authorized path. Fields are a manually reconciled view of live issues, not automatic synchronization. Read current issue state before acting. See issue #64 for execution receipts and acceptance.
 
 ## Estimates and reassessment
 
@@ -101,3 +101,5 @@ This is the initial ordering, not live state. Follow the issue for current statu
 | EXEC-14 | [Prepare the operator and replacement-maintainer recovery rehearsal](https://github.com/primfoundation/prim/issues/62) | Package entry gate | primfoundation/prim |
 | EXEC-15 | [Prepare independent usability and release evidence package](https://github.com/primfoundation/prim/issues/63) | EXEC-06, EXEC-11, EXEC-14 | primfoundation/prim |
 | EXEC-16 | [Add a GitHub Projects board when project-scoped access is available](https://github.com/primfoundation/prim/issues/64) | Package entry gate | primfoundation/prim |
+
+The Project has All work, Execution board, Ready now, Blocked and waiting, and Packages views. Field updates were tested and restored. [Execution evidence](evidence/2026-09-12-github-project.json) records exact receipts and test limits.
