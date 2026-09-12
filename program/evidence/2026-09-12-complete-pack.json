@@ -1,0 +1,114 @@
+{
+  "recorded_at": "2026-09-12",
+  "scope": "D95-04 Library/SDK complete-pack implementation and local installed-package verification; Mac source recovery and native release progress are separate facts",
+  "input_main": "eed0e6eae3f08352d587ff33738613bd377d98ac",
+  "versions": {
+    "library": "0.1.0a4",
+    "sdk": "0.5.0-dev.3"
+  },
+  "validation": {
+    "success": true,
+    "library_tests": 110,
+    "foundation_tests": 100,
+    "new_python_transfer_tests": 14,
+    "new_typescript_transfer_tests": 8,
+    "typescript_typecheck": "passed",
+    "typescript_existing_suites": "passed",
+    "python_typescript_python_binary_exchange": "passed: byte-identical archives after source deletion",
+    "installed_wheel": {
+      "success": true,
+      "version": "0.1.0a4",
+      "installed_from_site_packages": true,
+      "snapshot_sha256": "a659c3a69ef9a02976d53d033c4dba60a4ae7f75511cd44082e2f1e1125a2771",
+      "profiles": [
+        {
+          "profile": "primfoundation/decision",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/person",
+          "version": "0.1.0-dev.1",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/research",
+          "version": "0.3.0-dev.3",
+          "created": true
+        },
+        {
+          "profile": "primfoundation/workbook",
+          "version": "0.1.0-dev.1",
+          "created": true
+        }
+      ],
+      "stdio_client_modes": [
+        "auto",
+        "legacy"
+      ],
+      "distribution": {
+        "external_publish_resolve_restore_create_check": "passed",
+        "original_source_removed_before_restore": true,
+        "snapshot_sha256": "461d031622a83f94b8ec48af4f7846a2e4b98d6ebf1356a244e572238501dd7f"
+      },
+      "capture": {
+        "original_binary_capture": "passed",
+        "retry_after_source_removal": "passed",
+        "complete_zip_transfer_without_source_or_manifest": "passed",
+        "claims_created": 0
+      },
+      "not_established": [
+        "public deployment",
+        "all client UIs",
+        "independent security review"
+      ]
+    },
+    "installed_tarball": {
+      "installed": true,
+      "profiles": 4,
+      "registry": 24,
+      "completeTransfer": true,
+      "cli": true,
+      "types": true,
+      "archive": "eidos-agi-prim-0.5.0-dev.3.tgz",
+      "sha256": "7d8ebd79a1b7bbdce091dd3db18f1b8a45d2ffc99db028ce5f48974afcd6f978",
+      "scope": "Clean offline tarball installation, compiled Node API and CLI, declarations and local pack round trips; no package-index publication"
+    },
+    "local_environment_note": "Loopback HTTP tests passed with inherited outbound proxy variables unset; initial proxy-dependent run failed before HTTP connections."
+  },
+  "source_sha256": {
+    "sdk/typescript/src/complete-pack.ts": "63ac4ad79a6a0cc48b04fbbca07ea2fa75d5ac751d8eff305f0d14079494535a",
+    "sdk/typescript/src/pack-transfer.ts": "c82c2431a58be2e4425f8eb01f80ff0f5fc297b19919b65705bb4df0cecab8d1",
+    "sdk/typescript/tests/transfer.test.ts": "8dd4d8b16ef757e817a3064336eb703eec7cdd12ce11e5e9fd2215637a7fbf8e",
+    "services/library/src/prim_library/transfer.py": "53658eb95c0746690a5df6275415c4d7ae7f90186ea8658bd5394c4f37e65f72",
+    "services/library/tests/test_transfer.py": "ad1356a2ebec13da87137670d58e1d7841d70111fb7e1b06787e8f20fe33d8a7",
+    "sdk/typescript/README.md": "df67fdbd196a46d4a62c8eafdbf820d77ce7d6ed2c45537d583fa28e8c01f4c0",
+    "sdk/typescript/package-lock.json": "047f1c8e993e96ad1ef32cb599c1dd003ceaf077e5025bbf772b866175976edc",
+    "sdk/typescript/package.json": "0f01fbf342a780ac159de84b0e516a52d634ac74a3c1911653e4a961d65e8953",
+    "sdk/typescript/scripts/installed-smoke.mjs": "629cf8cf322b18cd6b5904b0a9af0525289f7c9a9dc79767fa74f7c543f2e30f",
+    "sdk/typescript/src/cli.ts": "c1edab05a0fedeaa06b0adfacd16b72ed8ab32e8558e45dad1e45b4a98a0a404",
+    "sdk/typescript/src/index.ts": "9c0f8c1211032d8e0cf1e6b4db1e5ae278cac5c0067a73c88e0bf52f5615a169",
+    "sdk/typescript/src/profile-schema.ts": "ce2b47b1cb447df205e198ebea984b2fd5098c77ddaedef33da02dd05baada61",
+    "services/library/README.md": "b1c18e624defa94a0b8d9d687265bb20117c5413233bd0e6b09b2f50c1881269",
+    "services/library/pyproject.toml": "ab64eb9b89703fd605179d3fa875b0a87e783cc5954c6fe77887be4b38a3a687",
+    "services/library/src/prim_library/__init__.py": "6c4c0796ac1c641ee1f7633a449f286b6c205d59eec42adc16c26529a6755425",
+    "services/library/src/prim_library/cli.py": "2c54c1bc96d86bbbbf7c195bcfbe719d5eb22cede9d79f5ad86a11aba21807f4",
+    "services/library/tests/installed_smoke.py": "c22e498e7902a3c93bd6f13732ccb12cc08efdf4616873bc8b6e97f70e780ee0"
+  },
+  "artifacts": {
+    "prim_foundation_mcp-0.1.0a4.tar.gz": "c5d193ea78c9cbe80dff5dc3dc19964d3e18b516705873a3602838c207e1610e",
+    "prim_foundation_mcp-0.1.0a4-py3-none-any.whl": "596f6e01fefc37f61ebd12796c20d510d3d0ae7c74393a14ac145e1ad87dc4d5",
+    "eidos-agi-prim-0.5.0-dev.3.tgz": "7d8ebd79a1b7bbdce091dd3db18f1b8a45d2ffc99db028ce5f48974afcd6f978"
+  },
+  "publication": {
+    "state": "local verification complete; PR and CI pending at evidence creation",
+    "branch": "codex/complete-pack-transport"
+  },
+  "not_established": [
+    "Hub and native complete-pack acceptance",
+    "publisher authentication or permission to share",
+    "Desktop dependency provenance",
+    "independent security/domain review",
+    "overall 95% acceptance"
+  ]
+}

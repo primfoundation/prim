@@ -1,7 +1,7 @@
 {
   "format_version": 1,
   "program": "Prim Foundation",
-  "as_of": "2026-09-11",
+  "as_of": "2026-09-12",
   "mission": "Free digital filing cabinets for billions; durable, understandable, evidence-backed things and work products independent of intelligence and tools.",
   "execution": {
     "state": "delivery_95_plan_and_fleet_mac_audit",
@@ -362,6 +362,24 @@
       "stage": "tests",
       "path": "program/evidence/2026-09-11-delivery-audit.json",
       "summary": "100 local Foundation tests and required program/catalog/compatibility checks passed; added delivery coverage/cycle/status regressions. Original requirement contracts preserved; no release or real-use acceptance implied."
+    },
+    {
+      "id": "E-SEP12-TRANSFER-IMPL",
+      "stage": "implementation",
+      "path": "program/evidence/2026-09-12-complete-pack.json",
+      "summary": "Bounded byte-preserving Library/SDK complete-pack transfer; 110 Library and 100 Foundation tests, cross-language binary exchange and installed wheel/tarball checks pass. Hub/native and independent acceptance remain."
+    },
+    {
+      "id": "E-SEP12-TRANSFER-TEST",
+      "stage": "tests",
+      "path": "program/evidence/2026-09-12-complete-pack.json",
+      "summary": "Bounded byte-preserving Library/SDK complete-pack transfer; 110 Library and 100 Foundation tests, cross-language binary exchange and installed wheel/tarball checks pass. Hub/native and independent acceptance remain."
+    },
+    {
+      "id": "E-SEP12-MAC-EXEC",
+      "stage": "implementation",
+      "path": "program/evidence/2026-09-12-mac-execution.json",
+      "summary": "Verified private source recovery copies; dependency and Desktop builds pass; Primboard company-signed candidate built and submitted for notarization. Provenance, legacy Desktop test failures and installed acceptance remain."
     }
   ],
   "requirements": [
@@ -626,9 +644,11 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP12-TRANSFER-IMPL",
+        "E-SEP12-TRANSFER-TEST"
       ],
-      "note": "Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain."
+      "note": "Bounded data-only directory and four-file ZIP authoring/reopen work offline. General attachments, archives and media inspection remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain."
     },
     {
       "id": "CORE-004",
@@ -1149,9 +1169,11 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP12-TRANSFER-IMPL",
+        "E-SEP12-TRANSFER-TEST"
       ],
-      "note": "Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain."
+      "note": "Readable local Hub and native views are derived from authority JSON; broader profile and attachment rendering remain. September 12 Library/SDK complete-pack transport retains attachments, receipts and opaque files; Hub/native integration and independent review remain."
     },
     {
       "id": "HUM-002",
@@ -1173,9 +1195,10 @@
       "evidence": [
         "E-SEP7-IMPL",
         "E-SEP7-TEST",
-        "E-SEP11-FLEET-AUDIT"
+        "E-SEP11-FLEET-AUDIT",
+        "E-SEP12-MAC-EXEC"
       ],
-      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates."
+      "note": "Fleet read-only audit on September 11 found a local prim-sim package declaring PrimSimCore with 10 Swift source files and four test files. No Git repository or root license was observed. Provenance/reuse authority, API/build compatibility, dirty work reconciliation and signed generic Desktop acceptance remain blocked or unverified; the candidate is not a substitute for those gates. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
     },
     {
       "id": "HUM-003",
@@ -1223,9 +1246,10 @@
         "E-SEP8-HOST-IMPL",
         "E-SEP8-HOST-TEST",
         "E-SEP8-PACK-IMPL",
-        "E-SEP8-PACK-TEST"
+        "E-SEP8-PACK-TEST",
+        "E-SEP12-MAC-EXEC"
       ],
-      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain."
+      "note": "Create, focused edit, explicit save, exact-pin reopen and recovered draft copies work through Hub/native/CLI. Actual-user filing and installed Mac acceptance remain. September 12 private work recovery and clean native builds are verified; Primboard company-signed candidate submitted once for notarization. Desktop source provenance, 27 legacy host assertions and installed acceptance remain unresolved."
     },
     {
       "id": "ING-001",

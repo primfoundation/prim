@@ -16,7 +16,7 @@ export function bounded(value: JSONValue, depth = 0): void {
 }
 
 export function parseProfileJSON(data: string | Uint8Array, maximum = 512 * 1024): JSONValue {
-  if (Buffer.byteLength(data) > maximum) throw new ProfileError("JSON size limit exceeded");
+  if ((typeof data === "string" ? new TextEncoder().encode(data).length : data.byteLength) > maximum) throw new ProfileError("JSON size limit exceeded");
   const raw = typeof data === "string" ? data : new TextDecoder("utf-8", { fatal: true }).decode(data);
   const stack: { keys: Set<string> | null; key: boolean }[] = [];
   for (let i = 0; i < raw.length; i++) {

@@ -75,6 +75,13 @@ def main(argv: list[str] | None = None) -> int:
     host.add_argument("--source-commit", default="unrecorded", help="Optional source provenance; not publisher authentication")
     pack = sub.add_parser("check-pack", help="Check a local Prim folder using its exact definition lock")
     pack.add_argument("path", type=Path)
+    for name in ["export-pack", "import-pack", "check-transfer"]:
+        p = sub.add_parser(name, help="Preserve and verify complete pack files and attachments locally")
+        p.add_argument("path", type=Path)
+        if name != "check-transfer":
+            p.add_argument("--output", type=Path, required=True)
+        if name != "export-pack":
+            p.add_argument("--expected-sha256", help="Optional archive digest from a trusted channel")
     search = sub.add_parser("search")
     search.add_argument("query", nargs="?", default="")
     search.add_argument("--sort", default="relevance", choices=["relevance", "popular", "trending"])
@@ -89,6 +96,20 @@ def main(argv: list[str] | None = None) -> int:
             p.add_argument("input", type=Path)
     args = ap.parse_args(argv)
     try:
+        if args.command in {"export-pack", "import-pack", "check-transfer"}:
+            from .transfer import export_pack, import_pack, decode_files, MAX_ARCHIVE
+            from .publishing import read_local
+            if args.library:
+                raise LibraryError("--library does not apply to byte-preserving transport; use check-pack for definition validation")
+            if args.command == "export-pack":
+                result = export_pack(args.path, args.output)
+            elif args.command == "import-pack":
+                result = import_pack(args.path, args.output, args.expected_sha256)
+            else:
+                _, result = decode_files(read_local(args.path, MAX_ARCHIVE), args.expected_sha256)
+                result = {"status": "passed", **result}
+            print(json.dumps(result, ensure_ascii=True, indent=2))
+            return 0
         if args.command in {"publish", "resolve", "restore"}:
             from .publishing import publish, read_local
             from .resolution import resolve_file, restore

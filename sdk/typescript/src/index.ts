@@ -70,6 +70,8 @@ export {
   type TypeStatus,
 } from "./registry.ts";
 
-export const VERSION = "0.5.0-dev.2";
+export const VERSION = "0.5.0-dev.3";
 
 export { ProfileLibrary, ProfileError, parseProfileJSON, type DefinitionPin, type CreationKit, type JSONValue, type ProfileProblem } from "./profile-library.ts";
+export { encodeCompletePack, decodeCompletePack, transferSHA256, type CompleteFiles, type TransferSummary } from './complete-pack.ts';
+export { readCompleteFolder, exportCompletePack, importCompletePack, checkCompletePack } from './pack-transfer.ts';

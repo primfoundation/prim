@@ -16,20 +16,28 @@ try {
   const archive = join(output, packed.filename);
   execFileSync('npm', ['install', '--ignore-scripts', '--offline', '--no-audit', '--no-fund', archive], {cwd:temp, stdio:'pipe'});
   const test = `import assert from 'node:assert/strict';
-import {ProfileLibrary, listTypes, VERSION} from '@eidos-agi/prim';
-assert.equal(VERSION,'0.5.0-dev.2'); assert.ok(listTypes().length > 0);
+import {ProfileLibrary, listTypes, VERSION, exportCompletePack, importCompletePack} from '@eidos-agi/prim';
+import {writeFileSync,readFileSync,rmSync} from 'node:fs';
+assert.equal(VERSION,'0.5.0-dev.3'); assert.ok(listTypes().length > 0);
 const library=new ProfileLibrary(); assert.equal(library.list().length,4);
 for (const kit of library.list()) {
  const pin=library.pin(kit), record=library.create(pin,{extension:{retained:'outside checkout'}});
  const target=new URL('./'+kit.profile_id.split('/').at(-1),import.meta.url).pathname;
  library.writePack(pin,record,target);assert.deepEqual(library.readPack(target),{pin,record});
+ writeFileSync(target+'/original.bin',new Uint8Array([0,255,13,10,42]));
+ const summary=await exportCompletePack(target,target+'.zip');
+ rmSync(target,{recursive:true});
+ await importCompletePack(target+'.zip',target,summary.archive_sha256);
+ assert.deepEqual([...readFileSync(target+'/original.bin')],[0,255,13,10,42]);
+ assert.deepEqual(library.readPack(target),{pin,record});
 }
-console.log(JSON.stringify({installed:true,profiles:library.list().length,registry:listTypes().length}));`;
+console.log(JSON.stringify({installed:true,profiles:library.list().length,registry:listTypes().length,completeTransfer:true}));`;
   writeFileSync(join(temp,'smoke.mjs'), test);
   const result = JSON.parse(execFileSync(process.execPath, ['smoke.mjs'], {cwd:temp,encoding:'utf8'}));
   const cli = join(temp,'node_modules/.bin/prim');
   assert.equal(execFileSync(cli,['profile','list'],{cwd:temp,encoding:'utf8'}).trim().split('\n').length,4);
   assert.equal(JSON.parse(execFileSync(cli,['profile','check',join(temp,'person')],{cwd:temp,encoding:'utf8'})).status,'passed');
+  assert.equal(JSON.parse(execFileSync(cli,['profile','check-transfer',join(temp,'person.zip')],{cwd:temp,encoding:'utf8'})).integrity,'passed');
   writeFileSync(join(temp,'types.mts'), `import {ProfileLibrary, type DefinitionPin} from '@eidos-agi/prim';\nconst library = new ProfileLibrary();\nconst pin: DefinitionPin = library.pin(library.list()[0]);\nlibrary.validate(pin, library.create(pin));\n`);
   execFileSync(process.execPath,[join(root,'node_modules/typescript/bin/tsc'),'--noEmit','--module','NodeNext','--target','ES2022','--typeRoots',join(root,'node_modules/@types'),join(temp,'types.mts')],{cwd:temp,stdio:'inherit'});
   const report = {...result, cli:true, types:true, archive:packed.filename, sha256:createHash('sha256').update(readFileSync(archive)).digest('hex'), scope:'Clean offline tarball installation, compiled Node API and CLI, declarations and local pack round trips; no package-index publication'};
