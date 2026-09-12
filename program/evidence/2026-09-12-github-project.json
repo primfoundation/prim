@@ -1,0 +1,52 @@
+{
+  "recorded_at": "2026-09-12",
+  "scope": "GitHub Projects via existing authorized Fleet Mac CLI, after user OAuth refresh",
+  "project_url": "https://github.com/orgs/primfoundation/projects/1",
+  "project_id": "PVT_kwDOExd2e84BjT0v",
+  "project_number": 1,
+  "visibility": "private",
+  "membership": {
+    "packages": 26,
+    "tasks": 16,
+    "total": 42,
+    "existing_issue_numbers": "23 through 64",
+    "repeated_import_duplicates": 0
+  },
+  "fields_verified": [
+    "Status",
+    "Kind",
+    "Delivery package",
+    "Priority",
+    "Implementation repository",
+    "Blocker"
+  ],
+  "requirement_authority": "program/plan.json unchanged",
+  "execution_authority": "live GitHub issue body/state",
+  "synchronization": "manual field reconciliation; no continuous worker",
+  "receipts": {
+    "access": "2db8b57b48c2c4337d1659ed53e305a14d99c09a45e8a453c7350b650c6e2961",
+    "create": "6c415e56736c6191cc9a0edfa21b910cdd562875abb992ee67db7c1e1a7ebd96",
+    "first_import": "030eaaefdbc7dfe95df07a528d1abcc3e1e0c5867e36f8a152962ff7e6a844a4",
+    "membership_followup": "b6e3c0f3c209401256a811b616d65057b9f2543685f3c017584b059614662812",
+    "fields_and_retry": "4c7ba1523267ba5fd4921f97cedc85fe6f7f4ceb736d1f1d2e645afdfefe8f75",
+    "views_and_reversible_update": "cd74f34727687058aa2bf0e7630aa619c9a9919f8395a29f10cf174180dcb7df"
+  },
+  "initial_readback": "Immediate import assertion failed; later read verified exact 42 membership. Final field and repeated-import check passed; initial assertion is not counted as a pass.",
+  "limits": [
+    "No new cloud GitHub App or MCP Projects tool added",
+    "No credentials exported",
+    "No automatic issue/Project synchronization",
+    "No cloud executor migration",
+    "No mission requirement completed solely by this board",
+    "View layout/filter configurations verified through API; no screenshot or independent browser UX acceptance claimed"
+  ],
+  "views": {
+    "All work": "TABLE_LAYOUT",
+    "Execution board": "BOARD_LAYOUT",
+    "Ready now": "TABLE_LAYOUT: kind:Task status:Ready",
+    "Blocked and waiting": "TABLE_LAYOUT: kind:Task status:Blocked,Waiting",
+    "Packages": "TABLE_LAYOUT: kind:Package"
+  },
+  "controlled_status_update_and_restore": "passed on issue 64, returned to In progress",
+  "foundation_checks": "100 tests plus required program, roadmap, catalog and pinned compatibility checks passed"
+}

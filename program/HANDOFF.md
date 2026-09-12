@@ -2,7 +2,7 @@
 
 ## GitHub execution is now established
 
-[Issue #9](https://github.com/primfoundation/prim/issues/9) links all 26 package trackers and 16 executable tasks. Read live issues before selecting work; `github-execution.json` is a mapping and initial snapshot, not live state. [TASK-SYSTEM.md](TASK-SYSTEM.md) defines claiming, handoff, evidence, closure and staged Project Prim adoption. Start with #50/#51/#53/#55/#49. Projects-board access is explicitly blocked in #64; the issue index works now. No unattended worker or Project exporter is claimed.
+[Issue #9](https://github.com/primfoundation/prim/issues/9) links all 26 package trackers and 16 executable tasks. Read live issues before selecting work; `github-execution.json` is a mapping and initial snapshot, not live state. [TASK-SYSTEM.md](TASK-SYSTEM.md) defines claiming, handoff, evidence, closure and staged Project Prim adoption. Start with #50/#51/#53/#55/#49. Projects access is now verified through Fleet and the laptop GitHub CLI after user authorization. [Project 1](https://github.com/orgs/primfoundation/projects/1) contains all 42 mapped issues; #64 retains receipts. Project fields are manually reconciled, not continuously synchronized. No unattended worker or Project exporter is claimed.
 
 ## Current delivery target and recovered Mac access
 
